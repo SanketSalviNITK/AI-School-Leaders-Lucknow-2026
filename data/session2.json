@@ -1,5 +1,5 @@
 {
-  "_help": "Session 2 content. Stage 1 done (missions s2m1–s2m5, numbered 6–10). Theory (Stage 3) and finale (Stage 4) to come. Step types: title, concept, reveal, poll, quiz, mission, finale.",
+  "_help": "Session 2 content. Stage 1 missions (s2m1–s2m5), Stage 3 theory (~20 min) done. Step types: title, concept, reveal, poll, quiz, mission, finale. 'notes' show only in presenter view.",
   "id": 2,
   "title": {
     "en": "Building Future-Ready Schools with AI Integration",
@@ -14,9 +14,383 @@
         "hi": "AI एकीकरण से भविष्य-तैयार विद्यालय"
       },
       "subtitle": {
-        "en": "Content coming soon",
-        "hi": "सामग्री जल्द आ रही है"
-      }
+        "en": "From the CT & AI circular to your classrooms, without a computer lab.",
+        "hi": "CT और AI परिपत्र से आपकी कक्षाओं तक, बिना कंप्यूटर लैब के।"
+      },
+      "notes": [
+        "11:30. Welcome back. One line: 'This morning you used AI in your office. Now we take it into your classrooms.'",
+        "Mention one number from Session 1's Progress tab (e.g. how many finished the AI policy) to build momentum."
+      ]
+    },
+    {
+      "type": "poll",
+      "id": "s2-poll-lab",
+      "question": {
+        "en": "Does your school have a working computer lab that Classes III–VIII can use every week?",
+        "hi": "क्या आपके विद्यालय में ऐसी चालू कंप्यूटर लैब है जिसका कक्षा III–VIII हर सप्ताह उपयोग कर सकें?"
+      },
+      "options": [
+        {
+          "en": "Yes, enough computers for a full class",
+          "hi": "हाँ, पूरी कक्षा के लिए पर्याप्त कंप्यूटर"
+        },
+        {
+          "en": "A small lab, shared and often busy",
+          "hi": "छोटी लैब, साझा और अक्सर व्यस्त"
+        },
+        {
+          "en": "No working lab",
+          "hi": "कोई चालू लैब नहीं"
+        }
+      ],
+      "notes": [
+        "1 min. Whatever the bars show, the message is the same: the CT & AI mandate for Classes III–V does not need a lab."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": {
+        "en": "The CT & AI mandate in plain words",
+        "hi": "CT और AI अनिवार्यता सरल शब्दों में"
+      },
+      "points": [
+        {
+          "en": "<b>Classes III–V:</b> about 50 hours a year of computational thinking, taught <b>inside Maths and The World Around Us</b> periods, mostly unplugged (no computers).",
+          "hi": "<b>कक्षा III–V:</b> वर्ष में लगभग 50 घंटे कम्प्यूटेशनल थिंकिंग, <b>गणित और The World Around Us</b> के पीरियड के भीतर, अधिकतर बिना कंप्यूटर के।"
+        },
+        {
+          "en": "<b>Classes VI–VIII:</b> about 100 hours a year: roughly 40 CT, 20 introductory AI and 40 project hours, shared by subject and computer teachers.",
+          "hi": "<b>कक्षा VI–VIII:</b> वर्ष में लगभग 100 घंटे: लगभग 40 CT, 20 प्रारंभिक AI और 40 प्रोजेक्ट घंटे, विषय और कंप्यूटर शिक्षक मिलकर।"
+        },
+        {
+          "en": "<b>No board exam</b> for these classes. Assessment is continuous: activities, rubrics and teacher observation.",
+          "hi": "इन कक्षाओं के लिए <b>कोई बोर्ड परीक्षा नहीं</b>। मूल्यांकन सतत है: गतिविधियाँ, रूब्रिक और शिक्षक अवलोकन।"
+        },
+        {
+          "en": "<b>Free CBSE handbooks</b> for students and teachers, Classes 3–8, on the CBSE academic website.",
+          "hi": "कक्षा 3–8 के छात्रों और शिक्षकों के लिए <b>मुफ़्त CBSE पुस्तिकाएँ</b>, CBSE शैक्षणिक वेबसाइट पर।"
+        },
+        {
+          "en": "<b>Class IX:</b> other AI courses are discontinued from 2026-27; Class X continues the 2025-26 scheme.",
+          "hi": "<b>कक्षा IX:</b> 2026-27 से अन्य AI पाठ्यक्रम बंद; कक्षा X में 2025-26 की योजना जारी।"
+        }
+      ],
+      "note": {
+        "en": "Source: CBSE Circulars Acad-15/2026 and Acad-18/2026. The hours are indicative, so a documented partial plan this year is acceptable.",
+        "hi": "स्रोत: CBSE परिपत्र Acad-15/2026 और Acad-18/2026। घंटे सांकेतिक हैं, इसलिए इस वर्ष दर्ज की गई आंशिक योजना भी स्वीकार्य है।"
+      },
+      "notes": [
+        "3 min. Point to the handbook link on the Resources page. Principals' biggest relief: 'no board exam, no lab needed for III–V'.",
+        "If asked about Class IX subject codes: refer them to Acad-18/2026 for the exact wording."
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "s2-quiz-where",
+      "question": {
+        "en": "In Classes III–V, where is computational thinking taught?",
+        "hi": "कक्षा III–V में कम्प्यूटेशनल थिंकिंग कहाँ पढ़ाई जाती है?"
+      },
+      "options": [
+        {
+          "en": "In a new, separate computer period",
+          "hi": "एक नए, अलग कंप्यूटर पीरियड में"
+        },
+        {
+          "en": "Inside Maths and The World Around Us periods",
+          "hi": "गणित और The World Around Us के पीरियड के भीतर"
+        },
+        {
+          "en": "Only in the computer lab",
+          "hi": "केवल कंप्यूटर लैब में"
+        },
+        {
+          "en": "After school, as an activity club",
+          "hi": "विद्यालय के बाद, गतिविधि क्लब के रूप में"
+        }
+      ],
+      "answer": 1,
+      "explain": {
+        "en": "Inside existing Maths and TWAU periods, mostly with paper, cards and movement. No new period and no lab are required.",
+        "hi": "मौजूदा गणित और TWAU पीरियड के भीतर, अधिकतर कागज़, कार्ड और गतिविधि से। न नया पीरियड चाहिए, न लैब।"
+      },
+      "notes": [
+        "1 min. Sets up Missions 6 and 7."
+      ]
+    },
+    {
+      "type": "reveal",
+      "title": {
+        "en": "What is computational thinking? Four ideas you already use",
+        "hi": "कम्प्यूटेशनल थिंकिंग क्या है? चार विचार जिनका आप पहले से उपयोग करते हैं"
+      },
+      "items": [
+        {
+          "front": {
+            "en": "Decomposition",
+            "hi": "विभाजन (Decomposition)"
+          },
+          "back": {
+            "en": "Breaking a big task into small steps. Planning the annual day: stage, invitations, practice, seating.",
+            "hi": "बड़े काम को छोटे चरणों में बाँटना। वार्षिकोत्सव की योजना: मंच, निमंत्रण, अभ्यास, बैठने की व्यवस्था।"
+          }
+        },
+        {
+          "front": {
+            "en": "Pattern recognition",
+            "hi": "पैटर्न पहचान (Pattern recognition)"
+          },
+          "back": {
+            "en": "Spotting what repeats. The 9 times table: digits always add up to 9 (18, 27, 36…).",
+            "hi": "दोहराव पहचानना। 9 का पहाड़ा: अंकों का योग हमेशा 9 (18, 27, 36…)।"
+          }
+        },
+        {
+          "front": {
+            "en": "Abstraction",
+            "hi": "सारांशीकरण (Abstraction)"
+          },
+          "back": {
+            "en": "Keeping only what matters. A school bus route map shows stops and roads, not every tree and shop.",
+            "hi": "केवल ज़रूरी बातें रखना। स्कूल बस का रूट मैप स्टॉप और सड़कें दिखाता है, हर पेड़ और दुकान नहीं।"
+          }
+        },
+        {
+          "front": {
+            "en": "Algorithm",
+            "hi": "एल्गोरिदम (Algorithm)"
+          },
+          "back": {
+            "en": "Exact steps in the right order. The morning assembly: prayer, pledge, news, announcements, national anthem.",
+            "hi": "सही क्रम में सटीक चरण। प्रातः सभा: प्रार्थना, प्रतिज्ञा, समाचार, घोषणाएँ, राष्ट्रगान।"
+          }
+        }
+      ],
+      "notes": [
+        "3 min. Ask a table for one more example of each from school life before you reveal.",
+        "Key line: 'Your teachers already do this. CT just gives it a name and a structure.'"
+      ]
+    },
+    {
+      "type": "concept",
+      "title": {
+        "en": "Try it now: the human algorithm (2 minutes)",
+        "hi": "अभी आज़माएँ: मानव एल्गोरिदम (2 मिनट)"
+      },
+      "points": [
+        {
+          "en": "In pairs: one person draws a simple shape without showing it (a house, a star).",
+          "hi": "जोड़ी में: एक व्यक्ति बिना दिखाए एक सरल आकृति बनाए (घर, तारा)।"
+        },
+        {
+          "en": "They give their partner <b>exact step-by-step instructions</b> to draw it, without naming the shape.",
+          "hi": "वह अपने साथी को आकृति का नाम बताए बिना उसे बनाने के <b>सटीक चरण-दर-चरण निर्देश</b> दे।"
+        },
+        {
+          "en": "Compare the drawings. Where the instructions were unclear, the drawing went wrong. That is debugging.",
+          "hi": "चित्रों की तुलना करें। जहाँ निर्देश अस्पष्ट थे, चित्र गलत हुआ। यही डिबगिंग है।"
+        }
+      ],
+      "note": {
+        "en": "This is exactly the kind of unplugged activity the CBSE handbooks use for Classes III–V. It costs nothing.",
+        "hi": "CBSE पुस्तिकाएँ कक्षा III–V के लिए ठीक ऐसी ही बिना कंप्यूटर की गतिविधियाँ देती हैं। इसमें कोई खर्च नहीं।"
+      },
+      "notes": [
+        "2 min, timed. Use the plain paper from Mission 2. Laughter is the goal; then one sentence: 'Children learn precision and debugging this way, years before any computer.'"
+      ]
+    },
+    {
+      "type": "poll",
+      "id": "s2-poll-who",
+      "question": {
+        "en": "Who will teach CT & AI in your school this year?",
+        "hi": "इस वर्ष आपके विद्यालय में CT और AI कौन पढ़ाएगा?"
+      },
+      "options": [
+        {
+          "en": "Class and Maths teachers (III–V), with support",
+          "hi": "कक्षा और गणित शिक्षक (III–V), सहयोग के साथ"
+        },
+        {
+          "en": "The computer teacher alone",
+          "hi": "केवल कंप्यूटर शिक्षक"
+        },
+        {
+          "en": "A shared team of subject and computer teachers",
+          "hi": "विषय और कंप्यूटर शिक्षकों की साझा टीम"
+        },
+        {
+          "en": "Not decided yet",
+          "hi": "अभी तय नहीं"
+        }
+      ],
+      "notes": [
+        "1 min. If many say 'computer teacher alone': gently point out the circular expects subject teachers to share it, and that one teacher cannot carry 100+ periods a week."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": {
+        "en": "The board exam has changed too",
+        "hi": "बोर्ड परीक्षा भी बदल गई है"
+      },
+      "points": [
+        {
+          "en": "<b>Class X paper:</b> about 50% competency-based questions (case-based, source-based, assertion-reason), 20% MCQ, 30% constructed response.",
+          "hi": "<b>कक्षा X प्रश्नपत्र:</b> लगभग 50% योग्यता-आधारित प्रश्न (केस-आधारित, स्रोत-आधारित, अभिकथन-कारण), 20% MCQ, 30% लिखित उत्तर।"
+        },
+        {
+          "en": "<b>Two board exams for Class X:</b> the main exam in February and an optional improvement exam in May.",
+          "hi": "<b>कक्षा X की दो बोर्ड परीक्षाएँ:</b> फ़रवरी में मुख्य परीक्षा और मई में वैकल्पिक सुधार परीक्षा।"
+        },
+        {
+          "en": "<b>What this means for you:</b> teachers need many good practice questions, every term. AI can draft them in minutes; teachers must verify them.",
+          "hi": "<b>आपके लिए इसका अर्थ:</b> शिक्षकों को हर सत्र में बहुत से अच्छे अभ्यास प्रश्न चाहिए। AI मिनटों में ड्राफ़्ट बना सकता है; शिक्षकों को जाँचना होगा।"
+        }
+      ],
+      "note": {
+        "en": "For Class XII, the competency-based share varies by subject. Check the 2026-27 CBSE sample papers.",
+        "hi": "कक्षा XII में योग्यता-आधारित प्रश्नों का अनुपात विषय के अनुसार अलग है। 2026-27 के CBSE सैंपल पेपर देखें।"
+      },
+      "notes": [
+        "2 min."
+      ]
+    },
+    {
+      "type": "reveal",
+      "title": {
+        "en": "Three question types. Tap to see an example.",
+        "hi": "तीन प्रकार के प्रश्न। उदाहरण देखने के लिए टैप करें।"
+      },
+      "items": [
+        {
+          "front": {
+            "en": "Assertion-Reason",
+            "hi": "अभिकथन-कारण"
+          },
+          "back": {
+            "en": "A: The clear sky appears blue. R: Air molecules scatter blue light more than red light.<br><b>Answer:</b> Both true, and R explains A.",
+            "hi": "A: साफ़ आकाश नीला दिखाई देता है। R: वायु के अणु लाल प्रकाश की तुलना में नीले प्रकाश को अधिक प्रकीर्णित करते हैं।<br><b>उत्तर:</b> दोनों सत्य हैं, और R, A की सही व्याख्या है।"
+          }
+        },
+        {
+          "front": {
+            "en": "Case-based",
+            "hi": "केस-आधारित"
+          },
+          "back": {
+            "en": "A short real-life passage, then 3–4 linked questions. Example: a dentist uses a concave mirror to see a tooth. Why concave? What kind of image does it form?",
+            "hi": "वास्तविक जीवन का छोटा अनुच्छेद, फिर 3–4 जुड़े प्रश्न। उदाहरण: दंत चिकित्सक दाँत देखने के लिए अवतल दर्पण का उपयोग करते हैं। अवतल क्यों? यह कैसा प्रतिबिंब बनाता है?"
+          }
+        },
+        {
+          "front": {
+            "en": "Source-based",
+            "hi": "स्रोत-आधारित"
+          },
+          "back": {
+            "en": "A table, graph or extract to read. Example: refractive index of water 1.33, glass 1.5, diamond 2.42. In which medium does light travel slowest?<br><b>Answer:</b> diamond.",
+            "hi": "पढ़ने के लिए तालिका, ग्राफ़ या अंश। उदाहरण: अपवर्तनांक जल 1.33, काँच 1.5, हीरा 2.42। प्रकाश किस माध्यम में सबसे धीमी गति से चलता है?<br><b>उत्तर:</b> हीरा।"
+          }
+        }
+      ],
+      "notes": [
+        "2 min. These are the formats Mission 8 asks Gemini to write."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": {
+        "en": "Why grounding matters: general AI vs your textbook",
+        "hi": "स्रोत-आधार क्यों ज़रूरी है: सामान्य AI बनाम आपकी पाठ्यपुस्तक"
+      },
+      "points": [
+        {
+          "en": "<b>A general chatbot</b> answers from everything it has read. Usually right, sometimes confidently wrong.",
+          "hi": "<b>सामान्य चैटबॉट</b> अपनी पढ़ी हर चीज़ से उत्तर देता है। अधिकतर सही, कभी-कभी आत्मविश्वास से गलत।"
+        },
+        {
+          "en": "<b>A grounded tool</b> such as NotebookLM answers only from the documents you give it, such as an NCERT chapter, and shows the exact line.",
+          "hi": "<b>स्रोत-आधारित टूल</b> जैसे NotebookLM केवल आपके दिए दस्तावेज़ों, जैसे NCERT अध्याय, से उत्तर देता है और सटीक पंक्ति दिखाता है।"
+        },
+        {
+          "en": "For parents, \"it comes from the NCERT book\" is the sentence that builds trust.",
+          "hi": "अभिभावकों के लिए \"यह NCERT पुस्तक से है\" वह वाक्य है जो भरोसा बनाता है।"
+        }
+      ],
+      "notes": [
+        "2 min. Sets up Mission 9. Contrast it with Mission 8, where Gemini drafts from general knowledge and then checks itself."
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "s2-quiz-verify",
+      "question": {
+        "en": "Gemini has drafted 10 board-pattern questions. What should happen before they go into a class test?",
+        "hi": "Gemini ने बोर्ड पैटर्न के 10 प्रश्न बनाए हैं। कक्षा परीक्षा में देने से पहले क्या होना चाहिए?"
+      },
+      "options": [
+        {
+          "en": "Nothing; AI questions are already correct",
+          "hi": "कुछ नहीं; AI के प्रश्न पहले से सही हैं"
+        },
+        {
+          "en": "A subject teacher checks them against NCERT and the CBSE sample paper",
+          "hi": "विषय शिक्षक उन्हें NCERT और CBSE सैंपल पेपर से जाँचें"
+        },
+        {
+          "en": "Ask Gemini once more if they are correct, then use them",
+          "hi": "Gemini से एक बार और पूछें कि क्या वे सही हैं, फिर उपयोग करें"
+        },
+        {
+          "en": "Let students find the mistakes during the test",
+          "hi": "छात्र परीक्षा के दौरान गलतियाँ ढूँढें"
+        }
+      ],
+      "answer": 1,
+      "explain": {
+        "en": "AI's self-check helps, but a subject teacher is the final check. Record it in the Question Bank's \"Verified\" column.",
+        "hi": "AI की स्व-जाँच मदद करती है, पर अंतिम जाँच विषय शिक्षक की है। इसे Question Bank के \"Verified\" कॉलम में दर्ज करें।"
+      },
+      "notes": [
+        "1 min."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": {
+        "en": "Your five missions (60 minutes)",
+        "hi": "आपके पाँच मिशन (60 मिनट)"
+      },
+      "points": [
+        {
+          "en": "6. Fit the CT & AI hours into your timetable – 10 min",
+          "hi": "6. CT और AI के घंटे अपनी समय-सारणी में फ़िट करें – 10 मिनट"
+        },
+        {
+          "en": "7. An unplugged CT lesson, no lab needed – 15 min",
+          "hi": "7. बिना कंप्यूटर का CT पाठ, लैब की ज़रूरत नहीं – 15 मिनट"
+        },
+        {
+          "en": "8. Board-pattern questions, then AI checks itself – 15 min",
+          "hi": "8. बोर्ड पैटर्न के प्रश्न, फिर AI स्वयं जाँचे – 15 मिनट"
+        },
+        {
+          "en": "9. Keep AI inside the textbook with NotebookLM – 10 min",
+          "hi": "9. NotebookLM से AI को पाठ्यपुस्तक के भीतर रखें – 10 मिनट"
+        },
+        {
+          "en": "10. A low-cost student AI project on a local problem – 10 min",
+          "hi": "10. स्थानीय समस्या पर कम खर्च का छात्र AI प्रोजेक्ट – 10 मिनट"
+        }
+      ],
+      "note": {
+        "en": "Use your Principal's Assistant Gem from Session 1. Press <b>Mark done</b> after each mission.",
+        "hi": "सत्र 1 का अपना Principal's Assistant Gem उपयोग करें। हर मिशन के बाद <b>पूरा हुआ</b> दबाएँ।"
+      },
+      "notes": [
+        "11:50. Start the clock. Mission 9 needs the NCERT PDF download: ask tables to start it during Mission 8 if the Wi-Fi is slow."
+      ]
     },
     {
       "type": "mission",
