@@ -1,74 +1,418 @@
 {
-  "_help": "Session content. Step types: title, concept, poll, quiz, reveal, mission, finale. Any text can be a plain string or {\"en\": \"...\", \"hi\": \"...\"}. DRAFT: structure only; final Session 1 content comes in the next stage.",
+  "_help": "Session 1 content. STAGE 1 DONE: missions s1m1–s1m5 final. Theory steps (title/poll/concept/quiz) and the finale are still drafts for Stage 3/4. Step types: title, concept, reveal, poll, quiz, mission, finale. Text: plain string or {\"en\":...,\"hi\":...}.",
   "id": 1,
-  "title": { "en": "Effective Leadership with AI", "hi": "AI के साथ प्रभावी नेतृत्व" },
+  "title": {
+    "en": "Effective Leadership with AI",
+    "hi": "AI के साथ प्रभावी नेतृत्व"
+  },
   "time": "9:30 – 11:00",
   "steps": [
     {
       "type": "title",
-      "title": { "en": "Effective Leadership with AI", "hi": "AI के साथ प्रभावी नेतृत्व" },
-      "subtitle": { "en": "20 minutes of ideas, 60 minutes of doing", "hi": "20 मिनट विचार, 60 मिनट अभ्यास" }
+      "title": {
+        "en": "Effective Leadership with AI",
+        "hi": "AI के साथ प्रभावी नेतृत्व"
+      },
+      "subtitle": {
+        "en": "20 minutes of ideas, 60 minutes of doing",
+        "hi": "20 मिनट विचार, 60 मिनट अभ्यास"
+      }
     },
     {
       "type": "poll",
       "id": "s1-poll-hours",
-      "question": { "en": "Last week, how many hours did you spend on paperwork?", "hi": "पिछले सप्ताह आपने कागज़ी काम पर कितने घंटे लगाए?" },
+      "question": {
+        "en": "Last week, how many hours did you spend on paperwork?",
+        "hi": "पिछले सप्ताह आपने कागज़ी काम पर कितने घंटे लगाए?"
+      },
       "options": [
-        { "en": "Less than 5", "hi": "5 से कम" },
-        { "en": "5 – 10", "hi": "5 – 10" },
-        { "en": "10 – 20", "hi": "10 – 20" },
-        { "en": "More than 20", "hi": "20 से अधिक" }
+        {
+          "en": "Less than 5",
+          "hi": "5 से कम"
+        },
+        {
+          "en": "5 – 10",
+          "hi": "5 – 10"
+        },
+        {
+          "en": "10 – 20",
+          "hi": "10 – 20"
+        },
+        {
+          "en": "More than 20",
+          "hi": "20 से अधिक"
+        }
       ]
     },
     {
       "type": "concept",
-      "title": { "en": "The prompt frame we use all day", "hi": "पूरे दिन उपयोग होने वाला प्रॉम्प्ट ढाँचा" },
+      "title": {
+        "en": "The prompt frame we use all day",
+        "hi": "पूरे दिन उपयोग होने वाला प्रॉम्प्ट ढाँचा"
+      },
       "points": [
-        { "en": "<b>R</b>ole – who Gemini should act as", "hi": "<b>R</b>ole – Gemini किसकी भूमिका निभाए" },
-        { "en": "<b>T</b>ask – what to produce", "hi": "<b>T</b>ask – क्या बनाना है" },
-        { "en": "<b>C</b>ontext – your school, the circular, constraints", "hi": "<b>C</b>ontext – आपका विद्यालय, परिपत्र, सीमाएँ" },
-        { "en": "<b>F</b>ormat – table, circular, word limit", "hi": "<b>F</b>ormat – तालिका, परिपत्र, शब्द सीमा" },
-        { "en": "<b>L</b>anguage – English, Hindi or both", "hi": "<b>L</b>anguage – अंग्रेज़ी, हिंदी या दोनों" },
-        { "en": "<b>C</b>heck – ask what you should verify", "hi": "<b>C</b>heck – पूछें कि क्या जाँचना है" }
+        {
+          "en": "<b>R</b>ole – who Gemini should act as",
+          "hi": "<b>R</b>ole – Gemini किसकी भूमिका निभाए"
+        },
+        {
+          "en": "<b>T</b>ask – what to produce",
+          "hi": "<b>T</b>ask – क्या बनाना है"
+        },
+        {
+          "en": "<b>C</b>ontext – your school, the circular, constraints",
+          "hi": "<b>C</b>ontext – आपका विद्यालय, परिपत्र, सीमाएँ"
+        },
+        {
+          "en": "<b>F</b>ormat – table, circular, word limit",
+          "hi": "<b>F</b>ormat – तालिका, परिपत्र, शब्द सीमा"
+        },
+        {
+          "en": "<b>L</b>anguage – English, Hindi or both",
+          "hi": "<b>L</b>anguage – अंग्रेज़ी, हिंदी या दोनों"
+        },
+        {
+          "en": "<b>C</b>heck – ask what you should verify",
+          "hi": "<b>C</b>heck – पूछें कि क्या जाँचना है"
+        }
       ]
     },
     {
       "type": "quiz",
       "id": "s1-quiz-data",
-      "question": { "en": "Which of these is safe to paste into Gemini?", "hi": "इनमें से क्या Gemini में डालना सुरक्षित है?" },
+      "question": {
+        "en": "Which of these is safe to paste into Gemini?",
+        "hi": "इनमें से क्या Gemini में डालना सुरक्षित है?"
+      },
       "options": [
-        { "en": "Student names with marks", "hi": "अंकों सहित छात्रों के नाम" },
-        { "en": "Teacher codes (T01, T02) with training hours", "hi": "प्रशिक्षण घंटों सहित शिक्षक कोड (T01, T02)" },
-        { "en": "APAAR IDs for the board registration list", "hi": "बोर्ड पंजीकरण सूची के APAAR ID" }
+        {
+          "en": "Student names with marks",
+          "hi": "अंकों सहित छात्रों के नाम"
+        },
+        {
+          "en": "Teacher codes (T01, T02) with training hours",
+          "hi": "प्रशिक्षण घंटों सहित शिक्षक कोड (T01, T02)"
+        },
+        {
+          "en": "APAAR IDs for the board registration list",
+          "hi": "बोर्ड पंजीकरण सूची के APAAR ID"
+        }
       ],
       "answer": 1,
-      "explain": { "en": "Anonymised codes only. Never paste names, marks, Aadhaar or APAAR data into public AI tools.", "hi": "केवल गुमनाम कोड। सार्वजनिक AI टूल में नाम, अंक, आधार या APAAR डेटा कभी न डालें।" }
+      "explain": {
+        "en": "Anonymised codes only. Never paste names, marks, Aadhaar or APAAR data into public AI tools.",
+        "hi": "केवल गुमनाम कोड। सार्वजनिक AI टूल में नाम, अंक, आधार या APAAR डेटा कभी न डालें।"
+      }
     },
     {
       "type": "mission",
-      "id": "m1",
+      "id": "s1m1",
       "number": 1,
       "minutes": 10,
       "tool": "Gemini",
-      "toolUrl": "https://gemini.google.com/app",
-      "title": { "en": "Build your Principal's Assistant (Gem)", "hi": "अपना प्रधानाचार्य सहायक (Gem) बनाएँ" },
-      "scenario": { "en": "Stop retyping your school's details into every chat.", "hi": "हर चैट में विद्यालय का विवरण दोबारा लिखना बंद करें।" },
+      "toolUrl": "https://gemini.google.com/gems/view",
+      "title": {
+        "en": "Build your Principal's Assistant (a Gem)",
+        "hi": "अपना प्रधानाचार्य सहायक (Gem) बनाएँ"
+      },
+      "scenario": {
+        "en": "Every time you open Gemini, you explain your school again. A Gem remembers it for you. You will use this Gem in every mission today.",
+        "hi": "हर बार Gemini खोलने पर आप अपने विद्यालय के बारे में फिर से बताते हैं। Gem यह आपके लिए याद रखता है। आज के हर मिशन में आप इसी Gem का उपयोग करेंगे।"
+      },
       "steps": [
-        { "en": "Open Gemini → Gems → New Gem.", "hi": "Gemini खोलें → Gems → New Gem।" },
-        { "en": "Copy the instructions below, fill the [brackets], save.", "hi": "नीचे दिए निर्देश कॉपी करें, [कोष्ठक] भरें, सेव करें।" }
+        {
+          "en": "Open <b>gemini.google.com</b> in Chrome (Gems are easiest to create in the browser, not the app). Sign in with your Google account.",
+          "hi": "Chrome में <b>gemini.google.com</b> खोलें (Gem ब्राउज़र में आसानी से बनता है, ऐप में नहीं)। अपने Google खाते से साइन इन करें।"
+        },
+        {
+          "en": "Menu → <b>Explore Gems</b> → <b>New Gem</b>. Name it <b>Principal's Assistant</b>.",
+          "hi": "मेनू → <b>Explore Gems</b> → <b>New Gem</b>। नाम रखें <b>Principal's Assistant</b>।"
+        },
+        {
+          "en": "Copy the instructions below into the <b>Instructions</b> box. Replace every [bracket] with your school's details.",
+          "hi": "नीचे दिए निर्देश <b>Instructions</b> बॉक्स में पेस्ट करें। हर [कोष्ठक] में अपने विद्यालय का विवरण भरें।"
+        },
+        {
+          "en": "Press <b>Save</b>, then start a chat with your Gem.",
+          "hi": "<b>Save</b> दबाएँ, फिर अपने Gem के साथ चैट शुरू करें।"
+        }
       ],
-      "prompt": "You are the assistant to the principal of [school], a CBSE school in [Barabanki/Bahraich], Classes [Nursery–XII]. Write in clear, respectful English and Hindi side by side unless told otherwise. Follow CBSE circular style. Never ask for or store student names, marks, Aadhaar or APAAR numbers. At the end of every answer, list facts I should verify.",
-      "expected": { "en": "A saved Gem you will reuse all day.", "hi": "एक सेव किया हुआ Gem जिसे आप पूरे दिन उपयोग करेंगे।" },
-      "check": { "en": "Ask it: \"Who are you?\" It should describe your school.", "hi": "उससे पूछें: \"आप कौन हैं?\" वह आपके विद्यालय का वर्णन करे।" }
+      "prompt": {
+        "en": "You are the personal assistant to the Principal of [School name], a CBSE-affiliated school in [Barabanki / Bahraich], Uttar Pradesh, with Classes [Nursery–XII] and about [number] students and [number] teachers.\n\nHow to work with me:\n- Write in clear, respectful, simple English. When I ask for Hindi, or when the reader is a parent, give English and Hindi side by side.\n- Follow CBSE conventions: circulars have a reference number, date, subject line, body and signature block.\n- Keep it practical for a budget-conscious school: no paid tools, no extra fees, nothing that needs every child to have a device.\n- Never ask me for, and never repeat, student names, marks, Aadhaar, APAAR IDs or phone numbers. If I paste any by mistake, remind me to remove them.\n- At the end of every answer, add a short section called \"Please verify\" listing any dates, numbers, rules or facts I should check before using it.",
+        "hi": "आप [विद्यालय का नाम] के प्रधानाचार्य के निजी सहायक हैं। यह उत्तर प्रदेश के [बाराबंकी / बहराइच] में CBSE से संबद्ध विद्यालय है, जिसमें कक्षा [नर्सरी–XII], लगभग [संख्या] छात्र और [संख्या] शिक्षक हैं।\n\nमेरे साथ कैसे काम करें:\n- स्पष्ट, सम्मानजनक और सरल भाषा में लिखें। जब मैं हिंदी माँगूँ, या पाठक अभिभावक हों, तो हिंदी और अंग्रेज़ी दोनों साथ-साथ दें।\n- CBSE के प्रारूप का पालन करें: परिपत्र में संदर्भ संख्या, दिनांक, विषय, मुख्य भाग और हस्ताक्षर हो।\n- कम बजट वाले विद्यालय के लिए व्यावहारिक रहें: कोई सशुल्क टूल नहीं, कोई अतिरिक्त शुल्क नहीं, ऐसा कुछ नहीं जिसके लिए हर बच्चे के पास उपकरण चाहिए।\n- मुझसे कभी छात्रों के नाम, अंक, आधार, APAAR ID या फ़ोन नंबर न माँगें और न दोहराएँ। यदि मैं गलती से ऐसा कुछ डाल दूँ, तो मुझे हटाने की याद दिलाएँ।\n- हर उत्तर के अंत में \"कृपया जाँचें\" नाम का छोटा भाग जोड़ें, जिसमें वे तिथियाँ, संख्याएँ, नियम या तथ्य हों जिन्हें उपयोग से पहले मुझे जाँचना चाहिए।"
+      },
+      "expected": {
+        "en": "A saved Gem called Principal's Assistant that already knows your school, your language preference and the data rules.",
+        "hi": "Principal's Assistant नाम का सेव किया हुआ Gem, जो आपके विद्यालय, भाषा की पसंद और डेटा नियमों को पहले से जानता है।"
+      },
+      "check": {
+        "en": "Type: \"Introduce yourself to me in Hindi in 3 lines.\" It should name your school and mention the data rule. If not, edit the Gem's instructions.",
+        "hi": "लिखें: \"हिंदी में 3 पंक्तियों में अपना परिचय दें।\" उसे आपके विद्यालय का नाम और डेटा नियम बताना चाहिए। यदि नहीं, तो Gem के निर्देश संपादित करें।"
+      },
+      "stretch": {
+        "en": "Add one more line to the Gem: \"Our school's strengths are [..]. Use them when I ask for parent or admission messages.\" You will need it in Session 3.",
+        "hi": "Gem में एक पंक्ति और जोड़ें: \"हमारे विद्यालय की विशेषताएँ हैं [..]। अभिभावक या प्रवेश संदेशों में इनका उपयोग करें।\" सत्र 3 में यह काम आएगा।"
+      },
+      "notes": [
+        "Gem creation is most reliable on the web; some phones' Gemini app only lets you use Gems. Tell them to open gemini.google.com in Chrome.",
+        "Gems on the free plan are for users 18+. Everyone in the room qualifies; mention it only if asked.",
+        "Common snag: they leave the [brackets] unfilled. Walk the room and check two or three phones in the first 3 minutes."
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "s1m2",
+      "number": 2,
+      "minutes": 10,
+      "tool": "Gemini",
+      "toolUrl": "https://gemini.google.com/app",
+      "title": {
+        "en": "From a handwritten note to a bilingual circular",
+        "hi": "हाथ से लिखे नोट से द्विभाषी परिपत्र"
+      },
+      "scenario": {
+        "en": "You jot a reminder on paper in a meeting. Turning it into a proper circular for parents usually takes 30 minutes and two drafts. Let Gemini read your photo and draft it.",
+        "hi": "बैठक में आप कागज़ पर एक नोट लिखते हैं। इसे अभिभावकों के लिए सही परिपत्र बनाने में आमतौर पर 30 मिनट और दो ड्राफ़्ट लगते हैं। Gemini आपकी फ़ोटो पढ़कर ड्राफ़्ट बनाएगा।"
+      },
+      "steps": [
+        {
+          "en": "On any paper, <b>write the note below by hand</b> (Hindi, English or mixed, just as you normally would).",
+          "hi": "किसी भी कागज़ पर <b>नीचे दिया नोट हाथ से लिखें</b> (हिंदी, अंग्रेज़ी या मिलाजुला, जैसे आप सामान्यतः लिखते हैं)।"
+        },
+        {
+          "en": "Open your <b>Principal's Assistant</b> Gem. Tap <b>+</b> → <b>Camera</b> and photograph the note.",
+          "hi": "अपना <b>Principal's Assistant</b> Gem खोलें। <b>+</b> → <b>Camera</b> दबाएँ और नोट की फ़ोटो लें।"
+        },
+        {
+          "en": "Paste the prompt below with the photo and send.",
+          "hi": "फ़ोटो के साथ नीचे दिया प्रॉम्प्ट पेस्ट करें और भेजें।"
+        },
+        {
+          "en": "Ask for one improvement, e.g. \"Make the Hindi simpler\" or \"Add a tear-off acknowledgement slip\".",
+          "hi": "एक सुधार माँगें, जैसे \"हिंदी और सरल करें\" या \"नीचे पावती पर्ची जोड़ें\"।"
+        }
+      ],
+      "sample": {
+        "label": {
+          "en": "Note to write by hand",
+          "hi": "हाथ से लिखने वाला नोट"
+        },
+        "text": {
+          "en": "PTM – Sat [date], 10 am–12 noon\nClasses III–VIII, parents must come\nShow parents new CT & AI (computational thinking) – CBSE new course\nNo extra fee, no phone/laptop needed at home\nClass teachers to share timetable",
+          "hi": "PTM – शनिवार [तिथि], सुबह 10–12 बजे\nकक्षा III–VIII, अभिभावक अवश्य आएँ\nअभिभावकों को नया CT और AI (कम्प्यूटेशनल थिंकिंग) दिखाना – CBSE का नया कोर्स\nकोई अतिरिक्त शुल्क नहीं, घर पर फ़ोन/लैपटॉप ज़रूरी नहीं\nकक्षा अध्यापक समय-सारणी साझा करें"
+        }
+      },
+      "prompt": {
+        "en": "Read my handwritten note in the photo. Turn it into a formal circular to parents in CBSE school format: reference number placeholder, date, subject line, body, and signature block for the Principal. Give the full circular in English, then the full circular in simple Hindi. Keep each version under 180 words. Warm and respectful tone. Do not add any facts that are not in my note; put [brackets] wherever a detail is missing.",
+        "hi": "फ़ोटो में मेरा हाथ से लिखा नोट पढ़ें। इसे CBSE विद्यालय प्रारूप में अभिभावकों के लिए औपचारिक परिपत्र बनाएँ: संदर्भ संख्या का स्थान, दिनांक, विषय, मुख्य भाग और प्रधानाचार्य के हस्ताक्षर। पूरा परिपत्र पहले अंग्रेज़ी में, फिर सरल हिंदी में दें। हर संस्करण 180 शब्दों से कम हो। स्वर आत्मीय और सम्मानजनक हो। मेरे नोट के बाहर कोई तथ्य न जोड़ें; जहाँ कोई जानकारी नहीं है वहाँ [कोष्ठक] लगाएँ।"
+      },
+      "expected": {
+        "en": "A ready circular in English and Hindi, with [brackets] where you still need to fill a date or reference number.",
+        "hi": "अंग्रेज़ी और हिंदी में तैयार परिपत्र, जिसमें जहाँ तिथि या संदर्भ संख्या भरनी है वहाँ [कोष्ठक] होंगे।"
+      },
+      "check": {
+        "en": "Did it read your handwriting correctly? Is the date and day right? Did it promise anything you did not write (a fee, a holiday, a time change)? Fill every [bracket] before sending.",
+        "hi": "क्या उसने आपकी लिखावट सही पढ़ी? क्या तिथि और दिन सही है? क्या उसने कुछ ऐसा वादा किया जो आपने नहीं लिखा (शुल्क, छुट्टी, समय परिवर्तन)? भेजने से पहले हर [कोष्ठक] भरें।"
+      },
+      "stretch": {
+        "en": "Ask: \"Now write a 40-word WhatsApp version of this circular for the class parents' group, in Hindi.\"",
+        "hi": "पूछें: \"अब इस परिपत्र का कक्षा अभिभावक समूह के लिए 40 शब्दों का हिंदी व्हाट्सऐप संदेश लिखें।\""
+      },
+      "notes": [
+        "This is the 'wow' mission: handwriting recognition in Hindi lands well. Show one participant's result on the projector if they agree.",
+        "If camera upload fails on weak network, they can type the note instead; the prompt still works.",
+        "Point out the 'Please verify' section the Gem adds: that is the habit we want."
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "s1m3",
+      "number": 3,
+      "minutes": 15,
+      "tool": "Gemini",
+      "toolUrl": "https://gemini.google.com/app",
+      "title": {
+        "en": "Your teachers' 50-hour CPD tracker",
+        "hi": "आपके शिक्षकों का 50-घंटे CPD ट्रैकर"
+      },
+      "scenario": {
+        "en": "CBSE expects every teacher to complete at least 50 hours of training a year: 25 through CBSE or government institutes and 25 school-based. You must check who is behind and how to close the gap without spending money.",
+        "hi": "CBSE के अनुसार हर शिक्षक को वर्ष में कम से कम 50 घंटे प्रशिक्षण पूरा करना है: 25 घंटे CBSE या सरकारी संस्थानों से और 25 घंटे विद्यालय-स्तर पर। आपको देखना है कि कौन पीछे है और बिना खर्च के कमी कैसे पूरी करें।"
+      },
+      "steps": [
+        {
+          "en": "Copy the sample training log below (teachers are codes T01–T12, never names).",
+          "hi": "नीचे दिया नमूना प्रशिक्षण रिकॉर्ड कॉपी करें (शिक्षक केवल कोड T01–T12 में हैं, नाम कभी नहीं)।"
+        },
+        {
+          "en": "In your Gem, paste the prompt, then paste the data below it, and send.",
+          "hi": "अपने Gem में प्रॉम्प्ट पेस्ट करें, उसके नीचे डेटा पेस्ट करें, और भेजें।"
+        },
+        {
+          "en": "Copy Gemini's table into a new Google Sheet (<b>sheets.new</b>) to keep it.",
+          "hi": "Gemini की तालिका को नई Google Sheet (<b>sheets.new</b>) में कॉपी करके रखें।"
+        }
+      ],
+      "sample": {
+        "label": {
+          "en": "Sample training log (anonymised)",
+          "hi": "नमूना प्रशिक्षण रिकॉर्ड (गुमनाम)"
+        },
+        "text": "Teacher\tSubject\tCBSE/Govt hrs\tSchool hrs\nT01\tMaths\t24\t20\nT02\tScience\t12\t18\nT03\tEnglish\t30\t25\nT04\tHindi\t6\t10\nT05\tSoc. Sci.\t18\t22\nT06\tComputer\t25\t30\nT07\tClass III\t9\t12\nT08\tClass IV\t15\t15\nT09\tClass V\t3\t8\nT10\tSanskrit\t20\t12\nT11\tPhys. Ed.\t0\t14\nT12\tArt\t6\t6"
+      },
+      "prompt": {
+        "en": "Below is my school's teacher training log for this year (teacher codes only). CBSE requires at least 50 hours of CPD per teacher per year: 25 hours through CBSE or government training institutes and 25 hours school-based.\n\n1. Make a table with: Teacher, Subject, CBSE/Govt hours, School-based hours, Total, Hours still needed, Status (On track / Behind / Critical, where Critical = less than 25 total).\n2. Sort it so the teachers furthest behind are at the top.\n3. For each teacher who is behind, suggest free ways to close the gap this year: CBSE 3030 Eklavya online episodes (3 CPD hours each, live in Hindi), a Sahodaya CT & AI District Level Deliberation (6 hours, one day offline), and in-house peer sessions.\n4. Write a 100-word summary note for the School Management Committee.\nShow the table in a format I can paste into Google Sheets.",
+        "hi": "नीचे इस वर्ष का मेरे विद्यालय का शिक्षक प्रशिक्षण रिकॉर्ड है (केवल शिक्षक कोड)। CBSE के अनुसार हर शिक्षक को वर्ष में कम से कम 50 घंटे CPD चाहिए: 25 घंटे CBSE या सरकारी प्रशिक्षण संस्थानों से और 25 घंटे विद्यालय-स्तर पर।\n\n1. एक तालिका बनाएँ: शिक्षक, विषय, CBSE/सरकारी घंटे, विद्यालय-स्तरीय घंटे, कुल, शेष आवश्यक घंटे, स्थिति (सही राह पर / पीछे / गंभीर, जहाँ गंभीर = कुल 25 से कम)।\n2. सबसे पीछे वाले शिक्षक ऊपर रहें।\n3. पीछे चल रहे हर शिक्षक के लिए इस वर्ष कमी पूरी करने के मुफ़्त तरीके सुझाएँ: CBSE 3030 एकलव्य ऑनलाइन एपिसोड (हर एपिसोड 3 CPD घंटे, हिंदी में लाइव), सहोदय CT और AI ज़िला स्तरीय विचार-विमर्श कार्यशाला (6 घंटे, एक दिन ऑफ़लाइन), और विद्यालय में सहकर्मी सत्र।\n4. विद्यालय प्रबंधन समिति के लिए 100 शब्दों का सारांश नोट लिखें।\nतालिका ऐसे प्रारूप में दें जिसे मैं Google Sheets में पेस्ट कर सकूँ।"
+      },
+      "expected": {
+        "en": "A sorted tracker table, a catch-up plan per teacher, and a short note for your management committee.",
+        "hi": "क्रमबद्ध ट्रैकर तालिका, हर शिक्षक के लिए कमी पूरी करने की योजना, और प्रबंधन समिति के लिए छोटा नोट।"
+      },
+      "check": {
+        "en": "AI can make arithmetic slips. Check two totals yourself (e.g. T09: 3 + 8 = 11, needs 39 more). In your Sheet, use =SUM() to confirm every total.",
+        "hi": "AI से जोड़ में गलती हो सकती है। दो कुल स्वयं जाँचें (जैसे T09: 3 + 8 = 11, 39 और चाहिए)। अपनी Sheet में =SUM() से हर कुल की पुष्टि करें।"
+      },
+      "stretch": {
+        "en": "Ask: \"Give me the Google Sheets formulas to calculate Total and Hours still needed, and a conditional-formatting rule to colour anyone below 50 hours red.\" Try them in your Sheet.",
+        "hi": "पूछें: \"कुल और शेष घंटे निकालने के Google Sheets फ़ॉर्मूले दें, और 50 घंटे से कम वालों को लाल रंग में दिखाने का कंडीशनल फ़ॉर्मैटिंग नियम बताएँ।\" इन्हें अपनी Sheet में आज़माएँ।"
+      },
+      "notes": [
+        "Expected statuses: Critical (<25 total) T04 (16), T07 (21), T09 (11), T11 (14), T12 (12); Behind (25–49) T01 (44), T02 (30), T05 (40), T08 (30), T10 (32); On track T03 (55), T06 (55). Use this to spot arithmetic errors in their output.",
+        "Teaching point: T03 and T06 meet 50, but also check the 25 CBSE/Govt part: T01 has 24, just short.",
+        "This table becomes the data for the Session 1 Pro finale (Gemini in Sheets + Claude dashboard)."
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "s1m4",
+      "number": 4,
+      "minutes": 15,
+      "tool": "Gemini",
+      "toolUrl": "https://gemini.google.com/app",
+      "title": {
+        "en": "Classroom observation: fair rubric and kind feedback",
+        "hi": "कक्षा अवलोकन: निष्पक्ष रूब्रिक और सहायक फीडबैक"
+      },
+      "scenario": {
+        "en": "You observed a Class 5 Maths lesson. You know what went well and what did not, but writing specific, encouraging feedback, in Hindi, takes time. Gemini drafts; you decide.",
+        "hi": "आपने कक्षा 5 के गणित पाठ का अवलोकन किया। आप जानते हैं क्या अच्छा रहा और क्या नहीं, पर स्पष्ट और प्रोत्साहक फीडबैक हिंदी में लिखने में समय लगता है। Gemini ड्राफ़्ट बनाता है; निर्णय आपका।"
+      },
+      "steps": [
+        {
+          "en": "Copy the sample observation notes below.",
+          "hi": "नीचे दिए नमूना अवलोकन नोट्स कॉपी करें।"
+        },
+        {
+          "en": "In your Gem, paste the prompt and the notes, and send.",
+          "hi": "अपने Gem में प्रॉम्प्ट और नोट्स पेस्ट करें और भेजें।"
+        },
+        {
+          "en": "Edit one sentence of the feedback so it sounds like you.",
+          "hi": "फीडबैक का एक वाक्य ऐसा बदलें कि वह आपकी आवाज़ लगे।"
+        }
+      ],
+      "sample": {
+        "label": {
+          "en": "Sample observation notes",
+          "hi": "नमूना अवलोकन नोट्स"
+        },
+        "text": {
+          "en": "Class 5-B Maths, topic 'Patterns', 35 minutes, 38 students. Teacher code T07.\n+ Started with a clapping pattern; children were excited.\n+ Used bangles and matchsticks as materials.\n- Teacher talked for most of the period; only 3 students asked questions.\n- Back benches were not involved.\n- No check for understanding before giving homework.\n- Did not link patterns to computational thinking (pattern as a repeating step), as in the CBSE CT handbook for Class 5.",
+          "hi": "कक्षा 5-B गणित, विषय 'पैटर्न', 35 मिनट, 38 छात्र। शिक्षक कोड T07।\n+ ताली के पैटर्न से शुरुआत; बच्चे उत्साहित थे।\n+ चूड़ियों और माचिस की तीलियों का उपयोग किया।\n- अधिकांश समय शिक्षक ही बोलते रहे; केवल 3 छात्रों ने प्रश्न पूछे।\n- पीछे बैठे बच्चे शामिल नहीं हुए।\n- गृहकार्य देने से पहले समझ की जाँच नहीं हुई।\n- पैटर्न को कम्प्यूटेशनल थिंकिंग (दोहराए जाने वाले चरण) से नहीं जोड़ा, जैसा कक्षा 5 की CBSE CT पुस्तिका में है।"
+        }
+      },
+      "prompt": {
+        "en": "I observed the lesson described below.\n1. Create a classroom observation rubric with 5 criteria (planning and materials, student engagement, questioning and checking understanding, inclusion of all learners, linking to computational thinking) and 4 levels (Beginning, Developing, Proficient, Exemplary), with one line describing each level. Show it as a table.\n2. Rate this lesson on the rubric, one line of evidence per criterion, using only my notes.\n3. Write a 120-word feedback note to the teacher in simple, respectful Hindi: one genuine appreciation, two specific improvements with a practical classroom idea for each, and one support I will provide.\nDo not invent anything that is not in my notes.",
+        "hi": "मैंने नीचे वर्णित पाठ का अवलोकन किया।\n1. 5 मानदंडों (योजना और सामग्री, छात्र सहभागिता, प्रश्न पूछना और समझ की जाँच, सभी विद्यार्थियों का समावेश, कम्प्यूटेशनल थिंकिंग से जुड़ाव) और 4 स्तरों (प्रारंभिक, विकासशील, दक्ष, उत्कृष्ट) वाला कक्षा अवलोकन रूब्रिक बनाएँ, हर स्तर का एक पंक्ति में वर्णन हो। तालिका में दिखाएँ।\n2. केवल मेरे नोट्स के आधार पर इस पाठ को रूब्रिक पर आँकें, हर मानदंड के लिए एक पंक्ति का प्रमाण दें।\n3. शिक्षक के लिए सरल, सम्मानजनक हिंदी में 120 शब्दों का फीडबैक नोट लिखें: एक सच्ची प्रशंसा, दो विशिष्ट सुधार और हर सुधार के लिए कक्षा का एक व्यावहारिक सुझाव, और एक सहायता जो मैं दूँगा/दूँगी।\nमेरे नोट्स के बाहर कुछ भी न जोड़ें।"
+      },
+      "expected": {
+        "en": "A reusable 5×4 observation rubric, an evidence-based rating, and a kind, specific feedback note in Hindi.",
+        "hi": "बार-बार उपयोग होने वाला 5×4 अवलोकन रूब्रिक, प्रमाण-आधारित आकलन, और हिंदी में सहायक व विशिष्ट फीडबैक नोट।"
+      },
+      "check": {
+        "en": "Is every rating backed by something you actually saw? Would you be comfortable saying this note to the teacher's face? The judgement and signature are yours, not the AI's.",
+        "hi": "क्या हर आकलन किसी ऐसी बात पर आधारित है जो आपने सच में देखी? क्या आप यह नोट शिक्षक से आमने-सामने कह सकेंगे? निर्णय और हस्ताक्षर आपके हैं, AI के नहीं।"
+      },
+      "stretch": {
+        "en": "Ask: \"Turn this rubric into a one-page observation form I can print, with tick boxes and space for notes.\"",
+        "hi": "पूछें: \"इस रूब्रिक को एक पृष्ठ के छपने योग्य अवलोकन फ़ॉर्म में बदलें, जिसमें टिक बॉक्स और नोट्स की जगह हो।\""
+      },
+      "notes": [
+        "Stress fairness: AI drafts, the principal judges. Appraisal decisions must never be made by AI.",
+        "Link to CPD: the improvement areas can become the teacher's school-based CPD topics (ties back to Mission 3)."
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "s1m5",
+      "number": 5,
+      "minutes": 10,
+      "tool": "Gemini Canvas",
+      "toolUrl": "https://gemini.google.com/app",
+      "title": {
+        "en": "Your school's AI policy, version 1",
+        "hi": "आपके विद्यालय की AI नीति, संस्करण 1"
+      },
+      "scenario": {
+        "en": "Teachers and students are already using AI, and the new data-protection rules (DPDP) are coming into force. A one-page policy protects your school, your staff and your students. Draft it now; finalise it with your management.",
+        "hi": "शिक्षक और छात्र पहले से AI का उपयोग कर रहे हैं, और नए डेटा संरक्षण नियम (DPDP) लागू हो रहे हैं। एक पृष्ठ की नीति आपके विद्यालय, स्टाफ़ और छात्रों की रक्षा करती है। अभी ड्राफ़्ट बनाएँ; प्रबंधन के साथ अंतिम रूप दें।"
+      },
+      "steps": [
+        {
+          "en": "In your Gem, open <b>Tools</b> → <b>Canvas</b> (it shows the document beside the chat).",
+          "hi": "अपने Gem में <b>Tools</b> → <b>Canvas</b> खोलें (यह चैट के साथ दस्तावेज़ दिखाता है)।"
+        },
+        {
+          "en": "Paste the prompt and send.",
+          "hi": "प्रॉम्प्ट पेस्ट करें और भेजें।"
+        },
+        {
+          "en": "Select one paragraph in Canvas and ask Gemini to change it to fit your school. Then export or copy it to Google Docs.",
+          "hi": "Canvas में एक अनुच्छेद चुनें और Gemini से उसे अपने विद्यालय के अनुसार बदलवाएँ। फिर Google Docs में निर्यात या कॉपी करें।"
+        }
+      ],
+      "prompt": {
+        "en": "Draft a one-page \"AI Acceptable Use and Data Privacy Policy\" for my CBSE school, version 1. Sections:\n1. Purpose (why we use AI: to save teacher time and improve learning, never to replace teachers).\n2. Approved tools (free tools such as Gemini, NotebookLM, Google Sheets; new tools need the Principal's approval).\n3. Who may use them: teachers for planning and admin; in Classes III–V only the teacher operates AI tools; older students only under teacher guidance and each tool's age rules.\n4. Data rules: never enter student names, marks, Aadhaar, APAAR IDs, photos or phone numbers into public AI tools; use codes; collect only what is needed, in line with India's Digital Personal Data Protection Act 2023.\n5. Academic honesty: students must say when they used AI; AI-written work is not accepted as their own.\n6. Screen time: follow CBSE PRAGYATA guidance by age.\n7. Parents: how we inform them.\n8. Review: every 6 months by the Principal and one teacher representative.\nUse simple language, short numbered points, and leave [brackets] for the school name and dates.",
+        "hi": "मेरे CBSE विद्यालय के लिए एक पृष्ठ की \"AI स्वीकार्य उपयोग और डेटा गोपनीयता नीति\", संस्करण 1, का ड्राफ़्ट बनाएँ। भाग:\n1. उद्देश्य (हम AI का उपयोग क्यों करते हैं: शिक्षकों का समय बचाने और सीखने को बेहतर बनाने के लिए, शिक्षकों की जगह लेने के लिए कभी नहीं)।\n2. स्वीकृत टूल (Gemini, NotebookLM, Google Sheets जैसे मुफ़्त टूल; किसी नए टूल के लिए प्रधानाचार्य की अनुमति)।\n3. कौन उपयोग कर सकता है: योजना और प्रशासन के लिए शिक्षक; कक्षा III–V में केवल शिक्षक AI टूल चलाएँगे; बड़े छात्र केवल शिक्षक के मार्गदर्शन में और हर टूल के आयु नियमों के अनुसार।\n4. डेटा नियम: छात्रों के नाम, अंक, आधार, APAAR ID, फ़ोटो या फ़ोन नंबर कभी सार्वजनिक AI टूल में न डालें; कोड का उपयोग करें; भारत के डिजिटल व्यक्तिगत डेटा संरक्षण अधिनियम 2023 के अनुरूप केवल आवश्यक जानकारी लें।\n5. शैक्षणिक ईमानदारी: छात्र बताएँ कि उन्होंने AI का उपयोग कब किया; AI से लिखा काम उनका अपना काम नहीं माना जाएगा।\n6. स्क्रीन समय: आयु के अनुसार CBSE PRAGYATA दिशानिर्देशों का पालन।\n7. अभिभावक: हम उन्हें कैसे सूचित करेंगे।\n8. समीक्षा: हर 6 महीने में प्रधानाचार्य और एक शिक्षक प्रतिनिधि द्वारा।\nसरल भाषा, छोटे क्रमांकित बिंदु रखें, और विद्यालय के नाम व तिथियों के लिए [कोष्ठक] छोड़ें।"
+      },
+      "expected": {
+        "en": "A one-page AI policy draft you can edit, take to your management committee, and adopt this term.",
+        "hi": "एक पृष्ठ की AI नीति का ड्राफ़्ट, जिसे आप संपादित करके प्रबंधन समिति के सामने रख सकते हैं और इसी सत्र में लागू कर सकते हैं।"
+      },
+      "check": {
+        "en": "This is a draft, not legal advice. Check the data section against your school's own practice, fill the [brackets], and get your management's approval before you circulate it.",
+        "hi": "यह ड्राफ़्ट है, कानूनी सलाह नहीं। डेटा वाले भाग को अपने विद्यालय की वास्तविक प्रक्रिया से मिलाएँ, [कोष्ठक] भरें, और प्रसारित करने से पहले प्रबंधन की स्वीकृति लें।"
+      },
+      "stretch": {
+        "en": "Use Gemini Live (the voice button): say in Hindi, \"Explain this policy to my teachers in 5 simple points for tomorrow's assembly.\" Listen, then ask for it in writing.",
+        "hi": "Gemini Live (आवाज़ वाला बटन) का उपयोग करें: हिंदी में कहें, \"कल की सभा के लिए यह नीति मेरे शिक्षकों को 5 सरल बिंदुओं में समझाएँ।\" सुनें, फिर लिखित रूप में माँगें।"
+      },
+      "notes": [
+        "Canvas is in the Tools menu of the web and app; if it is missing on a phone, the plain chat works fine.",
+        "Remind: the policy template will also be on the Resources page after the workshop.",
+        "Do not let anyone leave thinking this is legally vetted. It is a starting draft."
+      ]
     },
     {
       "type": "finale",
-      "title": { "en": "What Pro can do next", "hi": "Pro आगे क्या कर सकता है" },
+      "title": {
+        "en": "What Pro can do next",
+        "hi": "Pro आगे क्या कर सकता है"
+      },
       "points": [
-        { "en": "Ask your CPD sheet questions in plain language (Gemini Pro in Sheets).", "hi": "अपनी CPD शीट से सामान्य भाषा में प्रश्न पूछें (Sheets में Gemini Pro)।" },
-        { "en": "Turn the same sheet into a live dashboard (Claude).", "hi": "उसी शीट को लाइव डैशबोर्ड में बदलें (Claude)।" }
+        {
+          "en": "Ask your CPD sheet questions in plain language (Gemini Pro in Sheets).",
+          "hi": "अपनी CPD शीट से सामान्य भाषा में प्रश्न पूछें (Sheets में Gemini Pro)।"
+        },
+        {
+          "en": "Turn the same sheet into a live dashboard (Claude).",
+          "hi": "उसी शीट को लाइव डैशबोर्ड में बदलें (Claude)।"
+        }
       ],
-      "note": { "en": "Everything you did today is free. This is where it grows.", "hi": "आज आपने जो किया वह सब मुफ़्त है। यहाँ से यह आगे बढ़ता है।" }
+      "note": {
+        "en": "Everything you did today is free. This is where it grows.",
+        "hi": "आज आपने जो किया वह सब मुफ़्त है। यहाँ से यह आगे बढ़ता है।"
+      }
     }
   ]
 }

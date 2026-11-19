@@ -36,6 +36,8 @@
     prev: { en: 'Back', hi: 'पीछे' },
     copy: { en: 'Copy prompt', hi: 'प्रॉम्प्ट कॉपी करें' },
     copied: { en: 'Copied ✓', hi: 'कॉपी हुआ ✓' },
+    copySample: { en: 'Copy sample data', hi: 'नमूना डेटा कॉपी करें' },
+    stretch: { en: 'Finished early? Try this', hi: 'जल्दी पूरा हुआ? यह आज़माएँ' },
     open: { en: 'Open', hi: 'खोलें' },
     done: { en: 'Mark done', hi: 'पूरा हुआ' },
     isDone: { en: 'Done ✓', hi: 'पूरा ✓' },

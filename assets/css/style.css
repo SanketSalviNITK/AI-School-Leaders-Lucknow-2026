@@ -124,3 +124,17 @@ body.presenter .nav { background: #0f1b24; border-color: #24414d; }
 
 /* keep content clear of the sticky step navigation */
 body:has(.nav) main { padding-bottom: 5rem; }
+
+/* facilitator notes (presenter only) */
+.pnotes { margin-top: 1.2rem; font-size: 1rem; color: #b9c6cc; }
+.pnotes summary { cursor: pointer; color: var(--brand-2); }
+.sample { background: #eef5f5; border-style: solid; border-color: #cfe0e0; }
+.sample-table { overflow-x: auto; border: 1px solid #cfe0e0; border-radius: 10px; background: #eef5f5; }
+.sample-table table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+.sample-table th, .sample-table td { padding: .35rem .6rem; border-bottom: 1px solid #d9e7e7; text-align: left; white-space: nowrap; }
+.sample-table th { background: #dcecec; }
+body.presenter .btn.ghost { color: #f3efe8; border-color: #6fa3ab; }
+body.presenter .sample-table { background: #1b3440; border-color: #2e5160; }
+body.presenter .sample-table th { background: #24414d; }
+body.presenter .sample-table th, body.presenter .sample-table td { border-color: #2e5160; }
+body.presenter .sample { background: #1b3440; color: #e9e4da; border-color: #2e5160; }

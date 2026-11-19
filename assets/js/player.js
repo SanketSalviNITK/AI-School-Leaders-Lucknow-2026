@@ -9,6 +9,10 @@
     const R = renderers[step.type] || renderers.concept;
     const card = el('article', { class: 'step step-' + step.type });
     R(step, card, ctx);
+    if (ctx.presenter && step.notes) {
+      card.append(el('details', { class: 'pnotes' }, [el('summary', { text: 'Facilitator notes' }),
+        el('ul', {}, [].concat(step.notes).map(x => el('li', { html: safeHTML(t(x)) })))]));
+    }
     return card;
   }
 
@@ -95,6 +99,21 @@
         if (s.toolUrl) row.append(el('a', { class: 'btn ghost', href: s.toolUrl, target: '_blank', rel: 'noopener', text: t(UI.open) + ' ' + (s.tool || '') + ' ↗' }));
         c.append(pre, row);
       }
+      if (s.sample) {
+        const raw = t(s.sample.text);
+        let sp;
+        if (raw.includes('\t')) {            // tab-separated data: show as a table, copy as TSV (pastes into Sheets)
+          const rows = raw.split('\n').map(r => r.split('\t'));
+          sp = el('div', { class: 'sample-table' }, [el('table', {}, [
+            el('thead', {}, [el('tr', {}, rows[0].map(h => el('th', { text: h })))]),
+            el('tbody', {}, rows.slice(1).map(r => el('tr', {}, r.map(x => el('td', { text: x })))))
+          ])]);
+        } else { sp = el('pre', { class: 'prompt sample' }); sp.textContent = raw; }
+        const sc = el('button', { class: 'btn ghost small', type: 'button', text: t(UI.copySample) });
+        sc.addEventListener('click', async () => { if (await A.copyText(raw)) { sc.textContent = t(UI.copied); setTimeout(() => sc.textContent = t(UI.copySample), 2000); } });
+        c.append(el('p', { class: 'eyebrow', style: 'margin-top:.8rem', text: t(s.sample.label) }), sp, el('div', { class: 'row' }, [sc]));
+      }
+      if (s.stretch) c.append(el('div', { class: 'box' }, [el('b', { text: t(UI.stretch) + ': ' }), el('span', { html: safeHTML(t(s.stretch)) })]));
       if (s.expected) c.append(el('div', { class: 'box' }, [el('b', { text: t(UI.expected) + ': ' }), el('span', { html: safeHTML(t(s.expected)) })]));
       if (s.check) c.append(el('div', { class: 'box warn' }, [el('b', { text: t(UI.check) + ': ' }), el('span', { html: safeHTML(t(s.check)) })]));
       if (s.minutes) c.append(timer(s.minutes));
