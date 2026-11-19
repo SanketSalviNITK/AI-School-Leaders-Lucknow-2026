@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robot Algorithm · CT classroom game</title>
+<meta name="robots" content="noindex">
+<style>
+  :root { --paper:#fbf8f3; --ink:#1c2430; --muted:#5b6573; --teal:#0f5c63; --saff:#e07a2e; --line:#e6e0d6; --ok:#2f7d4f; --bad:#b23b3b; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family: Arial, "Noto Sans", "Noto Sans Devanagari", sans-serif; }
+  header { background:var(--teal); color:#fff; padding:.7rem 1rem; display:flex; gap:1rem; align-items:center; flex-wrap:wrap; }
+  header h1 { font-size:1.2rem; margin:0; flex:1; }
+  header button { font:inherit; border:1px solid rgba(255,255,255,.7); background:transparent; color:#fff; border-radius:999px; padding:.3rem .8rem; cursor:pointer; }
+  main { max-width:1100px; margin:0 auto; padding:1rem; display:grid; grid-template-columns: minmax(280px, 520px) 1fr; gap:1.2rem; }
+  @media (max-width: 800px) { main { grid-template-columns: 1fr; } }
+  .card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:1rem; }
+  .board { display:grid; gap:4px; aspect-ratio:1; }
+  .cell { background:#f1ede5; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:clamp(1.4rem, 5vw, 2.6rem); position:relative; }
+  .cell.wall { background:#7a6f5d; }
+  .cell.trail { background:#d9ece9; }
+  .cell.goal { background:#fff1d6; }
+  .robot { transition: transform .25s; display:inline-block; }
+  h2 { font-size:1.05rem; margin:.2rem 0 .6rem; }
+  .level { color:var(--muted); font-size:.9rem; margin:0 0 .6rem; }
+  .pad { display:grid; grid-template-columns: repeat(4, 1fr); gap:.5rem; margin-bottom:.8rem; }
+  .pad button, .ctrl button { font:inherit; font-size:1.1rem; padding:.7rem .4rem; border-radius:10px; border:1.5px solid var(--line); background:#fff; cursor:pointer; }
+  .pad button:hover { border-color:var(--teal); }
+  .program { min-height:64px; display:flex; flex-wrap:wrap; gap:.35rem; padding:.6rem; border:1.5px dashed #cfc6b6; border-radius:10px; background:#faf7f1; margin-bottom:.8rem; }
+  .step { background:var(--teal); color:#fff; border-radius:8px; padding:.3rem .55rem; font-weight:700; }
+  .step.now { background:var(--saff); }
+  .ctrl { display:flex; gap:.5rem; flex-wrap:wrap; }
+  .ctrl .run { background:var(--saff); color:#fff; border-color:var(--saff); font-weight:700; }
+  .msg { min-height:2.4em; font-weight:700; margin:.8rem 0 0; }
+  .msg.ok { color:var(--ok); } .msg.bad { color:var(--bad); }
+  .discuss { margin-top:1rem; font-size:.95rem; color:var(--muted); }
+  .discuss li { margin:.3rem 0; }
+  footer { text-align:center; color:var(--muted); font-size:.8rem; padding:1rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="title">Robot Algorithm · help the robot reach the star</h1>
+  <button id="lang" type="button">हिंदी</button>
+</header>
+<main>
+  <section class="card">
+    <p class="level" id="levelText"></p>
+    <div class="board" id="board" role="grid" aria-label="Game board"></div>
+  </section>
+  <section class="card">
+    <h2 id="hProg">Build the algorithm</h2>
+    <div class="pad" id="pad"></div>
+    <div class="program" id="program" aria-live="polite"></div>
+    <div class="ctrl">
+      <button class="run" id="run" type="button">▶ Run</button>
+      <button id="undo" type="button">⟲ Undo</button>
+      <button id="clear" type="button">✕ Clear</button>
+      <button id="next" type="button">Next level ›</button>
+    </div>
+    <p class="msg" id="msg" role="status"></p>
+    <div class="discuss"><b id="hDisc">Talk about it</b><ul id="disc"></ul></div>
+  </section>
+</main>
+<footer id="foot">Computational thinking: sequencing, algorithms and debugging. Works offline on one projector; no student accounts.</footer>
+<script>
+(function () {
+  'use strict';
+  let lang = 'en';
+  const T = {
+    title: { en: 'Robot Algorithm · help the robot reach the star', hi: 'रोबोट एल्गोरिदम · रोबोट को तारे तक पहुँचाएँ' },
+    hProg: { en: 'Build the algorithm', hi: 'एल्गोरिदम बनाएँ' },
+    run: { en: '▶ Run', hi: '▶ चलाएँ' }, undo: { en: '⟲ Undo', hi: '⟲ वापस' }, clear: { en: '✕ Clear', hi: '✕ साफ़' }, next: { en: 'Next level ›', hi: 'अगला स्तर ›' },
+    level: { en: 'Level', hi: 'स्तर' },
+    win: { en: 'The robot reached the star! Can you do it in fewer steps?', hi: 'रोबोट तारे तक पहुँच गया! क्या कम चरणों में कर सकते हैं?' },
+    wall: { en: 'Bump! The robot hit a wall at step ', hi: 'टक्कर! रोबोट चरण पर दीवार से टकराया: ' },
+    short: { en: 'The robot stopped before the star. Add more steps.', hi: 'रोबोट तारे से पहले रुक गया। और चरण जोड़ें।' },
+    empty: { en: 'Add some steps first.', hi: 'पहले कुछ चरण जोड़ें।' },
+    hDisc: { en: 'Talk about it', hi: 'चर्चा करें' },
+    disc: { en: ['Where did your algorithm go wrong? That is debugging.', 'Is there a shorter algorithm?', 'Which steps repeat? Could we say "repeat 3 times"?'],
+            hi: ['आपका एल्गोरिदम कहाँ गलत हुआ? यही डिबगिंग है।', 'क्या कोई छोटा एल्गोरिदम है?', 'कौन-से चरण दोहराए गए? क्या हम "3 बार दोहराएँ" कह सकते हैं?'] },
+    foot: { en: 'Computational thinking: sequencing, algorithms and debugging. Works offline on one projector; no student accounts.', hi: 'कम्प्यूटेशनल थिंकिंग: क्रम, एल्गोरिदम और डिबगिंग। एक प्रोजेक्टर पर ऑफ़लाइन चलता है; छात्रों के खाते नहीं।' }
+  };
+  const t = k => T[k][lang];
+  // Levels: S start, G goal, # wall, . empty
+  const LEVELS = [
+    ['S...', '.##.', '...#', '#..G'],
+    ['S.#..', '..#.#', '#...#', '..#..', '#...G'],
+    ['S..#..', '.#.#.#', '.#...#', '.##.#.', '....#G', '.#....']
+  ];
+  const MOVES = { U: [-1, 0, '↑'], D: [1, 0, '↓'], L: [0, -1, '←'], R: [0, 1, '→'] };
+  let lv = 0, prog = [], running = false;
+
+  const $ = id => document.getElementById(id);
+  function grid() { return LEVELS[lv].map(r => r.split('')); }
+  function find(g, ch) { for (let r = 0; r < g.length; r++) for (let c = 0; c < g[r].length; c++) if (g[r][c] === ch) return [r, c]; }
+
+  function draw(pos, trail) {
+    const g = grid(), n = g.length, b = $('board');
+    b.style.gridTemplateColumns = `repeat(${n}, 1fr)`; b.innerHTML = '';
+    const goal = find(g, 'G');
+    for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) {
+      const d = document.createElement('div'); d.className = 'cell'; d.setAttribute('role', 'gridcell');
+      if (g[r][c] === '#') d.classList.add('wall');
+      if (trail && trail.has(r + ',' + c)) d.classList.add('trail');
+      if (r === goal[0] && c === goal[1]) { d.classList.add('goal'); d.textContent = '⭐'; }
+      if (pos[0] === r && pos[1] === c) { d.innerHTML = '<span class="robot">🤖</span>'; }
+      b.append(d);
+    }
+    $('levelText').textContent = `${t('level')} ${lv + 1} / ${LEVELS.length}`;
+  }
+  function drawProg(now) {
+    $('program').innerHTML = prog.map((m, i) => `<span class="step${i === now ? ' now' : ''}">${MOVES[m][2]}</span>`).join('');
+  }
+  function pad() {
+    $('pad').innerHTML = '';
+    ['U', 'D', 'L', 'R'].forEach(m => {
+      const b = document.createElement('button'); b.type = 'button'; b.textContent = MOVES[m][2];
+      b.setAttribute('aria-label', { U: 'up', D: 'down', L: 'left', R: 'right' }[m]);
+      b.onclick = () => { if (!running) { prog.push(m); drawProg(); msg(''); } };
+      $('pad').append(b);
+    });
+  }
+  function msg(s, cls) { const m = $('msg'); m.textContent = s; m.className = 'msg' + (cls ? ' ' + cls : ''); }
+  function reset() { const g = grid(); draw(find(g, 'S'), new Set()); drawProg(); msg(''); }
+
+  async function run() {
+    if (running) return;
+    if (!prog.length) { msg(t('empty'), 'bad'); return; }
+    running = true;
+    const g = grid(), n = g.length; let pos = find(g, 'S'); const trail = new Set([pos.join(',')]);
+    for (let i = 0; i < prog.length; i++) {
+      drawProg(i);
+      const [dr, dc] = MOVES[prog[i]], nr = pos[0] + dr, nc = pos[1] + dc;
+      if (nr < 0 || nc < 0 || nr >= n || nc >= n || g[nr][nc] === '#') { msg(t('wall') + (i + 1), 'bad'); running = false; return; }
+      pos = [nr, nc]; trail.add(pos.join(',')); draw(pos, trail);
+      await new Promise(r => setTimeout(r, 380));
+      if (g[nr][nc] === 'G') { msg(t('win'), 'ok'); running = false; return; }
+    }
+    msg(t('short'), 'bad'); running = false;
+  }
+
+  function paintText() {
+    ['title', 'hProg', 'run', 'undo', 'clear', 'next', 'hDisc', 'foot'].forEach(k => $(k).textContent = t(k));
+    $('disc').innerHTML = T.disc[lang].map(x => `<li>${x}</li>`).join('');
+    $('lang').textContent = lang === 'en' ? 'हिंदी' : 'English';
+    document.documentElement.lang = lang;
+    reset();
+  }
+  $('run').onclick = run;
+  $('undo').onclick = () => { if (!running) { prog.pop(); drawProg(); } };
+  $('clear').onclick = () => { if (!running) { prog = []; reset(); } };
+  $('next').onclick = () => { if (!running) { lv = (lv + 1) % LEVELS.length; prog = []; reset(); } };
+  $('lang').onclick = () => { lang = lang === 'en' ? 'hi' : 'en'; paintText(); };
+  document.addEventListener('keydown', e => {
+    const k = { ArrowUp: 'U', ArrowDown: 'D', ArrowLeft: 'L', ArrowRight: 'R' }[e.key];
+    if (k && !running) { e.preventDefault(); prog.push(k); drawProg(); }
+    if (e.key === 'Enter') run();
+    if (e.key === 'Backspace') { prog.pop(); drawProg(); }
+  });
+  pad(); paintText();
+})();
+</script>
+</body>
+</html>

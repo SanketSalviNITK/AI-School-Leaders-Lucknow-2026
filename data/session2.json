@@ -1,5 +1,5 @@
 {
-  "_help": "Session 2 content. Stage 1 missions (s2m1–s2m5), Stage 3 theory (~20 min) done. Step types: title, concept, reveal, poll, quiz, mission, finale. 'notes' show only in presenter view.",
+  "_help": "Session 2 content. Stage 1 missions (s2m1–s2m5), Stage 3 theory (~20 min) done. Stage 4 finale + backup demo/robot-algorithm.html done. Step types: title, concept, reveal, poll, quiz, mission, finale. 'notes' show only in presenter view.",
   "id": 2,
   "title": {
     "en": "Building Future-Ready Schools with AI Integration",
@@ -658,6 +658,52 @@
       "notes": [
         "If time allows, do the Teachable Machine stretch yourself on the projector: two classes, ~20 photos each with the laptop webcam, train, test. It takes about 3 minutes and makes 'training data' concrete.",
         "Link to Session 3: a student project with real photos (with consent) is the best branding evidence for an 'AI-ready' school."
+      ]
+    },
+    {
+      "type": "finale",
+      "title": {
+        "en": "Everything you did today is free. Here is where it grows.",
+        "hi": "आज आपने जो किया वह सब मुफ़्त है। यहाँ से यह आगे बढ़ता है।"
+      },
+      "lead": {
+        "en": "Watch the screen: classroom materials you could not make before.",
+        "hi": "स्क्रीन देखें: ऐसी कक्षा सामग्री जो पहले नहीं बन सकती थी।"
+      },
+      "points": [
+        {
+          "en": "<b>Claude</b>: turn the Mission 7 lesson into a playable classroom game for the projector, in about a minute, with no coding.",
+          "hi": "<b>Claude</b>: मिशन 7 के पाठ को लगभग एक मिनट में, बिना कोडिंग के, प्रोजेक्टर पर खेले जाने वाले कक्षा खेल में बदलें।"
+        },
+        {
+          "en": "<b>Google AI Pro</b>: load all the CBSE CT & AI handbooks into one NotebookLM notebook and ask questions across Classes 3–8, with more sources and higher limits.",
+          "hi": "<b>Google AI Pro</b>: CBSE की सभी CT और AI पुस्तिकाएँ एक NotebookLM नोटबुक में डालें और कक्षा 3–8 में प्रश्न पूछें, अधिक स्रोतों और ऊँची सीमाओं के साथ।"
+        },
+        {
+          "en": "Start free. Upgrade only when a teacher is using it every week.",
+          "hi": "मुफ़्त से शुरू करें। तभी अपग्रेड करें जब कोई शिक्षक इसे हर सप्ताह उपयोग कर रहा हो।"
+        }
+      ],
+      "note": {
+        "en": "No vendor sponsors this workshop. Prices and features change often; check before you buy.",
+        "hi": "इस कार्यशाला को किसी कंपनी का प्रायोजन नहीं है। कीमतें और सुविधाएँ अक्सर बदलती हैं; खरीदने से पहले जाँचें।"
+      },
+      "links": [
+        {
+          "label": {
+            "en": "Play the example game",
+            "hi": "उदाहरण खेल खेलें"
+          },
+          "url": "demo/robot-algorithm.html"
+        }
+      ],
+      "notes": [
+        "12:50–12:57. 7 minutes. Laptop on projector. Tabs ready: Claude (signed in), NotebookLM on the Pro account with the CBSE CT handbooks for Classes 3–8 already uploaded as sources, and demo/robot-algorithm.html as backup.",
+        "<b>Part 1 · Claude builds a classroom game (3 min).</b> Prompt: \"Build a simple, colourful classroom game for Class 4 to practise algorithms, to play on a projector with no student devices: a robot on a grid must reach a star; students choose arrow steps, press Run, and see where it goes wrong. Three levels, English and Hindi labels, big buttons.\" Play one level with a volunteer calling out the arrows.",
+        "<b>Part 2 · NotebookLM with all handbooks (3 min).</b> Ask: \"Which CT skills are introduced in Class 3 and built on in Class 5? Give one unplugged activity for each, with the handbook page.\" Tap a citation to show the exact page. Mention that the Pro plan raises the limits on sources and notebooks.",
+        "<b>Close (1 min).</b> \"Your teachers do not need a lab or a coder to make materials like this. Start free; upgrade only when it is used every week.\"",
+        "<b>If Wi-Fi fails:</b> click 'Play the example game' on this slide (works offline once loaded) and play Level 1 with the room. Keep a 60-second recording of the NotebookLM demo on your desktop.",
+        "Do not imply CBSE or any vendor endorses these tools."
       ]
     }
   ]

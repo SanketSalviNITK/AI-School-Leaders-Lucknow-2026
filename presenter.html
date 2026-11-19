@@ -11,7 +11,7 @@
 <div class="topbar">
   <span class="title" id="topTitle">Presenter</span>
   <select id="pick" aria-label="Session" style="width:auto;padding:.2rem .5rem"></select>
-  <a href="facilitator/session1.html" target="_blank" rel="noopener" style="color:#fff;font-size:.85rem">Run sheet ↗</a>
+  <a id="runsheet" href="facilitator/session1.html" target="_blank" rel="noopener" style="color:#fff;font-size:.85rem">Run sheet ↗</a>
   <span id="langSlot"></span>
 </div>
 <div class="livebar"><span id="live">Live data: not connected</span><span>← → keys to move · F for full screen</span></div>
@@ -39,6 +39,7 @@
 
   async function load(num) {
     n = num; s = await A.loadJSON('data/session' + n + '.json');
+    document.getElementById('runsheet').href = 'facilitator/session' + n + '.html';
     s.steps.forEach(st => { if (st.type === 'title') st.session = n; });
     i = A.store.get('ppos.s' + n, 0); show(); refresh();
   }
