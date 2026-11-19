@@ -61,6 +61,14 @@
         {
           "title": "Teachable Machine",
           "url": "https://teachablemachine.withgoogle.com"
+        },
+        {
+          "title": "WhatsApp Business",
+          "url": "https://business.whatsapp.com"
+        },
+        {
+          "title": "Google Business Profile",
+          "url": "https://business.google.com"
         }
       ]
     },
@@ -104,6 +112,35 @@
             "hi": "रोबोट एल्गोरिदम कक्षा खेल"
           },
           "url": "demo/robot-algorithm.html"
+        },
+        {
+          "title": {
+            "en": "Parent communication guide (print, English + Hindi)",
+            "hi": "अभिभावक संवाद मार्गदर्शिका (प्रिंट, अंग्रेज़ी + हिंदी)"
+          },
+          "url": "handouts/parent-communication-guide.html"
+        },
+        {
+          "title": {
+            "en": "Example open-day website",
+            "hi": "उदाहरण ओपन डे वेबसाइट"
+          },
+          "url": "demo/open-day-site.html"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Data protection",
+        "hi": "डेटा संरक्षण"
+      },
+      "items": [
+        {
+          "title": {
+            "en": "DPDP Act 2023 and DPDP Rules 2025 (MeitY)",
+            "hi": "DPDP अधिनियम 2023 और DPDP नियम 2025 (MeitY)"
+          },
+          "url": "https://www.meity.gov.in/"
         }
       ]
     }

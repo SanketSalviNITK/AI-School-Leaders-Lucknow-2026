@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open Day 2027-28 · Sample school website (workshop demo)</title>
+<meta name="robots" content="noindex">
+<style>
+  :root { --paper:#fbf8f3; --ink:#1c2430; --muted:#5b6573; --teal:#0f5c63; --teal2:#dcecec; --saff:#e07a2e; --line:#e6e0d6; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family: Arial, "Noto Sans", "Noto Sans Devanagari", sans-serif; font-size:18px; line-height:1.5; }
+  .demo { background:#1c2430; color:#fff; text-align:center; font-size:.8rem; padding:.35rem; }
+  header { background:var(--teal); color:#fff; padding:2.2rem 1.2rem 2.6rem; text-align:center; position:relative; }
+  header .lang { position:absolute; top:.8rem; right:.8rem; font:inherit; font-size:.85rem; border:1px solid rgba(255,255,255,.7); background:transparent; color:#fff; border-radius:999px; padding:.25rem .8rem; cursor:pointer; }
+  header .crest { width:64px; height:64px; border-radius:50%; background:#fff; color:var(--teal); display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:1.3rem; margin-bottom:.6rem; }
+  header h1 { margin:.2rem 0; font-size:clamp(1.6rem, 5vw, 2.4rem); }
+  header p { margin:.3rem auto 0; max-width:640px; opacity:.92; }
+  .date { display:inline-block; margin-top:1.1rem; background:var(--saff); color:#fff; border-radius:12px; padding:.6rem 1.1rem; font-weight:700; }
+  main { max-width:960px; margin:0 auto; padding:1.5rem 1.1rem 3rem; }
+  h2 { color:var(--teal); font-size:1.35rem; margin:2rem 0 .8rem; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:.9rem; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:1rem 1.1rem; }
+  .card .icon { font-size:1.6rem; }
+  .card h3 { margin:.3rem 0 .3rem; font-size:1.05rem; }
+  .card p { margin:0; color:var(--muted); font-size:.95rem; }
+  .ct { background:var(--teal2); border-radius:16px; padding:1.2rem 1.3rem; }
+  .ct ul { margin:.4rem 0 0; padding-left:1.2rem; }
+  .visit { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+  @media (max-width:700px) { .visit { grid-template-columns:1fr; } }
+  .visit dl { margin:0; } .visit dt { font-weight:700; margin-top:.5rem; } .visit dd { margin:0; color:var(--muted); }
+  .cta { display:flex; flex-wrap:wrap; gap:.7rem; margin-top:1rem; }
+  .cta a { text-decoration:none; font-weight:700; border-radius:12px; padding:.8rem 1.2rem; }
+  .call { background:var(--teal); color:#fff; } .wa { background:#2f7d4f; color:#fff; } .map { background:#fff; color:var(--teal); border:2px solid var(--teal); }
+  .faq details { background:#fff; border:1px solid var(--line); border-radius:12px; padding:.7rem 1rem; margin-bottom:.5rem; }
+  .faq summary { font-weight:700; cursor:pointer; }
+  .faq p { margin:.5rem 0 0; color:var(--muted); }
+  footer { text-align:center; color:var(--muted); font-size:.85rem; padding:1.5rem 1rem 2.5rem; border-top:1px solid var(--line); }
+</style>
+</head>
+<body>
+<div class="demo" data-en="Workshop demo: a fictional school. Built from the Mission 11 text in about a minute." data-hi="कार्यशाला डेमो: एक काल्पनिक विद्यालय। मिशन 11 के पाठ से लगभग एक मिनट में बना।"></div>
+<header>
+  <button class="lang" type="button" id="lang">हिंदी</button>
+  <div class="crest" aria-hidden="true">SV</div>
+  <h1 data-en="Saraswati Vidya Niketan" data-hi="सरस्वती विद्या निकेतन"></h1>
+  <p data-en="CBSE affiliated · Nursery to Class XII · Barabanki, Uttar Pradesh" data-hi="CBSE संबद्ध · नर्सरी से कक्षा XII · बाराबंकी, उत्तर प्रदेश"></p>
+  <p data-en="Admissions open for 2027-28. Come and see a normal school day." data-hi="2027-28 के लिए प्रवेश प्रारंभ। आइए, विद्यालय का एक सामान्य दिन देखिए।"></p>
+  <div class="date" data-en="Open Day · Sunday 17 January 2027 · 10 am to 1 pm" data-hi="ओपन डे · रविवार 17 जनवरी 2027 · सुबह 10 से दोपहर 1 बजे"></div>
+</header>
+<main>
+  <h2 data-en="Why parents choose us" data-hi="अभिभावक हमें क्यों चुनते हैं"></h2>
+  <div class="grid">
+    <div class="card"><div class="icon">👩‍🏫</div><h3 data-en="Teachers who keep learning" data-hi="सीखते रहने वाले शिक्षक"></h3><p data-en="Every teacher is completing 50 hours of training this year." data-hi="इस वर्ष हर शिक्षक 50 घंटे का प्रशिक्षण पूरा कर रहे हैं।"></p></div>
+    <div class="card"><div class="icon">🧑‍🤝‍🧑</div><h3 data-en="Classes of about 32" data-hi="लगभग 32 की कक्षाएँ"></h3><p data-en="Small enough for teachers to know every child." data-hi="इतनी छोटी कि शिक्षक हर बच्चे को जानें।"></p></div>
+    <div class="card"><div class="icon">🚌</div><h3 data-en="Safe transport" data-hi="सुरक्षित परिवहन"></h3><p data-en="GPS-tracked buses on 6 routes." data-hi="6 मार्गों पर GPS-युक्त बसें।"></p></div>
+    <div class="card"><div class="icon">💬</div><h3 data-en="You always know" data-hi="आपको हमेशा जानकारी"></h3><p data-en="A weekly WhatsApp update in Hindi and English." data-hi="हर सप्ताह हिंदी और अंग्रेज़ी में व्हाट्सऐप अपडेट।"></p></div>
+  </div>
+
+  <h2 data-en="Computational Thinking & AI, from Class III" data-hi="कम्प्यूटेशनल थिंकिंग और AI, कक्षा III से"></h2>
+  <div class="ct">
+    <p data-en="As per CBSE's 2026-27 curriculum, children learn to think step by step, spot patterns and solve problems, mostly with games, cards and paper." data-hi="CBSE के 2026-27 पाठ्यक्रम के अनुसार बच्चे क्रम से सोचना, पैटर्न पहचानना और समस्याएँ हल करना सीखते हैं, अधिकतर खेल, कार्ड और कागज़ से।"></p>
+    <ul>
+      <li data-en="Classes III–V: inside Maths and The World Around Us, no extra screen time" data-hi="कक्षा III–V: गणित और The World Around Us के भीतर, अतिरिक्त स्क्रीन समय नहीं"></li>
+      <li data-en="Classes VI–VIII: introductory AI and small projects on local problems" data-hi="कक्षा VI–VIII: प्रारंभिक AI और स्थानीय समस्याओं पर छोटे प्रोजेक्ट"></li>
+      <li data-en="No extra fee. Try the robot game with your child at the Open Day." data-hi="कोई अतिरिक्त शुल्क नहीं। ओपन डे पर अपने बच्चे के साथ रोबोट खेल आज़माएँ।"></li>
+    </ul>
+  </div>
+
+  <h2 data-en="Visit us" data-hi="हमसे मिलें"></h2>
+  <div class="visit">
+    <div class="card"><dl>
+      <dt data-en="When" data-hi="कब"></dt><dd data-en="Sunday 17 January 2027, 10 am to 1 pm" data-hi="रविवार 17 जनवरी 2027, सुबह 10 से दोपहर 1 बजे"></dd>
+      <dt data-en="What happens" data-hi="क्या होगा"></dt><dd data-en="Classroom visits, meet the teachers, CT & AI activity corner, transport and fee desk" data-hi="कक्षाओं का भ्रमण, शिक्षकों से मिलना, CT और AI गतिविधि कोना, परिवहन और फ़ीस डेस्क"></dd>
+      <dt data-en="Office hours" data-hi="कार्यालय समय"></dt><dd data-en="Monday to Saturday, 8 am to 2 pm" data-hi="सोमवार से शनिवार, सुबह 8 से दोपहर 2 बजे"></dd>
+    </dl></div>
+    <div class="card">
+      <p data-en="Call or message us any time in office hours. We reply in Hindi or English." data-hi="कार्यालय समय में कभी भी फ़ोन या संदेश करें। हम हिंदी या अंग्रेज़ी में उत्तर देते हैं।"></p>
+      <div class="cta">
+        <a class="call" href="#" onclick="return false" data-en="📞 Call the office" data-hi="📞 कार्यालय को फ़ोन करें"></a>
+        <a class="wa" href="#" onclick="return false" data-en="💬 WhatsApp us" data-hi="💬 व्हाट्सऐप करें"></a>
+        <a class="map" href="#" onclick="return false" data-en="📍 Directions" data-hi="📍 रास्ता देखें"></a>
+      </div>
+    </div>
+  </div>
+
+  <h2 data-en="Questions parents ask" data-hi="अभिभावकों के प्रश्न"></h2>
+  <div class="faq">
+    <details><summary data-en="Will AI mean more screen time?" data-hi="क्या AI से स्क्रीन समय बढ़ेगा?"></summary><p data-en="No. In Classes III–V most CT & AI activities use no screens at all." data-hi="नहीं। कक्षा III–V में अधिकतर CT और AI गतिविधियों में स्क्रीन का उपयोग ही नहीं होता।"></p></details>
+    <details><summary data-en="Is my child's data safe?" data-hi="क्या मेरे बच्चे का डेटा सुरक्षित है?"></summary><p data-en="We never put children's names, marks or photos into AI tools, and we ask for your written consent before sharing any photo." data-hi="हम AI टूल में बच्चों के नाम, अंक या फ़ोटो कभी नहीं डालते, और कोई भी फ़ोटो साझा करने से पहले आपकी लिखित सहमति लेते हैं।"></p></details>
+    <details><summary data-en="When do admissions close?" data-hi="प्रवेश कब बंद होंगे?"></summary><p data-en="Please ask the office; seats are limited in some classes." data-hi="कृपया कार्यालय से पूछें; कुछ कक्षाओं में सीटें सीमित हैं।"></p></details>
+  </div>
+</main>
+<footer data-en="Sample page made for the Capacity Building Workshop for School Leaders 2026. The school, dates and details are fictional." data-hi="विद्यालय प्रमुखों की क्षमता निर्माण कार्यशाला 2026 के लिए बनाया गया नमूना पृष्ठ। विद्यालय, तिथियाँ और विवरण काल्पनिक हैं।"></footer>
+<script>
+(function () {
+  var lang = 'en';
+  try { var saved = localStorage.getItem('aisl.lang'); lang = new URLSearchParams(location.search).get('lang') || (saved ? JSON.parse(saved) : 'en'); } catch (e) {}
+  if (lang !== 'hi') lang = 'en';
+  function apply() {
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-en]').forEach(function (n) { n.textContent = n.getAttribute('data-' + lang) || n.getAttribute('data-en'); });
+    document.getElementById('lang').textContent = lang === 'en' ? 'हिंदी' : 'English';
+  }
+  document.getElementById('lang').addEventListener('click', function () { lang = lang === 'en' ? 'hi' : 'en'; try { localStorage.setItem('aisl.lang', JSON.stringify(lang)); } catch (e) {} apply(); });
+  apply();
+})();
+</script>
+</body>
+</html>
