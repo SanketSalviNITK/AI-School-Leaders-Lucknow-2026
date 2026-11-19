@@ -1,0 +1,49 @@
+/* Printable A4 pages: handouts and facilitator sheets. */
+@page { size: A4; margin: 14mm; }
+:root { --ink: #1c2430; --muted: #5b6573; --line: #cfc8bb; --brand: #0f5c63; --accent: #e07a2e; --soft: #f4f1ea; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #e9e6df; color: var(--ink); font-family: Arial, "Noto Sans", "Noto Sans Devanagari", sans-serif; font-size: 10.5pt; line-height: 1.45; }
+.toolbar { position: sticky; top: 0; display: flex; gap: .5rem; align-items: center; padding: .6rem 1rem; background: var(--brand); color: #fff; z-index: 5; }
+.toolbar a, .toolbar button { color: #fff; background: transparent; border: 1px solid rgba(255,255,255,.6); border-radius: 8px; padding: .3rem .8rem; font: inherit; font-size: .9rem; text-decoration: none; cursor: pointer; }
+.toolbar span { flex: 1; font-weight: 700; }
+.page { width: 210mm; min-height: 297mm; margin: 1rem auto; padding: 14mm; background: #fff; box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+h1 { font-size: 17pt; margin: 0 0 2mm; color: var(--brand); }
+h2 { font-size: 12pt; margin: 5mm 0 2mm; color: var(--brand); border-bottom: 1px solid var(--line); padding-bottom: 1mm; }
+h3 { font-size: 10.5pt; margin: 3mm 0 1mm; }
+p { margin: 0 0 2mm; }
+.meta { color: var(--muted); font-size: 9pt; margin-bottom: 4mm; }
+.blank { display: inline-block; min-width: 45mm; border-bottom: 1px solid var(--ink); }
+.lines { border-bottom: 1px solid var(--line); height: 7mm; }
+ol, ul { margin: 0 0 2mm; padding-left: 6mm; }
+li { margin: .6mm 0; }
+.box { border: 1px solid var(--line); border-radius: 3mm; padding: 3mm 4mm; margin: 2mm 0; }
+.box.rule { border-color: var(--accent); background: #fff6ee; }
+.tick { display: inline-block; width: 3.5mm; height: 3.5mm; border: 1px solid var(--ink); margin-right: 2mm; vertical-align: -0.5mm; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+.card { border: 1.5px dashed var(--muted); border-radius: 3mm; padding: 4mm; }
+.card h1 { font-size: 13pt; }
+.frame { width: 100%; border-collapse: collapse; margin: 1mm 0 2mm; }
+.frame td { border: 1px solid var(--line); padding: 1.2mm 2mm; vertical-align: top; }
+.frame td:first-child { font-weight: 700; color: var(--brand); width: 8mm; text-align: center; }
+table.run { width: 100%; border-collapse: collapse; font-size: 9.5pt; }
+table.run th, table.run td { border: 1px solid var(--line); padding: 1.5mm 2mm; text-align: left; vertical-align: top; }
+table.run th { background: var(--soft); }
+table.run td:first-child { white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 700; }
+.small { font-size: 8.5pt; color: var(--muted); }
+.check li { list-style: none; margin-left: -6mm; }
+.check input { margin-right: 2mm; }
+.footer { margin-top: 5mm; font-size: 8pt; color: var(--muted); border-top: 1px solid var(--line); padding-top: 2mm; }
+@media print {
+  body { background: #fff; }
+  .toolbar { display: none; }
+  .page { margin: 0; box-shadow: none; width: auto; min-height: 0; padding: 0; page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+  body { font-size: 9.6pt; line-height: 1.38; }
+  h1 { font-size: 15pt; }
+  h2 { margin: 3.2mm 0 1.4mm; }
+  .box { padding: 2mm 3mm; }
+  .card { padding: 3mm; }
+  .card h1 { font-size: 12pt; }
+  table.run th, table.run td { padding: 1.1mm 1.6mm; }
+}
+@media screen and (max-width: 800px) { .page { width: auto; min-height: 0; margin: .5rem; padding: 1rem; } .grid2 { grid-template-columns: 1fr; } }

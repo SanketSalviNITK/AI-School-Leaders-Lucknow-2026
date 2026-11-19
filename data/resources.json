@@ -2,29 +2,96 @@
   "_help": "Links shown on resources.html. Add workshop handouts here as they are made.",
   "groups": [
     {
-      "title": { "en": "Official CBSE references", "hi": "आधिकारिक CBSE संदर्भ" },
+      "title": {
+        "en": "Official CBSE references",
+        "hi": "आधिकारिक CBSE संदर्भ"
+      },
       "items": [
-        { "title": { "en": "CT & AI handbooks, Classes 3–8", "hi": "CT और AI पुस्तिकाएँ, कक्षा 3–8" }, "url": "https://cbseacademic.nic.in/ct-ai.html" },
-        { "title": "Circular Acad-15/2026 — CT & AI curriculum", "url": "https://cbseacademic.nic.in/web_material/Circulars/2026/15_Circular_2026.pdf" },
-        { "title": "Circular Acad-18/2026 — resource books", "url": "https://www.cbse.gov.in/cbsenew/documents/18_Circular_2026_13042026.pdf" },
-        { "title": "Training Notification TRG-02 (2026-27 theme)", "url": "https://www.cbse.gov.in/cbsenew/documents/Notification_CT_AI_2026_27_09042026.pdf" },
-        { "title": "CT & AI District Level Deliberation guidelines", "url": "https://www.cbse.gov.in/cbsenew/documents/CT_AI_DLD_Guidelines_2026_27_09042026.pdf" },
-        { "title": "3030 Eklavya CT & AI series (3 CPD hrs/episode)", "url": "https://www.cbse.gov.in/cbsenew/documents/14_Circular_2026_05082026.pdf" }
+        {
+          "title": {
+            "en": "CT & AI handbooks, Classes 3–8",
+            "hi": "CT और AI पुस्तिकाएँ, कक्षा 3–8"
+          },
+          "url": "https://cbseacademic.nic.in/ct-ai.html"
+        },
+        {
+          "title": "Circular Acad-15/2026 — CT & AI curriculum",
+          "url": "https://cbseacademic.nic.in/web_material/Circulars/2026/15_Circular_2026.pdf"
+        },
+        {
+          "title": "Circular Acad-18/2026 — resource books",
+          "url": "https://www.cbse.gov.in/cbsenew/documents/18_Circular_2026_13042026.pdf"
+        },
+        {
+          "title": "Training Notification TRG-02 (2026-27 theme)",
+          "url": "https://www.cbse.gov.in/cbsenew/documents/Notification_CT_AI_2026_27_09042026.pdf"
+        },
+        {
+          "title": "CT & AI District Level Deliberation guidelines",
+          "url": "https://www.cbse.gov.in/cbsenew/documents/CT_AI_DLD_Guidelines_2026_27_09042026.pdf"
+        },
+        {
+          "title": "3030 Eklavya CT & AI series (3 CPD hrs/episode)",
+          "url": "https://www.cbse.gov.in/cbsenew/documents/14_Circular_2026_05082026.pdf"
+        }
       ]
     },
     {
-      "title": { "en": "Free tools used today", "hi": "आज उपयोग किए गए मुफ़्त टूल" },
+      "title": {
+        "en": "Free tools used today",
+        "hi": "आज उपयोग किए गए मुफ़्त टूल"
+      },
       "items": [
-        { "title": "Gemini", "url": "https://gemini.google.com/app" },
-        { "title": "NotebookLM", "url": "https://notebooklm.google.com" },
-        { "title": "Google Sheets", "url": "https://sheets.google.com" },
-        { "title": "Canva", "url": "https://www.canva.com" },
-        { "title": "Teachable Machine", "url": "https://teachablemachine.withgoogle.com" }
+        {
+          "title": "Gemini",
+          "url": "https://gemini.google.com/app"
+        },
+        {
+          "title": "NotebookLM",
+          "url": "https://notebooklm.google.com"
+        },
+        {
+          "title": "Google Sheets",
+          "url": "https://sheets.google.com"
+        },
+        {
+          "title": "Canva",
+          "url": "https://www.canva.com"
+        },
+        {
+          "title": "Teachable Machine",
+          "url": "https://teachablemachine.withgoogle.com"
+        }
       ]
     },
     {
-      "title": { "en": "Workshop handouts", "hi": "कार्यशाला हैंडआउट" },
-      "items": []
+      "title": {
+        "en": "Workshop handouts",
+        "hi": "कार्यशाला हैंडआउट"
+      },
+      "items": [
+        {
+          "title": {
+            "en": "AI policy template (print, English + Hindi)",
+            "hi": "AI नीति टेम्पलेट (प्रिंट, अंग्रेज़ी + हिंदी)"
+          },
+          "url": "handouts/ai-policy-template.html"
+        },
+        {
+          "title": {
+            "en": "Pocket prompt card (print)",
+            "hi": "पॉकेट प्रॉम्प्ट कार्ड (प्रिंट)"
+          },
+          "url": "handouts/prompt-card.html"
+        },
+        {
+          "title": {
+            "en": "Example CPD dashboard",
+            "hi": "उदाहरण CPD डैशबोर्ड"
+          },
+          "url": "demo/cpd-dashboard.html"
+        }
+      ]
     }
   ]
 }
