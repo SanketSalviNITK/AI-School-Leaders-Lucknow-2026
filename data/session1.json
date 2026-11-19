@@ -1,5 +1,5 @@
 {
-  "_help": "Session 1 content. STAGE 1 DONE: missions s1m1–s1m5 final. Theory steps (title/poll/concept/quiz) and the finale are still drafts for Stage 3/4. Step types: title, concept, reveal, poll, quiz, mission, finale. Text: plain string or {\"en\":...,\"hi\":...}.",
+  "_help": "Session 1 content. Stage 1 done (missions s1m1–s1m5). Stage 3 done (theory, ~20 min). Finale = Stage 4 draft. Step types: title, concept, reveal, poll, quiz, mission, finale. Text: plain string or {\"en\":...,\"hi\":...}. 'notes' show only in presenter view.",
   "id": 1,
   "title": {
     "en": "Effective Leadership with AI",
@@ -14,16 +14,20 @@
         "hi": "AI के साथ प्रभावी नेतृत्व"
       },
       "subtitle": {
-        "en": "20 minutes of ideas, 60 minutes of doing",
-        "hi": "20 मिनट विचार, 60 मिनट अभ्यास"
-      }
+        "en": "20 minutes of ideas, 60 minutes of doing. Keep your phone ready.",
+        "hi": "20 मिनट विचार, 60 मिनट अभ्यास। अपना फ़ोन तैयार रखें।"
+      },
+      "notes": [
+        "9:30. Welcome, one line about yourself, then straight to the QR code: everyone registers and opens Session 1 on their phone.",
+        "Helpers check that each table has at least one phone on Wi-Fi or hotspot."
+      ]
     },
     {
       "type": "poll",
       "id": "s1-poll-hours",
       "question": {
-        "en": "Last week, how many hours did you spend on paperwork?",
-        "hi": "पिछले सप्ताह आपने कागज़ी काम पर कितने घंटे लगाए?"
+        "en": "Last week, how many hours did you spend on paperwork (circulars, reports, records)?",
+        "hi": "पिछले सप्ताह आपने कागज़ी काम (परिपत्र, रिपोर्ट, रिकॉर्ड) पर कितने घंटे लगाए?"
       },
       "options": [
         {
@@ -42,6 +46,185 @@
           "en": "More than 20",
           "hi": "20 से अधिक"
         }
+      ],
+      "notes": [
+        "2 min. Read the bars aloud. Anchor the day: 'If AI saves even a quarter of this, what would you do with that time?'"
+      ]
+    },
+    {
+      "type": "poll",
+      "id": "s1-poll-ai-use",
+      "question": {
+        "en": "How often do you use an AI tool such as Gemini or ChatGPT today?",
+        "hi": "आप आजकल Gemini या ChatGPT जैसे AI टूल का कितनी बार उपयोग करते हैं?"
+      },
+      "options": [
+        {
+          "en": "Never",
+          "hi": "कभी नहीं"
+        },
+        {
+          "en": "Tried it once or twice",
+          "hi": "एक-दो बार आज़माया"
+        },
+        {
+          "en": "Every week",
+          "hi": "हर सप्ताह"
+        },
+        {
+          "en": "Almost every day",
+          "hi": "लगभग रोज़"
+        }
+      ],
+      "notes": [
+        "1 min. Use the result to pair people: seat a 'weekly/daily' user next to a 'never' at each table for the missions."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": {
+        "en": "2026-27: what has landed on your desk",
+        "hi": "2026-27: आपकी मेज़ पर क्या आया है"
+      },
+      "points": [
+        {
+          "en": "<b>CT & AI is compulsory for Classes III–VIII</b> (CBSE Acad-15/2026): about 50 hours a year in III–V inside Maths and TWAU, about 100 hours in VI–VIII.",
+          "hi": "<b>कक्षा III–VIII में CT और AI अनिवार्य</b> (CBSE Acad-15/2026): कक्षा III–V में गणित और TWAU के भीतर लगभग 50 घंटे प्रति वर्ष, VI–VIII में लगभग 100 घंटे।"
+        },
+        {
+          "en": "<b>50 hours of CPD for every teacher, every year</b>: 25 through CBSE or government institutes, 25 school-based. You verify it.",
+          "hi": "<b>हर शिक्षक के लिए हर वर्ष 50 घंटे CPD</b>: 25 CBSE या सरकारी संस्थानों से, 25 विद्यालय-स्तर पर। सत्यापन आप करते हैं।"
+        },
+        {
+          "en": "<b>Data protection</b>: the DPDP Rules 2025 phase in by about May 2027. Schools must protect student and staff data.",
+          "hi": "<b>डेटा संरक्षण</b>: DPDP नियम 2025 लगभग मई 2027 तक लागू होंगे। विद्यालयों को छात्रों और स्टाफ़ के डेटा की रक्षा करनी है।"
+        },
+        {
+          "en": "<b>Board exams</b>: half of the Class X paper is competency-based, and Class X now has a second board exam in May.",
+          "hi": "<b>बोर्ड परीक्षा</b>: कक्षा X के प्रश्नपत्र का आधा भाग योग्यता-आधारित है, और अब कक्षा X की दूसरी बोर्ड परीक्षा मई में होती है।"
+        },
+        {
+          "en": "<b>And the usual</b>: mandatory disclosure, OASIS, APAAR, CCTV, SQAAF self-assessment.",
+          "hi": "<b>और सामान्य काम</b>: अनिवार्य प्रकटीकरण, OASIS, APAAR, CCTV, SQAAF स्व-मूल्यांकन।"
+        }
+      ],
+      "note": {
+        "en": "AI will not do these for you. It can cut the paperwork around them, so you have time to lead.",
+        "hi": "AI ये काम आपके लिए नहीं करेगा। यह इनसे जुड़ा कागज़ी काम घटा सकता है, ताकि आपके पास नेतृत्व के लिए समय रहे।"
+      },
+      "notes": [
+        "3 min. Do not lecture on each circular; Session 2 covers CT & AI in depth. The point is the load, and that AI helps with the paperwork, not the decisions.",
+        "If asked about the Class XII competency share: say it varies by subject; check the 2026-27 sample papers."
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "s1-quiz-cpd",
+      "question": {
+        "en": "Of each teacher's 50 CPD hours, how many must come through CBSE or government institutes?",
+        "hi": "हर शिक्षक के 50 CPD घंटों में से कितने घंटे CBSE या सरकारी संस्थानों से होने चाहिए?"
+      },
+      "options": [
+        {
+          "en": "10 hours",
+          "hi": "10 घंटे"
+        },
+        {
+          "en": "25 hours",
+          "hi": "25 घंटे"
+        },
+        {
+          "en": "All 50 hours",
+          "hi": "पूरे 50 घंटे"
+        },
+        {
+          "en": "None; any training counts",
+          "hi": "कोई नहीं; कोई भी प्रशिक्षण चलेगा"
+        }
+      ],
+      "answer": 1,
+      "explain": {
+        "en": "25 hours through CBSE or government institutes and 25 hours school-based. A free CBSE 3030 Eklavya episode counts 3 hours; a one-day Sahodaya CT & AI workshop counts 6.",
+        "hi": "25 घंटे CBSE या सरकारी संस्थानों से और 25 घंटे विद्यालय-स्तर पर। CBSE 3030 एकलव्य का एक मुफ़्त एपिसोड 3 घंटे गिना जाता है; सहोदय की एक-दिवसीय CT और AI कार्यशाला 6 घंटे।"
+      },
+      "notes": [
+        "1 min. This sets up Mission 3 (the CPD tracker)."
+      ]
+    },
+    {
+      "type": "reveal",
+      "title": {
+        "en": "Myth or fact? Tap each card.",
+        "hi": "मिथक या तथ्य? हर कार्ड टैप करें।"
+      },
+      "items": [
+        {
+          "front": {
+            "en": "\"AI will replace teachers.\"",
+            "hi": "\"AI शिक्षकों की जगह ले लेगा।\""
+          },
+          "back": {
+            "en": "Myth. Teachers stay in charge of every output. In Karnataka's Shiksha Copilot pilot, teachers saved about 2 hours a week on lesson plans and kept full control.",
+            "hi": "मिथक। हर परिणाम पर नियंत्रण शिक्षक का रहता है। कर्नाटक के शिक्षा कोपायलट पायलट में शिक्षकों ने पाठ योजना पर प्रति सप्ताह लगभग 2 घंटे बचाए और पूरा नियंत्रण उनका रहा।"
+          }
+        },
+        {
+          "front": {
+            "en": "\"We need a computer lab first.\"",
+            "hi": "\"पहले कंप्यूटर लैब चाहिए।\""
+          },
+          "back": {
+            "en": "Myth. CBSE's CT for Classes III–V is mostly unplugged, inside Maths and TWAU periods. For you, one phone and a projector are enough.",
+            "hi": "मिथक। कक्षा III–V के लिए CBSE का CT अधिकतर बिना कंप्यूटर के है, गणित और TWAU के पीरियड में। आपके लिए एक फ़ोन और प्रोजेक्टर काफ़ी है।"
+          }
+        },
+        {
+          "front": {
+            "en": "\"AI only works in English.\"",
+            "hi": "\"AI केवल अंग्रेज़ी में काम करता है।\""
+          },
+          "back": {
+            "en": "Myth. Gemini reads and writes Hindi, even handwriting. Check its Hindi terms the way you would check a new teacher's.",
+            "hi": "मिथक। Gemini हिंदी पढ़ता और लिखता है, हाथ की लिखावट भी। उसके हिंदी शब्दों को वैसे ही जाँचें जैसे किसी नए शिक्षक के।"
+          }
+        },
+        {
+          "front": {
+            "en": "\"If AI says it, it must be right.\"",
+            "hi": "\"AI ने कहा है, तो सही ही होगा।\""
+          },
+          "back": {
+            "en": "Myth. AI makes confident mistakes: wrong dates, wrong sums, invented rules. You verify before anything leaves your office.",
+            "hi": "मिथक। AI आत्मविश्वास से गलतियाँ करता है: गलत तिथि, गलत जोड़, गढ़े हुए नियम। आपके कार्यालय से कुछ भी जाने से पहले आप जाँचते हैं।"
+          }
+        }
+      ],
+      "notes": [
+        "3 min. Ask a table to call out their guess before you tap each card on the projector."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": {
+        "en": "Where AI helps a principal, and where it does not",
+        "hi": "प्रधानाचार्य के लिए AI कहाँ मदद करता है, और कहाँ नहीं"
+      },
+      "points": [
+        {
+          "en": "<b>Good at:</b> first drafts, summaries, tables, translation, rewording for parents, checklists, formulas.",
+          "hi": "<b>इसमें अच्छा:</b> पहला ड्राफ़्ट, सारांश, तालिकाएँ, अनुवाद, अभिभावकों के लिए सरल भाषा, चेकलिस्ट, फ़ॉर्मूले।"
+        },
+        {
+          "en": "<b>Not for:</b> final judgements about people, facts you have not checked, anything with student personal data.",
+          "hi": "<b>इसके लिए नहीं:</b> लोगों के बारे में अंतिम निर्णय, बिना जाँचे तथ्य, छात्रों के व्यक्तिगत डेटा वाला कोई भी काम।"
+        }
+      ],
+      "note": {
+        "en": "Think of Gemini as a fast, well-read new assistant: useful from day one, but you sign everything.",
+        "hi": "Gemini को एक तेज़, पढ़े-लिखे नए सहायक की तरह समझें: पहले दिन से उपयोगी, पर हस्ताक्षर हर चीज़ पर आपके।"
+      },
+      "notes": [
+        "2 min."
       ]
     },
     {
@@ -50,31 +233,98 @@
         "en": "The prompt frame we use all day",
         "hi": "पूरे दिन उपयोग होने वाला प्रॉम्प्ट ढाँचा"
       },
+      "lead": {
+        "en": "Six parts. You do not need all six every time, but the more you give, the better the draft.",
+        "hi": "छह भाग। हर बार सभी छह ज़रूरी नहीं, पर जितना अधिक देंगे, ड्राफ़्ट उतना बेहतर होगा।"
+      },
       "points": [
         {
           "en": "<b>R</b>ole – who Gemini should act as",
-          "hi": "<b>R</b>ole – Gemini किसकी भूमिका निभाए"
+          "hi": "<b>R</b>ole (भूमिका) – Gemini किसकी भूमिका निभाए"
         },
         {
           "en": "<b>T</b>ask – what to produce",
-          "hi": "<b>T</b>ask – क्या बनाना है"
+          "hi": "<b>T</b>ask (कार्य) – क्या बनाना है"
         },
         {
-          "en": "<b>C</b>ontext – your school, the circular, constraints",
-          "hi": "<b>C</b>ontext – आपका विद्यालय, परिपत्र, सीमाएँ"
+          "en": "<b>C</b>ontext – your school, the circular, the constraints",
+          "hi": "<b>C</b>ontext (संदर्भ) – आपका विद्यालय, परिपत्र, सीमाएँ"
         },
         {
           "en": "<b>F</b>ormat – table, circular, word limit",
-          "hi": "<b>F</b>ormat – तालिका, परिपत्र, शब्द सीमा"
+          "hi": "<b>F</b>ormat (प्रारूप) – तालिका, परिपत्र, शब्द सीमा"
         },
         {
           "en": "<b>L</b>anguage – English, Hindi or both",
-          "hi": "<b>L</b>anguage – अंग्रेज़ी, हिंदी या दोनों"
+          "hi": "<b>L</b>anguage (भाषा) – अंग्रेज़ी, हिंदी या दोनों"
         },
         {
-          "en": "<b>C</b>heck – ask what you should verify",
-          "hi": "<b>C</b>heck – पूछें कि क्या जाँचना है"
+          "en": "<b>C</b>heck – ask it what you should verify",
+          "hi": "<b>C</b>heck (जाँच) – पूछें कि आपको क्या जाँचना चाहिए"
         }
+      ],
+      "notes": [
+        "2 min. Say it once as 'R-T-C-F-L-C'. Every mission prompt today follows it; point this out in Mission 2."
+      ]
+    },
+    {
+      "type": "reveal",
+      "title": {
+        "en": "Same request, two prompts. Tap to compare.",
+        "hi": "एक ही अनुरोध, दो प्रॉम्प्ट। तुलना के लिए टैप करें।"
+      },
+      "items": [
+        {
+          "front": {
+            "en": "Weak prompt",
+            "hi": "कमज़ोर प्रॉम्प्ट"
+          },
+          "back": {
+            "en": "\"Write a circular about PTM.\"<br><br>Result: a generic letter with a made-up date, no Hindi, nothing about CT & AI.",
+            "hi": "\"PTM के बारे में परिपत्र लिखो।\"<br><br>परिणाम: गढ़ी हुई तिथि वाला सामान्य पत्र, हिंदी नहीं, CT और AI का ज़िक्र नहीं।"
+          }
+        },
+        {
+          "front": {
+            "en": "Strong prompt",
+            "hi": "मज़बूत प्रॉम्प्ट"
+          },
+          "back": {
+            "en": "\"You are my office assistant (<b>R</b>). Write a circular to parents (<b>T</b>) for the PTM on Saturday, 10–12, Classes III–VIII, introducing CBSE's new CT & AI course; no extra fee (<b>C</b>). CBSE format, under 150 words (<b>F</b>), in English and Hindi (<b>L</b>). List anything I should verify (<b>C</b>).\"",
+            "hi": "\"आप मेरे कार्यालय सहायक हैं (<b>R</b>)। शनिवार 10–12 बजे, कक्षा III–VIII की PTM के लिए अभिभावकों को परिपत्र लिखें (<b>T</b>), जिसमें CBSE के नए CT और AI कोर्स का परिचय हो; कोई अतिरिक्त शुल्क नहीं (<b>C</b>)। CBSE प्रारूप, 150 शब्दों से कम (<b>F</b>), अंग्रेज़ी और हिंदी में (<b>L</b>)। जो मुझे जाँचना चाहिए उसकी सूची दें (<b>C</b>)।\""
+          }
+        }
+      ],
+      "notes": [
+        "2 min. Optional live demo: run the weak prompt in Gemini on the projector, then the strong one. 60 seconds each."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": {
+        "en": "Three habits and one rule",
+        "hi": "तीन आदतें और एक नियम"
+      },
+      "points": [
+        {
+          "en": "<b>Refine</b>: the first answer is a draft. Ask for a better second one: \"shorter\", \"simpler Hindi\", \"add a table\".",
+          "hi": "<b>सुधारें</b>: पहला उत्तर ड्राफ़्ट है। बेहतर दूसरा माँगें: \"छोटा करें\", \"सरल हिंदी\", \"तालिका जोड़ें\"।"
+        },
+        {
+          "en": "<b>Reuse</b>: save prompts that work, and build a Gem so you never retype your school's details.",
+          "hi": "<b>दोबारा उपयोग</b>: जो प्रॉम्प्ट काम करें उन्हें सेव करें, और Gem बनाएँ ताकि विद्यालय का विवरण बार-बार न लिखना पड़े।"
+        },
+        {
+          "en": "<b>Review</b>: a person checks every date, number and name before anything is sent.",
+          "hi": "<b>समीक्षा</b>: कुछ भी भेजने से पहले हर तिथि, संख्या और नाम कोई व्यक्ति जाँचे।"
+        }
+      ],
+      "note": {
+        "en": "<b>The rule:</b> never put student names, marks, Aadhaar, APAAR IDs, photos or phone numbers into a public AI tool. Use codes like T01 or Roll 12.",
+        "hi": "<b>नियम:</b> छात्रों के नाम, अंक, आधार, APAAR ID, फ़ोटो या फ़ोन नंबर कभी सार्वजनिक AI टूल में न डालें। T01 या रोल 12 जैसे कोड का उपयोग करें।"
+      },
+      "notes": [
+        "2 min. The rule is the one thing everyone must remember. Repeat it at the start of Mission 3."
       ]
     },
     {
@@ -86,23 +336,66 @@
       },
       "options": [
         {
-          "en": "Student names with marks",
-          "hi": "अंकों सहित छात्रों के नाम"
+          "en": "The Class 10 result sheet with student names and marks",
+          "hi": "छात्रों के नाम और अंकों सहित कक्षा 10 की परिणाम शीट"
         },
         {
-          "en": "Teacher codes (T01, T02) with training hours",
+          "en": "Teacher codes (T01, T02) with their training hours",
           "hi": "प्रशिक्षण घंटों सहित शिक्षक कोड (T01, T02)"
         },
         {
           "en": "APAAR IDs for the board registration list",
           "hi": "बोर्ड पंजीकरण सूची के APAAR ID"
+        },
+        {
+          "en": "A parent's complaint with the child's name and phone number",
+          "hi": "बच्चे के नाम और फ़ोन नंबर सहित अभिभावक की शिकायत"
         }
       ],
       "answer": 1,
       "explain": {
-        "en": "Anonymised codes only. Never paste names, marks, Aadhaar or APAAR data into public AI tools.",
-        "hi": "केवल गुमनाम कोड। सार्वजनिक AI टूल में नाम, अंक, आधार या APAAR डेटा कभी न डालें।"
-      }
+        "en": "Only anonymised codes. Names, marks, IDs and phone numbers stay out of public AI tools.",
+        "hi": "केवल गुमनाम कोड। नाम, अंक, ID और फ़ोन नंबर सार्वजनिक AI टूल से बाहर रहें।"
+      },
+      "notes": [
+        "1 min."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": {
+        "en": "Your five missions (60 minutes)",
+        "hi": "आपके पाँच मिशन (60 मिनट)"
+      },
+      "points": [
+        {
+          "en": "1. Build your Principal's Assistant (Gem) – 10 min",
+          "hi": "1. अपना प्रधानाचार्य सहायक (Gem) बनाएँ – 10 मिनट"
+        },
+        {
+          "en": "2. Handwritten note → bilingual circular – 10 min",
+          "hi": "2. हाथ से लिखा नोट → द्विभाषी परिपत्र – 10 मिनट"
+        },
+        {
+          "en": "3. Your teachers' 50-hour CPD tracker – 15 min",
+          "hi": "3. आपके शिक्षकों का 50-घंटे CPD ट्रैकर – 15 मिनट"
+        },
+        {
+          "en": "4. Classroom observation feedback – 15 min",
+          "hi": "4. कक्षा अवलोकन फीडबैक – 15 मिनट"
+        },
+        {
+          "en": "5. Your school's AI policy, version 1 – 10 min",
+          "hi": "5. आपके विद्यालय की AI नीति, संस्करण 1 – 10 मिनट"
+        }
+      ],
+      "note": {
+        "en": "Press <b>Mark done</b> after each mission. Stuck? Raise your hand; a helper will come. Finished early? Try the stretch task on each card.",
+        "hi": "हर मिशन के बाद <b>पूरा हुआ</b> दबाएँ। अटक गए? हाथ उठाएँ; सहायक आएँगे। जल्दी पूरा हुआ? हर कार्ड पर दिया अतिरिक्त कार्य आज़माएँ।"
+      },
+      "notes": [
+        "9:50. Start the clock. Watch the live 'done' counts on each mission slide to pace the room."
+      ]
     },
     {
       "type": "mission",

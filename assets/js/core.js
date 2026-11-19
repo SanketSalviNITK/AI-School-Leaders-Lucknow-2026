@@ -53,6 +53,7 @@
     timer: { en: 'Start timer', hi: 'टाइमर शुरू करें' },
     mission: { en: 'Mission', hi: 'मिशन' },
     sessions: { en: 'Sessions', hi: 'सत्र' },
+    session: { en: 'Session', hi: 'सत्र' },
     resources: { en: 'Resources', hi: 'संसाधन' },
     feedback: { en: 'Feedback', hi: 'प्रतिक्रिया' },
     home: { en: 'Home', hi: 'मुख्य पृष्ठ' },

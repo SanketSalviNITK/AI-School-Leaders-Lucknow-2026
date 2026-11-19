@@ -67,7 +67,8 @@ h2 { font-size: 1.3rem; line-height: 1.25; margin: .2rem 0 .7rem; }
 /* ---------- reveal cards ---------- */
 .reveal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: .6rem; }
 .flip { position: relative; min-height: 110px; border: 1.5px solid var(--line); border-radius: 12px; background: #fff; font: inherit; padding: .8rem; cursor: pointer; text-align: left; }
-.flip .back { display: none; } .flip.open .front, .flip.open .hint { display: none; } .flip.open .back { display: block; }
+.flip .back { display: none; } .flip.open .hint { display: none; } .flip.open .back { display: block; margin-top: .5rem; padding-top: .5rem; border-top: 1px dashed var(--line); }
+.flip.open { border-color: var(--brand); }
 .flip .front { font-weight: 700; } .flip .hint { position: absolute; bottom: .4rem; right: .6rem; font-size: .75rem; color: var(--muted); }
 
 /* ---------- missions ---------- */

@@ -18,7 +18,7 @@
 
   const renderers = {
     title(s, c) {
-      c.append(el('p', { class: 'eyebrow', text: t(UI.sessions) + ' ' + (s.session || '') }));
+      c.append(el('p', { class: 'eyebrow', text: t(UI.session) + ' ' + (s.session || '') }));
       c.append(el('h1', { html: safeHTML(t(s.title)) }));
       if (s.subtitle) c.append(el('p', { class: 'lead', html: safeHTML(t(s.subtitle)) }));
     },
