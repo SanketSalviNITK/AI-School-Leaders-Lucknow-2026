@@ -90,6 +90,20 @@
             "hi": "उदाहरण CPD डैशबोर्ड"
           },
           "url": "demo/cpd-dashboard.html"
+        },
+        {
+          "title": {
+            "en": "CT & AI one-page guide (print, English + Hindi)",
+            "hi": "CT और AI एक-पृष्ठ मार्गदर्शिका (प्रिंट, अंग्रेज़ी + हिंदी)"
+          },
+          "url": "handouts/ct-ai-guide.html"
+        },
+        {
+          "title": {
+            "en": "Robot algorithm classroom game",
+            "hi": "रोबोट एल्गोरिदम कक्षा खेल"
+          },
+          "url": "demo/robot-algorithm.html"
         }
       ]
     }
