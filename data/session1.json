@@ -1,5 +1,5 @@
 {
-  "_help": "Session 1 content. Stage 1 done (missions s1m1–s1m5). Stage 3 done (theory, ~20 min). Finale = Stage 4 draft. Step types: title, concept, reveal, poll, quiz, mission, finale. Text: plain string or {\"en\":...,\"hi\":...}. 'notes' show only in presenter view.",
+  "_help": "Session 1 content. Stage 1 done (missions s1m1–s1m5). Stage 3 done (theory, ~20 min). Stage 4 done (finale + backup demo/cpd-dashboard.html). Step types: title, concept, reveal, poll, quiz, mission, finale. Text: plain string or {\"en\":...,\"hi\":...}. 'notes' show only in presenter view.",
   "id": 1,
   "title": {
     "en": "Effective Leadership with AI",
@@ -689,23 +689,48 @@
     {
       "type": "finale",
       "title": {
-        "en": "What Pro can do next",
-        "hi": "Pro आगे क्या कर सकता है"
+        "en": "Everything you did today is free. Here is where it grows.",
+        "hi": "आज आपने जो किया वह सब मुफ़्त है। यहाँ से यह आगे बढ़ता है।"
+      },
+      "lead": {
+        "en": "Watch the screen: the same CPD data, with paid AI tools.",
+        "hi": "स्क्रीन देखें: वही CPD डेटा, सशुल्क AI टूल के साथ।"
       },
       "points": [
         {
-          "en": "Ask your CPD sheet questions in plain language (Gemini Pro in Sheets).",
-          "hi": "अपनी CPD शीट से सामान्य भाषा में प्रश्न पूछें (Sheets में Gemini Pro)।"
+          "en": "<b>Gemini inside Google Sheets</b> (Google AI Pro): ask your CPD sheet questions in plain Hindi or English, right next to the data.",
+          "hi": "<b>Google Sheets के अंदर Gemini</b> (Google AI Pro): अपनी CPD शीट से सामान्य हिंदी या अंग्रेज़ी में प्रश्न पूछें, डेटा के ठीक बगल में।"
         },
         {
-          "en": "Turn the same sheet into a live dashboard (Claude).",
-          "hi": "उसी शीट को लाइव डैशबोर्ड में बदलें (Claude)।"
+          "en": "<b>Claude</b>: turn the same sheet into an interactive dashboard for your management committee in about a minute.",
+          "hi": "<b>Claude</b>: उसी शीट को लगभग एक मिनट में प्रबंधन समिति के लिए इंटरैक्टिव डैशबोर्ड में बदलें।"
+        },
+        {
+          "en": "You do not need these to start. Use the free tools for one term, measure the time saved, then decide.",
+          "hi": "शुरुआत के लिए इनकी ज़रूरत नहीं। एक सत्र मुफ़्त टूल का उपयोग करें, बचा समय मापें, फिर निर्णय लें।"
         }
       ],
       "note": {
-        "en": "Everything you did today is free. This is where it grows.",
-        "hi": "आज आपने जो किया वह सब मुफ़्त है। यहाँ से यह आगे बढ़ता है।"
-      }
+        "en": "No vendor sponsors this workshop. Prices and features change often; check before you buy.",
+        "hi": "इस कार्यशाला को किसी कंपनी का प्रायोजन नहीं है। कीमतें और सुविधाएँ अक्सर बदलती हैं; खरीदने से पहले जाँचें।"
+      },
+      "links": [
+        {
+          "label": {
+            "en": "See the example dashboard",
+            "hi": "उदाहरण डैशबोर्ड देखें"
+          },
+          "url": "demo/cpd-dashboard.html"
+        }
+      ],
+      "notes": [
+        "10:50–10:57. 7 minutes. Laptop on projector, logged in to the DEMO Google account (Gemini Pro) and Claude. Have the School Command Sheet copy open on the CPD Tracker tab, Claude open in a second tab, and demo/cpd-dashboard.html open in a third tab as backup.",
+        "<b>Part 1 · Gemini in Sheets (3 min).</b> Click the Gemini spark icon (top right) to open the side panel. Prompt 1: \"Which teachers are Critical, and for each one, what is the quickest free way to reach 50 hours this year using 3030 Eklavya episodes (3 hours each) and school-based sessions?\" Prompt 2: \"Write a polite 60-word note in Hindi to teacher T09 about their training plan.\" Point out: it reads the sheet itself, no copy-paste.",
+        "<b>Part 2 · Claude (3 min).</b> Copy the CPD Tracker table (A9:G21) and paste into Claude with: \"Build an interactive dashboard from this teacher CPD data for my school management committee: status counts, a bar chart of total hours against the 50-hour target, a filter by status, and a catch-up plan table using free routes (3030 Eklavya = 3 CBSE hours per episode; Sahodaya workshop = 6 hours). Keep it simple and readable on a projector.\" Show the result, click a filter, hover a bar.",
+        "<b>Close (1 min).</b> \"Everything before this was free. This is what is possible when your school is ready. The free path is enough to start.\" Point to the feedback page opt-in for in-school training.",
+        "<b>If Wi-Fi fails or a Pro feature misbehaves:</b> skip the live prompts and open the backup tab (the 'See the example dashboard' button on this slide). Say: \"Here is one I built with Claude this morning from the same sheet.\" Also keep a 60-second screen recording of each live demo on the laptop desktop.",
+        "Do not imply CBSE or any vendor endorses these tools. Never use real teacher or student names on screen."
+      ]
     }
   ]
 }

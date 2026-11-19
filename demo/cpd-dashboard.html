@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPD Dashboard · demo</title>
+<meta name="robots" content="noindex">
+<style>
+  :root {
+    --surface: #fcfcfb; --card: #ffffff; --line: #e4e2dc; --grid: #ecebe6;
+    --ink: #0b0b0b; --ink-2: #52514e; --ink-3: #7a7974;
+    --good: #0ca30c; --warning: #fab219; --serious: #ec835a; --critical: #d03b3b;
+    --target: #0b0b0b; --brand: #0f5c63;
+    font-family: Arial, "Noto Sans", system-ui, sans-serif; color: var(--ink); background: var(--surface);
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 1.2rem; max-width: 1100px; margin-inline: auto; }
+  header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .5rem; }
+  h1 { font-size: 1.5rem; margin: 0; }
+  .sub { color: var(--ink-2); font-size: .9rem; margin: .2rem 0 1rem; }
+  .badge { font-size: .75rem; color: var(--ink-3); border: 1px solid var(--line); border-radius: 999px; padding: .2rem .6rem; }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .7rem; margin-bottom: 1rem; }
+  .tile { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: .8rem 1rem; }
+  .tile .k { font-size: .8rem; color: var(--ink-2); display: flex; align-items: center; gap: .4rem; }
+  .tile .v { font-size: 2rem; font-weight: 700; margin-top: .2rem; font-variant-numeric: tabular-nums; }
+  .dot { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+  .filters { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0 0 .8rem; }
+  .filters button { font: inherit; font-size: .85rem; padding: .35rem .8rem; border-radius: 999px; border: 1px solid var(--line); background: var(--card); cursor: pointer; display: inline-flex; gap: .35rem; align-items: center; }
+  .filters button[aria-pressed="true"] { border-color: var(--ink); font-weight: 700; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1rem; margin-bottom: 1rem; }
+  .card h2 { font-size: 1rem; margin: 0 0 .2rem; }
+  .card p.note { margin: 0 0 .6rem; color: var(--ink-2); font-size: .85rem; }
+  svg text { font-family: inherit; }
+  .tip { position: fixed; pointer-events: none; background: #1a1a19; color: #f0efec; font-size: .8rem; line-height: 1.4; padding: .45rem .6rem; border-radius: 8px; opacity: 0; transition: opacity .1s; max-width: 240px; }
+  table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+  th, td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid var(--grid); }
+  th { color: var(--ink-2); font-weight: 600; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .status { display: inline-flex; align-items: center; gap: .35rem; white-space: nowrap; }
+  footer { color: var(--ink-3); font-size: .75rem; margin-top: 1rem; }
+  @media (max-width: 600px) { .hide-sm { display: none; } }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Teacher CPD dashboard, 2026-27</h1>
+    <p class="sub">12 teachers (sample data, codes only) · target 50 hours: 25 via CBSE/Govt + 25 school-based</p>
+  </div>
+  <span class="badge">Demo built with Claude from the School Command Sheet</span>
+</header>
+
+<section class="tiles" id="tiles"></section>
+
+<div class="filters" id="filters" role="group" aria-label="Filter by status"></div>
+
+<section class="card">
+  <h2>Total CPD hours per teacher</h2>
+  <p class="note">Sorted by total; the black line is the 50-hour target. Hover a bar for the breakdown.</p>
+  <div id="chart"></div>
+</section>
+
+<section class="card">
+  <h2>Catch-up plan</h2>
+  <p class="note">Free routes only. 3030 Eklavya episode = 3 CPD hours (CBSE/Govt part); a Sahodaya CT &amp; AI workshop = 6 hours.</p>
+  <div style="overflow-x:auto"><table id="table"></table></div>
+</section>
+
+<footer>Sources: CBSE CPD requirement (50 hours per teacher per year, 25 through CBSE/Govt institutes); CBSE Training Circular 14/2026 (3030 Eklavya, 3 CPD hours per episode); CBSE CT &amp; AI DLD guidelines 2026-27 (6 CPD hours). Data: workshop sample, not a real school.</footer>
+<div class="tip" id="tip" role="status"></div>
+
+<script>
+(function () {
+  'use strict';
+  const TARGET = 50, MIN_GOVT = 25, CRIT = 25;
+  const DATA = [
+    ['T01','Maths',24,20],['T02','Science',12,18],['T03','English',30,25],['T04','Hindi',6,10],
+    ['T05','Social Science',18,22],['T06','Computer',25,30],['T07','Class III',9,12],['T08','Class IV',15,15],
+    ['T09','Class V',3,8],['T10','Sanskrit',20,12],['T11','Physical Education',0,14],['T12','Art',6,6]
+  ].map(([code, subject, govt, school]) => {
+    const total = govt + school;
+    const status = total < CRIT ? 'Critical' : total < TARGET ? 'Behind' : govt < MIN_GOVT ? 'Short on CBSE/Govt' : 'On track';
+    const govtGap = Math.max(0, MIN_GOVT - govt), schoolGap = Math.max(0, TARGET - MIN_GOVT - school);
+    return { code, subject, govt, school, total, need: Math.max(0, TARGET - total), status, govtGap, schoolGap,
+             episodes: Math.ceil(govtGap / 3) };
+  });
+  // Status colours carry state; every use is paired with a text label (never colour alone).
+  const STATUS = {
+    'Critical': { c: 'var(--critical)', icon: '!' },
+    'Behind': { c: 'var(--serious)', icon: '▲' },
+    'Short on CBSE/Govt': { c: 'var(--warning)', icon: '◆' },
+    'On track': { c: 'var(--good)', icon: '✓' }
+  };
+  const order = ['Critical', 'Behind', 'Short on CBSE/Govt', 'On track'];
+  let filter = 'All';
+
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
+
+  function tiles() {
+    const count = s => DATA.filter(d => d.status === s).length;
+    const html = [
+      `<div class="tile"><div class="k">Teachers</div><div class="v">${DATA.length}</div></div>`,
+      ...order.filter(s => s !== 'Short on CBSE/Govt' || count(s)).map(s =>
+        `<div class="tile"><div class="k"><span class="dot" style="background:${STATUS[s].c}"></span>${s}</div><div class="v">${count(s)}</div></div>`),
+      `<div class="tile"><div class="k">Hours still needed</div><div class="v">${DATA.reduce((a, d) => a + d.need, 0)}</div></div>`
+    ];
+    $('tiles').innerHTML = html.join('');
+  }
+
+  function filters() {
+    const opts = ['All', ...order.filter(s => DATA.some(d => d.status === s))];
+    $('filters').innerHTML = opts.map(o =>
+      `<button type="button" aria-pressed="${o === filter}" data-f="${esc(o)}">${o === 'All' ? '' : `<span class="dot" style="background:${STATUS[o].c}"></span>`}${esc(o)}</button>`).join('');
+    $('filters').querySelectorAll('button').forEach(b => b.onclick = () => { filter = b.dataset.f; filters(); chart(); table(); });
+  }
+
+  function rows() { return DATA.filter(d => filter === 'All' || d.status === filter).sort((a, b) => a.total - b.total); }
+
+  function chart() {
+    const rs = rows(), W = Math.min(1060, $('chart').clientWidth || 900), left = 150, right = 110, rowH = 30, top = 22;
+    const H = top + rs.length * rowH + 28, max = 60, x = v => left + (W - left - right) * v / max;
+    let s = `<svg width="${W}" height="${H}" role="img" aria-label="Bar chart of total CPD hours per teacher against a 50-hour target">`;
+    for (let v = 0; v <= max; v += 10) {
+      s += `<line x1="${x(v)}" x2="${x(v)}" y1="${top - 6}" y2="${H - 22}" stroke="var(--grid)"/>`;
+      s += `<text x="${x(v)}" y="${H - 6}" font-size="11" fill="var(--ink-3)" text-anchor="middle">${v}</text>`;
+    }
+    rs.forEach((d, i) => {
+      const y = top + i * rowH, bw = Math.max(0, x(d.total) - x(0)), st = STATUS[d.status];
+      s += `<text x="${left - 10}" y="${y + 17}" font-size="12" text-anchor="end" fill="var(--ink)"><tspan font-weight="700">${d.code}</tspan> <tspan fill="var(--ink-2)">${esc(d.subject)}</tspan></text>`;
+      // bar: square at the baseline, 4px rounded data end
+      s += `<path d="M${x(0)},${y + 6} h${Math.max(0, bw - 4)} a4,4 0 0 1 4,4 v10 a4,4 0 0 1 -4,4 h${-Math.max(0, bw - 4)} z" fill="${st.c}"/>`;
+      s += `<text x="${x(d.total) + 6}" y="${y + 17}" font-size="12" fill="var(--ink)"><tspan font-weight="700">${d.total}</tspan> <tspan fill="var(--ink-2)">${st.icon} ${d.status}</tspan></text>`;
+      s += `<rect x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent" data-i="${i}" class="hit"/>`;
+    });
+    s += `<line x1="${x(TARGET)}" x2="${x(TARGET)}" y1="${top - 10}" y2="${H - 22}" stroke="var(--target)" stroke-width="2"/>`;
+    s += `<text x="${x(TARGET)}" y="${top - 12}" font-size="11" text-anchor="middle" fill="var(--ink)">Target 50</text>`;
+    s += `</svg>`;
+    $('chart').innerHTML = s;
+    const tip = $('tip');
+    $('chart').querySelectorAll('.hit').forEach(r => {
+      r.addEventListener('mousemove', e => {
+        const d = rs[+r.dataset.i];
+        tip.innerHTML = `<b>${d.code} · ${esc(d.subject)}</b><br>CBSE/Govt: ${d.govt} h · School-based: ${d.school} h<br>Total: ${d.total} h · Still needed: ${d.need} h<br>${d.status}`;
+        tip.style.left = Math.min(window.innerWidth - 250, e.clientX + 14) + 'px'; tip.style.top = (e.clientY + 14) + 'px'; tip.style.opacity = 1;
+      });
+      r.addEventListener('mouseleave', () => { tip.style.opacity = 0; });
+    });
+  }
+
+  function table() {
+    const rs = rows();
+    $('table').innerHTML = `<thead><tr><th>Teacher</th><th class="hide-sm">Subject</th><th class="num">CBSE/Govt</th><th class="num">School</th><th class="num">Total</th><th>Status</th><th>Free catch-up route</th></tr></thead><tbody>` +
+      rs.map(d => {
+        const plan = [];
+        if (d.episodes) plan.push(`${d.episodes} × 3030 Eklavya episode${d.episodes > 1 ? 's' : ''} (${d.govtGap} h CBSE/Govt)`);
+        if (d.schoolGap) plan.push(`${d.schoolGap} h school-based (peer sessions, Sahodaya workshop = 6 h)`);
+        return `<tr><td><b>${d.code}</b></td><td class="hide-sm">${esc(d.subject)}</td><td class="num">${d.govt}</td><td class="num">${d.school}</td><td class="num"><b>${d.total}</b></td>` +
+          `<td><span class="status"><span class="dot" style="background:${STATUS[d.status].c}"></span>${d.status}</span></td><td>${plan.join('; ') || 'Complete'}</td></tr>`;
+      }).join('') + '</tbody>';
+  }
+
+  tiles(); filters(); chart(); table();
+  window.addEventListener('resize', chart);
+})();
+</script>
+</body>
+</html>

@@ -28,6 +28,7 @@
       if (s.lead) c.append(el('p', { class: 'lead', html: safeHTML(t(s.lead)) }));
       if (s.points) c.append(el('ul', { class: 'points' }, s.points.map(p => el('li', { html: safeHTML(t(p)) }))));
       if (s.note) c.append(el('p', { class: 'note', html: safeHTML(t(s.note)) }));
+      if (s.links) c.append(el('div', { class: 'row' }, s.links.map(l => el('a', { class: 'btn ghost', href: l.url, target: '_blank', rel: 'noopener', text: t(l.label) + ' ↗' }))));
     },
 
     reveal(s, c) {
