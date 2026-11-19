@@ -45,6 +45,10 @@
         {
           "en": "Ask one follow-up: \"Which teachers need training first, and when?\"",
           "hi": "एक अनुवर्ती प्रश्न पूछें: \"किन शिक्षकों को पहले प्रशिक्षण चाहिए, और कब?\""
+        },
+        {
+          "en": "Compare with the <b>CT & AI Plan</b> tab in your School Command Sheet: change the blue numbers and the periods per week update by themselves.",
+          "hi": "अपनी स्कूल कमांड शीट के <b>CT & AI Plan</b> टैब से तुलना करें: नीली संख्याएँ बदलें, प्रति सप्ताह पीरियड अपने-आप बदल जाएँगे।"
         }
       ],
       "prompt": {
@@ -64,7 +68,7 @@
         "hi": "पूछें: \"इसे मेरे शिक्षकों के लिए एक पृष्ठ के हिंदी नोट में बदलें, जिसमें बताया हो कि अगले सोमवार से क्या बदलेगा।\""
       },
       "notes": [
-        "Sample answer to sanity-check, assuming about 40 teaching weeks a year: 4 months ≈ 16 weeks = 40% of the year. III–V: 40% of 50 h = 20 h = 30 periods of 40 min ≈ 2 periods a week; with the 1-Maths-period cap, the other comes from TWAU. VI–VIII: 40% of 100 h = 40 h = 60 periods ≈ 4 periods a week, shared between subject and computer teachers.",
+        "Check against the CT & AI Plan tab (40 weeks/year, 16 left = 40%): III–V need 20 h = 30 periods ≈ 1.9 a week per section; VI–VIII need 40 h = 60 periods ≈ 3.8 a week. Whole school with 2 sections each: 33.8 periods a week.",
         "Many principals will find the full hours impossible this year. Reassure them: CBSE calls the hours indicative; a documented partial plan is far better than none."
       ]
     },
@@ -145,6 +149,10 @@
         {
           "en": "Note one correction Gemini found. That is why the second step matters.",
           "hi": "Gemini ने जो एक सुधार बताया उसे नोट करें। इसीलिए दूसरा चरण ज़रूरी है।"
+        },
+        {
+          "en": "Paste your best question into the <b>Question Bank</b> tab of your School Command Sheet, with Verified = Not yet.",
+          "hi": "अपना सबसे अच्छा प्रश्न स्कूल कमांड शीट के <b>Question Bank</b> टैब में पेस्ट करें, Verified = Not yet के साथ।"
         }
       ],
       "prompt": {
