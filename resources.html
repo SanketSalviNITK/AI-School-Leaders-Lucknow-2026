@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resources · AI for School Leaders 2026</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="topbar"><a href="index.html" aria-label="Home">‹</a><span class="title" id="topTitle">Resources</span><span id="langSlot"></span></header>
+<main id="app"><p class="status">Loading…</p></main>
+<script src="assets/js/core.js"></script>
+<script>
+(async function () {
+  const A = AISL, { t, el } = A;
+  const r = await A.loadJSON('data/resources.json');
+  document.getElementById('langSlot').append(A.langToggle());
+  function paint() {
+    document.getElementById('topTitle').textContent = t(A.UI.resources);
+    const app = document.getElementById('app'); app.innerHTML = '';
+    r.groups.forEach(g => {
+      const card = el('section', { class: 'card' }, [el('h2', { text: t(g.title) })]);
+      if (!g.items.length) card.append(el('p', { class: 'status', text: t({ en: 'Coming soon.', hi: 'जल्द आ रहा है।' }) }));
+      else card.append(el('ul', { class: 'points' }, g.items.map(it => el('li', {}, [el('a', { href: it.url, target: '_blank', rel: 'noopener', text: t(it.title) + ' ↗' })]))));
+      app.append(card);
+    });
+  }
+  paint(); document.addEventListener('langchange', paint);
+})();
+</script>
+</body>
+</html>

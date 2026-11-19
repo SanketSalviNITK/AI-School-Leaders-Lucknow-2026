@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Feedback · AI for School Leaders 2026</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="topbar"><a href="index.html" aria-label="Home">‹</a><span class="title" id="topTitle">Feedback</span><span id="langSlot"></span></header>
+<main id="app"></main>
+<script src="assets/js/core.js"></script>
+<script>
+(async function () {
+  const A = AISL, { t, el } = A;
+  const w = await A.loadJSON('data/workshop.json');
+  A.setApi(w.apiUrl);
+  document.getElementById('langSlot').append(A.langToggle());
+  const L = {
+    title: { en: 'How was today?', hi: 'आज का अनुभव कैसा रहा?' },
+    overall: { en: 'Overall, how useful was the workshop? (1–5)', hi: 'कुल मिलाकर कार्यशाला कितनी उपयोगी रही? (1–5)' },
+    best: { en: 'What will you use first back at school?', hi: 'विद्यालय लौटकर आप सबसे पहले क्या उपयोग करेंगे?' },
+    improve: { en: 'What could be better?', hi: 'क्या बेहतर हो सकता था?' },
+    interest: { en: 'Would any of these help your school? (optional)', hi: 'क्या इनमें से कुछ आपके विद्यालय के लिए उपयोगी होगा? (वैकल्पिक)' },
+    opts: [
+      { en: 'In-school teacher training (CPD hours)', hi: 'विद्यालय में शिक्षक प्रशिक्षण (CPD घंटे)' },
+      { en: 'CT & AI curriculum roll-out support', hi: 'CT और AI पाठ्यक्रम लागू करने में सहायता' },
+      { en: 'AI policy & data-privacy pack', hi: 'AI नीति और डेटा गोपनीयता पैक' },
+      { en: 'Student AI club / camp', hi: 'छात्र AI क्लब / कैंप' },
+      { en: 'Parent orientation session', hi: 'अभिभावक अभिमुखीकरण सत्र' },
+      { en: 'Admissions & branding support', hi: 'प्रवेश और ब्रांडिंग सहायता' }
+    ],
+    contact: { en: 'You may contact me about these.', hi: 'आप इनके बारे में मुझसे संपर्क कर सकते हैं।' },
+    send: { en: 'Send feedback', hi: 'प्रतिक्रिया भेजें' },
+    thanks: { en: 'Thank you! Your feedback is recorded.', hi: 'धन्यवाद! आपकी प्रतिक्रिया दर्ज हुई।' }
+  };
+  function paint() {
+    document.getElementById('topTitle').textContent = t(A.UI.feedback);
+    const app = document.getElementById('app'); app.innerHTML = '';
+    if (A.store.get('feedbackSent', false)) { app.append(el('p', { class: 'card', text: t(L.thanks) })); return; }
+    const f = el('form', { class: 'card' }, [el('h2', { text: t(L.title) })]);
+    const rating = el('select', { id: 'rating', required: true }, [el('option', { value: '', text: '—' })].concat([5, 4, 3, 2, 1].map(v => el('option', { value: v, text: String(v) }))));
+    const best = el('textarea', { id: 'best', rows: 2, maxlength: 500 });
+    const improve = el('textarea', { id: 'improve', rows: 2, maxlength: 500 });
+    f.append(el('label', { for: 'rating', text: t(L.overall) }), rating, el('label', { for: 'best', text: t(L.best) }), best, el('label', { for: 'improve', text: t(L.improve) }), improve);
+    f.append(el('label', { text: t(L.interest) }));
+    const boxes = L.opts.map((o, i) => { const c = el('input', { type: 'checkbox', id: 'o' + i, value: o.en }); f.append(el('label', { class: 'consent', for: 'o' + i }, [c, el('span', { text: t(o) })])); return c; });
+    const contact = el('input', { type: 'checkbox', id: 'contact' });
+    f.append(el('label', { class: 'consent', for: 'contact' }, [contact, el('span', { text: t(L.contact) })]));
+    const hp = el('input', { class: 'hp', tabindex: '-1', autocomplete: 'off', 'aria-hidden': 'true' }); f.append(hp);
+    f.append(el('button', { class: 'btn', style: 'width:100%;margin-top:1rem', type: 'submit', text: t(L.send) }));
+    f.addEventListener('submit', async e => {
+      e.preventDefault(); if (hp.value) return;
+      await A.send('feedback', { rating: rating.value, best: best.value.trim(), improve: improve.value.trim(), interests: boxes.filter(b => b.checked).map(b => b.value).join('; '), contact: contact.checked ? 'yes' : 'no' });
+      A.store.set('feedbackSent', true); paint();
+    });
+    app.append(f);
+  }
+  paint(); document.addEventListener('langchange', paint);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presenter · AI for School Leaders 2026</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="presenter">
+<div class="topbar">
+  <span class="title" id="topTitle">Presenter</span>
+  <select id="pick" aria-label="Session" style="width:auto;padding:.2rem .5rem"></select>
+  <span id="langSlot"></span>
+</div>
+<div class="livebar"><span id="live">Live data: not connected</span><span>← → keys to move · F for full screen</span></div>
+<main id="app"><p class="status">Loading…</p></main>
+<nav class="nav">
+  <button class="btn ghost" id="prev" type="button">‹</button>
+  <span class="counter" id="counter"></span>
+  <button class="btn" id="next" type="button">›</button>
+</nav>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/player.js"></script>
+<script>
+(async function () {
+  const A = AISL, { t, el } = A;
+  const w = await A.loadJSON('data/workshop.json');
+  A.setApi(w.apiUrl);
+  document.getElementById('langSlot').append(A.langToggle());
+  const params = new URLSearchParams(location.search);
+  let n = parseInt(params.get('s') || '1', 10), s, i = 0, ctx;
+
+  const pick = document.getElementById('pick');
+  w.sessions.forEach(x => pick.append(el('option', { value: x.id, text: 'Session ' + x.id })));
+  pick.value = n;
+  pick.onchange = () => load(parseInt(pick.value, 10));
+
+  async function load(num) {
+    n = num; s = await A.loadJSON('data/session' + n + '.json');
+    s.steps.forEach(st => { if (st.type === 'title') st.session = n; });
+    i = A.store.get('ppos.s' + n, 0); show(); refresh();
+  }
+  function show() {
+    ctx = { session: n, presenter: true, widgets: [] };
+    const app = document.getElementById('app'); app.innerHTML = '';
+    document.getElementById('topTitle').textContent = n + '. ' + t(s.title);
+    app.append(AISLPlayer.renderStep(s.steps[i], ctx));
+    document.getElementById('counter').textContent = (i + 1) + ' / ' + s.steps.length;
+    A.store.set('ppos.s' + n, i);
+    refresh();
+  }
+  let last = null;
+  async function refresh() {
+    const data = await A.stats(n);
+    if (data && data.ok) {
+      last = data;
+      document.getElementById('live').textContent = 'Live · registered: ' + data.registered + ' · updated ' + new Date().toLocaleTimeString();
+    }
+    if (last) AISLPlayer.updateWidgets(ctx, last);
+  }
+  const go = d => { const j = i + d; if (j >= 0 && j < s.steps.length) { i = j; show(); } };
+  document.getElementById('prev').onclick = () => go(-1);
+  document.getElementById('next').onclick = () => go(1);
+  document.addEventListener('keydown', e => {
+    if (e.target.tagName === 'SELECT') return;
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); go(1); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(-1); }
+    if (e.key === 'f' || e.key === 'F') { document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen().catch(() => {}); }
+  });
+  document.addEventListener('langchange', show);
+  setInterval(refresh, 15000); // light polling: one request every 15 s from the presenter only
+  load(n);
+})().catch(e => { document.getElementById('app').innerHTML = '<p class="card">Could not load. Refresh.</p>'; console.error(e); });
+</script>
+</body>
+</html>

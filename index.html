@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI for School Leaders 2026 · Lucknow</title>
+<meta name="description" content="Hands-on workshop platform for CBSE school leaders: AI for leadership, future-ready classrooms, and school branding.">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <span class="title" id="topTitle">AI for School Leaders 2026</span>
+  <span id="langSlot"></span>
+</header>
+<main id="app"><p class="status">Loading…</p></main>
+<footer id="foot"></footer>
+<script src="assets/js/core.js"></script>
+<script>
+(async function () {
+  const A = AISL, { t, el } = A;
+  const w = await A.loadJSON('data/workshop.json');
+  A.setApi(w.apiUrl);
+  document.getElementById('langSlot').append(A.langToggle());
+
+  const L = {
+    welcome: { en: 'Welcome', hi: 'स्वागत है' },
+    regTitle: { en: 'Register (1 minute)', hi: 'पंजीकरण (1 मिनट)' },
+    name: { en: 'Your name', hi: 'आपका नाम' },
+    school: { en: 'School name', hi: 'विद्यालय का नाम' },
+    role: { en: 'Role', hi: 'पद' },
+    district: { en: 'District', hi: 'ज़िला' },
+    phone: { en: 'WhatsApp number (optional)', hi: 'व्हाट्सऐप नंबर (वैकल्पिक)' },
+    consent: { en: 'I agree that my name, school and contact are stored by the facilitator only to run this workshop and to send me workshop materials. I can ask for them to be deleted at any time.', hi: 'मैं सहमत हूँ कि मेरा नाम, विद्यालय और संपर्क केवल इस कार्यशाला के संचालन और सामग्री भेजने के लिए सुविधाकर्ता द्वारा रखे जाएँ। मैं कभी भी इन्हें हटाने का अनुरोध कर सकता/सकती हूँ।' },
+    hello: { en: 'You are registered as', hi: 'आप पंजीकृत हैं:' },
+    sheet: { en: 'Make your copy of the School Command Sheet', hi: 'विद्यालय कमांड शीट की अपनी प्रति बनाएँ' },
+    roles: [ { en: 'Principal', hi: 'प्रधानाचार्य' }, { en: 'Vice-Principal', hi: 'उप-प्रधानाचार्य' }, { en: 'Director / Manager', hi: 'निदेशक / प्रबंधक' }, { en: 'Coordinator / HoD', hi: 'समन्वयक / विभागाध्यक्ष' }, { en: 'Other', hi: 'अन्य' } ],
+    districts: [ 'Barabanki', 'Bahraich', 'Lucknow', { en: 'Other', hi: 'अन्य' } ]
+  };
+
+  function paint() {
+    const app = document.getElementById('app'); app.innerHTML = '';
+    document.getElementById('topTitle').textContent = t(w.title);
+    const p = A.participant();
+
+    app.append(el('section', { class: 'hero' }, [
+      el('p', { class: 'eyebrow', text: t(L.welcome) }),
+      el('h1', { text: t(w.title) }),
+      el('p', { class: 'lead', text: t(w.subtitle) }),
+      w.date ? el('p', { text: w.date + (w.venue ? ' · ' + w.venue : '') }) : null
+    ]));
+
+    if (!p.registered) app.append(regForm(p)); else app.append(el('p', { class: 'card', text: t(L.hello) + ' ' + p.name + ' · ' + p.school }));
+
+    if (w.commandSheetCopyUrl) app.append(el('a', { class: 'btn', style: 'width:100%;margin-bottom:1rem', href: w.commandSheetCopyUrl, target: '_blank', rel: 'noopener', text: t(L.sheet) + ' ↗' }));
+
+    app.append(el('h2', { text: t(A.UI.sessions) }));
+    const list = el('div', { class: 'session-list' });
+    w.sessions.forEach(s => {
+      list.append(el('a', { class: 'card session-link', href: 'session.html?s=' + s.id }, [
+        el('span', { class: 'time', text: s.time }),
+        el('h3', { text: s.id + '. ' + t(s.title) }),
+        el('p', { class: 'lead', style: 'margin:0', text: t(s.blurb) })
+      ]));
+    });
+    app.append(list);
+    app.append(el('div', { class: 'row', style: 'margin-top:1rem' }, [
+      el('a', { class: 'btn ghost', href: 'resources.html', text: t(A.UI.resources) }),
+      el('a', { class: 'btn ghost', href: 'feedback.html', text: t(A.UI.feedback) })
+    ]));
+    document.getElementById('foot').innerHTML = '';
+    document.getElementById('foot').append(el('a', { href: w.facilitator.url, text: w.facilitator.name }), ' · ' + t(w.facilitator.role));
+  }
+
+  function regForm(p) {
+    const f = el('form', { class: 'card' });
+    const field = (id, label, input) => { f.append(el('label', { for: id, text: t(label) }), input); return input; };
+    f.append(el('h2', { text: t(L.regTitle) }));
+    const name = field('name', L.name, el('input', { id: 'name', required: true, maxlength: 80, autocomplete: 'name' }));
+    const school = field('school', L.school, el('input', { id: 'school', required: true, maxlength: 120 }));
+    const role = field('role', L.role, el('select', { id: 'role' }, L.roles.map(r => el('option', { value: r.en, text: t(r) }))));
+    const district = field('district', L.district, el('select', { id: 'district' }, L.districts.map(d => el('option', { value: typeof d === 'string' ? d : d.en, text: t(d) }))));
+    const phone = field('phone', L.phone, el('input', { id: 'phone', inputmode: 'tel', maxlength: 15, pattern: '[0-9+ ]{0,15}' }));
+    const hp = el('input', { class: 'hp', tabindex: '-1', autocomplete: 'off', 'aria-hidden': 'true' });
+    const consent = el('input', { type: 'checkbox', id: 'consent', required: true });
+    f.append(hp, el('label', { class: 'consent', for: 'consent' }, [consent, el('span', { text: t(L.consent) })]));
+    f.append(el('button', { class: 'btn', style: 'width:100%;margin-top:1rem', type: 'submit', text: t(A.UI.register) }));
+    f.addEventListener('submit', async e => {
+      e.preventDefault();
+      if (hp.value) return; // bot
+      Object.assign(p, { registered: true, name: name.value.trim(), school: school.value.trim(), role: role.value, district: district.value });
+      A.saveParticipant(p);
+      await A.send('register', { name: p.name, school: p.school, role: p.role, district: p.district, phone: phone.value.trim(), consent: 'yes' });
+      paint();
+    });
+    return f;
+  }
+
+  paint();
+  document.addEventListener('langchange', paint);
+})().catch(e => { document.getElementById('app').innerHTML = '<p class="card">Could not load the workshop. Please refresh.</p>'; console.error(e); });
+</script>
+</body>
+</html>

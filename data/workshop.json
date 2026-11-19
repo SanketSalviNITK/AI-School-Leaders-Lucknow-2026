@@ -1,0 +1,44 @@
+{
+  "_help": "Workshop settings. apiUrl = the Google Apps Script web-app URL (see README, step 2). Leave empty to run offline: progress then stays on each phone only.",
+  "id": "lucknow-2026",
+  "title": {
+    "en": "AI for School Leaders 2026",
+    "hi": "विद्यालय नेतृत्व के लिए AI 2026"
+  },
+  "subtitle": {
+    "en": "Capacity Building Workshop · Barabanki & Bahraich Sahodaya School Complexes · Lucknow",
+    "hi": "क्षमता निर्माण कार्यशाला · बाराबंकी एवं बहराइच सहोदय विद्यालय परिसर · लखनऊ"
+  },
+  "date": "",
+  "venue": "",
+  "facilitator": {
+    "name": "Dr. Sanket Salvi",
+    "role": {
+      "en": "Assistant Professor, Computer Engineering & Technology, MIT World Peace University, Pune",
+      "hi": "सहायक प्राध्यापक, कंप्यूटर इंजीनियरिंग एवं प्रौद्योगिकी, एमआईटी वर्ल्ड पीस यूनिवर्सिटी, पुणे"
+    },
+    "url": "https://onlysanket.in/consulting.html"
+  },
+  "apiUrl": "",
+  "commandSheetCopyUrl": "",
+  "sessions": [
+    {
+      "id": 1,
+      "time": "9:30 – 11:00",
+      "title": { "en": "Effective Leadership with AI", "hi": "AI के साथ प्रभावी नेतृत्व" },
+      "blurb": { "en": "Your office tasks: circulars, CPD tracking, teacher feedback, a school AI policy.", "hi": "आपके कार्यालय के काम: परिपत्र, CPD ट्रैकिंग, शिक्षक फीडबैक, विद्यालय की AI नीति।" }
+    },
+    {
+      "id": 2,
+      "time": "11:30 – 1:00",
+      "title": { "en": "Building Future-Ready Schools with AI Integration", "hi": "AI एकीकरण से भविष्य-तैयार विद्यालय" },
+      "blurb": { "en": "Your classrooms: the CT & AI mandate, lesson plans, competency-based questions.", "hi": "आपकी कक्षाएँ: CT और AI अनिवार्यता, पाठ योजना, योग्यता-आधारित प्रश्न।" }
+    },
+    {
+      "id": 3,
+      "time": "2:00 – 3:30",
+      "title": { "en": "School Management & Branding", "hi": "विद्यालय प्रबंधन एवं ब्रांडिंग" },
+      "blurb": { "en": "Your parents and community: admissions, report remarks, parent communication.", "hi": "आपके अभिभावक और समुदाय: प्रवेश, रिपोर्ट टिप्पणियाँ, अभिभावक संवाद।" }
+    }
+  ]
+}

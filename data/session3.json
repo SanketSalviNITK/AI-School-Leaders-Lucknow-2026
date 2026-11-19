@@ -1,0 +1,22 @@
+{
+  "_help": "DRAFT placeholder. Content comes in a later stage.",
+  "id": 3,
+  "title": {
+    "en": "School Management & Branding",
+    "hi": "विद्यालय प्रबंधन एवं ब्रांडिंग"
+  },
+  "time": "2:00 – 3:30",
+  "steps": [
+    {
+      "type": "title",
+      "title": {
+        "en": "School Management & Branding",
+        "hi": "विद्यालय प्रबंधन एवं ब्रांडिंग"
+      },
+      "subtitle": {
+        "en": "Content coming soon",
+        "hi": "सामग्री जल्द आ रही है"
+      }
+    }
+  ]
+}

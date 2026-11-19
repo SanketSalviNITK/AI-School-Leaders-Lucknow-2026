@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Session · AI for School Leaders 2026</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header>
+  <div class="topbar">
+    <a href="index.html" aria-label="Home">‹</a>
+    <span class="title" id="topTitle">Session</span>
+    <span id="langSlot"></span>
+  </div>
+  <div class="progress"><span id="bar"></span></div>
+</header>
+<main id="app"><p class="status">Loading…</p></main>
+<nav class="nav">
+  <button class="btn ghost" id="prev" type="button">‹</button>
+  <span class="counter" id="counter"></span>
+  <button class="btn" id="next" type="button">›</button>
+</nav>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/player.js"></script>
+<script>
+(async function () {
+  const A = AISL, { t } = A;
+  const n = parseInt(new URLSearchParams(location.search).get('s') || '1', 10);
+  const [w, s] = await Promise.all([A.loadJSON('data/workshop.json'), A.loadJSON('data/session' + n + '.json')]);
+  A.setApi(w.apiUrl);
+  document.getElementById('langSlot').append(A.langToggle());
+  s.steps.forEach(st => { if (st.type === 'title') st.session = n; });
+
+  const key = 'pos.s' + n;
+  let i = Math.min(A.store.get(key, 0), s.steps.length - 1);
+  const ctx = { session: n, presenter: false, widgets: [] };
+
+  function show() {
+    const app = document.getElementById('app'); app.innerHTML = '';
+    document.getElementById('topTitle').textContent = n + '. ' + t(s.title);
+    app.append(AISLPlayer.renderStep(s.steps[i], ctx));
+    document.getElementById('counter').textContent = (i + 1) + ' / ' + s.steps.length;
+    document.getElementById('bar').style.width = Math.round(100 * (i + 1) / s.steps.length) + '%';
+    document.getElementById('prev').disabled = i === 0;
+    document.getElementById('next').disabled = i === s.steps.length - 1;
+    A.store.set(key, i);
+    window.scrollTo(0, 0);
+  }
+  document.getElementById('prev').onclick = () => { if (i > 0) { i--; show(); } };
+  document.getElementById('next').onclick = () => { if (i < s.steps.length - 1) { i++; show(); } };
+  document.addEventListener('langchange', show);
+  show();
+})().catch(e => { document.getElementById('app').innerHTML = '<p class="card">Could not load this session. Please refresh.</p>'; console.error(e); });
+</script>
+</body>
+</html>

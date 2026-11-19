@@ -1,0 +1,74 @@
+{
+  "_help": "Session content. Step types: title, concept, poll, quiz, reveal, mission, finale. Any text can be a plain string or {\"en\": \"...\", \"hi\": \"...\"}. DRAFT: structure only; final Session 1 content comes in the next stage.",
+  "id": 1,
+  "title": { "en": "Effective Leadership with AI", "hi": "AI के साथ प्रभावी नेतृत्व" },
+  "time": "9:30 – 11:00",
+  "steps": [
+    {
+      "type": "title",
+      "title": { "en": "Effective Leadership with AI", "hi": "AI के साथ प्रभावी नेतृत्व" },
+      "subtitle": { "en": "20 minutes of ideas, 60 minutes of doing", "hi": "20 मिनट विचार, 60 मिनट अभ्यास" }
+    },
+    {
+      "type": "poll",
+      "id": "s1-poll-hours",
+      "question": { "en": "Last week, how many hours did you spend on paperwork?", "hi": "पिछले सप्ताह आपने कागज़ी काम पर कितने घंटे लगाए?" },
+      "options": [
+        { "en": "Less than 5", "hi": "5 से कम" },
+        { "en": "5 – 10", "hi": "5 – 10" },
+        { "en": "10 – 20", "hi": "10 – 20" },
+        { "en": "More than 20", "hi": "20 से अधिक" }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": { "en": "The prompt frame we use all day", "hi": "पूरे दिन उपयोग होने वाला प्रॉम्प्ट ढाँचा" },
+      "points": [
+        { "en": "<b>R</b>ole – who Gemini should act as", "hi": "<b>R</b>ole – Gemini किसकी भूमिका निभाए" },
+        { "en": "<b>T</b>ask – what to produce", "hi": "<b>T</b>ask – क्या बनाना है" },
+        { "en": "<b>C</b>ontext – your school, the circular, constraints", "hi": "<b>C</b>ontext – आपका विद्यालय, परिपत्र, सीमाएँ" },
+        { "en": "<b>F</b>ormat – table, circular, word limit", "hi": "<b>F</b>ormat – तालिका, परिपत्र, शब्द सीमा" },
+        { "en": "<b>L</b>anguage – English, Hindi or both", "hi": "<b>L</b>anguage – अंग्रेज़ी, हिंदी या दोनों" },
+        { "en": "<b>C</b>heck – ask what you should verify", "hi": "<b>C</b>heck – पूछें कि क्या जाँचना है" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "s1-quiz-data",
+      "question": { "en": "Which of these is safe to paste into Gemini?", "hi": "इनमें से क्या Gemini में डालना सुरक्षित है?" },
+      "options": [
+        { "en": "Student names with marks", "hi": "अंकों सहित छात्रों के नाम" },
+        { "en": "Teacher codes (T01, T02) with training hours", "hi": "प्रशिक्षण घंटों सहित शिक्षक कोड (T01, T02)" },
+        { "en": "APAAR IDs for the board registration list", "hi": "बोर्ड पंजीकरण सूची के APAAR ID" }
+      ],
+      "answer": 1,
+      "explain": { "en": "Anonymised codes only. Never paste names, marks, Aadhaar or APAAR data into public AI tools.", "hi": "केवल गुमनाम कोड। सार्वजनिक AI टूल में नाम, अंक, आधार या APAAR डेटा कभी न डालें।" }
+    },
+    {
+      "type": "mission",
+      "id": "m1",
+      "number": 1,
+      "minutes": 10,
+      "tool": "Gemini",
+      "toolUrl": "https://gemini.google.com/app",
+      "title": { "en": "Build your Principal's Assistant (Gem)", "hi": "अपना प्रधानाचार्य सहायक (Gem) बनाएँ" },
+      "scenario": { "en": "Stop retyping your school's details into every chat.", "hi": "हर चैट में विद्यालय का विवरण दोबारा लिखना बंद करें।" },
+      "steps": [
+        { "en": "Open Gemini → Gems → New Gem.", "hi": "Gemini खोलें → Gems → New Gem।" },
+        { "en": "Copy the instructions below, fill the [brackets], save.", "hi": "नीचे दिए निर्देश कॉपी करें, [कोष्ठक] भरें, सेव करें।" }
+      ],
+      "prompt": "You are the assistant to the principal of [school], a CBSE school in [Barabanki/Bahraich], Classes [Nursery–XII]. Write in clear, respectful English and Hindi side by side unless told otherwise. Follow CBSE circular style. Never ask for or store student names, marks, Aadhaar or APAAR numbers. At the end of every answer, list facts I should verify.",
+      "expected": { "en": "A saved Gem you will reuse all day.", "hi": "एक सेव किया हुआ Gem जिसे आप पूरे दिन उपयोग करेंगे।" },
+      "check": { "en": "Ask it: \"Who are you?\" It should describe your school.", "hi": "उससे पूछें: \"आप कौन हैं?\" वह आपके विद्यालय का वर्णन करे।" }
+    },
+    {
+      "type": "finale",
+      "title": { "en": "What Pro can do next", "hi": "Pro आगे क्या कर सकता है" },
+      "points": [
+        { "en": "Ask your CPD sheet questions in plain language (Gemini Pro in Sheets).", "hi": "अपनी CPD शीट से सामान्य भाषा में प्रश्न पूछें (Sheets में Gemini Pro)।" },
+        { "en": "Turn the same sheet into a live dashboard (Claude).", "hi": "उसी शीट को लाइव डैशबोर्ड में बदलें (Claude)।" }
+      ],
+      "note": { "en": "Everything you did today is free. This is where it grows.", "hi": "आज आपने जो किया वह सब मुफ़्त है। यहाँ से यह आगे बढ़ता है।" }
+    }
+  ]
+}

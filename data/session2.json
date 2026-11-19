@@ -1,0 +1,22 @@
+{
+  "_help": "DRAFT placeholder. Content comes in a later stage.",
+  "id": 2,
+  "title": {
+    "en": "Building Future-Ready Schools with AI Integration",
+    "hi": "AI एकीकरण से भविष्य-तैयार विद्यालय"
+  },
+  "time": "11:30 – 1:00",
+  "steps": [
+    {
+      "type": "title",
+      "title": {
+        "en": "Building Future-Ready Schools with AI Integration",
+        "hi": "AI एकीकरण से भविष्य-तैयार विद्यालय"
+      },
+      "subtitle": {
+        "en": "Content coming soon",
+        "hi": "सामग्री जल्द आ रही है"
+      }
+    }
+  ]
+}
