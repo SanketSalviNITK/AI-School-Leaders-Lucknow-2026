@@ -1,5 +1,5 @@
 {
-  "_help": "DRAFT placeholder. Content comes in a later stage.",
+  "_help": "Session 2 content. Stage 1 done (missions s2m1–s2m5, numbered 6–10). Theory (Stage 3) and finale (Stage 4) to come. Step types: title, concept, reveal, poll, quiz, mission, finale.",
   "id": 2,
   "title": {
     "en": "Building Future-Ready Schools with AI Integration",
@@ -17,6 +17,266 @@
         "en": "Content coming soon",
         "hi": "सामग्री जल्द आ रही है"
       }
+    },
+    {
+      "type": "mission",
+      "id": "s2m1",
+      "number": 6,
+      "minutes": 10,
+      "tool": "Gemini",
+      "toolUrl": "https://gemini.google.com/app",
+      "title": {
+        "en": "Fit the CT & AI hours into your timetable",
+        "hi": "CT और AI के घंटे अपनी समय-सारणी में फ़िट करें"
+      },
+      "scenario": {
+        "en": "CBSE made Computational Thinking and AI compulsory for Classes III–VIII from 2026-27, but your timetable was made before the circular. You need a realistic plan for the months left: which class, which period, which teacher.",
+        "hi": "CBSE ने 2026-27 से कक्षा III–VIII के लिए कम्प्यूटेशनल थिंकिंग और AI अनिवार्य किया है, पर आपकी समय-सारणी परिपत्र से पहले बनी थी। शेष महीनों के लिए व्यावहारिक योजना चाहिए: कौन-सी कक्षा, कौन-सा पीरियड, कौन-सा शिक्षक।"
+      },
+      "steps": [
+        {
+          "en": "Open your <b>Principal's Assistant</b> Gem.",
+          "hi": "अपना <b>Principal's Assistant</b> Gem खोलें।"
+        },
+        {
+          "en": "Copy the prompt, replace the [brackets] with your school's numbers (or keep the sample numbers), and send.",
+          "hi": "प्रॉम्प्ट कॉपी करें, [कोष्ठक] में अपने विद्यालय की संख्याएँ भरें (या नमूना संख्याएँ रखें), और भेजें।"
+        },
+        {
+          "en": "Ask one follow-up: \"Which teachers need training first, and when?\"",
+          "hi": "एक अनुवर्ती प्रश्न पूछें: \"किन शिक्षकों को पहले प्रशिक्षण चाहिए, और कब?\""
+        }
+      ],
+      "prompt": {
+        "en": "Our CBSE school has Classes III–VIII with [2] sections each. Each section has [7] Maths periods and [5] TWAU / Science periods per week, 40 minutes each. About [4] months of teaching remain in 2026-27.\n\nUnder CBSE Circular Acad-15/2026: Classes III–V need about 50 hours a year of computational thinking (CT), taught inside Maths and The World Around Us periods, mostly unplugged; Classes VI–VIII need about 100 hours a year (about 40 CT, 20 introductory AI, 40 interdisciplinary projects), shared between subject and computer teachers. The hours are indicative.\n\n1. Make a table, one row per class: hours needed for the rest of this session (pro-rata), periods per week to set aside, which subject periods to use, and a suggested teacher role (Maths teacher, Science teacher, computer teacher).\n2. Keep it realistic: do not take more than 1 Maths period a week in Classes III–V.\n3. List 3 risks (for example, a teacher shortage) and how to handle each.\nShow the table so I can paste it into Google Sheets.",
+        "hi": "हमारे CBSE विद्यालय में कक्षा III–VIII हैं, हर कक्षा के [2] सेक्शन। हर सेक्शन में प्रति सप्ताह [7] गणित और [5] TWAU / विज्ञान के पीरियड हैं, हर पीरियड 40 मिनट का। 2026-27 में लगभग [4] महीने का शिक्षण शेष है।\n\nCBSE परिपत्र Acad-15/2026 के अनुसार: कक्षा III–V में वर्ष में लगभग 50 घंटे कम्प्यूटेशनल थिंकिंग (CT) चाहिए, गणित और The World Around Us के पीरियड के भीतर, अधिकतर बिना कंप्यूटर के; कक्षा VI–VIII में वर्ष में लगभग 100 घंटे (लगभग 40 CT, 20 प्रारंभिक AI, 40 अंतर्विषयक प्रोजेक्ट), विषय और कंप्यूटर शिक्षक मिलकर। घंटे सांकेतिक हैं।\n\n1. हर कक्षा के लिए एक पंक्ति वाली तालिका बनाएँ: इस सत्र के शेष समय के लिए आवश्यक घंटे (अनुपात में), प्रति सप्ताह कितने पीरियड अलग रखें, किस विषय के पीरियड का उपयोग हो, और सुझाई गई शिक्षक भूमिका (गणित, विज्ञान या कंप्यूटर शिक्षक)।\n2. व्यावहारिक रहें: कक्षा III–V में सप्ताह में 1 से अधिक गणित पीरियड न लें।\n3. 3 जोखिम (जैसे शिक्षकों की कमी) और हर एक से निपटने का तरीका बताएँ।\nतालिका ऐसे दें कि मैं उसे Google Sheets में पेस्ट कर सकूँ।"
+      },
+      "expected": {
+        "en": "A class-wise CT & AI plan for the rest of this session, with periods, subjects and teacher owners.",
+        "hi": "इस सत्र के शेष समय के लिए कक्षावार CT और AI योजना, पीरियड, विषय और ज़िम्मेदार शिक्षकों सहित।"
+      },
+      "check": {
+        "en": "Check the arithmetic: 4 months is about 16 teaching weeks. Is the plan possible with the teachers you actually have? The hours are indicative, so a partial plan this year is acceptable; record it.",
+        "hi": "गणना जाँचें: 4 महीने लगभग 16 शिक्षण सप्ताह होते हैं। क्या यह योजना आपके वास्तविक शिक्षकों के साथ संभव है? घंटे सांकेतिक हैं, इसलिए इस वर्ष आंशिक योजना भी स्वीकार्य है; उसे दर्ज करें।"
+      },
+      "stretch": {
+        "en": "Ask: \"Turn this into a one-page note for my teachers explaining what changes from next Monday, in Hindi.\"",
+        "hi": "पूछें: \"इसे मेरे शिक्षकों के लिए एक पृष्ठ के हिंदी नोट में बदलें, जिसमें बताया हो कि अगले सोमवार से क्या बदलेगा।\""
+      },
+      "notes": [
+        "Sample answer to sanity-check, assuming about 40 teaching weeks a year: 4 months ≈ 16 weeks = 40% of the year. III–V: 40% of 50 h = 20 h = 30 periods of 40 min ≈ 2 periods a week; with the 1-Maths-period cap, the other comes from TWAU. VI–VIII: 40% of 100 h = 40 h = 60 periods ≈ 4 periods a week, shared between subject and computer teachers.",
+        "Many principals will find the full hours impossible this year. Reassure them: CBSE calls the hours indicative; a documented partial plan is far better than none."
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "s2m2",
+      "number": 7,
+      "minutes": 15,
+      "tool": "Gemini",
+      "toolUrl": "https://gemini.google.com/app",
+      "title": {
+        "en": "An unplugged CT lesson: no computer lab needed",
+        "hi": "बिना कंप्यूटर का CT पाठ: लैब की ज़रूरत नहीं"
+      },
+      "scenario": {
+        "en": "Your Class 4 Maths teacher must start computational thinking next week, with no computers and no extra budget. Give her a ready lesson she can teach with paper, chalk and the children themselves.",
+        "hi": "आपकी कक्षा 4 की गणित शिक्षिका को अगले सप्ताह से कम्प्यूटेशनल थिंकिंग शुरू करनी है, बिना कंप्यूटर और बिना अतिरिक्त बजट के। उन्हें एक तैयार पाठ दें जिसे वे कागज़, चॉक और बच्चों के साथ पढ़ा सकें।"
+      },
+      "steps": [
+        {
+          "en": "In your Gem, paste the prompt and send.",
+          "hi": "अपने Gem में प्रॉम्प्ट पेस्ट करें और भेजें।"
+        },
+        {
+          "en": "Refine once: \"Make the Hindi instructions simpler for a Class 4 child.\"",
+          "hi": "एक बार सुधारें: \"हिंदी निर्देश कक्षा 4 के बच्चे के लिए और सरल करें।\""
+        },
+        {
+          "en": "Compare with the free CBSE CT handbook for Class 4 (link on the Resources page).",
+          "hi": "कक्षा 4 की मुफ़्त CBSE CT पुस्तिका से तुलना करें (लिंक संसाधन पृष्ठ पर)।"
+        }
+      ],
+      "prompt": {
+        "en": "Create a 40-minute lesson plan for Class 4 Maths on patterns, aligned to NCERT and to the CBSE Computational Thinking framework for 2026-27. No computers or devices for students.\nInclude:\n1. Learning objective in one line, and the CT skill it builds (pattern recognition, sequencing or algorithms).\n2. A 5-minute warm-up using claps or body movement.\n3. A 15-minute unplugged activity with paper cards or chalk: children write and follow a step-by-step 'algorithm' to make a pattern.\n4. 10 minutes of pair work and 5 minutes of sharing.\n5. A 3-question exit ticket.\n6. A 3-level rubric (Beginning, Developing, Proficient).\nGive teacher instructions in Hindi and student instructions in simple English and Hindi. Materials must cost nothing.",
+        "hi": "कक्षा 4 गणित में 'पैटर्न' पर 40 मिनट की पाठ योजना बनाएँ, NCERT और 2026-27 के CBSE कम्प्यूटेशनल थिंकिंग ढाँचे के अनुरूप। छात्रों के लिए कोई कंप्यूटर या उपकरण नहीं।\nशामिल करें:\n1. एक पंक्ति में सीखने का उद्देश्य, और इससे बनने वाला CT कौशल (पैटर्न पहचान, क्रम या एल्गोरिदम)।\n2. ताली या शारीरिक गतिविधि से 5 मिनट का वार्म-अप।\n3. कागज़ के कार्ड या चॉक से 15 मिनट की बिना कंप्यूटर की गतिविधि: बच्चे पैटर्न बनाने का चरण-दर-चरण 'एल्गोरिदम' लिखें और उसका पालन करें।\n4. 10 मिनट जोड़ी में काम और 5 मिनट साझा करना।\n5. 3 प्रश्नों का एग्ज़िट टिकट।\n6. 3-स्तरीय रूब्रिक (प्रारंभिक, विकासशील, दक्ष)।\nशिक्षक के निर्देश हिंदी में और छात्रों के निर्देश सरल अंग्रेज़ी और हिंदी में दें। सामग्री पर कोई खर्च न हो।"
+      },
+      "expected": {
+        "en": "A complete, zero-cost CT lesson your teacher can use next week, with a rubric for continuous assessment.",
+        "hi": "एक पूरा, बिना खर्च का CT पाठ जिसे आपकी शिक्षिका अगले सप्ताह उपयोग कर सकें, सतत मूल्यांकन के रूब्रिक सहित।"
+      },
+      "check": {
+        "en": "Would this work with 40 children in your actual classroom? Is the Hindi natural for your area? Match it against the CBSE Class 4 CT handbook before using.",
+        "hi": "क्या यह आपकी वास्तविक कक्षा में 40 बच्चों के साथ चलेगा? क्या हिंदी आपके क्षेत्र के लिए स्वाभाविक है? उपयोग से पहले CBSE की कक्षा 4 CT पुस्तिका से मिलाएँ।"
+      },
+      "stretch": {
+        "en": "Ask for a printable A4 worksheet version with pictures described in words, so a teacher can draw them on the board.",
+        "hi": "छपने योग्य A4 वर्कशीट माँगें, जिसमें चित्रों का शब्दों में वर्णन हो ताकि शिक्षक उन्हें बोर्ड पर बना सकें।"
+      },
+      "notes": [
+        "Do 2 minutes of the activity with the room yourself if energy is low: a clap-stamp pattern, then ask a table to write the 'algorithm'.",
+        "Key message for principals: the mandate does not need a lab. III–V CT lives inside Maths and TWAU periods."
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "s2m3",
+      "number": 8,
+      "minutes": 15,
+      "tool": "Gemini",
+      "toolUrl": "https://gemini.google.com/app",
+      "title": {
+        "en": "Board-pattern competency questions, then make AI check itself",
+        "hi": "बोर्ड पैटर्न के योग्यता-आधारित प्रश्न, फिर AI से स्वयं जाँच कराएँ"
+      },
+      "scenario": {
+        "en": "Half of the Class X board paper is now competency-based: case-based, source-based and assertion-reason questions. Teachers struggle to write good ones. Gemini can draft them fast, but it can also make mistakes, so you will ask it to act as a strict paper setter and check its own work.",
+        "hi": "कक्षा X बोर्ड प्रश्नपत्र का आधा भाग अब योग्यता-आधारित है: केस-आधारित, स्रोत-आधारित और अभिकथन-कारण प्रश्न। शिक्षकों को अच्छे प्रश्न बनाने में कठिनाई होती है। Gemini इन्हें जल्दी बना सकता है, पर गलती भी कर सकता है, इसलिए आप उससे सख़्त प्रश्नपत्र निर्माता बनकर अपना काम जाँचने को कहेंगे।"
+      },
+      "steps": [
+        {
+          "en": "Send prompt <b>A</b> (write the questions).",
+          "hi": "प्रॉम्प्ट <b>A</b> भेजें (प्रश्न लिखें)।"
+        },
+        {
+          "en": "Then send prompt <b>B</b> in the same chat (check them).",
+          "hi": "फिर उसी चैट में प्रॉम्प्ट <b>B</b> भेजें (जाँचें)।"
+        },
+        {
+          "en": "Note one correction Gemini found. That is why the second step matters.",
+          "hi": "Gemini ने जो एक सुधार बताया उसे नोट करें। इसीलिए दूसरा चरण ज़रूरी है।"
+        }
+      ],
+      "prompt": {
+        "en": "A) Write a competency-based question set for CBSE Class X Science, Chapter 9 'Light – Reflection and Refraction' (NCERT):\n- 1 case-based question with a short real-life passage (for example, a vehicle's rear-view mirror or a magnifying glass) and 4 sub-questions worth 1, 1, 2 and 4 marks.\n- 2 assertion-reason questions with the standard four options.\nFor every question give the answer, the marking scheme and the competency it tests.\n\nB) Now act as a strict CBSE paper setter. Check every question above for factual errors, ambiguity, wrong marks and whether it stays within the NCERT chapter. List what you would fix, then give the corrected set.",
+        "hi": "A) CBSE कक्षा X विज्ञान, अध्याय 9 'प्रकाश – परावर्तन तथा अपवर्तन' (NCERT) के लिए योग्यता-आधारित प्रश्न-समूह लिखें:\n- वास्तविक जीवन के छोटे अनुच्छेद (जैसे वाहन का पीछे देखने वाला दर्पण या आवर्धक लेंस) के साथ 1 केस-आधारित प्रश्न, जिसके 4 उप-प्रश्न 1, 1, 2 और 4 अंकों के हों।\n- मानक चार विकल्पों वाले 2 अभिकथन-कारण प्रश्न।\nहर प्रश्न का उत्तर, अंक योजना और जाँची जाने वाली योग्यता दें।\n\nB) अब एक सख़्त CBSE प्रश्नपत्र निर्माता बनें। ऊपर के हर प्रश्न में तथ्यात्मक गलती, अस्पष्टता, गलत अंक और NCERT अध्याय के भीतर रहने की जाँच करें। जो सुधारेंगे उसकी सूची दें, फिर सुधरा हुआ प्रश्न-समूह दें।"
+      },
+      "expected": {
+        "en": "A board-pattern question set with answers and marking scheme, plus a list of corrections Gemini made to its own first draft.",
+        "hi": "उत्तर और अंक योजना सहित बोर्ड पैटर्न का प्रश्न-समूह, साथ ही Gemini द्वारा अपने पहले ड्राफ़्ट में किए सुधारों की सूची।"
+      },
+      "check": {
+        "en": "A subject teacher must still verify every answer against the NCERT chapter and the latest CBSE sample paper before any question is used in a test.",
+        "hi": "किसी भी प्रश्न को परीक्षा में उपयोग करने से पहले विषय शिक्षक को हर उत्तर NCERT अध्याय और नवीनतम CBSE सैंपल पेपर से जाँचना होगा।"
+      },
+      "stretch": {
+        "en": "Ask for the same case-based question in Hindi medium, using the NCERT Hindi terms (दर्पण, लेंस, फ़ोकस दूरी).",
+        "hi": "यही केस-आधारित प्रश्न हिंदी माध्यम में माँगें, NCERT के हिंदी शब्दों (दर्पण, लेंस, फ़ोकस दूरी) के साथ।"
+      },
+      "notes": [
+        "The self-check step is the teaching point: first drafts often contain a sign-convention slip or a mark total that does not add up. Ask 2–3 principals what Gemini corrected.",
+        "Principals who are not Science teachers can swap the chapter for one from their own subject."
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "s2m4",
+      "number": 9,
+      "minutes": 10,
+      "tool": "NotebookLM",
+      "toolUrl": "https://notebooklm.google.com",
+      "title": {
+        "en": "Keep AI inside the textbook with NotebookLM",
+        "hi": "NotebookLM से AI को पाठ्यपुस्तक के भीतर रखें"
+      },
+      "scenario": {
+        "en": "Parents and teachers worry that AI makes things up. NotebookLM answers only from the documents you give it and shows where each answer comes from. Give it one NCERT chapter and see the difference.",
+        "hi": "अभिभावक और शिक्षक चिंतित हैं कि AI बातें गढ़ लेता है। NotebookLM केवल आपके दिए दस्तावेज़ों से उत्तर देता है और दिखाता है कि हर उत्तर कहाँ से आया। उसे एक NCERT अध्याय दें और अंतर देखें।"
+      },
+      "steps": [
+        {
+          "en": "Download the NCERT chapter PDF with the button below (Class 10 Science, Chapter 9).",
+          "hi": "नीचे दिए बटन से NCERT अध्याय की PDF डाउनलोड करें (कक्षा 10 विज्ञान, अध्याय 9)।"
+        },
+        {
+          "en": "Open <b>notebooklm.google.com</b> → <b>Create new</b> → upload the PDF as a source.",
+          "hi": "<b>notebooklm.google.com</b> खोलें → <b>Create new</b> → PDF को स्रोत के रूप में अपलोड करें।"
+        },
+        {
+          "en": "Paste the prompt in the chat. Tap a citation number to see the exact line in the chapter.",
+          "hi": "चैट में प्रॉम्प्ट पेस्ट करें। अध्याय की सटीक पंक्ति देखने के लिए किसी संदर्भ संख्या पर टैप करें।"
+        },
+        {
+          "en": "If time allows, tap <b>Audio Overview</b> and choose Hindi.",
+          "hi": "समय हो तो <b>Audio Overview</b> टैप करें और हिंदी चुनें।"
+        }
+      ],
+      "prompt": {
+        "en": "Using only this chapter, create 10 multiple-choice questions for Class 10 students, with the correct answer and the section of the chapter each answer comes from. Then list 3 common student misconceptions this chapter addresses.",
+        "hi": "केवल इस अध्याय का उपयोग करके कक्षा 10 के छात्रों के लिए 10 बहुविकल्पीय प्रश्न बनाएँ, सही उत्तर और अध्याय का वह भाग बताएँ जहाँ से हर उत्तर आया। फिर उन 3 सामान्य भ्रांतियों की सूची दें जिन्हें यह अध्याय दूर करता है।"
+      },
+      "expected": {
+        "en": "Ten quiz questions where every answer is traceable to a line in the NCERT chapter, plus a teaching note on misconceptions.",
+        "hi": "दस प्रश्न जिनका हर उत्तर NCERT अध्याय की किसी पंक्ति से जुड़ा है, साथ ही भ्रांतियों पर शिक्षण नोट।"
+      },
+      "check": {
+        "en": "Tap two citations and read the original lines. Grounded does not mean perfect, but you can now verify in seconds.",
+        "hi": "दो संदर्भों पर टैप करके मूल पंक्तियाँ पढ़ें। स्रोत-आधारित होने का अर्थ पूर्ण होना नहीं, पर अब आप सेकंडों में जाँच सकते हैं।"
+      },
+      "stretch": {
+        "en": "Add the CBSE Class 10 Science sample paper as a second source and ask: \"Which topics in this chapter appear most in the sample paper?\"",
+        "hi": "CBSE कक्षा 10 विज्ञान सैंपल पेपर को दूसरे स्रोत के रूप में जोड़ें और पूछें: \"इस अध्याय के कौन-से विषय सैंपल पेपर में सबसे अधिक आते हैं?\""
+      },
+      "notes": [
+        "NotebookLM needs a Google account; same one as Gemini. If the PDF download is slow on venue Wi-Fi, project your own screen and let tables watch.",
+        "Contrast with Mission 8: Gemini drafted from its general knowledge; NotebookLM is grounded in the chapter. Both are useful; grounding is what builds parents' trust.",
+        "Chapter PDF link: ncert.nic.in/textbook/pdf/jesc109.pdf (Class 10 Science, Ch. 9 Light – Reflection and Refraction). Check it opens on the venue Wi-Fi; keep a downloaded copy on your laptop."
+      ],
+      "links": [
+        {
+          "label": {
+            "en": "Download NCERT Class 10 Science, Chapter 9 (PDF)",
+            "hi": "NCERT कक्षा 10 विज्ञान, अध्याय 9 डाउनलोड करें (PDF)"
+          },
+          "url": "https://ncert.nic.in/textbook/pdf/jesc109.pdf"
+        }
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "s2m5",
+      "number": 10,
+      "minutes": 10,
+      "tool": "Gemini",
+      "toolUrl": "https://gemini.google.com/app",
+      "title": {
+        "en": "A low-cost student AI project on a local problem",
+        "hi": "स्थानीय समस्या पर कम खर्च का छात्र AI प्रोजेक्ट"
+      },
+      "scenario": {
+        "en": "Classes VI–VIII now include interdisciplinary AI projects, and a Sahodaya CT & AI workshop is the place to show them. Plan a project your students can build with one shared laptop, about a problem from your own district.",
+        "hi": "कक्षा VI–VIII में अब अंतर्विषयक AI प्रोजेक्ट शामिल हैं, और सहोदय CT और AI कार्यशाला उन्हें दिखाने का स्थान है। ऐसा प्रोजेक्ट बनाएँ जिसे आपके छात्र एक साझा लैपटॉप से, अपने ज़िले की किसी समस्या पर बना सकें।"
+      },
+      "steps": [
+        {
+          "en": "In your Gem, paste the prompt and send.",
+          "hi": "अपने Gem में प्रॉम्प्ट पेस्ट करें और भेजें।"
+        },
+        {
+          "en": "Pick the idea you like most and ask: \"Give me a 4-week plan for this, one hour a week.\"",
+          "hi": "सबसे अच्छा विचार चुनें और पूछें: \"इसके लिए 4 सप्ताह की योजना दें, सप्ताह में एक घंटा।\""
+        }
+      ],
+      "prompt": {
+        "en": "Suggest 3 low-cost AI project ideas for Class VII–VIII students in a semi-urban district of Uttar Pradesh (such as Barabanki or Bahraich), using one shared laptop and free tools like Google's Teachable Machine (image or sound classification in the browser).\nEach idea should solve a local problem: farming (for example, healthy vs diseased crop leaves), water, health, waste or school life.\nFor each idea give: the problem, what students will collect (photos or sounds), how they train and test the model, the subjects it connects (Science, Maths, Social Science, Hindi), the time needed, and 3 discussion questions on fairness and errors in AI.\nNo student faces or personal data in the training data.",
+        "hi": "उत्तर प्रदेश के अर्ध-शहरी ज़िले (जैसे बाराबंकी या बहराइच) के कक्षा VII–VIII के छात्रों के लिए 3 कम खर्च वाले AI प्रोजेक्ट विचार सुझाएँ, जिनमें एक साझा लैपटॉप और Google Teachable Machine जैसे मुफ़्त टूल का उपयोग हो (ब्राउज़र में चित्र या ध्वनि वर्गीकरण)।\nहर विचार किसी स्थानीय समस्या को हल करे: खेती (जैसे स्वस्थ और रोगग्रस्त फ़सल की पत्तियाँ), पानी, स्वास्थ्य, कचरा या विद्यालय जीवन।\nहर विचार के लिए बताएँ: समस्या, छात्र क्या एकत्र करेंगे (फ़ोटो या ध्वनि), मॉडल को कैसे प्रशिक्षित और परखेंगे, किन विषयों से जुड़ता है (विज्ञान, गणित, सामाजिक विज्ञान, हिंदी), आवश्यक समय, और AI में निष्पक्षता व त्रुटियों पर 3 चर्चा प्रश्न।\nप्रशिक्षण डेटा में छात्रों के चेहरे या व्यक्तिगत डेटा न हों।"
+      },
+      "expected": {
+        "en": "Three ready project ideas tied to your district, and a 4-week plan for one of them that your computer or Science teacher can run.",
+        "hi": "आपके ज़िले से जुड़े तीन तैयार प्रोजेक्ट विचार, और उनमें से एक की 4 सप्ताह की योजना जिसे आपके कंप्यूटर या विज्ञान शिक्षक चला सकें।"
+      },
+      "check": {
+        "en": "Is it safe and practical for 12-year-olds? Do students collect their own photos of leaves or objects, never of people? Can it be shown at a Sahodaya CT & AI workshop?",
+        "hi": "क्या यह 12 वर्ष के बच्चों के लिए सुरक्षित और व्यावहारिक है? क्या छात्र पत्तियों या वस्तुओं की अपनी फ़ोटो लेते हैं, लोगों की कभी नहीं? क्या इसे सहोदय CT और AI कार्यशाला में दिखाया जा सकता है?"
+      },
+      "stretch": {
+        "en": "Open teachablemachine.withgoogle.com on the projector laptop and train a 2-class model (for example, 'pen' vs 'pencil') in front of your table in 3 minutes.",
+        "hi": "प्रोजेक्टर वाले लैपटॉप पर teachablemachine.withgoogle.com खोलें और 3 मिनट में अपनी टेबल के सामने 2-वर्ग मॉडल (जैसे 'पेन' बनाम 'पेंसिल') प्रशिक्षित करें।"
+      },
+      "notes": [
+        "If time allows, do the Teachable Machine stretch yourself on the projector: two classes, ~20 photos each with the laptop webcam, train, test. It takes about 3 minutes and makes 'training data' concrete.",
+        "Link to Session 3: a student project with real photos (with consent) is the best branding evidence for an 'AI-ready' school."
+      ]
     }
   ]
 }

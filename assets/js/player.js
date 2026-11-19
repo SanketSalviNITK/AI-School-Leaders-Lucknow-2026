@@ -92,6 +92,7 @@
       c.append(el('h2', { html: safeHTML(t(s.title)) }));
       if (s.scenario) c.append(el('p', { class: 'lead', html: safeHTML(t(s.scenario)) }));
       if (s.steps) c.append(el('ol', { class: 'msteps' }, s.steps.map(x => el('li', { html: safeHTML(t(x)) }))));
+      if (s.links) c.append(el('div', { class: 'row' }, s.links.map(l => el('a', { class: 'btn ghost', href: l.url, target: '_blank', rel: 'noopener', text: t(l.label) + ' ↗' }))));
       if (s.prompt) {
         const pre = el('pre', { class: 'prompt' }); pre.textContent = t(s.prompt);
         const copy = el('button', { class: 'btn', type: 'button', text: t(UI.copy) });
