@@ -1,5 +1,5 @@
 {
-  "_help": "DRAFT placeholder. Content comes in a later stage.",
+  "_help": "Session 3 content. Stage 1 missions s3m1–s3m5 (numbered 11–15). Step types: title, concept, reveal, poll, quiz, mission, finale.",
   "id": 3,
   "title": {
     "en": "School Management & Branding",
@@ -17,6 +17,285 @@
         "en": "Content coming soon",
         "hi": "सामग्री जल्द आ रही है"
       }
+    },
+    {
+      "type": "mission",
+      "id": "s3m1",
+      "number": 11,
+      "minutes": 15,
+      "tool": "Gemini Canvas",
+      "toolUrl": "https://gemini.google.com/app",
+      "title": {
+        "en": "An honest admission campaign for 2027-28",
+        "hi": "2027-28 के लिए ईमानदार प्रवेश अभियान"
+      },
+      "scenario": {
+        "en": "Admissions open soon and parents are comparing you with bigger schools in Lucknow. You need a short campaign for WhatsApp and Instagram that is warm, bilingual and makes only claims you can show.",
+        "hi": "प्रवेश जल्द शुरू होंगे और अभिभावक आपकी तुलना लखनऊ के बड़े विद्यालयों से कर रहे हैं। व्हाट्सऐप और इंस्टाग्राम के लिए एक छोटा अभियान चाहिए जो आत्मीय, द्विभाषी हो और केवल वही दावे करे जो आप दिखा सकें।"
+      },
+      "steps": [
+        {
+          "en": "Open your Gem → <b>Tools</b> → <b>Canvas</b>.",
+          "hi": "अपना Gem खोलें → <b>Tools</b> → <b>Canvas</b>।"
+        },
+        {
+          "en": "Copy the prompt and replace the sample strengths with your school's <b>real</b> ones.",
+          "hi": "प्रॉम्प्ट कॉपी करें और नमूना विशेषताओं की जगह अपने विद्यालय की <b>वास्तविक</b> विशेषताएँ लिखें।"
+        },
+        {
+          "en": "Delete any claim you cannot prove with a photo, a document or a number.",
+          "hi": "ऐसा हर दावा हटा दें जिसे आप फ़ोटो, दस्तावेज़ या संख्या से साबित नहीं कर सकते।"
+        }
+      ],
+      "sample": {
+        "label": {
+          "en": "Sample school strengths (replace with yours)",
+          "hi": "नमूना विशेषताएँ (अपनी लिखें)"
+        },
+        "text": {
+          "en": "- CBSE affiliated, Nursery to Class XII\n- CT & AI taught from Class III, as per CBSE 2026-27\n- Average class size 32\n- 2 smart classrooms and a science lab\n- Every teacher completing 50 hours of training this year\n- Safe school transport on 6 routes, GPS-tracked\n- Weekly parent updates on WhatsApp in Hindi and English",
+          "hi": "- CBSE संबद्ध, नर्सरी से कक्षा XII\n- CBSE 2026-27 के अनुसार कक्षा III से CT और AI\n- औसत कक्षा आकार 32\n- 2 स्मार्ट कक्षाएँ और विज्ञान प्रयोगशाला\n- इस वर्ष हर शिक्षक 50 घंटे का प्रशिक्षण पूरा कर रहे हैं\n- 6 मार्गों पर सुरक्षित, GPS-युक्त स्कूल परिवहन\n- हर सप्ताह व्हाट्सऐप पर हिंदी और अंग्रेज़ी में अभिभावक अपडेट"
+        }
+      },
+      "prompt": {
+        "en": "Write an admission campaign for 2027-28 for our CBSE school in [town, district], using only these real strengths: [paste strengths].\n1. Five short posts for WhatsApp and Instagram (each under 60 words), each in English and simple Hindi, each with one clear call to action (visit, call, or join the open day on [date]).\n2. Text for one A4 poster: headline, three lines, contact.\n3. A 20-second script for a short video showing real classrooms.\nRules: warm and honest; no words like \"best\", \"No. 1\" or \"guaranteed\"; no comparison with other schools; no promises about results; nothing that needs AI-generated photos of children.\nAt the end, list every factual claim so I can check each one.",
+        "hi": "[कस्बा, ज़िला] में हमारे CBSE विद्यालय के लिए 2027-28 का प्रवेश अभियान लिखें, केवल इन वास्तविक विशेषताओं का उपयोग करके: [विशेषताएँ पेस्ट करें]।\n1. व्हाट्सऐप और इंस्टाग्राम के लिए पाँच छोटी पोस्ट (हर एक 60 शब्दों से कम), हर एक अंग्रेज़ी और सरल हिंदी में, हर एक में एक स्पष्ट आह्वान (मिलने आएँ, फ़ोन करें, या [तिथि] को ओपन डे में आएँ)।\n2. एक A4 पोस्टर का पाठ: शीर्षक, तीन पंक्तियाँ, संपर्क।\n3. वास्तविक कक्षाएँ दिखाने वाले 20 सेकंड के छोटे वीडियो की स्क्रिप्ट।\nनियम: आत्मीय और ईमानदार; \"सर्वश्रेष्ठ\", \"नंबर 1\" या \"गारंटी\" जैसे शब्द नहीं; किसी अन्य विद्यालय से तुलना नहीं; परिणामों के वादे नहीं; AI से बनी बच्चों की फ़ोटो की ज़रूरत वाली कोई चीज़ नहीं।\nअंत में हर तथ्यात्मक दावे की सूची दें ताकि मैं हर एक जाँच सकूँ।"
+      },
+      "expected": {
+        "en": "Five bilingual posts, a poster and a video script, plus a checklist of every claim to verify.",
+        "hi": "पाँच द्विभाषी पोस्ट, एक पोस्टर और वीडियो स्क्रिप्ट, साथ ही जाँचने योग्य हर दावे की सूची।"
+      },
+      "check": {
+        "en": "Can you show proof for every claim on the list (a CPD log, a timetable, a photo)? Use only real photos, taken with parents' consent. Never use AI-generated images of children.",
+        "hi": "क्या आप सूची के हर दावे का प्रमाण दिखा सकते हैं (CPD रिकॉर्ड, समय-सारणी, फ़ोटो)? केवल वास्तविक फ़ोटो, अभिभावकों की सहमति से लें। बच्चों की AI से बनी छवियाँ कभी उपयोग न करें।"
+      },
+      "stretch": {
+        "en": "Open canva.com, choose an A4 poster template and paste in the poster text. Add one real photo of your school building.",
+        "hi": "canva.com खोलें, A4 पोस्टर टेम्पलेट चुनें और पोस्टर का पाठ पेस्ट करें। अपने विद्यालय भवन की एक वास्तविक फ़ोटो जोड़ें।"
+      },
+      "notes": [
+        "Ask one volunteer to read their best post aloud; ask the room: 'Can they prove every word?'",
+        "Link back: CT & AI from Class III is only a claim if Mission 6's plan is running. Evidence first, branding second."
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "s3m2",
+      "number": 12,
+      "minutes": 10,
+      "tool": "Gemini + Sheets",
+      "toolUrl": "https://gemini.google.com/app",
+      "title": {
+        "en": "Report-card remarks that sound like a person",
+        "hi": "रिपोर्ट कार्ड टिप्पणियाँ जो किसी व्यक्ति जैसी लगें"
+      },
+      "scenario": {
+        "en": "Each class teacher writes 40 remarks every term, and most end up as \"Good, can do better\". AI can draft specific, encouraging remarks in two languages, as long as you never share names or marks.",
+        "hi": "हर कक्षा अध्यापक हर सत्र में 40 टिप्पणियाँ लिखते हैं, और अधिकतर \"अच्छा, और बेहतर कर सकते हो\" बन जाती हैं। AI दो भाषाओं में विशिष्ट, प्रोत्साहक टिप्पणियाँ बना सकता है, बशर्ते आप कभी नाम या अंक साझा न करें।"
+      },
+      "steps": [
+        {
+          "en": "Copy the sample below: student <b>codes</b> and performance <b>bands</b>, never names or marks.",
+          "hi": "नीचे दिया नमूना कॉपी करें: छात्रों के <b>कोड</b> और प्रदर्शन के <b>स्तर</b>, नाम या अंक कभी नहीं।"
+        },
+        {
+          "en": "In your Gem, paste the prompt, then the data, and send.",
+          "hi": "अपने Gem में प्रॉम्प्ट, फिर डेटा पेस्ट करें, और भेजें।"
+        },
+        {
+          "en": "Paste the result into the <b>Report Remarks</b> tab of your School Command Sheet. The teacher matches codes to names offline.",
+          "hi": "परिणाम को स्कूल कमांड शीट के <b>Report Remarks</b> टैब में पेस्ट करें। शिक्षक कोड को नामों से ऑफ़लाइन मिलाएँ।"
+        }
+      ],
+      "sample": {
+        "label": {
+          "en": "Sample class data (codes and bands only)",
+          "hi": "नमूना कक्षा डेटा (केवल कोड और स्तर)"
+        },
+        "text": "Student\tLanguages\tMaths\tScience\tTeacher observation 1\tTeacher observation 2\nS01\tStrong\tDeveloping\tStrong\tHelps classmates in group work\tRushes through word problems\nS02\tDeveloping\tStrong\tStrong\tAsks thoughtful questions\tQuiet in class discussions\nS03\tNeeds support\tDeveloping\tDeveloping\tImproved reading this term\tOften incomplete homework\nS04\tStrong\tStrong\tStrong\tLed the class CT activity\tCan be impatient with others\nS05\tDeveloping\tNeeds support\tDeveloping\tCreative in art and craft\tFinds fractions difficult\nS06\tStrong\tDeveloping\tNeeds support\tExcellent Hindi recitation\tMissed several science practicals\nS07\tDeveloping\tDeveloping\tDeveloping\tPunctual and well organised\tHesitates to ask for help\nS08\tNeeds support\tNeeds support\tDeveloping\tTries hard; very regular\tNeeds help with English reading"
+      },
+      "prompt": {
+        "en": "Below are performance bands and two teacher observations for 8 students, identified only by code. For each student, write a report-card remark of about 40 words in English and the same in simple Hindi:\n- one specific strength taken from the data,\n- one specific next step with a practical suggestion for home or school,\n- an encouraging, respectful tone; no labels such as \"weak\" or \"careless\".\nUse only what is in the data; do not invent achievements. Output a table: Student code | Remark (English) | Remark (Hindi).",
+        "hi": "नीचे 8 छात्रों के प्रदर्शन स्तर और शिक्षक के दो अवलोकन हैं, केवल कोड से पहचाने गए। हर छात्र के लिए लगभग 40 शब्दों की रिपोर्ट कार्ड टिप्पणी अंग्रेज़ी में और वही सरल हिंदी में लिखें:\n- डेटा से ली गई एक विशिष्ट विशेषता,\n- घर या विद्यालय के लिए व्यावहारिक सुझाव के साथ एक विशिष्ट अगला कदम,\n- प्रोत्साहक, सम्मानजनक स्वर; \"कमज़ोर\" या \"लापरवाह\" जैसे लेबल नहीं।\nकेवल डेटा में जो है उसी का उपयोग करें; उपलब्धियाँ न गढ़ें। तालिका दें: छात्र कोड | टिप्पणी (अंग्रेज़ी) | टिप्पणी (हिंदी)।"
+      },
+      "expected": {
+        "en": "Eight specific, encouraging remarks in English and Hindi, ready for the teacher to review and personalise.",
+        "hi": "अंग्रेज़ी और हिंदी में आठ विशिष्ट, प्रोत्साहक टिप्पणियाँ, शिक्षक की समीक्षा और व्यक्तिगत रूप देने के लिए तैयार।"
+      },
+      "check": {
+        "en": "The class teacher reads every remark and changes at least one word to make it theirs. Never paste names, marks, roll numbers or photos into Gemini.",
+        "hi": "कक्षा अध्यापक हर टिप्पणी पढ़ें और उसे अपना बनाने के लिए कम से कम एक शब्द बदलें। Gemini में नाम, अंक, रोल नंबर या फ़ोटो कभी न डालें।"
+      },
+      "stretch": {
+        "en": "Ask: \"Write a 3-line message for the parents of S03 inviting them to a short meeting about homework, in Hindi, without sounding like a complaint.\"",
+        "hi": "पूछें: \"S03 के अभिभावकों को गृहकार्य पर छोटी बैठक के लिए आमंत्रित करने का 3 पंक्तियों का हिंदी संदेश लिखें, जो शिकायत जैसा न लगे।\""
+      },
+      "notes": [
+        "Stress the method: codes plus bands keeps personal data out. The teacher keeps the code-to-name list on paper or in the school's own system.",
+        "Time saved is the selling point: 40 remarks drafted in minutes, then 15 minutes of teacher review instead of an evening."
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "s3m3",
+      "number": 13,
+      "minutes": 10,
+      "tool": "Gemini",
+      "toolUrl": "https://gemini.google.com/app",
+      "title": {
+        "en": "Answer parents' questions about AI, in Hindi",
+        "hi": "अभिभावकों के AI संबंधी प्रश्नों के उत्तर, हिंदी में"
+      },
+      "scenario": {
+        "en": "Once you announce CT & AI, parents will ask the same questions in the class WhatsApp groups. Prepared, consistent answers build trust; improvised ones create rumours.",
+        "hi": "CT और AI की घोषणा के बाद अभिभावक कक्षा के व्हाट्सऐप समूहों में वही प्रश्न पूछेंगे। तैयार और एक जैसे उत्तर भरोसा बनाते हैं; अचानक दिए उत्तर अफ़वाहें फैलाते हैं।"
+      },
+      "steps": [
+        {
+          "en": "Open the chat where you drafted your AI policy in Mission 5 (or paste the policy).",
+          "hi": "वह चैट खोलें जहाँ आपने मिशन 5 में AI नीति बनाई थी (या नीति पेस्ट करें)।"
+        },
+        {
+          "en": "Paste the prompt and send.",
+          "hi": "प्रॉम्प्ट पेस्ट करें और भेजें।"
+        },
+        {
+          "en": "Save the answers as quick replies in WhatsApp Business (free) for your office staff.",
+          "hi": "उत्तरों को अपने कार्यालय स्टाफ़ के लिए WhatsApp Business (मुफ़्त) में क्विक रिप्लाई के रूप में सेव करें।"
+        }
+      ],
+      "prompt": {
+        "en": "Using our school's AI policy above, write short WhatsApp replies (under 50 words each) in simple Hindi, with an English version below each, to these parent questions:\n1. Will my child use AI to cheat on homework?\n2. Will this mean more screen time?\n3. Is there an extra fee for CT & AI?\n4. Is my child's data safe?\n5. Will AI replace teachers?\n6. What do children actually do in CT & AI class?\n7. Do we need a phone or laptop at home?\n8. How can I help my child at home?\nTone: warm, reassuring, factual. Mention our CT & AI open day on [date] where it fits.",
+        "hi": "ऊपर दी गई हमारे विद्यालय की AI नीति के आधार पर, इन अभिभावक प्रश्नों के लिए सरल हिंदी में छोटे व्हाट्सऐप उत्तर (हर एक 50 शब्दों से कम) लिखें, हर एक के नीचे अंग्रेज़ी संस्करण के साथ:\n1. क्या मेरा बच्चा गृहकार्य में नकल के लिए AI का उपयोग करेगा?\n2. क्या इससे स्क्रीन समय बढ़ेगा?\n3. क्या CT और AI के लिए अतिरिक्त शुल्क है?\n4. क्या मेरे बच्चे का डेटा सुरक्षित है?\n5. क्या AI शिक्षकों की जगह लेगा?\n6. CT और AI कक्षा में बच्चे वास्तव में क्या करते हैं?\n7. क्या घर पर फ़ोन या लैपटॉप चाहिए?\n8. मैं घर पर अपने बच्चे की कैसे मदद करूँ?\nस्वर: आत्मीय, आश्वस्त करने वाला, तथ्यपूर्ण। जहाँ उचित हो वहाँ [तिथि] को हमारे CT और AI ओपन डे का उल्लेख करें।"
+      },
+      "expected": {
+        "en": "Eight ready, consistent answers in Hindi and English that your office and class teachers can use.",
+        "hi": "हिंदी और अंग्रेज़ी में आठ तैयार, एक जैसे उत्तर जिन्हें आपका कार्यालय और कक्षा अध्यापक उपयोग कर सकें।"
+      },
+      "check": {
+        "en": "Does every answer match what your school really does? Remove any promise you cannot keep (for example \"no screens at all\" if Classes VI–VIII use a lab).",
+        "hi": "क्या हर उत्तर आपके विद्यालय की वास्तविक प्रक्रिया से मेल खाता है? ऐसा हर वादा हटाएँ जो आप निभा न सकें (जैसे \"कोई स्क्रीन नहीं\" यदि कक्षा VI–VIII लैब का उपयोग करती हैं)।"
+      },
+      "stretch": {
+        "en": "Ask for a 1-minute speech in Hindi that you can give at the next PTM to introduce CT & AI to parents.",
+        "hi": "अगली PTM में अभिभावकों को CT और AI से परिचित कराने के लिए 1 मिनट का हिंदी भाषण माँगें।"
+      },
+      "notes": [
+        "Role-play option (if time): you play a worried parent and ask one question aloud; a principal answers using their draft."
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "s3m4",
+      "number": 14,
+      "minutes": 10,
+      "tool": "Gemini",
+      "toolUrl": "https://gemini.google.com/app",
+      "title": {
+        "en": "Your Google Business Profile and a calm reply to a bad review",
+        "hi": "आपकी Google Business Profile और खराब समीक्षा का शांत उत्तर"
+      },
+      "scenario": {
+        "en": "Many parents search \"CBSE school near me\" before they ever visit. Your Google profile is your first impression, and one unanswered angry review can cost admissions.",
+        "hi": "कई अभिभावक मिलने आने से पहले \"मेरे पास CBSE स्कूल\" खोजते हैं। आपकी Google प्रोफ़ाइल आपकी पहली छवि है, और एक अनुत्तरित नाराज़ समीक्षा प्रवेश घटा सकती है।"
+      },
+      "steps": [
+        {
+          "en": "In your Gem, paste the prompt with the sample review and send.",
+          "hi": "अपने Gem में नमूना समीक्षा के साथ प्रॉम्प्ट पेस्ट करें और भेजें।"
+        },
+        {
+          "en": "Later, at school: open <b>business.google.com</b> to claim or update your school's profile.",
+          "hi": "बाद में, विद्यालय में: अपनी विद्यालय प्रोफ़ाइल का दावा करने या अपडेट करने के लिए <b>business.google.com</b> खोलें।"
+        }
+      ],
+      "sample": {
+        "label": {
+          "en": "Sample 2-star review (fictional)",
+          "hi": "नमूना 2-स्टार समीक्षा (काल्पनिक)"
+        },
+        "text": {
+          "en": "★★☆☆☆ \"Fees went up this year but the school bus was late three times last week. My son waited 40 minutes. Nobody in the office answered the phone.\"",
+          "hi": "★★☆☆☆ \"इस वर्ष फ़ीस बढ़ गई पर पिछले सप्ताह स्कूल बस तीन बार देर से आई। मेरा बेटा 40 मिनट इंतज़ार करता रहा। कार्यालय में किसी ने फ़ोन नहीं उठाया।\""
+        }
+      },
+      "prompt": {
+        "en": "1. Write a Google Business Profile description for our CBSE school in [town, district], maximum 750 characters, in English, using only these facts: [paste your strengths from Mission 11]. No \"best\" or \"No. 1\".\n2. Write five short FAQs with answers (admission dates, fees enquiry, transport, timings, CT & AI).\n3. Write a reply to this review: [paste review]. Thank the parent, acknowledge the problem without excuses, say what we are doing (for example, checking the route timing), and invite them to call the Principal's office directly. Do not mention the child's name or any personal details. Under 80 words, in English with a Hindi version.",
+        "hi": "1. [कस्बा, ज़िला] में हमारे CBSE विद्यालय के लिए Google Business Profile विवरण लिखें, अधिकतम 750 अक्षर, अंग्रेज़ी में, केवल इन तथ्यों से: [मिशन 11 की अपनी विशेषताएँ पेस्ट करें]। \"सर्वश्रेष्ठ\" या \"नंबर 1\" नहीं।\n2. उत्तरों सहित पाँच छोटे FAQ लिखें (प्रवेश तिथियाँ, फ़ीस पूछताछ, परिवहन, समय, CT और AI)।\n3. इस समीक्षा का उत्तर लिखें: [समीक्षा पेस्ट करें]। अभिभावक को धन्यवाद दें, बिना बहाने के समस्या स्वीकार करें, बताएँ कि हम क्या कर रहे हैं (जैसे मार्ग का समय जाँचना), और उन्हें सीधे प्रधानाचार्य कार्यालय में फ़ोन करने के लिए आमंत्रित करें। बच्चे का नाम या कोई व्यक्तिगत विवरण न लिखें। 80 शब्दों से कम, अंग्रेज़ी में और हिंदी संस्करण के साथ।"
+      },
+      "expected": {
+        "en": "A ready profile description, five FAQs, and a calm, professional reply you can adapt for any complaint.",
+        "hi": "तैयार प्रोफ़ाइल विवरण, पाँच FAQ, और एक शांत, पेशेवर उत्तर जिसे आप किसी भी शिकायत के लिए बदल सकते हैं।"
+      },
+      "check": {
+        "en": "Never argue in public, never reveal a child's or parent's details, and never post fake reviews. Fix the real problem, then reply.",
+        "hi": "सार्वजनिक रूप से कभी बहस न करें, किसी बच्चे या अभिभावक का विवरण कभी न बताएँ, और कभी नकली समीक्षाएँ न डालें। पहले वास्तविक समस्या ठीक करें, फिर उत्तर दें।"
+      },
+      "stretch": {
+        "en": "Ask: \"Suggest a polite WhatsApp message we can send to parents who are happy with the school, asking them to leave an honest Google review.\"",
+        "hi": "पूछें: \"विद्यालय से संतुष्ट अभिभावकों को ईमानदार Google समीक्षा लिखने का अनुरोध करने वाला विनम्र व्हाट्सऐप संदेश सुझाएँ।\""
+      },
+      "notes": [
+        "Ask by show of hands who has claimed their Google Business Profile. Usually few have: an easy free win.",
+        "Asking for honest reviews is fine; writing, buying or incentivising reviews is not. Say it plainly."
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "s3m5",
+      "number": 15,
+      "minutes": 10,
+      "tool": "Gemini + Sheets",
+      "toolUrl": "https://gemini.google.com/app",
+      "title": {
+        "en": "From parent feedback to a 30-day action plan",
+        "hi": "अभिभावक प्रतिक्रिया से 30-दिन की कार्य योजना"
+      },
+      "scenario": {
+        "en": "After every PTM you collect comments, in Hindi and English, and they sit in a file. Gemini can read them all in seconds, group them and turn them into actions with owners.",
+        "hi": "हर PTM के बाद आप हिंदी और अंग्रेज़ी में टिप्पणियाँ एकत्र करते हैं, और वे फ़ाइल में पड़ी रहती हैं। Gemini उन्हें सेकंडों में पढ़कर समूहों में बाँट सकता है और ज़िम्मेदारों सहित कार्यों में बदल सकता है।"
+      },
+      "steps": [
+        {
+          "en": "Copy the sample comments (anonymous, mixed Hindi and English).",
+          "hi": "नमूना टिप्पणियाँ कॉपी करें (गुमनाम, हिंदी और अंग्रेज़ी मिली-जुली)।"
+        },
+        {
+          "en": "In your Gem, paste the prompt, then the comments, and send.",
+          "hi": "अपने Gem में प्रॉम्प्ट, फिर टिप्पणियाँ पेस्ट करें, और भेजें।"
+        },
+        {
+          "en": "Copy the action plan into the <b>Parent Feedback</b> tab of your School Command Sheet.",
+          "hi": "कार्य योजना को स्कूल कमांड शीट के <b>Parent Feedback</b> टैब में कॉपी करें।"
+        }
+      ],
+      "sample": {
+        "label": {
+          "en": "Sample PTM comments (anonymous)",
+          "hi": "नमूना PTM टिप्पणियाँ (गुमनाम)"
+        },
+        "text": "1. Teachers are very caring, my daughter likes coming to school.\n2. बस अक्सर देर से आती है।\n3. Homework is too much in Class 4.\n4. Please send updates in Hindi also, I don't read English well.\n5. CT & AI ke baare mein aur jaankari chahiye.\n6. Toilets on the first floor need better cleaning.\n7. Very happy with the science teacher.\n8. फ़ीस की रसीद समय पर नहीं मिलती।\n9. My son is excited about the robot game in class!\n10. Canteen food quality has improved, thank you.\n11. Bus driver drives too fast near the market.\n12. PTM timing on Saturday morning is difficult for working parents.\n13. बच्चों को खेल का समय और मिलना चाहिए।\n14. Class teacher answers WhatsApp quickly, very helpful.\n15. Will AI make children lazy? Worried.\n16. Too many notebooks to buy.\n17. होमवर्क बहुत ज़्यादा है।\n18. Good discipline in school.\n19. Please start an evening PTM option.\n20. Library books are old."
+      },
+      "prompt": {
+        "en": "Below are 20 anonymous parent comments from our last PTM, in Hindi and English.\n1. Group them into the top 5 themes. For each theme give the number of comments, 2 example comments, and whether the feeling is mostly positive or negative.\n2. Give an overall sentiment summary in two lines.\n3. Make a 30-day action plan as a table: Action | Owner (role, not name) | By when | How we will tell parents.\n4. Write a short, warm WhatsApp message to all parents in Hindi and English: \"You said, we are doing\".",
+        "hi": "नीचे हमारी पिछली PTM की 20 गुमनाम अभिभावक टिप्पणियाँ हैं, हिंदी और अंग्रेज़ी में।\n1. इन्हें शीर्ष 5 विषयों में बाँटें। हर विषय के लिए टिप्पणियों की संख्या, 2 उदाहरण टिप्पणियाँ, और भावना अधिकतर सकारात्मक है या नकारात्मक, बताएँ।\n2. दो पंक्तियों में कुल भावना का सारांश दें।\n3. 30-दिन की कार्य योजना तालिका में दें: कार्य | ज़िम्मेदार (पद, नाम नहीं) | कब तक | अभिभावकों को कैसे बताएँगे।\n4. सभी अभिभावकों के लिए हिंदी और अंग्रेज़ी में छोटा, आत्मीय व्हाट्सऐप संदेश लिखें: \"आपने कहा, हम कर रहे हैं\"।"
+      },
+      "expected": {
+        "en": "Themes with counts, a sentiment summary, a 30-day action plan with owners, and a \"you said, we are doing\" message.",
+        "hi": "संख्या सहित विषय, भावना सारांश, ज़िम्मेदारों सहित 30-दिन की कार्य योजना, और \"आपने कहा, हम कर रहे हैं\" संदेश।"
+      },
+      "check": {
+        "en": "Count one theme yourself (homework appears in comments 3 and 17). Did Gemini count right? Remove any action you cannot deliver in 30 days.",
+        "hi": "एक विषय स्वयं गिनें (गृहकार्य टिप्पणी 3 और 17 में है)। क्या Gemini ने सही गिना? ऐसा हर कार्य हटाएँ जो आप 30 दिनों में न कर सकें।"
+      },
+      "stretch": {
+        "en": "Ask Gemini to turn the plan into a Google Form with 5 questions for next term's PTM, so feedback becomes easy to analyse.",
+        "hi": "Gemini से योजना को अगले सत्र की PTM के लिए 5 प्रश्नों वाले Google Form में बदलवाएँ, ताकि प्रतिक्रिया का विश्लेषण आसान हो।"
+      },
+      "notes": [
+        "Expected themes (for checking): transport/bus (2, 11); homework load (3, 17, plus notebooks 16); communication/language (4, 14); CT & AI interest or worry (5, 9, 15); PTM timing (12, 19); facilities (6, 20, 10); teachers and discipline, positive (1, 7, 18); fee receipts (8); play time (13). Counts may vary slightly with grouping.",
+        "This is the day's last mission: tie it to the feedback form on the website. 'You are about to give us feedback; this is what we will do with it.'"
+      ]
     }
   ]
 }
