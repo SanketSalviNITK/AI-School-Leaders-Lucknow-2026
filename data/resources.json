@@ -80,6 +80,13 @@
       "items": [
         {
           "title": {
+            "en": "All handouts in one printable PDF (7 pages)",
+            "hi": "सभी हैंडआउट एक प्रिंट योग्य PDF में (7 पृष्ठ)"
+          },
+          "url": "handouts/participant-handout-pack.pdf"
+        },
+        {
+          "title": {
             "en": "AI policy template (print, English + Hindi)",
             "hi": "AI नीति टेम्पलेट (प्रिंट, अंग्रेज़ी + हिंदी)"
           },
