@@ -25,6 +25,9 @@ img { max-width: 100%; }
 /* ---------- top bar ---------- */
 .topbar { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: .75rem;
   padding: .6rem 1rem; background: var(--brand); color: #fff; }
+.topbar .brandlogo { height: 32px; width: auto; background: #fff; border-radius: 6px; padding: 3px 6px; flex: none; }
+.presenter .topbar .brandlogo { height: 40px; }
+@media (max-width: 380px) { .topbar .brandlogo { height: 26px; } }
 .topbar a { color: #fff; text-decoration: none; font-weight: 600; }
 .topbar .title { flex: 1; font-size: .95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .lang { border: 1px solid rgba(255,255,255,.6); background: transparent; color: #fff; border-radius: 999px;
@@ -34,6 +37,8 @@ img { max-width: 100%; }
 
 main { width: 100%; max-width: 760px; margin: 0 auto; padding: 1rem; flex: 1; }
 footer { text-align: center; color: var(--muted); font-size: .8rem; padding: 1.5rem 1rem; }
+footer .credit { display: block; margin-top: .4rem; font-size: .7rem; }
+footer .credit a { color: inherit; }
 
 /* ---------- cards & type ---------- */
 h1 { font-size: 1.7rem; line-height: 1.2; margin: .2rem 0 .6rem; }

@@ -9,6 +9,7 @@
 </head>
 <body>
 <header class="topbar">
+  <img class="brandlogo" src="assets/img/mitwpu-logo.png" alt="MIT World Peace University, Pune" width="114" height="32">
   <span class="title" id="topTitle">AI for School Leaders 2026</span>
   <span id="langSlot"></span>
 </header>
@@ -69,6 +70,8 @@
     ]));
     document.getElementById('foot').innerHTML = '';
     document.getElementById('foot').append(el('a', { href: w.facilitator.url, text: w.facilitator.name }), ' · ' + t(w.facilitator.role));
+    const cr = el('span', { class: 'credit', html: 'MIT-WPU logo: MIT WPU, <a href="https://commons.wikimedia.org/wiki/File:MIT_-_WPU_Logo.webp">via Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>' });
+    document.getElementById('foot').append(cr);
   }
 
   function regForm(p) {
