@@ -38,24 +38,24 @@
       "id": 2,
       "time": "11:30 – 1:00",
       "title": {
-        "en": "Building Future-Ready Schools with AI Integration",
-        "hi": "AI एकीकरण से भविष्य-तैयार विद्यालय"
-      },
-      "blurb": {
-        "en": "Your classrooms: the CT & AI mandate, lesson plans, competency-based questions.",
-        "hi": "आपकी कक्षाएँ: CT और AI अनिवार्यता, पाठ योजना, योग्यता-आधारित प्रश्न।"
-      }
-    },
-    {
-      "id": 3,
-      "time": "2:00 – 3:30",
-      "title": {
         "en": "School Management & Branding",
         "hi": "विद्यालय प्रबंधन एवं ब्रांडिंग"
       },
       "blurb": {
         "en": "Your parents and community: admissions, report remarks, parent communication.",
         "hi": "आपके अभिभावक और समुदाय: प्रवेश, रिपोर्ट टिप्पणियाँ, अभिभावक संवाद।"
+      }
+    },
+    {
+      "id": 3,
+      "time": "2:00 – 3:30",
+      "title": {
+        "en": "Building Future-Ready Schools with AI Integration",
+        "hi": "AI एकीकरण से भविष्य-तैयार विद्यालय"
+      },
+      "blurb": {
+        "en": "Your classrooms: the CT & AI mandate, lesson plans, competency-based questions.",
+        "hi": "आपकी कक्षाएँ: CT और AI अनिवार्यता, पाठ योजना, योग्यता-आधारित प्रश्न।"
       }
     }
   ]

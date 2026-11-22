@@ -1,170 +1,426 @@
 {
-  "_help": "Session 3 content: 7 theory steps, missions s3m1–s3m5 (numbered 11–15), Pro finale and closing. Step types: title, concept, reveal, poll, quiz, mission, finale.",
-  "id": 3,
+  "_help": "Session 3 content (Building Future-Ready Schools; previously Session 2). Stage 1 missions (s2m1–s2m5), Stage 3 theory (~20 min) done. Stage 4 finale + backup demo/robot-algorithm.html done. Step types: title, concept, reveal, poll, quiz, mission, finale. 'notes' show only in presenter view.",
+  "id": 2,
   "title": {
-    "en": "School Management & Branding",
-    "hi": "विद्यालय प्रबंधन एवं ब्रांडिंग"
+    "en": "Building Future-Ready Schools with AI Integration",
+    "hi": "AI एकीकरण से भविष्य-तैयार विद्यालय"
   },
   "time": "2:00 – 3:30",
   "steps": [
     {
       "type": "title",
       "title": {
-        "en": "School Management & Branding with AI",
-        "hi": "AI के साथ विद्यालय प्रबंधन और ब्रांडिंग"
+        "en": "Building Future-Ready Schools with AI Integration",
+        "hi": "AI एकीकरण से भविष्य-तैयार विद्यालय"
       },
       "subtitle": {
-        "en": "Trust is your brand. AI helps you show it, every week, in two languages.",
-        "hi": "भरोसा ही आपका ब्रांड है। AI इसे हर सप्ताह, दो भाषाओं में, दिखाने में मदद करता है।"
+        "en": "From the CT & AI circular to your classrooms, without a computer lab.",
+        "hi": "CT और AI परिपत्र से आपकी कक्षाओं तक, बिना कंप्यूटर लैब के।"
       },
       "notes": [
-        "2:00. Post-lunch energy is low: stand everyone up for the first poll (hands, then phones).",
-        "One line: 'Morning: your office. Late morning: your classrooms. Now: your parents and your town.'"
+        "2:00. Welcome back. One line: 'This morning you used AI in your office. Now we take it into your classrooms.'",
+        "Ask for hands: who has created their Gem (step 2)? Those who have not do it now, with a helper, while you run the opening."
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "s2pre",
+      "label": {
+        "en": "Before the session · prerequisite",
+        "hi": "सत्र से पहले · पूर्व-आवश्यकता"
+      },
+      "minutes": 10,
+      "tool": "Gemini",
+      "toolUrl": "https://gemini.google.com/gems/view",
+      "title": {
+        "en": "Create your Principal's Assistant (a Gem)",
+        "hi": "अपना प्रधानाचार्य सहायक (Gem) बनाएँ"
+      },
+      "scenario": {
+        "en": "Every mission in this session uses a Gem: a saved Gemini assistant that already knows your school, so you do not explain it again each time. Please create it before the session starts. It takes about 10 minutes.",
+        "hi": "इस सत्र का हर मिशन एक Gem का उपयोग करता है: Gemini का एक सहेजा हुआ सहायक जो आपके विद्यालय को पहले से जानता है, ताकि हर बार परिचय न देना पड़े। कृपया इसे सत्र शुरू होने से पहले बना लें। इसमें लगभग 10 मिनट लगते हैं।"
+      },
+      "steps": [
+        {
+          "en": "Open <b>gemini.google.com</b> in Chrome (Gems are easiest to create in the browser, not the app). Sign in with your Google account.",
+          "hi": "Chrome में <b>gemini.google.com</b> खोलें (Gem ब्राउज़र में आसानी से बनता है, ऐप में नहीं)। अपने Google खाते से साइन इन करें।"
+        },
+        {
+          "en": "Menu → <b>Explore Gems</b> → <b>New Gem</b>. Name it <b>Principal's Assistant</b>.",
+          "hi": "मेनू → <b>Explore Gems</b> → <b>New Gem</b>। नाम रखें <b>Principal's Assistant</b>।"
+        },
+        {
+          "en": "Copy the instructions below into the <b>Instructions</b> box. Replace every [bracket] with your school's details.",
+          "hi": "नीचे दिए निर्देश <b>Instructions</b> बॉक्स में पेस्ट करें। हर [कोष्ठक] में अपने विद्यालय का विवरण भरें।"
+        },
+        {
+          "en": "Press <b>Save</b>, then start a chat with your Gem.",
+          "hi": "<b>Save</b> दबाएँ, फिर अपने Gem के साथ चैट शुरू करें।"
+        },
+        {
+          "en": "Test it: ask your Gem <b>\"Who are you working for?\"</b> It should name your school and district.",
+          "hi": "जाँचें: अपने Gem से पूछें <b>\"आप किसके लिए काम करते हैं?\"</b> उसे आपके विद्यालय और ज़िले का नाम बताना चाहिए।"
+        },
+        {
+          "en": "Also make your own copy of the <b>School Command Sheet</b> (button below). Missions 1 and 3 use its <b>CT &amp; AI Plan</b> and <b>Question Bank</b> tabs.",
+          "hi": "<b>स्कूल कमांड शीट</b> की अपनी प्रति भी बना लें (नीचे बटन)। मिशन 1 और 3 इसके <b>CT &amp; AI Plan</b> और <b>Question Bank</b> टैब का उपयोग करते हैं।"
+        }
+      ],
+      "links": [
+        {
+          "label": {
+            "en": "Make a copy of the School Command Sheet",
+            "hi": "स्कूल कमांड शीट की प्रति बनाएँ"
+          },
+          "url": "https://docs.google.com/spreadsheets/d/1B0SdmcTN7xaZUiuz5L8v6oDsIuy6PpFH0AeYSwS7kD0/copy"
+        }
+      ],
+      "prompt": {
+        "en": "You are the personal assistant to the Principal of [School name], a CBSE-affiliated school in [Barabanki / Bahraich], Uttar Pradesh, with Classes [Nursery–XII] and about [number] students and [number] teachers.\n\nHow to work with me:\n- Write in clear, respectful, simple English. When I ask for Hindi, or when the reader is a parent, give English and Hindi side by side.\n- Follow CBSE conventions: circulars have a reference number, date, subject line, body and signature block.\n- Keep it practical for a budget-conscious school: no paid tools, no extra fees, nothing that needs every child to have a device.\n- Never ask me for, and never repeat, student names, marks, Aadhaar, APAAR IDs or phone numbers. If I paste any by mistake, remind me to remove them.\n- For teaching and curriculum work, follow the NCERT textbooks and the CBSE CT & AI framework for 2026-27, and say which class and chapter you used.\n- At the end of every answer, add a short section called \"Please verify\" listing any dates, numbers, rules or facts I should check before using it.",
+        "hi": "आप [विद्यालय का नाम] के प्रधानाचार्य के निजी सहायक हैं। यह उत्तर प्रदेश के [बाराबंकी / बहराइच] में CBSE से संबद्ध विद्यालय है, जिसमें कक्षा [नर्सरी–XII], लगभग [संख्या] छात्र और [संख्या] शिक्षक हैं।\n\nमेरे साथ कैसे काम करें:\n- स्पष्ट, सम्मानजनक और सरल भाषा में लिखें। जब मैं हिंदी माँगूँ, या पाठक अभिभावक हों, तो हिंदी और अंग्रेज़ी दोनों साथ-साथ दें।\n- CBSE के प्रारूप का पालन करें: परिपत्र में संदर्भ संख्या, दिनांक, विषय, मुख्य भाग और हस्ताक्षर हो।\n- कम बजट वाले विद्यालय के लिए व्यावहारिक रहें: कोई सशुल्क टूल नहीं, कोई अतिरिक्त शुल्क नहीं, ऐसा कुछ नहीं जिसके लिए हर बच्चे के पास उपकरण चाहिए।\n- मुझसे कभी छात्रों के नाम, अंक, आधार, APAAR ID या फ़ोन नंबर न माँगें और न दोहराएँ। यदि मैं गलती से ऐसा कुछ डाल दूँ, तो मुझे हटाने की याद दिलाएँ।\n- शिक्षण और पाठ्यक्रम के काम में NCERT पाठ्यपुस्तकों और CBSE के 2026-27 CT और AI ढाँचे का पालन करें, और बताएँ कि किस कक्षा और अध्याय का उपयोग किया।\n- हर उत्तर के अंत में \"कृपया जाँचें\" नाम का छोटा भाग जोड़ें, जिसमें वे तिथियाँ, संख्याएँ, नियम या तथ्य हों जिन्हें उपयोग से पहले मुझे जाँचना चाहिए।"
+      },
+      "expected": {
+        "en": "A Gem named Principal's Assistant that answers in your school's context and ends every answer with a \"Please verify\" list.",
+        "hi": "Principal's Assistant नाम का Gem, जो आपके विद्यालय के संदर्भ में उत्तर दे और हर उत्तर के अंत में \"कृपया जाँचें\" सूची दे।"
+      },
+      "check": {
+        "en": "Did you replace every [bracket] with your own details? Never add student names, marks or phone numbers to a Gem.",
+        "hi": "क्या आपने हर [कोष्ठक] में अपना विवरण भरा? Gem में कभी छात्रों के नाम, अंक या फ़ोन नंबर न डालें।"
+      },
+      "notes": [
+        "Prerequisite. Ideally shared with participants a day before (WhatsApp the Session 3 link). At the start, ask for hands: who has a Gem? Anyone without one does this step first while you run the opening; helpers assist.",
+        "Gems are easiest to create in Chrome on gemini.google.com, not in the app."
       ]
     },
     {
       "type": "poll",
-      "id": "s3-poll-source",
+      "id": "s2-poll-lab",
       "question": {
-        "en": "Where do most new admission enquiries at your school come from?",
-        "hi": "आपके विद्यालय में अधिकतर नए प्रवेश पूछताछ कहाँ से आती हैं?"
+        "en": "Does your school have a working computer lab that Classes III–VIII can use every week?",
+        "hi": "क्या आपके विद्यालय में ऐसी चालू कंप्यूटर लैब है जिसका कक्षा III–VIII हर सप्ताह उपयोग कर सकें?"
       },
       "options": [
         {
-          "en": "Word of mouth from current parents",
-          "hi": "वर्तमान अभिभावकों की सिफ़ारिश"
+          "en": "Yes, enough computers for a full class",
+          "hi": "हाँ, पूरी कक्षा के लिए पर्याप्त कंप्यूटर"
         },
         {
-          "en": "WhatsApp and social media",
-          "hi": "व्हाट्सऐप और सोशल मीडिया"
+          "en": "A small lab, shared and often busy",
+          "hi": "छोटी लैब, साझा और अक्सर व्यस्त"
         },
         {
-          "en": "Google search and Maps",
-          "hi": "Google सर्च और मैप्स"
-        },
-        {
-          "en": "Banners, newspaper, walk-ins",
-          "hi": "बैनर, अख़बार, स्वयं आने वाले"
-        },
-        {
-          "en": "We do not track this",
-          "hi": "हम इसका हिसाब नहीं रखते"
+          "en": "No working lab",
+          "hi": "कोई चालू लैब नहीं"
         }
       ],
       "notes": [
-        "1 min. Usually word of mouth wins. Line: 'So your best marketing team is your current parents. Today is about giving them reasons and words.'",
-        "If 'We do not track this' is large: that is what the Admission Enquiries tab is for."
+        "1 min. Whatever the bars show, the message is the same: the CT & AI mandate for Classes III–V does not need a lab."
       ]
     },
     {
       "type": "concept",
       "title": {
-        "en": "Your brand is what parents say when you are not in the room",
-        "hi": "आपका ब्रांड वह है जो अभिभावक आपकी अनुपस्थिति में कहते हैं"
+        "en": "The CT & AI mandate in plain words",
+        "hi": "CT और AI अनिवार्यता सरल शब्दों में"
       },
       "points": [
         {
-          "en": "<b>Parents choose on trust:</b> safety, caring teachers, regular communication, visible progress. Results matter, but they are rarely the first thing a parent asks about.",
-          "hi": "<b>अभिभावक भरोसे पर चुनते हैं:</b> सुरक्षा, स्नेही शिक्षक, नियमित संवाद, दिखने वाली प्रगति। परिणाम महत्वपूर्ण हैं, पर अभिभावक का पहला प्रश्न अक्सर यह नहीं होता।"
+          "en": "<b>Classes III–V:</b> about 50 hours a year of computational thinking, taught <b>inside Maths and The World Around Us</b> periods, mostly unplugged (no computers).",
+          "hi": "<b>कक्षा III–V:</b> वर्ष में लगभग 50 घंटे कम्प्यूटेशनल थिंकिंग, <b>गणित और The World Around Us</b> के पीरियड के भीतर, अधिकतर बिना कंप्यूटर के।"
         },
         {
-          "en": "<b>Consistency beats campaigns:</b> one honest update every week does more than one big banner in March.",
-          "hi": "<b>निरंतरता अभियान से बेहतर है:</b> हर सप्ताह एक ईमानदार अपडेट मार्च के एक बड़े बैनर से अधिक असर करता है।"
+          "en": "<b>Classes VI–VIII:</b> about 100 hours a year: roughly 40 CT, 20 introductory AI and 40 project hours, shared by subject and computer teachers.",
+          "hi": "<b>कक्षा VI–VIII:</b> वर्ष में लगभग 100 घंटे: लगभग 40 CT, 20 प्रारंभिक AI और 40 प्रोजेक्ट घंटे, विषय और कंप्यूटर शिक्षक मिलकर।"
         },
         {
-          "en": "<b>AI's job:</b> remove the writing bottleneck, so the office can communicate well in Hindi and English without extra staff.",
-          "hi": "<b>AI का काम:</b> लेखन की रुकावट हटाना, ताकि कार्यालय बिना अतिरिक्त स्टाफ़ के हिंदी और अंग्रेज़ी में अच्छा संवाद कर सके।"
+          "en": "<b>No board exam</b> for these classes. Assessment is continuous: activities, rubrics and teacher observation.",
+          "hi": "इन कक्षाओं के लिए <b>कोई बोर्ड परीक्षा नहीं</b>। मूल्यांकन सतत है: गतिविधियाँ, रूब्रिक और शिक्षक अवलोकन।"
         },
         {
-          "en": "<b>Your job:</b> make sure every word is true, and that the school delivers what the words promise.",
-          "hi": "<b>आपका काम:</b> सुनिश्चित करना कि हर शब्द सत्य हो, और विद्यालय वही करे जिसका शब्द वादा करते हैं।"
+          "en": "<b>Free CBSE handbooks</b> for students and teachers, Classes 3–8, on the CBSE academic website.",
+          "hi": "कक्षा 3–8 के छात्रों और शिक्षकों के लिए <b>मुफ़्त CBSE पुस्तिकाएँ</b>, CBSE शैक्षणिक वेबसाइट पर।"
+        },
+        {
+          "en": "<b>Class IX:</b> other AI courses are discontinued from 2026-27; Class X continues the 2025-26 scheme.",
+          "hi": "<b>कक्षा IX:</b> 2026-27 से अन्य AI पाठ्यक्रम बंद; कक्षा X में 2025-26 की योजना जारी।"
         }
       ],
+      "note": {
+        "en": "Source: CBSE Circulars Acad-15/2026 and Acad-18/2026. The hours are indicative, so a documented partial plan this year is acceptable.",
+        "hi": "स्रोत: CBSE परिपत्र Acad-15/2026 और Acad-18/2026। घंटे सांकेतिक हैं, इसलिए इस वर्ष दर्ज की गई आंशिक योजना भी स्वीकार्य है।"
+      },
       "notes": [
-        "2 min. Ask one principal: 'What do parents in your town say about your school?' Their answer is their brand."
+        "3 min. Point to the handbook link on the Resources page. Principals' biggest relief: 'no board exam, no lab needed for III–V'.",
+        "If asked about Class IX subject codes: refer them to Acad-18/2026 for the exact wording."
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "s2-quiz-where",
+      "question": {
+        "en": "In Classes III–V, where is computational thinking taught?",
+        "hi": "कक्षा III–V में कम्प्यूटेशनल थिंकिंग कहाँ पढ़ाई जाती है?"
+      },
+      "options": [
+        {
+          "en": "In a new, separate computer period",
+          "hi": "एक नए, अलग कंप्यूटर पीरियड में"
+        },
+        {
+          "en": "Inside Maths and The World Around Us periods",
+          "hi": "गणित और The World Around Us के पीरियड के भीतर"
+        },
+        {
+          "en": "Only in the computer lab",
+          "hi": "केवल कंप्यूटर लैब में"
+        },
+        {
+          "en": "After school, as an activity club",
+          "hi": "विद्यालय के बाद, गतिविधि क्लब के रूप में"
+        }
+      ],
+      "answer": 1,
+      "explain": {
+        "en": "Inside existing Maths and TWAU periods, mostly with paper, cards and movement. No new period and no lab are required.",
+        "hi": "मौजूदा गणित और TWAU पीरियड के भीतर, अधिकतर कागज़, कार्ड और गतिविधि से। न नया पीरियड चाहिए, न लैब।"
+      },
+      "notes": [
+        "1 min. Sets up Missions 1 and 2."
       ]
     },
     {
       "type": "reveal",
       "title": {
-        "en": "Four channels. Tap to see what AI can do for each.",
-        "hi": "चार माध्यम। हर एक में AI क्या कर सकता है, देखने के लिए टैप करें।"
+        "en": "What is computational thinking? Four ideas you already use",
+        "hi": "कम्प्यूटेशनल थिंकिंग क्या है? चार विचार जिनका आप पहले से उपयोग करते हैं"
       },
       "items": [
         {
           "front": {
-            "en": "WhatsApp",
-            "hi": "व्हाट्सऐप"
+            "en": "Decomposition",
+            "hi": "विभाजन (Decomposition)"
           },
           "back": {
-            "en": "Weekly bilingual updates, quick replies to common questions, PTM reminders. Use WhatsApp Business (free) for labels and saved replies.",
-            "hi": "हर सप्ताह द्विभाषी अपडेट, आम प्रश्नों के त्वरित उत्तर, PTM अनुस्मारक। लेबल और सेव किए उत्तरों के लिए WhatsApp Business (मुफ़्त) उपयोग करें।"
+            "en": "Breaking a big task into small steps. Planning the annual day: stage, invitations, practice, seating.",
+            "hi": "बड़े काम को छोटे चरणों में बाँटना। वार्षिकोत्सव की योजना: मंच, निमंत्रण, अभ्यास, बैठने की व्यवस्था।"
           }
         },
         {
           "front": {
-            "en": "Google Business Profile",
-            "hi": "Google Business Profile"
+            "en": "Pattern recognition",
+            "hi": "पैटर्न पहचान (Pattern recognition)"
           },
           "back": {
-            "en": "The first thing many parents see. A clear description, real photos, correct timings, and calm replies to every review. Free.",
-            "hi": "कई अभिभावक सबसे पहले यही देखते हैं। स्पष्ट विवरण, वास्तविक फ़ोटो, सही समय, और हर समीक्षा का शांत उत्तर। मुफ़्त।"
+            "en": "Spotting what repeats. The 9 times table: digits always add up to 9 (18, 27, 36…).",
+            "hi": "दोहराव पहचानना। 9 का पहाड़ा: अंकों का योग हमेशा 9 (18, 27, 36…)।"
           }
         },
         {
           "front": {
-            "en": "Instagram / Facebook",
-            "hi": "इंस्टाग्राम / फ़ेसबुक"
+            "en": "Abstraction",
+            "hi": "सारांशीकरण (Abstraction)"
           },
           "back": {
-            "en": "Short posts about real activities: the CT game, the science fair, a teacher's training. AI drafts the caption; you choose the photo.",
-            "hi": "वास्तविक गतिविधियों पर छोटी पोस्ट: CT खेल, विज्ञान मेला, शिक्षक का प्रशिक्षण। AI कैप्शन बनाता है; फ़ोटो आप चुनते हैं।"
+            "en": "Keeping only what matters. A school bus route map shows stops and roads, not every tree and shop.",
+            "hi": "केवल ज़रूरी बातें रखना। स्कूल बस का रूट मैप स्टॉप और सड़कें दिखाता है, हर पेड़ और दुकान नहीं।"
           }
         },
         {
           "front": {
-            "en": "The report card and PTM",
-            "hi": "रिपोर्ट कार्ड और PTM"
+            "en": "Algorithm",
+            "hi": "एल्गोरिदम (Algorithm)"
           },
           "back": {
-            "en": "The most-read document in every home. Specific, kind remarks and a 'you said, we did' message turn PTMs into trust.",
-            "hi": "हर घर में सबसे अधिक पढ़ा जाने वाला दस्तावेज़। विशिष्ट, स्नेहपूर्ण टिप्पणियाँ और 'आपने कहा, हमने किया' संदेश PTM को भरोसे में बदलते हैं।"
+            "en": "Exact steps in the right order. The morning assembly: prayer, pledge, news, announcements, national anthem.",
+            "hi": "सही क्रम में सटीक चरण। प्रातः सभा: प्रार्थना, प्रतिज्ञा, समाचार, घोषणाएँ, राष्ट्रगान।"
           }
         }
       ],
       "notes": [
-        "3 min. The report card surprises people as a 'branding channel'. Pause on it."
+        "3 min. Ask a table for one more example of each from school life before you reveal.",
+        "Key line: 'Your teachers already do this. CT just gives it a name and a structure.'"
+      ]
+    },
+    {
+      "type": "concept",
+      "title": {
+        "en": "Try it now: the human algorithm (2 minutes)",
+        "hi": "अभी आज़माएँ: मानव एल्गोरिदम (2 मिनट)"
+      },
+      "points": [
+        {
+          "en": "In pairs: one person draws a simple shape without showing it (a house, a star).",
+          "hi": "जोड़ी में: एक व्यक्ति बिना दिखाए एक सरल आकृति बनाए (घर, तारा)।"
+        },
+        {
+          "en": "They give their partner <b>exact step-by-step instructions</b> to draw it, without naming the shape.",
+          "hi": "वह अपने साथी को आकृति का नाम बताए बिना उसे बनाने के <b>सटीक चरण-दर-चरण निर्देश</b> दे।"
+        },
+        {
+          "en": "Compare the drawings. Where the instructions were unclear, the drawing went wrong. That is debugging.",
+          "hi": "चित्रों की तुलना करें। जहाँ निर्देश अस्पष्ट थे, चित्र गलत हुआ। यही डिबगिंग है।"
+        }
+      ],
+      "note": {
+        "en": "This is exactly the kind of unplugged activity the CBSE handbooks use for Classes III–V. It costs nothing.",
+        "hi": "CBSE पुस्तिकाएँ कक्षा III–V के लिए ठीक ऐसी ही बिना कंप्यूटर की गतिविधियाँ देती हैं। इसमें कोई खर्च नहीं।"
+      },
+      "notes": [
+        "2 min, timed. Use the plain paper on the tables. Laughter is the goal; then one sentence: 'Children learn precision and debugging this way, years before any computer.'"
+      ]
+    },
+    {
+      "type": "poll",
+      "id": "s2-poll-who",
+      "question": {
+        "en": "Who will teach CT & AI in your school this year?",
+        "hi": "इस वर्ष आपके विद्यालय में CT और AI कौन पढ़ाएगा?"
+      },
+      "options": [
+        {
+          "en": "Class and Maths teachers (III–V), with support",
+          "hi": "कक्षा और गणित शिक्षक (III–V), सहयोग के साथ"
+        },
+        {
+          "en": "The computer teacher alone",
+          "hi": "केवल कंप्यूटर शिक्षक"
+        },
+        {
+          "en": "A shared team of subject and computer teachers",
+          "hi": "विषय और कंप्यूटर शिक्षकों की साझा टीम"
+        },
+        {
+          "en": "Not decided yet",
+          "hi": "अभी तय नहीं"
+        }
+      ],
+      "notes": [
+        "1 min. If many say 'computer teacher alone': gently point out the circular expects subject teachers to share it, and that one teacher cannot carry 100+ periods a week."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": {
+        "en": "The board exam has changed too",
+        "hi": "बोर्ड परीक्षा भी बदल गई है"
+      },
+      "points": [
+        {
+          "en": "<b>Class X paper:</b> about 50% competency-based questions (case-based, source-based, assertion-reason), 20% MCQ, 30% constructed response.",
+          "hi": "<b>कक्षा X प्रश्नपत्र:</b> लगभग 50% योग्यता-आधारित प्रश्न (केस-आधारित, स्रोत-आधारित, अभिकथन-कारण), 20% MCQ, 30% लिखित उत्तर।"
+        },
+        {
+          "en": "<b>Two board exams for Class X:</b> the main exam in February and an optional improvement exam in May.",
+          "hi": "<b>कक्षा X की दो बोर्ड परीक्षाएँ:</b> फ़रवरी में मुख्य परीक्षा और मई में वैकल्पिक सुधार परीक्षा।"
+        },
+        {
+          "en": "<b>What this means for you:</b> teachers need many good practice questions, every term. AI can draft them in minutes; teachers must verify them.",
+          "hi": "<b>आपके लिए इसका अर्थ:</b> शिक्षकों को हर सत्र में बहुत से अच्छे अभ्यास प्रश्न चाहिए। AI मिनटों में ड्राफ़्ट बना सकता है; शिक्षकों को जाँचना होगा।"
+        }
+      ],
+      "note": {
+        "en": "For Class XII, the competency-based share varies by subject. Check the 2026-27 CBSE sample papers.",
+        "hi": "कक्षा XII में योग्यता-आधारित प्रश्नों का अनुपात विषय के अनुसार अलग है। 2026-27 के CBSE सैंपल पेपर देखें।"
+      },
+      "notes": [
+        "2 min."
+      ]
+    },
+    {
+      "type": "reveal",
+      "title": {
+        "en": "Three question types. Tap to see an example.",
+        "hi": "तीन प्रकार के प्रश्न। उदाहरण देखने के लिए टैप करें।"
+      },
+      "items": [
+        {
+          "front": {
+            "en": "Assertion-Reason",
+            "hi": "अभिकथन-कारण"
+          },
+          "back": {
+            "en": "A: The clear sky appears blue. R: Air molecules scatter blue light more than red light.<br><b>Answer:</b> Both true, and R explains A.",
+            "hi": "A: साफ़ आकाश नीला दिखाई देता है। R: वायु के अणु लाल प्रकाश की तुलना में नीले प्रकाश को अधिक प्रकीर्णित करते हैं।<br><b>उत्तर:</b> दोनों सत्य हैं, और R, A की सही व्याख्या है।"
+          }
+        },
+        {
+          "front": {
+            "en": "Case-based",
+            "hi": "केस-आधारित"
+          },
+          "back": {
+            "en": "A short real-life passage, then 3–4 linked questions. Example: a dentist uses a concave mirror to see a tooth. Why concave? What kind of image does it form?",
+            "hi": "वास्तविक जीवन का छोटा अनुच्छेद, फिर 3–4 जुड़े प्रश्न। उदाहरण: दंत चिकित्सक दाँत देखने के लिए अवतल दर्पण का उपयोग करते हैं। अवतल क्यों? यह कैसा प्रतिबिंब बनाता है?"
+          }
+        },
+        {
+          "front": {
+            "en": "Source-based",
+            "hi": "स्रोत-आधारित"
+          },
+          "back": {
+            "en": "A table, graph or extract to read. Example: refractive index of water 1.33, glass 1.5, diamond 2.42. In which medium does light travel slowest?<br><b>Answer:</b> diamond.",
+            "hi": "पढ़ने के लिए तालिका, ग्राफ़ या अंश। उदाहरण: अपवर्तनांक जल 1.33, काँच 1.5, हीरा 2.42। प्रकाश किस माध्यम में सबसे धीमी गति से चलता है?<br><b>उत्तर:</b> हीरा।"
+          }
+        }
+      ],
+      "notes": [
+        "2 min. These are the formats Mission 3 asks Gemini to write."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": {
+        "en": "Why grounding matters: general AI vs your textbook",
+        "hi": "स्रोत-आधार क्यों ज़रूरी है: सामान्य AI बनाम आपकी पाठ्यपुस्तक"
+      },
+      "points": [
+        {
+          "en": "<b>A general chatbot</b> answers from everything it has read. Usually right, sometimes confidently wrong.",
+          "hi": "<b>सामान्य चैटबॉट</b> अपनी पढ़ी हर चीज़ से उत्तर देता है। अधिकतर सही, कभी-कभी आत्मविश्वास से गलत।"
+        },
+        {
+          "en": "<b>A grounded tool</b> such as NotebookLM answers only from the documents you give it, such as an NCERT chapter, and shows the exact line.",
+          "hi": "<b>स्रोत-आधारित टूल</b> जैसे NotebookLM केवल आपके दिए दस्तावेज़ों, जैसे NCERT अध्याय, से उत्तर देता है और सटीक पंक्ति दिखाता है।"
+        },
+        {
+          "en": "For parents, \"it comes from the NCERT book\" is the sentence that builds trust.",
+          "hi": "अभिभावकों के लिए \"यह NCERT पुस्तक से है\" वह वाक्य है जो भरोसा बनाता है।"
+        }
+      ],
+      "notes": [
+        "2 min. Sets up Mission 4. Contrast it with Mission 3, where Gemini drafts from general knowledge and then checks itself."
       ]
     },
     {
       "type": "quiz",
-      "id": "s3-quiz-claims",
+      "id": "s2-quiz-verify",
       "question": {
-        "en": "Which line is safe to use in an admission post?",
-        "hi": "प्रवेश पोस्ट में कौन-सी पंक्ति उपयोग करना सुरक्षित है?"
+        "en": "Gemini has drafted 10 board-pattern questions. What should happen before they go into a class test?",
+        "hi": "Gemini ने बोर्ड पैटर्न के 10 प्रश्न बनाए हैं। कक्षा परीक्षा में देने से पहले क्या होना चाहिए?"
       },
       "options": [
         {
-          "en": "\"The No. 1 school in Barabanki\"",
-          "hi": "\"बाराबंकी का नंबर 1 विद्यालय\""
+          "en": "Nothing; AI questions are already correct",
+          "hi": "कुछ नहीं; AI के प्रश्न पहले से सही हैं"
         },
         {
-          "en": "\"100% results guaranteed\"",
-          "hi": "\"100% परिणाम की गारंटी\""
+          "en": "A subject teacher checks them against NCERT and the CBSE sample paper",
+          "hi": "विषय शिक्षक उन्हें NCERT और CBSE सैंपल पेपर से जाँचें"
         },
         {
-          "en": "\"CT & AI taught from Class III, as per CBSE 2026-27\"",
-          "hi": "\"CBSE 2026-27 के अनुसार कक्षा III से CT और AI\""
+          "en": "Ask Gemini once more if they are correct, then use them",
+          "hi": "Gemini से एक बार और पूछें कि क्या वे सही हैं, फिर उपयोग करें"
         },
         {
-          "en": "A photo of smiling children made with AI",
-          "hi": "AI से बनी मुस्कुराते बच्चों की फ़ोटो"
+          "en": "Let students find the mistakes during the test",
+          "hi": "छात्र परीक्षा के दौरान गलतियाँ ढूँढें"
         }
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": {
-        "en": "It is specific, true and provable (if your timetable shows it). Rankings you cannot prove, guarantees and AI-made photos of children damage trust when parents find out.",
-        "hi": "यह विशिष्ट, सत्य और प्रमाणित करने योग्य है (यदि आपकी समय-सारणी में दिखता है)। बिना प्रमाण की रैंकिंग, गारंटी और AI से बनी बच्चों की फ़ोटो, अभिभावकों को पता चलने पर भरोसा तोड़ती हैं।"
+        "en": "AI's self-check helps, but a subject teacher is the final check. Record it in the Question Bank's \"Verified\" column.",
+        "hi": "AI की स्व-जाँच मदद करती है, पर अंतिम जाँच विषय शिक्षक की है। इसे Question Bank के \"Verified\" कॉलम में दर्ज करें।"
       },
       "notes": [
         "1 min."
@@ -173,419 +429,329 @@
     {
       "type": "concept",
       "title": {
-        "en": "Children's data and photos: the DPDP Act",
-        "hi": "बच्चों का डेटा और फ़ोटो: DPDP अधिनियम"
+        "en": "Your five missions (60 minutes)",
+        "hi": "आपके पाँच मिशन (60 मिनट)"
       },
       "points": [
         {
-          "en": "India's <b>Digital Personal Data Protection Act, 2023</b> and the <b>DPDP Rules, 2025</b> (notified November 2025) treat everyone under 18 as a child.",
-          "hi": "भारत का <b>डिजिटल व्यक्तिगत डेटा संरक्षण अधिनियम, 2023</b> और <b>DPDP नियम, 2025</b> (नवंबर 2025 में अधिसूचित) 18 वर्ष से कम आयु के हर व्यक्ति को बालक मानते हैं।"
+          "en": "1. Fit the CT & AI hours into your timetable – 10 min",
+          "hi": "1. CT और AI के घंटे अपनी समय-सारणी में फ़िट करें – 10 मिनट"
         },
         {
-          "en": "Using a child's personal data generally needs <b>verifiable consent from a parent</b>. Schools have some exemptions for education itself, but <b>marketing is not education</b>.",
-          "hi": "बच्चे के व्यक्तिगत डेटा के उपयोग के लिए सामान्यतः <b>अभिभावक की सत्यापन-योग्य सहमति</b> चाहिए। विद्यालयों को शिक्षा के लिए कुछ छूट है, पर <b>मार्केटिंग शिक्षा नहीं है</b>।"
+          "en": "2. An unplugged CT lesson, no lab needed – 15 min",
+          "hi": "2. बिना कंप्यूटर का CT पाठ, लैब की ज़रूरत नहीं – 15 मिनट"
         },
         {
-          "en": "The main duties (notice, consent, security, breach reporting) apply from <b>May 2027</b>. That is the 2027-28 admission season, so prepare now.",
-          "hi": "मुख्य दायित्व (सूचना, सहमति, सुरक्षा, उल्लंघन रिपोर्टिंग) <b>मई 2027</b> से लागू होंगे। यही 2027-28 का प्रवेश सत्र है, इसलिए अभी तैयारी करें।"
+          "en": "3. Board-pattern questions, then AI checks itself – 15 min",
+          "hi": "3. बोर्ड पैटर्न के प्रश्न, फिर AI स्वयं जाँचे – 15 मिनट"
         },
         {
-          "en": "<b>Practical rules today:</b> a written photo-consent form at admission; no names with photos; never paste children's names, marks or photos into a free AI tool.",
-          "hi": "<b>आज के व्यावहारिक नियम:</b> प्रवेश के समय लिखित फ़ोटो-सहमति फ़ॉर्म; फ़ोटो के साथ नाम नहीं; मुफ़्त AI टूल में बच्चों के नाम, अंक या फ़ोटो कभी न डालें।"
+          "en": "4. Keep AI inside the textbook with NotebookLM – 10 min",
+          "hi": "4. NotebookLM से AI को पाठ्यपुस्तक के भीतर रखें – 10 मिनट"
+        },
+        {
+          "en": "5. A low-cost student AI project on a local problem – 10 min",
+          "hi": "5. स्थानीय समस्या पर कम खर्च का छात्र AI प्रोजेक्ट – 10 मिनट"
         }
       ],
       "note": {
-        "en": "This is general information, not legal advice. Check the Act and Rules on meity.gov.in, or ask your school's legal adviser.",
-        "hi": "यह सामान्य जानकारी है, कानूनी सलाह नहीं। अधिनियम और नियम meity.gov.in पर देखें, या अपने विद्यालय के कानूनी सलाहकार से पूछें।"
+        "en": "Use your Principal's Assistant Gem (see \"Before you start\", step 2). Press <b>Mark done</b> after each mission.",
+        "hi": "अपना Principal's Assistant Gem उपयोग करें (देखें \"सत्र से पहले\", चरण 2)। हर मिशन के बाद <b>पूरा हुआ</b> दबाएँ।"
       },
+      "notes": [
+        "2:20. Start the clock. Mission 4 needs the NCERT PDF download: ask tables to start it during Mission 3 if the Wi-Fi is slow."
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "s2m1",
+      "number": 1,
+      "minutes": 10,
+      "tool": "Gemini",
+      "toolUrl": "https://gemini.google.com/app",
+      "title": {
+        "en": "Fit the CT & AI hours into your timetable",
+        "hi": "CT और AI के घंटे अपनी समय-सारणी में फ़िट करें"
+      },
+      "scenario": {
+        "en": "CBSE made Computational Thinking and AI compulsory for Classes III–VIII from 2026-27, but your timetable was made before the circular. You need a realistic plan for the months left: which class, which period, which teacher.",
+        "hi": "CBSE ने 2026-27 से कक्षा III–VIII के लिए कम्प्यूटेशनल थिंकिंग और AI अनिवार्य किया है, पर आपकी समय-सारणी परिपत्र से पहले बनी थी। शेष महीनों के लिए व्यावहारिक योजना चाहिए: कौन-सी कक्षा, कौन-सा पीरियड, कौन-सा शिक्षक।"
+      },
+      "steps": [
+        {
+          "en": "Open your <b>Principal's Assistant</b> Gem.",
+          "hi": "अपना <b>Principal's Assistant</b> Gem खोलें।"
+        },
+        {
+          "en": "Copy the prompt, replace the [brackets] with your school's numbers (or keep the sample numbers), and send.",
+          "hi": "प्रॉम्प्ट कॉपी करें, [कोष्ठक] में अपने विद्यालय की संख्याएँ भरें (या नमूना संख्याएँ रखें), और भेजें।"
+        },
+        {
+          "en": "Ask one follow-up: \"Which teachers need training first, and when?\"",
+          "hi": "एक अनुवर्ती प्रश्न पूछें: \"किन शिक्षकों को पहले प्रशिक्षण चाहिए, और कब?\""
+        },
+        {
+          "en": "Compare with the <b>CT & AI Plan</b> tab in your School Command Sheet: change the blue numbers and the periods per week update by themselves.",
+          "hi": "अपनी स्कूल कमांड शीट के <b>CT & AI Plan</b> टैब से तुलना करें: नीली संख्याएँ बदलें, प्रति सप्ताह पीरियड अपने-आप बदल जाएँगे।"
+        }
+      ],
+      "prompt": {
+        "en": "Our CBSE school has Classes III–VIII with [2] sections each. Each section has [7] Maths periods and [5] TWAU / Science periods per week, 40 minutes each. About [4] months of teaching remain in 2026-27.\n\nUnder CBSE Circular Acad-15/2026: Classes III–V need about 50 hours a year of computational thinking (CT), taught inside Maths and The World Around Us periods, mostly unplugged; Classes VI–VIII need about 100 hours a year (about 40 CT, 20 introductory AI, 40 interdisciplinary projects), shared between subject and computer teachers. The hours are indicative.\n\n1. Make a table, one row per class: hours needed for the rest of this session (pro-rata), periods per week to set aside, which subject periods to use, and a suggested teacher role (Maths teacher, Science teacher, computer teacher).\n2. Keep it realistic: do not take more than 1 Maths period a week in Classes III–V.\n3. List 3 risks (for example, a teacher shortage) and how to handle each.\nShow the table so I can paste it into Google Sheets.",
+        "hi": "हमारे CBSE विद्यालय में कक्षा III–VIII हैं, हर कक्षा के [2] सेक्शन। हर सेक्शन में प्रति सप्ताह [7] गणित और [5] TWAU / विज्ञान के पीरियड हैं, हर पीरियड 40 मिनट का। 2026-27 में लगभग [4] महीने का शिक्षण शेष है।\n\nCBSE परिपत्र Acad-15/2026 के अनुसार: कक्षा III–V में वर्ष में लगभग 50 घंटे कम्प्यूटेशनल थिंकिंग (CT) चाहिए, गणित और The World Around Us के पीरियड के भीतर, अधिकतर बिना कंप्यूटर के; कक्षा VI–VIII में वर्ष में लगभग 100 घंटे (लगभग 40 CT, 20 प्रारंभिक AI, 40 अंतर्विषयक प्रोजेक्ट), विषय और कंप्यूटर शिक्षक मिलकर। घंटे सांकेतिक हैं।\n\n1. हर कक्षा के लिए एक पंक्ति वाली तालिका बनाएँ: इस सत्र के शेष समय के लिए आवश्यक घंटे (अनुपात में), प्रति सप्ताह कितने पीरियड अलग रखें, किस विषय के पीरियड का उपयोग हो, और सुझाई गई शिक्षक भूमिका (गणित, विज्ञान या कंप्यूटर शिक्षक)।\n2. व्यावहारिक रहें: कक्षा III–V में सप्ताह में 1 से अधिक गणित पीरियड न लें।\n3. 3 जोखिम (जैसे शिक्षकों की कमी) और हर एक से निपटने का तरीका बताएँ।\nतालिका ऐसे दें कि मैं उसे Google Sheets में पेस्ट कर सकूँ।"
+      },
+      "expected": {
+        "en": "A class-wise CT & AI plan for the rest of this session, with periods, subjects and teacher owners.",
+        "hi": "इस सत्र के शेष समय के लिए कक्षावार CT और AI योजना, पीरियड, विषय और ज़िम्मेदार शिक्षकों सहित।"
+      },
+      "check": {
+        "en": "Check the arithmetic: 4 months is about 16 teaching weeks. Is the plan possible with the teachers you actually have? The hours are indicative, so a partial plan this year is acceptable; record it.",
+        "hi": "गणना जाँचें: 4 महीने लगभग 16 शिक्षण सप्ताह होते हैं। क्या यह योजना आपके वास्तविक शिक्षकों के साथ संभव है? घंटे सांकेतिक हैं, इसलिए इस वर्ष आंशिक योजना भी स्वीकार्य है; उसे दर्ज करें।"
+      },
+      "stretch": {
+        "en": "Ask: \"Turn this into a one-page note for my teachers explaining what changes from next Monday, in Hindi.\"",
+        "hi": "पूछें: \"इसे मेरे शिक्षकों के लिए एक पृष्ठ के हिंदी नोट में बदलें, जिसमें बताया हो कि अगले सोमवार से क्या बदलेगा।\""
+      },
+      "notes": [
+        "Check against the CT & AI Plan tab (40 weeks/year, 16 left = 40%): III–V need 20 h = 30 periods ≈ 1.9 a week per section; VI–VIII need 40 h = 60 periods ≈ 3.8 a week. Whole school with 2 sections each: 33.8 periods a week.",
+        "Many principals will find the full hours impossible this year. Reassure them: CBSE calls the hours indicative; a documented partial plan is far better than none."
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "s2m2",
+      "number": 2,
+      "minutes": 15,
+      "tool": "Gemini",
+      "toolUrl": "https://gemini.google.com/app",
+      "title": {
+        "en": "An unplugged CT lesson: no computer lab needed",
+        "hi": "बिना कंप्यूटर का CT पाठ: लैब की ज़रूरत नहीं"
+      },
+      "scenario": {
+        "en": "Your Class 4 Maths teacher must start computational thinking next week, with no computers and no extra budget. Give her a ready lesson she can teach with paper, chalk and the children themselves.",
+        "hi": "आपकी कक्षा 4 की गणित शिक्षिका को अगले सप्ताह से कम्प्यूटेशनल थिंकिंग शुरू करनी है, बिना कंप्यूटर और बिना अतिरिक्त बजट के। उन्हें एक तैयार पाठ दें जिसे वे कागज़, चॉक और बच्चों के साथ पढ़ा सकें।"
+      },
+      "steps": [
+        {
+          "en": "In your Gem, paste the prompt and send.",
+          "hi": "अपने Gem में प्रॉम्प्ट पेस्ट करें और भेजें।"
+        },
+        {
+          "en": "Refine once: \"Make the Hindi instructions simpler for a Class 4 child.\"",
+          "hi": "एक बार सुधारें: \"हिंदी निर्देश कक्षा 4 के बच्चे के लिए और सरल करें।\""
+        },
+        {
+          "en": "Compare with the free CBSE CT handbook for Class 4 (link on the Resources page).",
+          "hi": "कक्षा 4 की मुफ़्त CBSE CT पुस्तिका से तुलना करें (लिंक संसाधन पृष्ठ पर)।"
+        }
+      ],
+      "prompt": {
+        "en": "Create a 40-minute lesson plan for Class 4 Maths on patterns, aligned to NCERT and to the CBSE Computational Thinking framework for 2026-27. No computers or devices for students.\nInclude:\n1. Learning objective in one line, and the CT skill it builds (pattern recognition, sequencing or algorithms).\n2. A 5-minute warm-up using claps or body movement.\n3. A 15-minute unplugged activity with paper cards or chalk: children write and follow a step-by-step 'algorithm' to make a pattern.\n4. 10 minutes of pair work and 5 minutes of sharing.\n5. A 3-question exit ticket.\n6. A 3-level rubric (Beginning, Developing, Proficient).\nGive teacher instructions in Hindi and student instructions in simple English and Hindi. Materials must cost nothing.",
+        "hi": "कक्षा 4 गणित में 'पैटर्न' पर 40 मिनट की पाठ योजना बनाएँ, NCERT और 2026-27 के CBSE कम्प्यूटेशनल थिंकिंग ढाँचे के अनुरूप। छात्रों के लिए कोई कंप्यूटर या उपकरण नहीं।\nशामिल करें:\n1. एक पंक्ति में सीखने का उद्देश्य, और इससे बनने वाला CT कौशल (पैटर्न पहचान, क्रम या एल्गोरिदम)।\n2. ताली या शारीरिक गतिविधि से 5 मिनट का वार्म-अप।\n3. कागज़ के कार्ड या चॉक से 15 मिनट की बिना कंप्यूटर की गतिविधि: बच्चे पैटर्न बनाने का चरण-दर-चरण 'एल्गोरिदम' लिखें और उसका पालन करें।\n4. 10 मिनट जोड़ी में काम और 5 मिनट साझा करना।\n5. 3 प्रश्नों का एग्ज़िट टिकट।\n6. 3-स्तरीय रूब्रिक (प्रारंभिक, विकासशील, दक्ष)।\nशिक्षक के निर्देश हिंदी में और छात्रों के निर्देश सरल अंग्रेज़ी और हिंदी में दें। सामग्री पर कोई खर्च न हो।"
+      },
+      "expected": {
+        "en": "A complete, zero-cost CT lesson your teacher can use next week, with a rubric for continuous assessment.",
+        "hi": "एक पूरा, बिना खर्च का CT पाठ जिसे आपकी शिक्षिका अगले सप्ताह उपयोग कर सकें, सतत मूल्यांकन के रूब्रिक सहित।"
+      },
+      "check": {
+        "en": "Would this work with 40 children in your actual classroom? Is the Hindi natural for your area? Match it against the CBSE Class 4 CT handbook before using.",
+        "hi": "क्या यह आपकी वास्तविक कक्षा में 40 बच्चों के साथ चलेगा? क्या हिंदी आपके क्षेत्र के लिए स्वाभाविक है? उपयोग से पहले CBSE की कक्षा 4 CT पुस्तिका से मिलाएँ।"
+      },
+      "stretch": {
+        "en": "Ask for a printable A4 worksheet version with pictures described in words, so a teacher can draw them on the board.",
+        "hi": "छपने योग्य A4 वर्कशीट माँगें, जिसमें चित्रों का शब्दों में वर्णन हो ताकि शिक्षक उन्हें बोर्ड पर बना सकें।"
+      },
+      "notes": [
+        "Do 2 minutes of the activity with the room yourself if energy is low: a clap-stamp pattern, then ask a table to write the 'algorithm'.",
+        "Key message for principals: the mandate does not need a lab. III–V CT lives inside Maths and TWAU periods."
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "s2m3",
+      "number": 3,
+      "minutes": 15,
+      "tool": "Gemini",
+      "toolUrl": "https://gemini.google.com/app",
+      "title": {
+        "en": "Board-pattern competency questions, then make AI check itself",
+        "hi": "बोर्ड पैटर्न के योग्यता-आधारित प्रश्न, फिर AI से स्वयं जाँच कराएँ"
+      },
+      "scenario": {
+        "en": "Half of the Class X board paper is now competency-based: case-based, source-based and assertion-reason questions. Teachers struggle to write good ones. Gemini can draft them fast, but it can also make mistakes, so you will ask it to act as a strict paper setter and check its own work.",
+        "hi": "कक्षा X बोर्ड प्रश्नपत्र का आधा भाग अब योग्यता-आधारित है: केस-आधारित, स्रोत-आधारित और अभिकथन-कारण प्रश्न। शिक्षकों को अच्छे प्रश्न बनाने में कठिनाई होती है। Gemini इन्हें जल्दी बना सकता है, पर गलती भी कर सकता है, इसलिए आप उससे सख़्त प्रश्नपत्र निर्माता बनकर अपना काम जाँचने को कहेंगे।"
+      },
+      "steps": [
+        {
+          "en": "Send prompt <b>A</b> (write the questions).",
+          "hi": "प्रॉम्प्ट <b>A</b> भेजें (प्रश्न लिखें)।"
+        },
+        {
+          "en": "Then send prompt <b>B</b> in the same chat (check them).",
+          "hi": "फिर उसी चैट में प्रॉम्प्ट <b>B</b> भेजें (जाँचें)।"
+        },
+        {
+          "en": "Note one correction Gemini found. That is why the second step matters.",
+          "hi": "Gemini ने जो एक सुधार बताया उसे नोट करें। इसीलिए दूसरा चरण ज़रूरी है।"
+        },
+        {
+          "en": "Paste your best question into the <b>Question Bank</b> tab of your School Command Sheet, with Verified = Not yet.",
+          "hi": "अपना सबसे अच्छा प्रश्न स्कूल कमांड शीट के <b>Question Bank</b> टैब में पेस्ट करें, Verified = Not yet के साथ।"
+        }
+      ],
+      "prompt": {
+        "en": "A) Write a competency-based question set for CBSE Class X Science, Chapter 9 'Light – Reflection and Refraction' (NCERT):\n- 1 case-based question with a short real-life passage (for example, a vehicle's rear-view mirror or a magnifying glass) and 4 sub-questions worth 1, 1, 2 and 4 marks.\n- 2 assertion-reason questions with the standard four options.\nFor every question give the answer, the marking scheme and the competency it tests.\n\nB) Now act as a strict CBSE paper setter. Check every question above for factual errors, ambiguity, wrong marks and whether it stays within the NCERT chapter. List what you would fix, then give the corrected set.",
+        "hi": "A) CBSE कक्षा X विज्ञान, अध्याय 9 'प्रकाश – परावर्तन तथा अपवर्तन' (NCERT) के लिए योग्यता-आधारित प्रश्न-समूह लिखें:\n- वास्तविक जीवन के छोटे अनुच्छेद (जैसे वाहन का पीछे देखने वाला दर्पण या आवर्धक लेंस) के साथ 1 केस-आधारित प्रश्न, जिसके 4 उप-प्रश्न 1, 1, 2 और 4 अंकों के हों।\n- मानक चार विकल्पों वाले 2 अभिकथन-कारण प्रश्न।\nहर प्रश्न का उत्तर, अंक योजना और जाँची जाने वाली योग्यता दें।\n\nB) अब एक सख़्त CBSE प्रश्नपत्र निर्माता बनें। ऊपर के हर प्रश्न में तथ्यात्मक गलती, अस्पष्टता, गलत अंक और NCERT अध्याय के भीतर रहने की जाँच करें। जो सुधारेंगे उसकी सूची दें, फिर सुधरा हुआ प्रश्न-समूह दें।"
+      },
+      "expected": {
+        "en": "A board-pattern question set with answers and marking scheme, plus a list of corrections Gemini made to its own first draft.",
+        "hi": "उत्तर और अंक योजना सहित बोर्ड पैटर्न का प्रश्न-समूह, साथ ही Gemini द्वारा अपने पहले ड्राफ़्ट में किए सुधारों की सूची।"
+      },
+      "check": {
+        "en": "A subject teacher must still verify every answer against the NCERT chapter and the latest CBSE sample paper before any question is used in a test.",
+        "hi": "किसी भी प्रश्न को परीक्षा में उपयोग करने से पहले विषय शिक्षक को हर उत्तर NCERT अध्याय और नवीनतम CBSE सैंपल पेपर से जाँचना होगा।"
+      },
+      "stretch": {
+        "en": "Ask for the same case-based question in Hindi medium, using the NCERT Hindi terms (दर्पण, लेंस, फ़ोकस दूरी).",
+        "hi": "यही केस-आधारित प्रश्न हिंदी माध्यम में माँगें, NCERT के हिंदी शब्दों (दर्पण, लेंस, फ़ोकस दूरी) के साथ।"
+      },
+      "notes": [
+        "The self-check step is the teaching point: first drafts often contain a sign-convention slip or a mark total that does not add up. Ask 2–3 principals what Gemini corrected.",
+        "Principals who are not Science teachers can swap the chapter for one from their own subject."
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "s2m4",
+      "number": 4,
+      "minutes": 10,
+      "tool": "NotebookLM",
+      "toolUrl": "https://notebooklm.google.com",
+      "title": {
+        "en": "Keep AI inside the textbook with NotebookLM",
+        "hi": "NotebookLM से AI को पाठ्यपुस्तक के भीतर रखें"
+      },
+      "scenario": {
+        "en": "Parents and teachers worry that AI makes things up. NotebookLM answers only from the documents you give it and shows where each answer comes from. Give it one NCERT chapter and see the difference.",
+        "hi": "अभिभावक और शिक्षक चिंतित हैं कि AI बातें गढ़ लेता है। NotebookLM केवल आपके दिए दस्तावेज़ों से उत्तर देता है और दिखाता है कि हर उत्तर कहाँ से आया। उसे एक NCERT अध्याय दें और अंतर देखें।"
+      },
+      "steps": [
+        {
+          "en": "Download the NCERT chapter PDF with the button below (Class 10 Science, Chapter 9).",
+          "hi": "नीचे दिए बटन से NCERT अध्याय की PDF डाउनलोड करें (कक्षा 10 विज्ञान, अध्याय 9)।"
+        },
+        {
+          "en": "Open <b>notebooklm.google.com</b> → <b>Create new</b> → upload the PDF as a source.",
+          "hi": "<b>notebooklm.google.com</b> खोलें → <b>Create new</b> → PDF को स्रोत के रूप में अपलोड करें।"
+        },
+        {
+          "en": "Paste the prompt in the chat. Tap a citation number to see the exact line in the chapter.",
+          "hi": "चैट में प्रॉम्प्ट पेस्ट करें। अध्याय की सटीक पंक्ति देखने के लिए किसी संदर्भ संख्या पर टैप करें।"
+        },
+        {
+          "en": "If time allows, tap <b>Audio Overview</b> and choose Hindi.",
+          "hi": "समय हो तो <b>Audio Overview</b> टैप करें और हिंदी चुनें।"
+        }
+      ],
+      "prompt": {
+        "en": "Using only this chapter, create 10 multiple-choice questions for Class 10 students, with the correct answer and the section of the chapter each answer comes from. Then list 3 common student misconceptions this chapter addresses.",
+        "hi": "केवल इस अध्याय का उपयोग करके कक्षा 10 के छात्रों के लिए 10 बहुविकल्पीय प्रश्न बनाएँ, सही उत्तर और अध्याय का वह भाग बताएँ जहाँ से हर उत्तर आया। फिर उन 3 सामान्य भ्रांतियों की सूची दें जिन्हें यह अध्याय दूर करता है।"
+      },
+      "expected": {
+        "en": "Ten quiz questions where every answer is traceable to a line in the NCERT chapter, plus a teaching note on misconceptions.",
+        "hi": "दस प्रश्न जिनका हर उत्तर NCERT अध्याय की किसी पंक्ति से जुड़ा है, साथ ही भ्रांतियों पर शिक्षण नोट।"
+      },
+      "check": {
+        "en": "Tap two citations and read the original lines. Grounded does not mean perfect, but you can now verify in seconds.",
+        "hi": "दो संदर्भों पर टैप करके मूल पंक्तियाँ पढ़ें। स्रोत-आधारित होने का अर्थ पूर्ण होना नहीं, पर अब आप सेकंडों में जाँच सकते हैं।"
+      },
+      "stretch": {
+        "en": "Add the CBSE Class 10 Science sample paper as a second source and ask: \"Which topics in this chapter appear most in the sample paper?\"",
+        "hi": "CBSE कक्षा 10 विज्ञान सैंपल पेपर को दूसरे स्रोत के रूप में जोड़ें और पूछें: \"इस अध्याय के कौन-से विषय सैंपल पेपर में सबसे अधिक आते हैं?\""
+      },
+      "notes": [
+        "NotebookLM needs a Google account; same one as Gemini. If the PDF download is slow on venue Wi-Fi, project your own screen and let tables watch.",
+        "Contrast with Mission 3: Gemini drafted from its general knowledge; NotebookLM is grounded in the chapter. Both are useful; grounding is what builds parents' trust.",
+        "Chapter PDF link: ncert.nic.in/textbook/pdf/jesc109.pdf (Class 10 Science, Ch. 9 Light – Reflection and Refraction). Check it opens on the venue Wi-Fi; keep a downloaded copy on your laptop."
+      ],
       "links": [
         {
           "label": {
-            "en": "DPDP Act and Rules (MeitY)",
-            "hi": "DPDP अधिनियम और नियम (MeitY)"
+            "en": "Download NCERT Class 10 Science, Chapter 9 (PDF)",
+            "hi": "NCERT कक्षा 10 विज्ञान, अध्याय 9 डाउनलोड करें (PDF)"
           },
-          "url": "https://www.meity.gov.in/"
+          "url": "https://ncert.nic.in/textbook/pdf/jesc109.pdf"
         }
-      ],
-      "notes": [
-        "3 min. Expect questions. Do not give legal opinions; point to the source and the consent-form habit.",
-        "Bridge: 'Mission 12 shows how to use AI for report remarks without sharing any child's data.'"
-      ]
-    },
-    {
-      "type": "poll",
-      "id": "s3-poll-consent",
-      "question": {
-        "en": "Does your school take written parent consent before posting children's photos?",
-        "hi": "क्या आपका विद्यालय बच्चों की फ़ोटो पोस्ट करने से पहले अभिभावकों की लिखित सहमति लेता है?"
-      },
-      "options": [
-        {
-          "en": "Yes, a form at admission",
-          "hi": "हाँ, प्रवेश के समय फ़ॉर्म"
-        },
-        {
-          "en": "Sometimes, verbally",
-          "hi": "कभी-कभी, मौखिक रूप से"
-        },
-        {
-          "en": "No",
-          "hi": "नहीं"
-        },
-        {
-          "en": "Not sure",
-          "hi": "पता नहीं"
-        }
-      ],
-      "notes": [
-        "1 min. Whatever the result: 'Mission 13's policy chat can draft that consent form in 2 minutes. Do it this week.'"
-      ]
-    },
-    {
-      "type": "concept",
-      "title": {
-        "en": "Your five missions (55 minutes)",
-        "hi": "आपके पाँच मिशन (55 मिनट)"
-      },
-      "points": [
-        {
-          "en": "11. An honest admission campaign for 2027-28 – 15 min",
-          "hi": "11. 2027-28 के लिए ईमानदार प्रवेश अभियान – 15 मिनट"
-        },
-        {
-          "en": "12. Report-card remarks that sound like a person – 10 min",
-          "hi": "12. रिपोर्ट कार्ड टिप्पणियाँ जो किसी व्यक्ति जैसी लगें – 10 मिनट"
-        },
-        {
-          "en": "13. Answer parents' questions about AI, in Hindi – 10 min",
-          "hi": "13. अभिभावकों के AI संबंधी प्रश्नों के उत्तर, हिंदी में – 10 मिनट"
-        },
-        {
-          "en": "14. Your Google Business Profile and a calm reply to a bad review – 10 min",
-          "hi": "14. आपकी Google Business Profile और खराब समीक्षा का शांत उत्तर – 10 मिनट"
-        },
-        {
-          "en": "15. From parent feedback to a 30-day action plan – 10 min",
-          "hi": "15. अभिभावक प्रतिक्रिया से 30-दिन की कार्य योजना – 10 मिनट"
-        }
-      ],
-      "note": {
-        "en": "Keep using your Principal's Assistant Gem. Three new tabs are waiting in your School Command Sheet: Admission Enquiries, Report Remarks and Parent Feedback.",
-        "hi": "अपना Principal's Assistant Gem उपयोग करते रहें। आपकी स्कूल कमांड शीट में तीन नए टैब हैं: Admission Enquiries, Report Remarks और Parent Feedback।"
-      },
-      "notes": [
-        "2:18. Start the clock. Tables that finish early: try the stretch tasks, or log the sample enquiries in the Admission Enquiries tab and watch the overdue follow-ups turn red."
       ]
     },
     {
       "type": "mission",
-      "id": "s3m1",
-      "number": 11,
-      "minutes": 15,
-      "tool": "Gemini Canvas",
-      "toolUrl": "https://gemini.google.com/app",
-      "title": {
-        "en": "An honest admission campaign for 2027-28",
-        "hi": "2027-28 के लिए ईमानदार प्रवेश अभियान"
-      },
-      "scenario": {
-        "en": "Admissions open soon and parents are comparing you with bigger schools in Lucknow. You need a short campaign for WhatsApp and Instagram that is warm, bilingual and makes only claims you can show.",
-        "hi": "प्रवेश जल्द शुरू होंगे और अभिभावक आपकी तुलना लखनऊ के बड़े विद्यालयों से कर रहे हैं। व्हाट्सऐप और इंस्टाग्राम के लिए एक छोटा अभियान चाहिए जो आत्मीय, द्विभाषी हो और केवल वही दावे करे जो आप दिखा सकें।"
-      },
-      "steps": [
-        {
-          "en": "Open your Gem → <b>Tools</b> → <b>Canvas</b>.",
-          "hi": "अपना Gem खोलें → <b>Tools</b> → <b>Canvas</b>।"
-        },
-        {
-          "en": "Copy the prompt and replace the sample strengths with your school's <b>real</b> ones.",
-          "hi": "प्रॉम्प्ट कॉपी करें और नमूना विशेषताओं की जगह अपने विद्यालय की <b>वास्तविक</b> विशेषताएँ लिखें।"
-        },
-        {
-          "en": "Delete any claim you cannot prove with a photo, a document or a number.",
-          "hi": "ऐसा हर दावा हटा दें जिसे आप फ़ोटो, दस्तावेज़ या संख्या से साबित नहीं कर सकते।"
-        },
-        {
-          "en": "Log new enquiries in the <b>Admission Enquiries</b> tab of your School Command Sheet, with a code, never a phone number.",
-          "hi": "नई पूछताछ को स्कूल कमांड शीट के <b>Admission Enquiries</b> टैब में कोड के साथ दर्ज करें, फ़ोन नंबर कभी नहीं।"
-        }
-      ],
-      "sample": {
-        "label": {
-          "en": "Sample school strengths (replace with yours)",
-          "hi": "नमूना विशेषताएँ (अपनी लिखें)"
-        },
-        "text": {
-          "en": "- CBSE affiliated, Nursery to Class XII\n- CT & AI taught from Class III, as per CBSE 2026-27\n- Average class size 32\n- 2 smart classrooms and a science lab\n- Every teacher completing 50 hours of training this year\n- Safe school transport on 6 routes, GPS-tracked\n- Weekly parent updates on WhatsApp in Hindi and English",
-          "hi": "- CBSE संबद्ध, नर्सरी से कक्षा XII\n- CBSE 2026-27 के अनुसार कक्षा III से CT और AI\n- औसत कक्षा आकार 32\n- 2 स्मार्ट कक्षाएँ और विज्ञान प्रयोगशाला\n- इस वर्ष हर शिक्षक 50 घंटे का प्रशिक्षण पूरा कर रहे हैं\n- 6 मार्गों पर सुरक्षित, GPS-युक्त स्कूल परिवहन\n- हर सप्ताह व्हाट्सऐप पर हिंदी और अंग्रेज़ी में अभिभावक अपडेट"
-        }
-      },
-      "prompt": {
-        "en": "Write an admission campaign for 2027-28 for our CBSE school in [town, district], using only these real strengths: [paste strengths].\n1. Five short posts for WhatsApp and Instagram (each under 60 words), each in English and simple Hindi, each with one clear call to action (visit, call, or join the open day on [date]).\n2. Text for one A4 poster: headline, three lines, contact.\n3. A 20-second script for a short video showing real classrooms.\nRules: warm and honest; no words like \"best\", \"No. 1\" or \"guaranteed\"; no comparison with other schools; no promises about results; nothing that needs AI-generated photos of children.\nAt the end, list every factual claim so I can check each one.",
-        "hi": "[कस्बा, ज़िला] में हमारे CBSE विद्यालय के लिए 2027-28 का प्रवेश अभियान लिखें, केवल इन वास्तविक विशेषताओं का उपयोग करके: [विशेषताएँ पेस्ट करें]।\n1. व्हाट्सऐप और इंस्टाग्राम के लिए पाँच छोटी पोस्ट (हर एक 60 शब्दों से कम), हर एक अंग्रेज़ी और सरल हिंदी में, हर एक में एक स्पष्ट आह्वान (मिलने आएँ, फ़ोन करें, या [तिथि] को ओपन डे में आएँ)।\n2. एक A4 पोस्टर का पाठ: शीर्षक, तीन पंक्तियाँ, संपर्क।\n3. वास्तविक कक्षाएँ दिखाने वाले 20 सेकंड के छोटे वीडियो की स्क्रिप्ट।\nनियम: आत्मीय और ईमानदार; \"सर्वश्रेष्ठ\", \"नंबर 1\" या \"गारंटी\" जैसे शब्द नहीं; किसी अन्य विद्यालय से तुलना नहीं; परिणामों के वादे नहीं; AI से बनी बच्चों की फ़ोटो की ज़रूरत वाली कोई चीज़ नहीं।\nअंत में हर तथ्यात्मक दावे की सूची दें ताकि मैं हर एक जाँच सकूँ।"
-      },
-      "expected": {
-        "en": "Five bilingual posts, a poster and a video script, plus a checklist of every claim to verify.",
-        "hi": "पाँच द्विभाषी पोस्ट, एक पोस्टर और वीडियो स्क्रिप्ट, साथ ही जाँचने योग्य हर दावे की सूची।"
-      },
-      "check": {
-        "en": "Can you show proof for every claim on the list (a CPD log, a timetable, a photo)? Use only real photos, taken with parents' consent. Never use AI-generated images of children.",
-        "hi": "क्या आप सूची के हर दावे का प्रमाण दिखा सकते हैं (CPD रिकॉर्ड, समय-सारणी, फ़ोटो)? केवल वास्तविक फ़ोटो, अभिभावकों की सहमति से लें। बच्चों की AI से बनी छवियाँ कभी उपयोग न करें।"
-      },
-      "stretch": {
-        "en": "Open canva.com, choose an A4 poster template and paste in the poster text. Add one real photo of your school building.",
-        "hi": "canva.com खोलें, A4 पोस्टर टेम्पलेट चुनें और पोस्टर का पाठ पेस्ट करें। अपने विद्यालय भवन की एक वास्तविक फ़ोटो जोड़ें।"
-      },
-      "notes": [
-        "Ask one volunteer to read their best post aloud; ask the room: 'Can they prove every word?'",
-        "Link back: CT & AI from Class III is only a claim if Mission 6's plan is running. Evidence first, branding second."
-      ]
-    },
-    {
-      "type": "mission",
-      "id": "s3m2",
-      "number": 12,
-      "minutes": 10,
-      "tool": "Gemini + Sheets",
-      "toolUrl": "https://gemini.google.com/app",
-      "title": {
-        "en": "Report-card remarks that sound like a person",
-        "hi": "रिपोर्ट कार्ड टिप्पणियाँ जो किसी व्यक्ति जैसी लगें"
-      },
-      "scenario": {
-        "en": "Each class teacher writes 40 remarks every term, and most end up as \"Good, can do better\". AI can draft specific, encouraging remarks in two languages, as long as you never share names or marks.",
-        "hi": "हर कक्षा अध्यापक हर सत्र में 40 टिप्पणियाँ लिखते हैं, और अधिकतर \"अच्छा, और बेहतर कर सकते हो\" बन जाती हैं। AI दो भाषाओं में विशिष्ट, प्रोत्साहक टिप्पणियाँ बना सकता है, बशर्ते आप कभी नाम या अंक साझा न करें।"
-      },
-      "steps": [
-        {
-          "en": "Copy the sample below: student <b>codes</b> and performance <b>bands</b>, never names or marks.",
-          "hi": "नीचे दिया नमूना कॉपी करें: छात्रों के <b>कोड</b> और प्रदर्शन के <b>स्तर</b>, नाम या अंक कभी नहीं।"
-        },
-        {
-          "en": "In your Gem, paste the prompt, then the data, and send.",
-          "hi": "अपने Gem में प्रॉम्प्ट, फिर डेटा पेस्ट करें, और भेजें।"
-        },
-        {
-          "en": "Paste the result into the <b>Report Remarks</b> tab of your School Command Sheet. The teacher matches codes to names offline.",
-          "hi": "परिणाम को स्कूल कमांड शीट के <b>Report Remarks</b> टैब में पेस्ट करें। शिक्षक कोड को नामों से ऑफ़लाइन मिलाएँ।"
-        }
-      ],
-      "sample": {
-        "label": {
-          "en": "Sample class data (codes and bands only)",
-          "hi": "नमूना कक्षा डेटा (केवल कोड और स्तर)"
-        },
-        "text": "Student\tLanguages\tMaths\tScience\tTeacher observation 1\tTeacher observation 2\nS01\tStrong\tDeveloping\tStrong\tHelps classmates in group work\tRushes through word problems\nS02\tDeveloping\tStrong\tStrong\tAsks thoughtful questions\tQuiet in class discussions\nS03\tNeeds support\tDeveloping\tDeveloping\tImproved reading this term\tOften incomplete homework\nS04\tStrong\tStrong\tStrong\tLed the class CT activity\tCan be impatient with others\nS05\tDeveloping\tNeeds support\tDeveloping\tCreative in art and craft\tFinds fractions difficult\nS06\tStrong\tDeveloping\tNeeds support\tExcellent Hindi recitation\tMissed several science practicals\nS07\tDeveloping\tDeveloping\tDeveloping\tPunctual and well organised\tHesitates to ask for help\nS08\tNeeds support\tNeeds support\tDeveloping\tTries hard; very regular\tNeeds help with English reading"
-      },
-      "prompt": {
-        "en": "Below are performance bands and two teacher observations for 8 students, identified only by code. For each student, write a report-card remark of about 40 words in English and the same in simple Hindi:\n- one specific strength taken from the data,\n- one specific next step with a practical suggestion for home or school,\n- an encouraging, respectful tone; no labels such as \"weak\" or \"careless\".\nUse only what is in the data; do not invent achievements. Output a table: Student code | Remark (English) | Remark (Hindi).",
-        "hi": "नीचे 8 छात्रों के प्रदर्शन स्तर और शिक्षक के दो अवलोकन हैं, केवल कोड से पहचाने गए। हर छात्र के लिए लगभग 40 शब्दों की रिपोर्ट कार्ड टिप्पणी अंग्रेज़ी में और वही सरल हिंदी में लिखें:\n- डेटा से ली गई एक विशिष्ट विशेषता,\n- घर या विद्यालय के लिए व्यावहारिक सुझाव के साथ एक विशिष्ट अगला कदम,\n- प्रोत्साहक, सम्मानजनक स्वर; \"कमज़ोर\" या \"लापरवाह\" जैसे लेबल नहीं।\nकेवल डेटा में जो है उसी का उपयोग करें; उपलब्धियाँ न गढ़ें। तालिका दें: छात्र कोड | टिप्पणी (अंग्रेज़ी) | टिप्पणी (हिंदी)।"
-      },
-      "expected": {
-        "en": "Eight specific, encouraging remarks in English and Hindi, ready for the teacher to review and personalise.",
-        "hi": "अंग्रेज़ी और हिंदी में आठ विशिष्ट, प्रोत्साहक टिप्पणियाँ, शिक्षक की समीक्षा और व्यक्तिगत रूप देने के लिए तैयार।"
-      },
-      "check": {
-        "en": "The class teacher reads every remark and changes at least one word to make it theirs. Never paste names, marks, roll numbers or photos into Gemini.",
-        "hi": "कक्षा अध्यापक हर टिप्पणी पढ़ें और उसे अपना बनाने के लिए कम से कम एक शब्द बदलें। Gemini में नाम, अंक, रोल नंबर या फ़ोटो कभी न डालें।"
-      },
-      "stretch": {
-        "en": "Ask: \"Write a 3-line message for the parents of S03 inviting them to a short meeting about homework, in Hindi, without sounding like a complaint.\"",
-        "hi": "पूछें: \"S03 के अभिभावकों को गृहकार्य पर छोटी बैठक के लिए आमंत्रित करने का 3 पंक्तियों का हिंदी संदेश लिखें, जो शिकायत जैसा न लगे।\""
-      },
-      "notes": [
-        "Stress the method: codes plus bands keeps personal data out. The teacher keeps the code-to-name list on paper or in the school's own system.",
-        "Time saved is the selling point: 40 remarks drafted in minutes, then 15 minutes of teacher review instead of an evening."
-      ]
-    },
-    {
-      "type": "mission",
-      "id": "s3m3",
-      "number": 13,
+      "id": "s2m5",
+      "number": 5,
       "minutes": 10,
       "tool": "Gemini",
       "toolUrl": "https://gemini.google.com/app",
       "title": {
-        "en": "Answer parents' questions about AI, in Hindi",
-        "hi": "अभिभावकों के AI संबंधी प्रश्नों के उत्तर, हिंदी में"
+        "en": "A low-cost student AI project on a local problem",
+        "hi": "स्थानीय समस्या पर कम खर्च का छात्र AI प्रोजेक्ट"
       },
       "scenario": {
-        "en": "Once you announce CT & AI, parents will ask the same questions in the class WhatsApp groups. Prepared, consistent answers build trust; improvised ones create rumours.",
-        "hi": "CT और AI की घोषणा के बाद अभिभावक कक्षा के व्हाट्सऐप समूहों में वही प्रश्न पूछेंगे। तैयार और एक जैसे उत्तर भरोसा बनाते हैं; अचानक दिए उत्तर अफ़वाहें फैलाते हैं।"
+        "en": "Classes VI–VIII now include interdisciplinary AI projects, and a Sahodaya CT & AI workshop is the place to show them. Plan a project your students can build with one shared laptop, about a problem from your own district.",
+        "hi": "कक्षा VI–VIII में अब अंतर्विषयक AI प्रोजेक्ट शामिल हैं, और सहोदय CT और AI कार्यशाला उन्हें दिखाने का स्थान है। ऐसा प्रोजेक्ट बनाएँ जिसे आपके छात्र एक साझा लैपटॉप से, अपने ज़िले की किसी समस्या पर बना सकें।"
       },
       "steps": [
         {
-          "en": "Open the chat where you drafted your AI policy in Mission 5 (or paste the policy).",
-          "hi": "वह चैट खोलें जहाँ आपने मिशन 5 में AI नीति बनाई थी (या नीति पेस्ट करें)।"
+          "en": "In your Gem, paste the prompt and send.",
+          "hi": "अपने Gem में प्रॉम्प्ट पेस्ट करें और भेजें।"
         },
         {
-          "en": "Paste the prompt and send.",
-          "hi": "प्रॉम्प्ट पेस्ट करें और भेजें।"
-        },
-        {
-          "en": "Save the answers as quick replies in WhatsApp Business (free) for your office staff.",
-          "hi": "उत्तरों को अपने कार्यालय स्टाफ़ के लिए WhatsApp Business (मुफ़्त) में क्विक रिप्लाई के रूप में सेव करें।"
+          "en": "Pick the idea you like most and ask: \"Give me a 4-week plan for this, one hour a week.\"",
+          "hi": "सबसे अच्छा विचार चुनें और पूछें: \"इसके लिए 4 सप्ताह की योजना दें, सप्ताह में एक घंटा।\""
         }
       ],
       "prompt": {
-        "en": "Using our school's AI policy above, write short WhatsApp replies (under 50 words each) in simple Hindi, with an English version below each, to these parent questions:\n1. Will my child use AI to cheat on homework?\n2. Will this mean more screen time?\n3. Is there an extra fee for CT & AI?\n4. Is my child's data safe?\n5. Will AI replace teachers?\n6. What do children actually do in CT & AI class?\n7. Do we need a phone or laptop at home?\n8. How can I help my child at home?\nTone: warm, reassuring, factual. Mention our CT & AI open day on [date] where it fits.",
-        "hi": "ऊपर दी गई हमारे विद्यालय की AI नीति के आधार पर, इन अभिभावक प्रश्नों के लिए सरल हिंदी में छोटे व्हाट्सऐप उत्तर (हर एक 50 शब्दों से कम) लिखें, हर एक के नीचे अंग्रेज़ी संस्करण के साथ:\n1. क्या मेरा बच्चा गृहकार्य में नकल के लिए AI का उपयोग करेगा?\n2. क्या इससे स्क्रीन समय बढ़ेगा?\n3. क्या CT और AI के लिए अतिरिक्त शुल्क है?\n4. क्या मेरे बच्चे का डेटा सुरक्षित है?\n5. क्या AI शिक्षकों की जगह लेगा?\n6. CT और AI कक्षा में बच्चे वास्तव में क्या करते हैं?\n7. क्या घर पर फ़ोन या लैपटॉप चाहिए?\n8. मैं घर पर अपने बच्चे की कैसे मदद करूँ?\nस्वर: आत्मीय, आश्वस्त करने वाला, तथ्यपूर्ण। जहाँ उचित हो वहाँ [तिथि] को हमारे CT और AI ओपन डे का उल्लेख करें।"
+        "en": "Suggest 3 low-cost AI project ideas for Class VII–VIII students in a semi-urban district of Uttar Pradesh (such as Barabanki or Bahraich), using one shared laptop and free tools like Google's Teachable Machine (image or sound classification in the browser).\nEach idea should solve a local problem: farming (for example, healthy vs diseased crop leaves), water, health, waste or school life.\nFor each idea give: the problem, what students will collect (photos or sounds), how they train and test the model, the subjects it connects (Science, Maths, Social Science, Hindi), the time needed, and 3 discussion questions on fairness and errors in AI.\nNo student faces or personal data in the training data.",
+        "hi": "उत्तर प्रदेश के अर्ध-शहरी ज़िले (जैसे बाराबंकी या बहराइच) के कक्षा VII–VIII के छात्रों के लिए 3 कम खर्च वाले AI प्रोजेक्ट विचार सुझाएँ, जिनमें एक साझा लैपटॉप और Google Teachable Machine जैसे मुफ़्त टूल का उपयोग हो (ब्राउज़र में चित्र या ध्वनि वर्गीकरण)।\nहर विचार किसी स्थानीय समस्या को हल करे: खेती (जैसे स्वस्थ और रोगग्रस्त फ़सल की पत्तियाँ), पानी, स्वास्थ्य, कचरा या विद्यालय जीवन।\nहर विचार के लिए बताएँ: समस्या, छात्र क्या एकत्र करेंगे (फ़ोटो या ध्वनि), मॉडल को कैसे प्रशिक्षित और परखेंगे, किन विषयों से जुड़ता है (विज्ञान, गणित, सामाजिक विज्ञान, हिंदी), आवश्यक समय, और AI में निष्पक्षता व त्रुटियों पर 3 चर्चा प्रश्न।\nप्रशिक्षण डेटा में छात्रों के चेहरे या व्यक्तिगत डेटा न हों।"
       },
       "expected": {
-        "en": "Eight ready, consistent answers in Hindi and English that your office and class teachers can use.",
-        "hi": "हिंदी और अंग्रेज़ी में आठ तैयार, एक जैसे उत्तर जिन्हें आपका कार्यालय और कक्षा अध्यापक उपयोग कर सकें।"
+        "en": "Three ready project ideas tied to your district, and a 4-week plan for one of them that your computer or Science teacher can run.",
+        "hi": "आपके ज़िले से जुड़े तीन तैयार प्रोजेक्ट विचार, और उनमें से एक की 4 सप्ताह की योजना जिसे आपके कंप्यूटर या विज्ञान शिक्षक चला सकें।"
       },
       "check": {
-        "en": "Does every answer match what your school really does? Remove any promise you cannot keep (for example \"no screens at all\" if Classes VI–VIII use a lab).",
-        "hi": "क्या हर उत्तर आपके विद्यालय की वास्तविक प्रक्रिया से मेल खाता है? ऐसा हर वादा हटाएँ जो आप निभा न सकें (जैसे \"कोई स्क्रीन नहीं\" यदि कक्षा VI–VIII लैब का उपयोग करती हैं)।"
+        "en": "Is it safe and practical for 12-year-olds? Do students collect their own photos of leaves or objects, never of people? Can it be shown at a Sahodaya CT & AI workshop?",
+        "hi": "क्या यह 12 वर्ष के बच्चों के लिए सुरक्षित और व्यावहारिक है? क्या छात्र पत्तियों या वस्तुओं की अपनी फ़ोटो लेते हैं, लोगों की कभी नहीं? क्या इसे सहोदय CT और AI कार्यशाला में दिखाया जा सकता है?"
       },
       "stretch": {
-        "en": "Ask for a 1-minute speech in Hindi that you can give at the next PTM to introduce CT & AI to parents.",
-        "hi": "अगली PTM में अभिभावकों को CT और AI से परिचित कराने के लिए 1 मिनट का हिंदी भाषण माँगें।"
+        "en": "Open teachablemachine.withgoogle.com on the projector laptop and train a 2-class model (for example, 'pen' vs 'pencil') in front of your table in 3 minutes.",
+        "hi": "प्रोजेक्टर वाले लैपटॉप पर teachablemachine.withgoogle.com खोलें और 3 मिनट में अपनी टेबल के सामने 2-वर्ग मॉडल (जैसे 'पेन' बनाम 'पेंसिल') प्रशिक्षित करें।"
       },
       "notes": [
-        "Role-play option (if time): you play a worried parent and ask one question aloud; a principal answers using their draft."
-      ]
-    },
-    {
-      "type": "mission",
-      "id": "s3m4",
-      "number": 14,
-      "minutes": 10,
-      "tool": "Gemini",
-      "toolUrl": "https://gemini.google.com/app",
-      "title": {
-        "en": "Your Google Business Profile and a calm reply to a bad review",
-        "hi": "आपकी Google Business Profile और खराब समीक्षा का शांत उत्तर"
-      },
-      "scenario": {
-        "en": "Many parents search \"CBSE school near me\" before they ever visit. Your Google profile is your first impression, and one unanswered angry review can cost admissions.",
-        "hi": "कई अभिभावक मिलने आने से पहले \"मेरे पास CBSE स्कूल\" खोजते हैं। आपकी Google प्रोफ़ाइल आपकी पहली छवि है, और एक अनुत्तरित नाराज़ समीक्षा प्रवेश घटा सकती है।"
-      },
-      "steps": [
-        {
-          "en": "In your Gem, paste the prompt with the sample review and send.",
-          "hi": "अपने Gem में नमूना समीक्षा के साथ प्रॉम्प्ट पेस्ट करें और भेजें।"
-        },
-        {
-          "en": "Later, at school: open <b>business.google.com</b> to claim or update your school's profile.",
-          "hi": "बाद में, विद्यालय में: अपनी विद्यालय प्रोफ़ाइल का दावा करने या अपडेट करने के लिए <b>business.google.com</b> खोलें।"
-        }
-      ],
-      "sample": {
-        "label": {
-          "en": "Sample 2-star review (fictional)",
-          "hi": "नमूना 2-स्टार समीक्षा (काल्पनिक)"
-        },
-        "text": {
-          "en": "★★☆☆☆ \"Fees went up this year but the school bus was late three times last week. My son waited 40 minutes. Nobody in the office answered the phone.\"",
-          "hi": "★★☆☆☆ \"इस वर्ष फ़ीस बढ़ गई पर पिछले सप्ताह स्कूल बस तीन बार देर से आई। मेरा बेटा 40 मिनट इंतज़ार करता रहा। कार्यालय में किसी ने फ़ोन नहीं उठाया।\""
-        }
-      },
-      "prompt": {
-        "en": "1. Write a Google Business Profile description for our CBSE school in [town, district], maximum 750 characters, in English, using only these facts: [paste your strengths from Mission 11]. No \"best\" or \"No. 1\".\n2. Write five short FAQs with answers (admission dates, fees enquiry, transport, timings, CT & AI).\n3. Write a reply to this review: [paste review]. Thank the parent, acknowledge the problem without excuses, say what we are doing (for example, checking the route timing), and invite them to call the Principal's office directly. Do not mention the child's name or any personal details. Under 80 words, in English with a Hindi version.",
-        "hi": "1. [कस्बा, ज़िला] में हमारे CBSE विद्यालय के लिए Google Business Profile विवरण लिखें, अधिकतम 750 अक्षर, अंग्रेज़ी में, केवल इन तथ्यों से: [मिशन 11 की अपनी विशेषताएँ पेस्ट करें]। \"सर्वश्रेष्ठ\" या \"नंबर 1\" नहीं।\n2. उत्तरों सहित पाँच छोटे FAQ लिखें (प्रवेश तिथियाँ, फ़ीस पूछताछ, परिवहन, समय, CT और AI)।\n3. इस समीक्षा का उत्तर लिखें: [समीक्षा पेस्ट करें]। अभिभावक को धन्यवाद दें, बिना बहाने के समस्या स्वीकार करें, बताएँ कि हम क्या कर रहे हैं (जैसे मार्ग का समय जाँचना), और उन्हें सीधे प्रधानाचार्य कार्यालय में फ़ोन करने के लिए आमंत्रित करें। बच्चे का नाम या कोई व्यक्तिगत विवरण न लिखें। 80 शब्दों से कम, अंग्रेज़ी में और हिंदी संस्करण के साथ।"
-      },
-      "expected": {
-        "en": "A ready profile description, five FAQs, and a calm, professional reply you can adapt for any complaint.",
-        "hi": "तैयार प्रोफ़ाइल विवरण, पाँच FAQ, और एक शांत, पेशेवर उत्तर जिसे आप किसी भी शिकायत के लिए बदल सकते हैं।"
-      },
-      "check": {
-        "en": "Never argue in public, never reveal a child's or parent's details, and never post fake reviews. Fix the real problem, then reply.",
-        "hi": "सार्वजनिक रूप से कभी बहस न करें, किसी बच्चे या अभिभावक का विवरण कभी न बताएँ, और कभी नकली समीक्षाएँ न डालें। पहले वास्तविक समस्या ठीक करें, फिर उत्तर दें।"
-      },
-      "stretch": {
-        "en": "Ask: \"Suggest a polite WhatsApp message we can send to parents who are happy with the school, asking them to leave an honest Google review.\"",
-        "hi": "पूछें: \"विद्यालय से संतुष्ट अभिभावकों को ईमानदार Google समीक्षा लिखने का अनुरोध करने वाला विनम्र व्हाट्सऐप संदेश सुझाएँ।\""
-      },
-      "notes": [
-        "Ask by show of hands who has claimed their Google Business Profile. Usually few have: an easy free win.",
-        "Asking for honest reviews is fine; writing, buying or incentivising reviews is not. Say it plainly."
-      ]
-    },
-    {
-      "type": "mission",
-      "id": "s3m5",
-      "number": 15,
-      "minutes": 10,
-      "tool": "Gemini + Sheets",
-      "toolUrl": "https://gemini.google.com/app",
-      "title": {
-        "en": "From parent feedback to a 30-day action plan",
-        "hi": "अभिभावक प्रतिक्रिया से 30-दिन की कार्य योजना"
-      },
-      "scenario": {
-        "en": "After every PTM you collect comments, in Hindi and English, and they sit in a file. Gemini can read them all in seconds, group them and turn them into actions with owners.",
-        "hi": "हर PTM के बाद आप हिंदी और अंग्रेज़ी में टिप्पणियाँ एकत्र करते हैं, और वे फ़ाइल में पड़ी रहती हैं। Gemini उन्हें सेकंडों में पढ़कर समूहों में बाँट सकता है और ज़िम्मेदारों सहित कार्यों में बदल सकता है।"
-      },
-      "steps": [
-        {
-          "en": "Copy the sample comments (anonymous, mixed Hindi and English).",
-          "hi": "नमूना टिप्पणियाँ कॉपी करें (गुमनाम, हिंदी और अंग्रेज़ी मिली-जुली)।"
-        },
-        {
-          "en": "In your Gem, paste the prompt, then the comments, and send.",
-          "hi": "अपने Gem में प्रॉम्प्ट, फिर टिप्पणियाँ पेस्ट करें, और भेजें।"
-        },
-        {
-          "en": "Copy the action plan into the <b>Parent Feedback</b> tab of your School Command Sheet.",
-          "hi": "कार्य योजना को स्कूल कमांड शीट के <b>Parent Feedback</b> टैब में कॉपी करें।"
-        }
-      ],
-      "sample": {
-        "label": {
-          "en": "Sample PTM comments (anonymous)",
-          "hi": "नमूना PTM टिप्पणियाँ (गुमनाम)"
-        },
-        "text": "1. Teachers are very caring, my daughter likes coming to school.\n2. बस अक्सर देर से आती है।\n3. Homework is too much in Class 4.\n4. Please send updates in Hindi also, I don't read English well.\n5. CT & AI ke baare mein aur jaankari chahiye.\n6. Toilets on the first floor need better cleaning.\n7. Very happy with the science teacher.\n8. फ़ीस की रसीद समय पर नहीं मिलती।\n9. My son is excited about the robot game in class!\n10. Canteen food quality has improved, thank you.\n11. Bus driver drives too fast near the market.\n12. PTM timing on Saturday morning is difficult for working parents.\n13. बच्चों को खेल का समय और मिलना चाहिए।\n14. Class teacher answers WhatsApp quickly, very helpful.\n15. Will AI make children lazy? Worried.\n16. Too many notebooks to buy.\n17. होमवर्क बहुत ज़्यादा है।\n18. Good discipline in school.\n19. Please start an evening PTM option.\n20. Library books are old."
-      },
-      "prompt": {
-        "en": "Below are 20 anonymous parent comments from our last PTM, in Hindi and English.\n1. Group them into the top 5 themes. For each theme give the number of comments, 2 example comments, and whether the feeling is mostly positive or negative.\n2. Give an overall sentiment summary in two lines.\n3. Make a 30-day action plan as a table: Action | Owner (role, not name) | By when | How we will tell parents.\n4. Write a short, warm WhatsApp message to all parents in Hindi and English: \"You said, we are doing\".",
-        "hi": "नीचे हमारी पिछली PTM की 20 गुमनाम अभिभावक टिप्पणियाँ हैं, हिंदी और अंग्रेज़ी में।\n1. इन्हें शीर्ष 5 विषयों में बाँटें। हर विषय के लिए टिप्पणियों की संख्या, 2 उदाहरण टिप्पणियाँ, और भावना अधिकतर सकारात्मक है या नकारात्मक, बताएँ।\n2. दो पंक्तियों में कुल भावना का सारांश दें।\n3. 30-दिन की कार्य योजना तालिका में दें: कार्य | ज़िम्मेदार (पद, नाम नहीं) | कब तक | अभिभावकों को कैसे बताएँगे।\n4. सभी अभिभावकों के लिए हिंदी और अंग्रेज़ी में छोटा, आत्मीय व्हाट्सऐप संदेश लिखें: \"आपने कहा, हम कर रहे हैं\"।"
-      },
-      "expected": {
-        "en": "Themes with counts, a sentiment summary, a 30-day action plan with owners, and a \"you said, we are doing\" message.",
-        "hi": "संख्या सहित विषय, भावना सारांश, ज़िम्मेदारों सहित 30-दिन की कार्य योजना, और \"आपने कहा, हम कर रहे हैं\" संदेश।"
-      },
-      "check": {
-        "en": "Count one theme yourself (homework appears in comments 3 and 17). Did Gemini count right? Remove any action you cannot deliver in 30 days.",
-        "hi": "एक विषय स्वयं गिनें (गृहकार्य टिप्पणी 3 और 17 में है)। क्या Gemini ने सही गिना? ऐसा हर कार्य हटाएँ जो आप 30 दिनों में न कर सकें।"
-      },
-      "stretch": {
-        "en": "Ask Gemini to turn the plan into a Google Form with 5 questions for next term's PTM, so feedback becomes easy to analyse.",
-        "hi": "Gemini से योजना को अगले सत्र की PTM के लिए 5 प्रश्नों वाले Google Form में बदलवाएँ, ताकि प्रतिक्रिया का विश्लेषण आसान हो।"
-      },
-      "notes": [
-        "Expected themes (for checking): transport/bus (2, 11); homework load (3, 17, plus notebooks 16); communication/language (4, 14); CT & AI interest or worry (5, 9, 15); PTM timing (12, 19); facilities (6, 20, 10); teachers and discipline, positive (1, 7, 18); fee receipts (8); play time (13). Counts may vary slightly with grouping.",
-        "This is the day's last mission: tie it to the feedback form on the website. 'You are about to give us feedback; this is what we will do with it.'"
+        "If time allows, do the Teachable Machine stretch yourself on the projector: two classes, ~20 photos each with the laptop webcam, train, test. It takes about 3 minutes and makes 'training data' concrete.",
+        "Link back to Session 2: a student project with real photos (with consent) is the best branding evidence for an 'AI-ready' school."
       ]
     },
     {
       "type": "finale",
       "title": {
-        "en": "From words to a working website, in one minute",
-        "hi": "शब्दों से चालू वेबसाइट तक, एक मिनट में"
+        "en": "Everything you did today is free. Here is where it grows.",
+        "hi": "आज आपने जो किया वह सब मुफ़्त है। यहाँ से यह आगे बढ़ता है।"
       },
       "lead": {
-        "en": "Watch the screen: the admission campaign from Mission 11 becomes things parents can open and share.",
-        "hi": "स्क्रीन देखें: मिशन 11 का प्रवेश अभियान ऐसी चीज़ों में बदलता है जिन्हें अभिभावक खोल और साझा कर सकें।"
+        "en": "Watch the screen: classroom materials you could not make before.",
+        "hi": "स्क्रीन देखें: ऐसी कक्षा सामग्री जो पहले नहीं बन सकती थी।"
       },
       "points": [
         {
-          "en": "<b>Claude</b>: paste your strengths and open-day details, and get a bilingual one-page open-day website, ready to share as a link.",
-          "hi": "<b>Claude</b>: अपनी विशेषताएँ और ओपन डे का विवरण पेस्ट करें, और साझा करने योग्य लिंक के साथ द्विभाषी एक-पृष्ठ ओपन डे वेबसाइट पाएँ।"
+          "en": "<b>Claude</b>: turn the Mission 2 lesson into a playable classroom game for the projector, in about a minute, with no coding.",
+          "hi": "<b>Claude</b>: मिशन 2 के पाठ को लगभग एक मिनट में, बिना कोडिंग के, प्रोजेक्टर पर खेले जाने वाले कक्षा खेल में बदलें।"
         },
         {
-          "en": "<b>NotebookLM</b> (free): upload your prospectus and fee structure and make a short audio overview that parents can listen to.",
-          "hi": "<b>NotebookLM</b> (मुफ़्त): अपनी विवरणिका और फ़ीस संरचना अपलोड करें और अभिभावकों के सुनने के लिए छोटा ऑडियो सारांश बनाएँ।"
+          "en": "<b>Google AI Pro</b>: load all the CBSE CT & AI handbooks into one NotebookLM notebook and ask questions across Classes 3–8, with more sources and higher limits.",
+          "hi": "<b>Google AI Pro</b>: CBSE की सभी CT और AI पुस्तिकाएँ एक NotebookLM नोटबुक में डालें और कक्षा 3–8 में प्रश्न पूछें, अधिक स्रोतों और ऊँची सीमाओं के साथ।"
         },
         {
-          "en": "<b>Google AI Pro</b>: Gemini in Gmail, Docs and Sheets directly, and Deep Research to scan public information on schooling trends in your district.",
-          "hi": "<b>Google AI Pro</b>: Gmail, Docs और Sheets में सीधे Gemini, और आपके ज़िले में शिक्षा रुझानों की सार्वजनिक जानकारी के लिए Deep Research।"
-        },
-        {
-          "en": "Same rules as the morning: real photos with consent, true claims only, a human checks everything.",
-          "hi": "सुबह जैसे ही नियम: सहमति के साथ वास्तविक फ़ोटो, केवल सच्चे दावे, हर चीज़ की मानवीय जाँच।"
+          "en": "Start free. Upgrade only when a teacher is using it every week.",
+          "hi": "मुफ़्त से शुरू करें। तभी अपग्रेड करें जब कोई शिक्षक इसे हर सप्ताह उपयोग कर रहा हो।"
         }
       ],
       "note": {
@@ -595,78 +761,19 @@
       "links": [
         {
           "label": {
-            "en": "See the example open-day site",
-            "hi": "उदाहरण ओपन डे साइट देखें"
+            "en": "Play the example game",
+            "hi": "उदाहरण खेल खेलें"
           },
-          "url": "demo/open-day-site.html"
+          "url": "demo/robot-algorithm.html"
         }
       ],
       "notes": [
-        "3:13–3:20. 7 minutes. Laptop on projector. Tabs ready: Claude (signed in), the Mission 11 output from a volunteer, demo/open-day-site.html as backup.",
-        "Demo prompt for Claude: 'Make a one-page, mobile-friendly open-day website for [school], in English and Hindi with a language toggle. Use only these facts: [paste]. Sections: why parents choose us, CT & AI from Class III, open day date and time, map link, call and WhatsApp buttons. Warm colours, large text. No photos of children.'",
-        "If Claude is slow or the Wi-Fi fails, open the backup page and say: 'This is what you get in about a minute.'",
-        "Close the demo with the same line as every session: start free; upgrade only when someone uses it every week."
-      ]
-    },
-    {
-      "type": "concept",
-      "title": {
-        "en": "Your 30-day plan, and thank you",
-        "hi": "आपकी 30-दिन की योजना, और धन्यवाद"
-      },
-      "points": [
-        {
-          "en": "<b>Week 1:</b> share the AI policy draft with your staff; claim your Google Business Profile.",
-          "hi": "<b>सप्ताह 1:</b> स्टाफ़ के साथ AI नीति का ड्राफ़्ट साझा करें; अपनी Google Business Profile का दावा करें।"
-        },
-        {
-          "en": "<b>Week 2:</b> start the CPD Tracker and the CT & AI plan with your coordinators.",
-          "hi": "<b>सप्ताह 2:</b> अपने समन्वयकों के साथ CPD Tracker और CT और AI योजना शुरू करें।"
-        },
-        {
-          "en": "<b>Week 3:</b> run one unplugged CT lesson and post about it, with consent.",
-          "hi": "<b>सप्ताह 3:</b> एक बिना कंप्यूटर का CT पाठ कराएँ और सहमति के साथ उसके बारे में पोस्ट करें।"
-        },
-        {
-          "en": "<b>Week 4:</b> send a \"you said, we are doing\" message after your next PTM.",
-          "hi": "<b>सप्ताह 4:</b> अगली PTM के बाद \"आपने कहा, हम कर रहे हैं\" संदेश भेजें।"
-        },
-        {
-          "en": "Everything from today stays online: missions, prompts, handouts and your School Command Sheet.",
-          "hi": "आज की हर चीज़ ऑनलाइन रहेगी: मिशन, प्रॉम्प्ट, हैंडआउट और आपकी स्कूल कमांड शीट।"
-        }
-      ],
-      "note": {
-        "en": "Please give 2 minutes of feedback now. It tells us what to improve, and you can ask for follow-up support for your school.",
-        "hi": "कृपया अभी 2 मिनट में प्रतिक्रिया दें। इससे हमें सुधार का पता चलता है, और आप अपने विद्यालय के लिए आगे सहयोग माँग सकते हैं।"
-      },
-      "links": [
-        {
-          "label": {
-            "en": "Give feedback (2 minutes)",
-            "hi": "प्रतिक्रिया दें (2 मिनट)"
-          },
-          "url": "feedback.html"
-        },
-        {
-          "label": {
-            "en": "All resources",
-            "hi": "सभी संसाधन"
-          },
-          "url": "resources.html"
-        },
-        {
-          "label": {
-            "en": "Parent communication guide",
-            "hi": "अभिभावक संवाद मार्गदर्शिका"
-          },
-          "url": "handouts/parent-communication-guide.html"
-        }
-      ],
-      "notes": [
-        "3:20–3:30. Show the feedback QR or link on the projector and wait in silence for 2 minutes while people fill it in. Watch the count.",
-        "Thank the Sahodaya organisers by name. Mention, once and lightly: follow-up support for schools (staff training, AI policy review, CT & AI rollout) is available; the feedback form has a box for it.",
-        "Group photo, only with everyone's agreement."
+        "3:20–3:27. 7 minutes. Laptop on projector. Tabs ready: Claude (signed in), NotebookLM on the Pro account with the CBSE CT handbooks for Classes 3–8 already uploaded as sources, and demo/robot-algorithm.html as backup.",
+        "<b>Part 1 · Claude builds a classroom game (3 min).</b> Prompt: \"Build a simple, colourful classroom game for Class 4 to practise algorithms, to play on a projector with no student devices: a robot on a grid must reach a star; students choose arrow steps, press Run, and see where it goes wrong. Three levels, English and Hindi labels, big buttons.\" Play one level with a volunteer calling out the arrows.",
+        "<b>Part 2 · NotebookLM with all handbooks (3 min).</b> Ask: \"Which CT skills are introduced in Class 3 and built on in Class 5? Give one unplugged activity for each, with the handbook page.\" Tap a citation to show the exact page. Mention that the Pro plan raises the limits on sources and notebooks.",
+        "<b>Close (1 min).</b> \"Your teachers do not need a lab or a coder to make materials like this. Start free; upgrade only when it is used every week.\"",
+        "<b>If Wi-Fi fails:</b> click 'Play the example game' on this slide (works offline once loaded) and play Level 1 with the room. Keep a 60-second recording of the NotebookLM demo on your desktop.",
+        "Do not imply CBSE or any vendor endorses these tools."
       ]
     }
   ]
