@@ -24,6 +24,196 @@
     },
     {
       "type": "poll",
+      "id": "s1-w-tool",
+      "question": {
+        "en": "Which AI tool have you used most in the last month?",
+        "hi": "पिछले महीने आपने सबसे अधिक कौन-सा AI टूल उपयोग किया?"
+      },
+      "options": [
+        {
+          "en": "ChatGPT",
+          "hi": "ChatGPT"
+        },
+        {
+          "en": "Gemini",
+          "hi": "Gemini"
+        },
+        {
+          "en": "Meta AI (the blue circle in WhatsApp)",
+          "hi": "Meta AI (व्हाट्सऐप का नीला गोला)"
+        },
+        {
+          "en": "None, or not sure",
+          "hi": "कोई नहीं, या पता नहीं"
+        }
+      ],
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
+        "Many people use Meta AI or Google Lens without calling it AI. Show the blue circle in WhatsApp and watch hands go up."
+      ]
+    },
+    {
+      "type": "poll",
+      "id": "s1-w-task",
+      "question": {
+        "en": "What have you used AI for most?",
+        "hi": "आपने AI का उपयोग सबसे अधिक किस काम के लिए किया?"
+      },
+      "options": [
+        {
+          "en": "A circular or notice",
+          "hi": "परिपत्र या सूचना"
+        },
+        {
+          "en": "A speech or message",
+          "hi": "भाषण या संदेश"
+        },
+        {
+          "en": "Translating between Hindi and English",
+          "hi": "हिंदी-अंग्रेज़ी अनुवाद"
+        },
+        {
+          "en": "Not yet for school work",
+          "hi": "विद्यालय के काम के लिए अभी नहीं"
+        }
+      ],
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
+        "Write the top answer on the board: Mission 1's Gem builds on it."
+      ]
+    },
+    {
+      "type": "poll",
+      "id": "s1-w-paid",
+      "question": {
+        "en": "Do you pay for any AI tool?",
+        "hi": "क्या आप किसी AI टूल के लिए भुगतान करते हैं?"
+      },
+      "options": [
+        {
+          "en": "Only free tools",
+          "hi": "केवल मुफ़्त टूल"
+        },
+        {
+          "en": "I pay for one myself",
+          "hi": "मैं स्वयं एक के लिए भुगतान करता/करती हूँ"
+        },
+        {
+          "en": "The school pays for a tool",
+          "hi": "विद्यालय एक टूल के लिए भुगतान करता है"
+        },
+        {
+          "en": "Not sure",
+          "hi": "पता नहीं"
+        }
+      ],
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
+        "Sets up the message for the day: start free, upgrade only when a tool is used every week."
+      ]
+    },
+    {
+      "type": "poll",
+      "id": "s1-w-device",
+      "question": {
+        "en": "Where do you use AI most?",
+        "hi": "आप AI का उपयोग सबसे अधिक कहाँ करते हैं?"
+      },
+      "options": [
+        {
+          "en": "On my phone",
+          "hi": "फ़ोन पर"
+        },
+        {
+          "en": "On a computer",
+          "hi": "कंप्यूटर पर"
+        },
+        {
+          "en": "Both equally",
+          "hi": "दोनों पर बराबर"
+        },
+        {
+          "en": "I don't use AI yet",
+          "hi": "अभी AI का उपयोग नहीं करता/करती"
+        }
+      ],
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
+        "Most say phone: that is why every mission today is phone-first."
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "s1-q-sqaaf",
+      "question": {
+        "en": "What is SQAAF?",
+        "hi": "SQAAF क्या है?"
+      },
+      "options": [
+        {
+          "en": "CBSE's School Quality Assessment and Assurance Framework",
+          "hi": "CBSE का विद्यालय गुणवत्ता आकलन एवं आश्वासन ढाँचा"
+        },
+        {
+          "en": "A new CBSE sports scheme",
+          "hi": "CBSE की नई खेल योजना"
+        },
+        {
+          "en": "A student scholarship portal",
+          "hi": "छात्रवृत्ति पोर्टल"
+        },
+        {
+          "en": "A rule for teacher salaries",
+          "hi": "शिक्षक वेतन का नियम"
+        }
+      ],
+      "answer": 0,
+      "explain": {
+        "en": "SQAAF is CBSE's set of quality standards for schools. A self-assessment against it is required before CBSE accepts applications for fresh affiliation, switch-over, upgradation or extension (from session 2025-26). Check the SARAS portal.",
+        "hi": "SQAAF विद्यालयों के लिए CBSE के गुणवत्ता मानक हैं। नई संबद्धता, स्विच-ओवर, उन्नयन या विस्तार के आवेदन (सत्र 2025-26 से) से पहले इसके अनुसार स्व-आकलन आवश्यक है। SARAS पोर्टल देखें।"
+      },
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
+        "Ask first: never heard of it, heard of it, or already done? The count is useful for follow-up."
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "s1-q-apaar",
+      "question": {
+        "en": "From 2026-27, what is mandatory for CBSE registration of Classes 9 and 11?",
+        "hi": "2026-27 से कक्षा 9 और 11 के CBSE पंजीकरण के लिए क्या अनिवार्य है?"
+      },
+      "options": [
+        {
+          "en": "A copy of the Aadhaar card",
+          "hi": "आधार कार्ड की प्रति"
+        },
+        {
+          "en": "The student's APAAR ID",
+          "hi": "छात्र की APAAR ID"
+        },
+        {
+          "en": "A parent's PAN card",
+          "hi": "अभिभावक का PAN कार्ड"
+        },
+        {
+          "en": "Only a passport photo",
+          "hi": "केवल पासपोर्ट फ़ोटो"
+        }
+      ],
+      "answer": 1,
+      "explain": {
+        "en": "CBSE has made the APAAR ID a mandatory field for registration and LOC data from 2026-27. Nationally, fewer than half of students in CBSE schools had one by 2025-26, so there is paperwork ahead.",
+        "hi": "CBSE ने 2026-27 से पंजीकरण और LOC डेटा में APAAR ID को अनिवार्य किया है। 2025-26 तक CBSE विद्यालयों के आधे से कम छात्रों के पास यह थी, इसलिए काग़ज़ी काम बाकी है।"
+      },
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
+        "Follow-up: 'What share of your students have one?' A good opener for: AI can help with the paperwork."
+      ]
+    },
+    {
+      "type": "poll",
       "id": "s1-poll-hours",
       "question": {
         "en": "Last week, how many hours did you spend on paperwork (circulars, reports, records)?",

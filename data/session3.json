@@ -94,6 +94,263 @@
     },
     {
       "type": "poll",
+      "id": "s2-w-teachers",
+      "question": {
+        "en": "How many of your teachers use AI for lesson plans or question papers?",
+        "hi": "आपके कितने शिक्षक पाठ योजना या प्रश्नपत्र के लिए AI का उपयोग करते हैं?"
+      },
+      "options": [
+        {
+          "en": "Almost none",
+          "hi": "लगभग कोई नहीं"
+        },
+        {
+          "en": "A few",
+          "hi": "कुछ"
+        },
+        {
+          "en": "About half",
+          "hi": "लगभग आधे"
+        },
+        {
+          "en": "Most",
+          "hi": "अधिकतर"
+        }
+      ],
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
+        "Principals often underestimate this. Follow up: 'Do you know which tools they use?'"
+      ]
+    },
+    {
+      "type": "poll",
+      "id": "s2-w-homework",
+      "question": {
+        "en": "Have your students used AI for homework?",
+        "hi": "क्या आपके छात्रों ने गृहकार्य के लिए AI का उपयोग किया है?"
+      },
+      "options": [
+        {
+          "en": "Yes, we have caught it",
+          "hi": "हाँ, हमने पकड़ा है"
+        },
+        {
+          "en": "Probably",
+          "hi": "शायद"
+        },
+        {
+          "en": "No",
+          "hi": "नहीं"
+        },
+        {
+          "en": "We allow it, with rules",
+          "hi": "हम नियमों के साथ अनुमति देते हैं"
+        }
+      ],
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
+        "Leads into 'AI drafts, a teacher checks' and why the school needs an AI policy."
+      ]
+    },
+    {
+      "type": "poll",
+      "id": "s2-w-tools",
+      "question": {
+        "en": "Which tool have your teachers or students used most?",
+        "hi": "आपके शिक्षकों या छात्रों ने कौन-सा टूल सबसे अधिक उपयोग किया है?"
+      },
+      "options": [
+        {
+          "en": "ChatGPT",
+          "hi": "ChatGPT"
+        },
+        {
+          "en": "Gemini",
+          "hi": "Gemini"
+        },
+        {
+          "en": "Google Lens (for homework)",
+          "hi": "Google Lens (गृहकार्य के लिए)"
+        },
+        {
+          "en": "NotebookLM",
+          "hi": "NotebookLM"
+        }
+      ],
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
+        "NotebookLM usually gets almost no votes, which sets up Mission 4."
+      ]
+    },
+    {
+      "type": "poll",
+      "id": "s2-w-wrong",
+      "question": {
+        "en": "Has an AI answer ever been wrong in a way that worried you?",
+        "hi": "क्या कभी AI का कोई उत्तर ऐसा गलत निकला जिससे आपको चिंता हुई?"
+      },
+      "options": [
+        {
+          "en": "Yes, more than once",
+          "hi": "हाँ, एक से अधिक बार"
+        },
+        {
+          "en": "Once",
+          "hi": "एक बार"
+        },
+        {
+          "en": "Never",
+          "hi": "कभी नहीं"
+        },
+        {
+          "en": "I don't usually check",
+          "hi": "मैं आमतौर पर जाँचता/जाँचती नहीं"
+        }
+      ],
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
+        "Ask for one real example from the room: it opens the Mission 3 self-check better than any slide."
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "s2-q-boards",
+      "question": {
+        "en": "How many Class 10 board exams does CBSE hold in a year from 2026?",
+        "hi": "2026 से CBSE एक वर्ष में कक्षा 10 की कितनी बोर्ड परीक्षाएँ लेता है?"
+      },
+      "options": [
+        {
+          "en": "One",
+          "hi": "एक"
+        },
+        {
+          "en": "Two: a main exam in February and an optional one in May",
+          "hi": "दो: फ़रवरी में मुख्य और मई में वैकल्पिक"
+        },
+        {
+          "en": "Three",
+          "hi": "तीन"
+        },
+        {
+          "en": "Four term exams",
+          "hi": "चार सत्रीय परीक्षाएँ"
+        }
+      ],
+      "answer": 1,
+      "explain": {
+        "en": "The February exam is mandatory and is the main exam. The May exam is mainly for improvement and compartment; students can improve up to three subjects.",
+        "hi": "फ़रवरी की परीक्षा अनिवार्य और मुख्य है। मई की परीक्षा मुख्यतः सुधार और कम्पार्टमेंट के लिए है; छात्र अधिकतम तीन विषयों में सुधार कर सकते हैं।"
+      },
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest."
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "s2-q-soar",
+      "question": {
+        "en": "What is SOAR?",
+        "hi": "SOAR क्या है?"
+      },
+      "options": [
+        {
+          "en": "A satellite education channel",
+          "hi": "एक उपग्रह शिक्षा चैनल"
+        },
+        {
+          "en": "An AI skilling programme for Classes 6–12 and teachers",
+          "hi": "कक्षा 6–12 और शिक्षकों के लिए AI कौशल कार्यक्रम"
+        },
+        {
+          "en": "A sports scheme",
+          "hi": "एक खेल योजना"
+        },
+        {
+          "en": "An online exam portal",
+          "hi": "एक ऑनलाइन परीक्षा पोर्टल"
+        }
+      ],
+      "answer": 1,
+      "explain": {
+        "en": "SOAR (Skilling for AI Readiness) was launched in July 2025 by the Ministry of Skill Development and Entrepreneurship, for school students in Classes 6–12 and educators.",
+        "hi": "SOAR (Skilling for AI Readiness) जुलाई 2025 में कौशल विकास और उद्यमिता मंत्रालय ने कक्षा 6–12 के छात्रों और शिक्षकों के लिए शुरू किया।"
+      },
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
+        "Count the 'never heard of it' hands first."
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "s2-q-atl",
+      "question": {
+        "en": "How many new Atal Tinkering Labs did the 2025-26 Union Budget announce?",
+        "hi": "2025-26 के केंद्रीय बजट में कितनी नई अटल टिंकरिंग लैब की घोषणा हुई?"
+      },
+      "options": [
+        {
+          "en": "5,000",
+          "hi": "5,000"
+        },
+        {
+          "en": "10,000",
+          "hi": "10,000"
+        },
+        {
+          "en": "50,000",
+          "hi": "50,000"
+        },
+        {
+          "en": "1 lakh",
+          "hi": "1 लाख"
+        }
+      ],
+      "answer": 2,
+      "explain": {
+        "en": "50,000 Atal Tinkering Labs in government schools over five years (about 10,000 existed in October 2025). Most private CBSE schools will not get one, so the unplugged, no-lab approach today matters even more.",
+        "hi": "पाँच वर्षों में सरकारी विद्यालयों में 50,000 अटल टिंकरिंग लैब (अक्टूबर 2025 तक लगभग 10,000 थीं)। अधिकतर निजी CBSE विद्यालयों को यह नहीं मिलेगी, इसलिए आज का बिना-लैब तरीका और भी महत्वपूर्ण है।"
+      },
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest."
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "s2-q-hpc",
+      "question": {
+        "en": "Who developed the Holistic Progress Card?",
+        "hi": "समग्र प्रगति कार्ड किसने विकसित किया?"
+      },
+      "options": [
+        {
+          "en": "CBSE",
+          "hi": "CBSE"
+        },
+        {
+          "en": "PARAKH, at NCERT",
+          "hi": "PARAKH (NCERT)"
+        },
+        {
+          "en": "NITI Aayog",
+          "hi": "नीति आयोग"
+        },
+        {
+          "en": "State boards",
+          "hi": "राज्य बोर्ड"
+        }
+      ],
+      "answer": 1,
+      "explain": {
+        "en": "PARAKH, the assessment body at NCERT, developed the HPC. Its competency-based approach matches the board-pattern questions in Mission 3.",
+        "hi": "NCERT के मूल्यांकन निकाय PARAKH ने HPC विकसित किया। इसका योग्यता-आधारित दृष्टिकोण मिशन 3 के बोर्ड-पैटर्न प्रश्नों से मेल खाता है।"
+      },
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest."
+      ]
+    },
+    {
+      "type": "poll",
       "id": "s2-poll-lab",
       "question": {
         "en": "Does your school have a working computer lab that Classes III–VIII can use every week?",

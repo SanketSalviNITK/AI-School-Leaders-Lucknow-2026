@@ -24,6 +24,225 @@
     },
     {
       "type": "poll",
+      "id": "s3-w-office",
+      "question": {
+        "en": "Does anyone in your office use AI for parent communication?",
+        "hi": "क्या आपके कार्यालय में कोई अभिभावक संवाद के लिए AI का उपयोग करता है?"
+      },
+      "options": [
+        {
+          "en": "Yes, regularly",
+          "hi": "हाँ, नियमित रूप से"
+        },
+        {
+          "en": "Sometimes",
+          "hi": "कभी-कभी"
+        },
+        {
+          "en": "No",
+          "hi": "नहीं"
+        },
+        {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      ],
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
+        "'I don't know' is common and worth a smile: staff often use it quietly."
+      ]
+    },
+    {
+      "type": "poll",
+      "id": "s3-w-tools",
+      "question": {
+        "en": "Which free tool does your school use most with parents?",
+        "hi": "अभिभावकों के साथ आपका विद्यालय कौन-सा मुफ़्त टूल सबसे अधिक उपयोग करता है?"
+      },
+      "options": [
+        {
+          "en": "WhatsApp Business",
+          "hi": "WhatsApp Business"
+        },
+        {
+          "en": "Canva",
+          "hi": "Canva"
+        },
+        {
+          "en": "Google Forms",
+          "hi": "Google Forms"
+        },
+        {
+          "en": "A school app or ERP",
+          "hi": "विद्यालय ऐप या ERP"
+        }
+      ],
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
+        "Shows which tools are already in place and which missions will feel new."
+      ]
+    },
+    {
+      "type": "poll",
+      "id": "s3-w-aiimage",
+      "question": {
+        "en": "Has your school ever posted an image made by AI?",
+        "hi": "क्या आपके विद्यालय ने कभी AI से बनी छवि पोस्ट की है?"
+      },
+      "options": [
+        {
+          "en": "Yes",
+          "hi": "हाँ"
+        },
+        {
+          "en": "No",
+          "hi": "नहीं"
+        },
+        {
+          "en": "Not sure",
+          "hi": "पता नहीं"
+        },
+        {
+          "en": "We don't post images",
+          "hi": "हम छवियाँ पोस्ट नहीं करते"
+        }
+      ],
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
+        "A gentle way into the rule: real photos only, never AI-made images of children."
+      ]
+    },
+    {
+      "type": "poll",
+      "id": "s3-w-pasted",
+      "question": {
+        "en": "Has anyone in your school pasted student names or marks into an AI tool?",
+        "hi": "क्या आपके विद्यालय में किसी ने AI टूल में छात्रों के नाम या अंक डाले हैं?"
+      },
+      "options": [
+        {
+          "en": "Never",
+          "hi": "कभी नहीं"
+        },
+        {
+          "en": "Once or twice",
+          "hi": "एक-दो बार"
+        },
+        {
+          "en": "Often",
+          "hi": "अक्सर"
+        },
+        {
+          "en": "Not sure",
+          "hi": "पता नहीं"
+        }
+      ],
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
+        "Anonymous and non-judgemental. Bridge to Mission 7: codes and bands, never names or marks."
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "s3-q-apaar",
+      "question": {
+        "en": "Before a school creates a student's APAAR ID, what must it get?",
+        "hi": "किसी छात्र की APAAR ID बनाने से पहले विद्यालय को क्या लेना होगा?"
+      },
+      "options": [
+        {
+          "en": "Only the student's signature",
+          "hi": "केवल छात्र के हस्ताक्षर"
+        },
+        {
+          "en": "Permission from the district office",
+          "hi": "ज़िला कार्यालय की अनुमति"
+        },
+        {
+          "en": "Consent from the parent or guardian",
+          "hi": "माता-पिता या अभिभावक की सहमति"
+        },
+        {
+          "en": "Nothing",
+          "hi": "कुछ नहीं"
+        }
+      ],
+      "answer": 2,
+      "explain": {
+        "en": "Schools must obtain consent from parents or guardians before creating the ID. For the 2026 board lists, CBSE allowed 'refused' or 'not generated' entries, partly because consent was missing. Consent matters for photos too.",
+        "hi": "ID बनाने से पहले विद्यालयों को माता-पिता या अभिभावक की सहमति लेनी होती है। 2026 की बोर्ड सूची में CBSE ने 'refused' या 'not generated' प्रविष्टियों की अनुमति दी, आंशिक रूप से सहमति न मिलने के कारण। फ़ोटो के लिए भी सहमति ज़रूरी है।"
+      },
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
+        "Links straight to the DPDP and photo-consent slide."
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "s3-q-hpc",
+      "question": {
+        "en": "Who gives feedback in the Holistic Progress Card (HPC)?",
+        "hi": "समग्र प्रगति कार्ड (HPC) में प्रतिक्रिया कौन देता है?"
+      },
+      "options": [
+        {
+          "en": "Only teachers",
+          "hi": "केवल शिक्षक"
+        },
+        {
+          "en": "Teachers and the principal",
+          "hi": "शिक्षक और प्रधानाचार्य"
+        },
+        {
+          "en": "Teachers, parents, classmates and the student",
+          "hi": "शिक्षक, अभिभावक, सहपाठी और स्वयं छात्र"
+        },
+        {
+          "en": "Only parents",
+          "hi": "केवल अभिभावक"
+        }
+      ],
+      "answer": 2,
+      "explain": {
+        "en": "The HPC adds parent feedback, peer assessment and self-assessment to the teacher's view. It needs specific, descriptive remarks, which is where Mission 7 helps.",
+        "hi": "HPC में शिक्षक के साथ अभिभावक की प्रतिक्रिया, सहपाठी आकलन और स्व-आकलन जुड़ते हैं। इसके लिए विशिष्ट, वर्णनात्मक टिप्पणियाँ चाहिए, जिसमें मिशन 7 मदद करता है।"
+      },
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest."
+      ]
+    },
+    {
+      "type": "poll",
+      "id": "s3-w-sqaaf",
+      "question": {
+        "en": "Is your school's SQAAF self-assessment done?",
+        "hi": "क्या आपके विद्यालय का SQAAF स्व-आकलन हो गया है?"
+      },
+      "options": [
+        {
+          "en": "Yes",
+          "hi": "हाँ"
+        },
+        {
+          "en": "In progress",
+          "hi": "चल रहा है"
+        },
+        {
+          "en": "No",
+          "hi": "नहीं"
+        },
+        {
+          "en": "What is SQAAF?",
+          "hi": "SQAAF क्या है?"
+        }
+      ],
+      "notes": [
+        "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
+        "An honesty check that links to evidence-based branding: you can only promise what you can show."
+      ]
+    },
+    {
+      "type": "poll",
       "id": "s3-poll-source",
       "question": {
         "en": "Where do most new admission enquiries at your school come from?",
