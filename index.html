@@ -50,6 +50,15 @@
       w.date ? el('p', { text: w.date + (w.venue ? ' · ' + w.venue : '') }) : null
     ]));
 
+    app.append(el('section', { class: 'card siteqr' }, [
+      el('img', { src: 'assets/img/qr-site.png', alt: t({ en: 'QR code for this website', hi: 'इस वेबसाइट का QR कोड' }), width: '150', height: '150' }),
+      el('div', {}, [
+        el('h2', { style: 'margin:0 0 .3rem', text: t({ en: 'Scan to open this website', hi: 'यह वेबसाइट खोलने के लिए स्कैन करें' }) }),
+        el('p', { class: 'status', style: 'margin:0 0 .3rem', text: t({ en: 'Point your phone camera at the code, or type the link:', hi: 'फ़ोन का कैमरा कोड पर रखें, या लिंक टाइप करें:' }) }),
+        el('a', { href: 'https://sanketsalvinitk.github.io/AI-School-Leaders-Lucknow-2026/', style: 'font-weight:700;word-break:break-all', text: 'sanketsalvinitk.github.io/AI-School-Leaders-Lucknow-2026' })
+      ])
+    ]));
+
     if (!p.registered) app.append(regForm(p)); else app.append(el('p', { class: 'card', text: t(L.hello) + ' ' + p.name + ' · ' + p.school }));
 
     if (w.commandSheetCopyUrl) app.append(el('a', { class: 'btn', style: 'width:100%;margin-bottom:1rem', href: w.commandSheetCopyUrl, target: '_blank', rel: 'noopener', text: t(L.sheet) + ' ↗' }));

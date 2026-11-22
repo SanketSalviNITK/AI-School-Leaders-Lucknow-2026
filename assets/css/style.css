@@ -144,3 +144,6 @@ body.presenter .sample-table { background: #1b3440; border-color: #2e5160; }
 body.presenter .sample-table th { background: #24414d; }
 body.presenter .sample-table th, body.presenter .sample-table td { border-color: #2e5160; }
 body.presenter .sample { background: #1b3440; color: #e9e4da; border-color: #2e5160; }
+/* home page: website QR above registration */
+.siteqr { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+.siteqr img { width: 150px; height: 150px; flex: none; border-radius: 8px; }
