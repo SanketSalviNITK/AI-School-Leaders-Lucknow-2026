@@ -147,3 +147,7 @@ body.presenter .sample { background: #1b3440; color: #e9e4da; border-color: #2e5
 /* home page: website QR above registration */
 .siteqr { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
 .siteqr img { width: 150px; height: 150px; flex: none; border-radius: 8px; }
+.qrbig { position: fixed; inset: 0; z-index: 100; background: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .5rem; cursor: zoom-out; padding: 1rem; text-align: center; }
+.qrbig img { width: min(80vh, 90vw); height: min(80vh, 90vw); }
+.qrbig p { margin: 0; font-weight: 700; color: var(--brand); font-size: 1.4rem; word-break: break-all; }
+.qrbig p.small { font-size: .9rem; color: var(--muted); font-weight: 400; }

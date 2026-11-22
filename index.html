@@ -50,12 +50,22 @@
       w.date ? el('p', { text: w.date + (w.venue ? ' · ' + w.venue : '') }) : null
     ]));
 
+    const bigQR = () => {
+      const o = el('div', { class: 'qrbig', role: 'dialog', 'aria-label': 'QR code' }, [
+        el('img', { src: 'assets/img/qr-site.png', alt: 'QR code for this website' }),
+        el('p', { text: 'sanketsalvinitk.github.io/AI-School-Leaders-Lucknow-2026' }),
+        el('p', { class: 'small', text: t({ en: 'Tap anywhere to close', hi: 'बंद करने के लिए कहीं भी टैप करें' }) })
+      ]);
+      o.addEventListener('click', () => o.remove());
+      document.body.append(o);
+    };
     app.append(el('section', { class: 'card siteqr' }, [
-      el('img', { src: 'assets/img/qr-site.png', alt: t({ en: 'QR code for this website', hi: 'इस वेबसाइट का QR कोड' }), width: '150', height: '150' }),
+      el('img', { src: 'assets/img/qr-site.png', alt: t({ en: 'QR code for this website', hi: 'इस वेबसाइट का QR कोड' }), width: '150', height: '150', style: 'cursor:zoom-in', onclick: bigQR }),
       el('div', {}, [
         el('h2', { style: 'margin:0 0 .3rem', text: t({ en: 'Scan to open this website', hi: 'यह वेबसाइट खोलने के लिए स्कैन करें' }) }),
         el('p', { class: 'status', style: 'margin:0 0 .3rem', text: t({ en: 'Point your phone camera at the code, or type the link:', hi: 'फ़ोन का कैमरा कोड पर रखें, या लिंक टाइप करें:' }) }),
-        el('a', { href: 'https://sanketsalvinitk.github.io/AI-School-Leaders-Lucknow-2026/', style: 'font-weight:700;word-break:break-all', text: 'sanketsalvinitk.github.io/AI-School-Leaders-Lucknow-2026' })
+        el('a', { href: 'https://sanketsalvinitk.github.io/AI-School-Leaders-Lucknow-2026/', style: 'font-weight:700;word-break:break-all', text: 'sanketsalvinitk.github.io/AI-School-Leaders-Lucknow-2026' }),
+        el('div', { class: 'row' }, [el('button', { class: 'btn small', type: 'button', onclick: bigQR, text: t({ en: 'Show QR full screen', hi: 'QR पूरी स्क्रीन पर दिखाएँ' }) })])
       ])
     ]));
 
