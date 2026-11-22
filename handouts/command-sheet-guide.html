@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to use the Prompt Library and the School Command Sheet</title>
+<link rel="stylesheet" href="../assets/css/print.css">
+<style>
+.flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 2mm; align-items: stretch; margin: 3mm 0; }
+.flow .node { border: 1.5px solid var(--brand); border-radius: 3mm; padding: 2.5mm 3mm; background: #eef5f5; }
+.flow .node b { color: var(--brand); display: block; margin-bottom: .5mm; }
+.flow .arr { align-self: center; font-size: 15pt; color: var(--accent); font-weight: 700; }
+.loop { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.5mm; margin: 2mm 0 3mm; }
+.loop div { border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 2mm; padding: 1.8mm 2mm; font-size: 9pt; }
+.loop div b { display: block; color: var(--brand); }
+.tabcard { border: 1px solid var(--line); border-left: 4px solid var(--brand); border-radius: 2mm; padding: 2.5mm 3.5mm; margin: 2.5mm 0; break-inside: avoid; }
+.tabcard h3 { margin: 0 0 1mm; color: var(--brand); }
+.tabcard table { width: 100%; border-collapse: collapse; font-size: 9.2pt; }
+.tabcard td { padding: .6mm 1.5mm; vertical-align: top; border-top: 1px dotted var(--line); }
+.tabcard td:first-child { width: 30mm; font-weight: 700; color: var(--muted); }
+.pid { display: inline-block; background: var(--brand); color: #fff; border-radius: 1.5mm; padding: 0 1.4mm; font-size: 8.2pt; font-weight: 700; }
+pre.gem { white-space: pre-wrap; font-family: inherit; font-size: 9pt; background: var(--soft); border-radius: 2mm; padding: 2.5mm 3mm; margin: 1mm 0; }
+.fill { color: #b3541e; font-weight: 700; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+.toc li { margin: .4mm 0; }
+.hi { font-size: 10.2pt; }
+</style>
+</head>
+<body>
+<div class="toolbar"><span>Guide: Prompt Library + School Command Sheet</span><button onclick="window.print()">Print / Save as PDF</button><a href="../prompts.html">Prompt Library</a><a href="../resources.html">Back</a></div>
+
+<!-- ===================== PAGE 1 ===================== -->
+<section class="page">
+<h1>How to use the Prompt Library and the School Command Sheet</h1>
+<div class="meta">A step-by-step guide for Principals · AI for School Leaders 2026 · Barabanki &amp; Bahraich Sahodaya School Complexes · Lucknow · Dr. Sanket Salvi, MIT World Peace University, Pune</div>
+
+<h2>1. Three tools that work together</h2>
+<div class="flow">
+  <div class="node"><b>School Command Sheet</b>Your school's numbers in one Google Sheet: CPD hours, observations, CT &amp; AI periods, questions, admissions, report remarks, parent feedback. It calculates totals and gaps by itself.</div>
+  <div class="arr">⇄</div>
+  <div class="node"><b>Principal's Assistant (Gem)</b>Your own Gemini assistant that already knows your school, your language preference and the data rules. Free, on phone or computer.</div>
+  <div class="arr">⇄</div>
+  <div class="node"><b>Prompt Library</b>46 tested prompts for school work. Each one says when to use it and which Command Sheet tab to paste in. You fill the [brackets].</div>
+</div>
+<p><b>In one line:</b> the <b>Sheet</b> holds the facts, the <b>Prompt</b> asks the right question, the <b>Gem</b> drafts the answer, and <b>you</b> check it and decide.</p>
+
+<h2>2. What you need</h2>
+<ul>
+<li>A Google account (the one on your Android phone is enough). Free Gemini works for everything in this guide.</li>
+<li>Chrome on a computer or laptop is easiest for setup. Daily use works on the phone too (Gemini app + Google Sheets app).</li>
+<li>About <b>20 minutes</b> for the one-time setup in Section 3.</li>
+</ul>
+
+<h2>Contents</h2>
+<ol class="toc">
+<li>Three tools that work together · 2. What you need</li>
+<li>One-time setup: copy the sheet, create your Gem, open the library</li>
+<li>How to read a prompt card, and the R-T-C-F-L-C frame</li>
+<li>The everyday loop: Pick → Fill → Paste → Refine → Check → Save</li>
+<li>Moving data between the sheet and Gemini (both directions)</li>
+<li>Tab-by-tab guide to the School Command Sheet</li>
+<li>Your routine: weekly, monthly, termly</li>
+<li>Sharing with your staff</li>
+<li>Data protection rules</li>
+<li>Problems and fixes · 12. Hindi quick start (हिंदी में त्वरित शुरुआत)</li>
+</ol>
+<div class="box rule"><b>The one rule that never changes:</b> never type or paste student names, marks linked to a child, Aadhaar, APAAR IDs, phone numbers, addresses or photos into any AI tool. Use codes: <b>S01</b> for a student, <b>T01</b> for a teacher, <b>E001</b> for an admission enquiry. Keep the code-to-name list in your own register or a separate private file, never in the sheet you paste from.</div>
+</section>
+
+<!-- ===================== PAGE 2 ===================== -->
+<section class="page">
+<h2>3. One-time setup (about 20 minutes)</h2>
+<h3>Step A · Make your own copy of the School Command Sheet (3 min)</h3>
+<ol>
+<li>Open the workshop website → home page → <b>Copy the School Command Sheet</b>. (Direct link: <i>docs.google.com/spreadsheets/d/1B0SdmcTN7xaZUiuz5L8v6oDsIuy6PpFH0AeYSwS7kD0/copy</i>.)</li>
+<li>Google asks "Copy document?" → press <b>Make a copy</b>. The copy is in <b>your</b> Google Drive; nobody else can see it.</li>
+<li>Rename it: <i>File → Rename</i> → "Command Sheet – [your school] – 2026-27".</li>
+<li>The example rows (T01, E001, S01…) show how to fill each tab. Delete them when you enter your own data, or overwrite them. <b>Do not delete header rows or grey/white formula cells.</b></li>
+</ol>
+<div class="box"><b>Colour code in every tab:</b> <span style="color:#0000ff;font-weight:700">blue cells</span> are for you to type or paste. All other cells calculate by themselves. If you type over a formula cell by mistake, press <b>Ctrl+Z</b> (or ↶ on the phone).</div>
+
+<h3>Step B · Create your Principal's Assistant Gem (10 min)</h3>
+<ol>
+<li>On a computer, open <b>gemini.google.com</b> in Chrome and sign in.</li>
+<li>Menu → <b>Explore Gems</b> → <b>New Gem</b>. Name: <b>Principal's Assistant</b>.</li>
+<li>Copy the instructions below into the <b>Instructions</b> box. Replace every <span class="fill">[bracket]</span>. Press <b>Save</b>.</li>
+</ol>
+<pre class="gem">You are the personal assistant to the Principal of <span class="fill">[School name]</span>, a CBSE-affiliated school in <span class="fill">[Barabanki / Bahraich]</span>, Uttar Pradesh, with Classes <span class="fill">[Nursery–XII]</span> and about <span class="fill">[number]</span> students and <span class="fill">[number]</span> teachers.
+
+How to work with me:
+- Write in clear, respectful, simple English. When I ask for Hindi, or when the reader is a parent, give English and Hindi side by side.
+- Follow CBSE conventions: circulars have a reference number, date, subject line, body and signature block.
+- Keep it practical for a budget-conscious school: no paid tools, no extra fees, nothing that needs every child to have a device.
+- Never ask me for, and never repeat, student names, marks, Aadhaar, APAAR IDs or phone numbers. If I paste any by mistake, remind me to remove them.
+- At the end of every answer, add a short section called "Please verify" listing any dates, numbers, rules or facts I should check before using it.</pre>
+<p><b>Optional lines that make the Gem better</b> (add them at the end of the instructions):</p>
+<ul>
+<li>"Our school's strengths are <span class="fill">[..]</span>. Use them when I ask for parent or admission messages." (used by <span class="pid">BR-01</span>, <span class="pid">BR-03</span>)</li>
+<li>"When I paste a table from my School Command Sheet, keep the same column names in your answer, so I can paste it back."</li>
+<li>"CBSE Computational Thinking &amp; AI is being introduced for Classes III–VIII; follow the NCERT/CBSE CT &amp; AI handbooks when I ask about it."</li>
+</ul>
+<p><b>Test it:</b> type "Introduce yourself to me in Hindi in 3 lines." It should name your school and mention the data rule. If not, open the Gem → <b>Edit</b> and fix the instructions.</p>
+<p class="small">On the phone: Gems you create on the computer appear in the Gemini app too (tap your Gem's name in the menu). If your Gemini version does not show Gems, paste the instructions above as the first message of a new chat instead.</p>
+
+<h3>Step C · Open and bookmark the Prompt Library (2 min)</h3>
+<ol>
+<li>Workshop website → <b>Resources</b> → <b>Prompt Library</b> (or open <i>prompts.html</i>). On the phone: Chrome menu ⋮ → <b>Add to Home screen</b>.</li>
+<li>The same 46 prompts are also in your Command Sheet, in the tab <b>Prompt Library</b>, and in the printable library (handouts/prompt-library.html). Use whichever is handy.</li>
+</ol>
+</section>
+
+<!-- ===================== PAGE 3 ===================== -->
+<section class="page">
+<h2>4. How to read a prompt card</h2>
+<table class="run">
+<tr><th>Part of the card</th><th>What it tells you</th></tr>
+<tr><td>ID, e.g. ST-01</td><td>A short code so you and your staff can say "use ST-01". Letters show the area: OF office · ST staff · CU curriculum · AS assessment · PA parents · BR branding · SH spreadsheet · PO policy · LE leadership.</td></tr>
+<tr><td>Title (English + हिंदी)</td><td>What the prompt produces.</td></tr>
+<tr><td>When</td><td>The situation it is meant for.</td></tr>
+<tr><td>Command Sheet tag</td><td>The tab whose data you paste into the prompt. "Any tab" means it works with every tab.</td></tr>
+<tr><td>Practised in</td><td>The workshop session and mission where you tried it, so you can look back at the worked example.</td></tr>
+<tr><td><span class="fill">[Orange brackets]</span></td><td>The parts you must replace before sending. Delete the brackets themselves. If a bracket offers choices, e.g. [English / Hindi / both], keep the one you want.</td></tr>
+</table>
+
+<h3>Why the prompts work: the R-T-C-F-L-C frame</h3>
+<p>Every prompt in the library follows the same six parts. Use the frame to write your own prompts too.</p>
+<table class="frame">
+<tr><td>R</td><td><b>Role</b>: who the AI should be. Your Gem already holds this, so most library prompts skip it.</td></tr>
+<tr><td>T</td><td><b>Task</b>: exactly what to produce ("a circular", "5 assertion-reason questions", "a 30-day plan").</td></tr>
+<tr><td>C</td><td><b>Context</b>: your school, the circular, the pasted Command Sheet data, the constraints (no lab, 40-minute periods).</td></tr>
+<tr><td>F</td><td><b>Format</b>: table with named columns, word limit, numbered points, one page.</td></tr>
+<tr><td>L</td><td><b>Language</b>: English, Hindi, or both side by side; simple words for parents and support staff.</td></tr>
+<tr><td>C</td><td><b>Check</b>: ask it to list what to verify, or to check its own work (<span class="pid">AS-02</span>).</td></tr>
+</table>
+
+<h2>5. The everyday loop</h2>
+<div class="loop">
+<div><b>1 Pick</b>Find the prompt by area or search ("remarks", "CPD", "circular").</div>
+<div><b>2 Fill</b>Replace the [brackets]. Paste the table from the named tab.</div>
+<div><b>3 Paste</b>Open your Gem, paste, send.</div>
+<div><b>4 Refine</b>Ask for changes in the same chat. Do not start over.</div>
+<div><b>5 Check</b>Read every line. Verify the "Please verify" list.</div>
+<div><b>6 Save</b>Paste results into the sheet; save your best prompt version.</div>
+</div>
+<h3>Useful refine lines (type them after the first answer)</h3>
+<div class="two">
+<ul>
+<li>"Make it shorter: under 100 words."</li>
+<li>"Give it in simple Hindi. Keep English below each point."</li>
+<li>"Put it in a table with columns: …"</li>
+<li>"Make the tone warmer / firmer / more formal."</li>
+<li>"Our school does not have [a lab / smart boards]. Change the plan."</li>
+</ul>
+<ul>
+<li>"Which parts of this are you not sure about?"</li>
+<li>"Check your answer against the circular I pasted. Quote the line for each point."</li>
+<li>"Give me 3 different versions to choose from."</li>
+<li>"Explain this to a teacher who is new to AI."</li>
+<li>"What did I forget to tell you that would make this better?"</li>
+</ul>
+</div>
+<div class="box"><b>Check before you use (every time):</b> dates and times · numbers and totals · names of schemes, circulars and rules (SQAAF, APAAR, HPC, CPD hours) · anything about fees or legal duties · whether it sounds like your school. AI writes confidently even when it is wrong. You are the Principal; it is the assistant.</div>
+</section>
+
+<!-- ===================== PAGE 4 ===================== -->
+<section class="page">
+<h2>6. Moving data between the sheet and Gemini</h2>
+<h3>From the sheet into Gemini</h3>
+<ol>
+<li>In the tab, click the first header cell (e.g. <i>Teacher code</i>) and drag to the last filled cell, so the header row is included. On the phone: tap a cell, then drag the blue handles.</li>
+<li>Copy (<b>Ctrl+C</b>, or long-press → Copy).</li>
+<li>In the prompt, replace <span class="fill">[paste the table here]</span> with the copied table (<b>Ctrl+V</b>). It arrives as text with spaces or tabs between columns; Gemini reads it correctly.</li>
+<li>Copy only the columns the prompt needs. Never copy a column that has names or phone numbers. (The tabs are designed with codes only, so this is easy.)</li>
+</ol>
+<h3>From Gemini back into the sheet</h3>
+<ol>
+<li>Ask for a table with the <b>exact column names</b> of the tab. Add prompt <span class="pid">SH-04</span> to the end of any prompt to force this.</li>
+<li>If Gemini shows an <b>Export to Sheets</b> option under the table, you can use it, but it creates a new file. For your Command Sheet, it is simpler to copy the table.</li>
+<li>Select the table in Gemini's answer, copy, click the first empty cell under the matching header in your tab, and paste. If columns land in the wrong place, press Ctrl+Z, then paste one column at a time.</li>
+<li>For long text (remarks, actions), paste with <b>Ctrl+Shift+V</b> (paste values only) so the sheet's formatting stays.</li>
+<li>Then mark the review column (<i>Verified by teacher</i>, <i>Teacher reviewed</i>) only after a person has really checked the row.</li>
+</ol>
+<h3>Asking for formulas</h3>
+<p>You do not need to know formulas. Use <span class="pid">SH-02</span> to get a new one and <span class="pid">SH-03</span> to fix a broken one. Always tell Gemini the tab name, the header row number, and which column holds what. Paste the formula into one cell first and check the answer by hand for two rows before copying it down.</p>
+
+<h2>7. Tab-by-tab guide to the School Command Sheet</h2>
+<p>The sheet has a <b>Start Here</b> tab with the four rules, then the tabs below. Each tab has a title in row 1, an instruction in row 2, and headers in row 4 (CPD Tracker: row 9; CT &amp; AI Plan: row 10).</p>
+
+<div class="tabcard"><h3>CPD Tracker · teachers' 50 training hours</h3>
+<table>
+<tr><td>Purpose</td><td>See which teachers are on track for the CBSE target of 50 CPD hours a year (at least 25 through CBSE or government institutes), and who needs help.</td></tr>
+<tr><td>You type (blue)</td><td>Settings at the top (target 50, minimum 25, "critical" threshold); per teacher: Teacher code, Subject, CBSE/Govt hours, School-based hours.</td></tr>
+<tr><td>It calculates</td><td>Total hours, Hours still needed, Status (On track / Behind / Critical), and the Summary box (teachers listed, on track, behind, critical).</td></tr>
+<tr><td>Prompts</td><td><span class="pid">ST-01</span> find gaps and plan training · <span class="pid">SH-05</span> monthly report · <span class="pid">LE-01</span> weekly priorities.</td></tr>
+<tr><td>How often</td><td>Update on the last working day of each month; give the office coordinator edit access to enter certificates.</td></tr>
+</table></div>
+
+<div class="tabcard"><h3>Observation Log · classroom visits</h3>
+<table>
+<tr><td>Purpose</td><td>A fair, consistent record of classroom observations that leads to a conversation, not a verdict.</td></tr>
+<tr><td>You type (blue)</td><td>Date, Teacher code, Class, Subject, Topic; ratings 1–4 for Planning &amp; materials, Engagement, Questioning &amp; checking, Inclusion, Link to CT; Strengths seen, Next steps, Support I will provide.</td></tr>
+<tr><td>It calculates</td><td>Average (1–4) per visit.</td></tr>
+<tr><td>Prompts</td><td><span class="pid">ST-02</span> rubric · <span class="pid">ST-03</span> feedback for one row · <span class="pid">ST-04</span> patterns across the school.</td></tr>
+<tr><td>How often</td><td>Fill the row the same day as the visit; run ST-04 once a month.</td></tr>
+</table></div>
+</section>
+
+<!-- ===================== PAGE 5 ===================== -->
+<section class="page">
+<div class="tabcard"><h3>CT &amp; AI Plan · periods for Classes III–VIII</h3>
+<table>
+<tr><td>Purpose</td><td>Turn the CBSE annual CT &amp; AI hours (Circular Acad-15/2026; the sheet's figures are indicative, check them against the circular) into periods per week per section, with a teacher owner.</td></tr>
+<tr><td>You type (blue)</td><td>Teaching weeks in the year and left this session, period length; per class: Sections, Annual hours, Subject periods to use, Teacher owner, Status.</td></tr>
+<tr><td>It calculates</td><td>Share of the year left, Hours for rest of session, Periods needed, Periods per week per section, the whole-school total, and sections "Not started".</td></tr>
+<tr><td>Prompts</td><td><span class="pid">CU-01</span> fit into the timetable · <span class="pid">CU-02</span> unplugged lesson · <span class="pid">CU-03</span> integrate into a chapter · <span class="pid">CU-04</span> student project.</td></tr>
+<tr><td>How often</td><td>Set up once per term; move Status to Planned → Running → Done as classes start.</td></tr>
+</table></div>
+
+<div class="tabcard"><h3>Question Bank · competency-based questions</h3>
+<table>
+<tr><td>Purpose</td><td>A growing, teacher-verified bank of board-pattern questions (assertion-reason, case-based, source-based).</td></tr>
+<tr><td>You type (blue)</td><td>ID, Class, Subject, Chapter, Question type, Question, Answer, Marks, Competency tested, Verified by teacher (Yes / Not yet).</td></tr>
+<tr><td>It calculates</td><td>"Questions verified: x of y" at the top.</td></tr>
+<tr><td>Prompts</td><td><span class="pid">AS-01</span> generate in the sheet's column order → <span class="pid">AS-02</span> make AI check itself → teacher verifies against NCERT and the latest CBSE sample paper → <span class="pid">AS-03</span> revision notes in NotebookLM.</td></tr>
+<tr><td>How often</td><td>Ask each department for 5 verified questions a week; only "Yes" rows go into tests.</td></tr>
+</table></div>
+
+<div class="tabcard"><h3>Admission Enquiries · 2027-28 season</h3>
+<table>
+<tr><td>Purpose</td><td>Every enquiry logged with its source and follow-up date, so no family is forgotten and you know which outreach works.</td></tr>
+<tr><td>You type (blue)</td><td>Date, Enquiry code (E001…), Class sought, Source (dropdown), Follow-up date, Status (dropdown), Notes. Parents' names and phones stay in your office register.</td></tr>
+<tr><td>It calculates</td><td>Total enquiries, Admitted, Conversion rate, Overdue follow-ups, and enquiries by source.</td></tr>
+<tr><td>Prompts</td><td><span class="pid">BR-01</span> campaign · <span class="pid">BR-02</span> weekly analysis and follow-up messages · <span class="pid">BR-03</span>/<span class="pid">BR-04</span> Google profile and reviews · <span class="pid">BR-05</span> event posts.</td></tr>
+<tr><td>How often</td><td>The front office enters enquiries daily; you review the Summary every Monday.</td></tr>
+</table></div>
+
+<div class="tabcard"><h3>Report Remarks · personal, bilingual remarks</h3>
+<table>
+<tr><td>Purpose</td><td>Draft report-card remarks in English and Hindi from performance bands and teacher observations, without sharing marks or names.</td></tr>
+<tr><td>You type (blue)</td><td>Student code, bands for Languages / Maths / Science (Strong, Developing, Needs support), Teacher observation 1 and 2, Teacher reviewed (Yes / No).</td></tr>
+<tr><td>It calculates</td><td>"Remarks reviewed: x of y".</td></tr>
+<tr><td>Prompts</td><td><span class="pid">PA-01</span> remarks table → paste into Remark (English) and Remark (Hindi) → class teacher reads each, edits, marks Yes, and matches codes to names offline.</td></tr>
+<tr><td>How often</td><td>Each report-card cycle; one copy of the tab per class (right-click the tab → Duplicate).</td></tr>
+</table></div>
+
+<div class="tabcard"><h3>Parent Feedback · from comments to action</h3>
+<table>
+<tr><td>Purpose</td><td>Turn anonymous PTM or survey comments into themes, a short action plan, and a message that tells parents what you will do.</td></tr>
+<tr><td>You type (blue)</td><td>#, Comment (no names), Theme, Sentiment; on the right: Action, Owner (role), By when, How we tell parents, Status.</td></tr>
+<tr><td>Prompts</td><td><span class="pid">PA-03</span> theme and sentiment → you check them → <span class="pid">PA-04</span> 30-day plan and WhatsApp message.</td></tr>
+<tr><td>How often</td><td>After every PTM; review Status at the next staff meeting.</td></tr>
+</table></div>
+
+<div class="tabcard"><h3>Prompt Library · your own copy of the 46 prompts</h3>
+<table>
+<tr><td>Purpose</td><td>The library inside your sheet, so it travels with your data, plus space for prompts you improve or write yourself.</td></tr>
+<tr><td>You type (blue)</td><td><i>My version / notes</i> and <i>How well it worked (1–5)</i> for any prompt; new prompts in the empty "My prompts" rows at the bottom (IDs MY-01, MY-02…).</td></tr>
+<tr><td>Tip</td><td>Use the filter button on the header row to show one category or one Command Sheet tab.</td></tr>
+</table></div>
+</section>
+
+<!-- ===================== PAGE 6 ===================== -->
+<section class="page">
+<h2>8. Your routine</h2>
+<table class="run">
+<tr><th>When</th><th>Who</th><th>What to do</th><th>Prompts</th></tr>
+<tr><td>Daily, 5 min</td><td>Front office</td><td>Log new admission enquiries; update follow-up status.</td><td>—</td></tr>
+<tr><td>Daily, as needed</td><td>Principal</td><td>Circulars, replies, notices, substitution.</td><td>OF-01 to OF-05, ST-05</td></tr>
+<tr><td>Monday, 10 min</td><td>Principal</td><td>Read every tab's summary numbers; ask for the week's 3 priorities.</td><td>LE-01, BR-02</td></tr>
+<tr><td>After each visit</td><td>Principal / HoD</td><td>Fill an Observation Log row; send feedback within 48 hours.</td><td>ST-03</td></tr>
+<tr><td>Weekly</td><td>HoDs</td><td>Add and verify 5 questions per department.</td><td>AS-01, AS-02</td></tr>
+<tr><td>Month end, 30 min</td><td>Principal + coordinator</td><td>Update CPD hours; look at observation patterns; one-page report to management.</td><td>ST-01, ST-04, SH-05</td></tr>
+<tr><td>After each PTM</td><td>Principal</td><td>Paste comments; themes; action plan; message to parents.</td><td>PA-03, PA-04, PA-06</td></tr>
+<tr><td>Term start / end</td><td>Principal + CT owner</td><td>Reset CT &amp; AI weeks left and status; report remarks; calendar; SQAAF evidence.</td><td>CU-01, CU-05, PA-01, PO-03</td></tr>
+<tr><td>Once a year</td><td>Principal + SMC</td><td>Review the AI policy and the improvement plan. Make a fresh copy of the sheet for the new session.</td><td>PO-01, LE-02</td></tr>
+</table>
+
+<h2>9. Sharing with your staff</h2>
+<ul>
+<li><b>The sheet:</b> Share → add the person's Gmail → <b>Editor</b> only for the people who enter data (office coordinator, HoDs); <b>Viewer</b> for others. Do not use "Anyone with the link" for your school's sheet.</li>
+<li><b>Protect formulas:</b> select the calculated columns → right-click → <i>View more cell actions → Protect range</i> → "Show a warning when editing this range".</li>
+<li><b>The prompts:</b> send staff the Prompt Library link, or the ID of the prompt ("please use PA-01 for remarks"). Teachers can create their own Gem with the same instructions, changing "Principal" to their role.</li>
+<li><b>Start small:</b> one tab and two prompts with one team for a month works better than everything at once. A good first pair: CPD Tracker + ST-01, or Report Remarks + PA-01.</li>
+<li><b>Staff meeting idea (20 min):</b> project the library, pick one prompt, fill it together live, compare the answer with what a teacher would write, then agree the school's checking rule.</li>
+</ul>
+
+<h2>10. Data protection rules</h2>
+<div class="box rule">
+<ol style="margin:0">
+<li><b>Codes, not people.</b> S01, T01, E001 in the sheet and in prompts. The code list stays offline with the class teacher or office.</li>
+<li><b>Bands, not marks.</b> Strong / Developing / Needs support. Never paste a mark sheet.</li>
+<li><b>Anonymous comments only.</b> Remove names and numbers from parent feedback before pasting. Use <span class="pid">PO-02</span> to double-check any text.</li>
+<li><b>No IDs or photos.</b> No Aadhaar, APAAR, roll numbers, health details or pictures of children.</li>
+<li><b>A person decides.</b> AI drafts; a teacher or the Principal checks, edits and signs. Mark review columns honestly.</li>
+<li><b>Follow your AI policy and India's DPDP Act 2023.</b> Children's data needs extra care; when in doubt, leave it out.</li>
+</ol>
+</div>
+</section>
+
+<!-- ===================== PAGE 7 ===================== -->
+<section class="page">
+<h2>11. Problems and fixes</h2>
+<table class="run">
+<tr><th>Problem</th><th>What to do</th></tr>
+<tr><td>"Make a copy" does not appear</td><td>You are not signed in to Google, or the link opened in an app. Open it in Chrome, sign in, try again.</td></tr>
+<tr><td>A cell shows #REF!, #VALUE! or #DIV/0!</td><td>A formula cell was typed over or a row deleted. Press Ctrl+Z, or copy the formula from the cell above. Still broken: <span class="pid">SH-03</span>.</td></tr>
+<tr><td>Totals do not change</td><td>The number was typed as text (e.g. "20 hrs"). Type only the number. Check the cell is in a blue input column.</td></tr>
+<tr><td>Pasted table lands in one column</td><td>Paste into the sheet with Ctrl+Shift+V, or use <i>Data → Split text to columns</i>. Next time add <span class="pid">SH-04</span> to the prompt.</td></tr>
+<tr><td>Hindi looks like boxes</td><td>Update Chrome / the Sheets app; on Windows install a Devanagari font such as Noto Sans Devanagari.</td></tr>
+<tr><td>Gemini forgets my school</td><td>You are in a normal chat, not the Gem. Open the Gem from the menu, then paste the prompt.</td></tr>
+<tr><td>The answer is generic</td><td>Add more context: classes, numbers from the sheet, what you tried. Ask "What else do you need to know?"</td></tr>
+<tr><td>The answer has a wrong fact</td><td>Say: "Point 3 is wrong; the circular says …. Correct it." Then check the rest. For textbook content, use NotebookLM with the NCERT PDF (<span class="pid">AS-03</span>).</td></tr>
+<tr><td>Gemini refuses or says it cannot</td><td>Rephrase plainly, remove anything that looks like personal data, or break the task into two smaller prompts.</td></tr>
+<tr><td>Daily limit reached on free Gemini</td><td>Wait and continue later, or continue the same task in a new chat with a summary of where you stopped.</td></tr>
+<tr><td>Poor internet at school</td><td>Fill the sheet offline (Sheets app → ⋮ → Available offline). Run prompts later from home or the office Wi-Fi; use the printed library to plan.</td></tr>
+</table>
+
+<h3>Write your own prompt in 5 minutes</h3>
+<ol>
+<li>Write the <b>Task</b> in one sentence: "Write a ___ for ___".</li>
+<li>Add <b>Context</b>: who reads it, what the school has and does not have, any pasted data.</li>
+<li>Add <b>Format</b> and <b>Language</b>: table / points / word limit; English, Hindi or both.</li>
+<li>End with a <b>Check</b>: "List what I should verify."</li>
+<li>Try it twice. When it works, save it in the sheet's Prompt Library tab as MY-01 with a note on when to use it.</li>
+</ol>
+<div class="footer">AI output can be wrong. Check every date, number, rule and name before you use it. Scheme and circular details mentioned here (CPD 50 hours, CT &amp; AI hours, SQAAF, DPDP Act) are as discussed in the workshop; always confirm against the latest official CBSE / government document.</div>
+</section>
+
+<!-- ===================== PAGE 8 HINDI ===================== -->
+<section class="page hi" lang="hi">
+<h2>12. हिंदी में त्वरित शुरुआत</h2>
+<p><b>तीन साधन:</b> <b>School Command Sheet</b> (आपके विद्यालय के आँकड़े, जो अपने-आप गणना करती है) · <b>Principal's Assistant Gem</b> (Gemini में आपका अपना सहायक) · <b>Prompt Library</b> (46 तैयार प्रॉम्प्ट)। शीट तथ्य रखती है, प्रॉम्प्ट सही प्रश्न पूछता है, Gem मसौदा बनाता है, और निर्णय आप लेते हैं।</p>
+<h3>एक बार की तैयारी (20 मिनट)</h3>
+<ol>
+<li>वेबसाइट पर <b>Copy the School Command Sheet</b> दबाएँ → <b>Make a copy</b>। फ़ाइल का नाम बदलें: "Command Sheet – [विद्यालय] – 2026-27"।</li>
+<li><b>नीले सेल</b> में ही लिखें; बाकी सेल अपने-आप गणना करते हैं। गलती हो तो Ctrl+Z दबाएँ।</li>
+<li>कंप्यूटर पर gemini.google.com → <b>Explore Gems</b> → <b>New Gem</b> → नाम "Principal's Assistant" → पृष्ठ 2 के निर्देश पेस्ट करें, [कोष्ठक] भरें, <b>Save</b>।</li>
+<li>जाँचें: "हिंदी में 3 पंक्तियों में अपना परिचय दें।" उसे आपके विद्यालय का नाम और डेटा नियम बताना चाहिए।</li>
+<li>Prompt Library खोलें (वेबसाइट → Resources) और फ़ोन की होम स्क्रीन पर जोड़ें।</li>
+</ol>
+<h3>रोज़ का तरीका: चुनें → भरें → पेस्ट करें → सुधारें → जाँचें → सेव करें</h3>
+<ol>
+<li><b>चुनें:</b> क्षेत्र या खोज से प्रॉम्प्ट चुनें (परिपत्र, CPD, टिप्पणी, प्रवेश)।</li>
+<li><b>भरें:</b> हर नारंगी [कोष्ठक] भरें; कार्ड पर लिखे टैब की तालिका (शीर्षक सहित) कॉपी करके पेस्ट करें।</li>
+<li><b>पेस्ट करें:</b> अपना Gem खोलें और भेजें।</li>
+<li><b>सुधारें:</b> उसी चैट में लिखें: "छोटा करें", "सरल हिंदी में", "इन कॉलम वाली तालिका में दें: …"।</li>
+<li><b>जाँचें:</b> हर तिथि, संख्या, नियम और नाम जाँचें; "कृपया जाँचें" सूची देखें।</li>
+<li><b>सेव करें:</b> तालिका को शीट के सही कॉलम में पेस्ट करें (Ctrl+Shift+V)। अच्छा प्रॉम्प्ट Prompt Library टैब में MY-01 के रूप में सेव करें।</li>
+</ol>
+<h3>कौन-सा टैब, कौन-सा प्रॉम्प्ट</h3>
+<table class="run">
+<tr><th>टैब</th><th>किस काम के लिए</th><th>प्रॉम्प्ट</th></tr>
+<tr><td>CPD Tracker</td><td>हर शिक्षक के 50 प्रशिक्षण घंटे, कमी और स्थिति</td><td>ST-01</td></tr>
+<tr><td>Observation Log</td><td>कक्षा-अवलोकन, ताकतें और अगले कदम</td><td>ST-02, ST-03, ST-04</td></tr>
+<tr><td>CT &amp; AI Plan</td><td>कक्षा III–VIII के लिए साप्ताहिक CT और AI पीरियड</td><td>CU-01 से CU-04</td></tr>
+<tr><td>Question Bank</td><td>शिक्षक द्वारा जाँचे गए योग्यता-आधारित प्रश्न</td><td>AS-01, AS-02, AS-03</td></tr>
+<tr><td>Admission Enquiries</td><td>हर पूछताछ, फ़ॉलो-अप और रूपांतरण दर</td><td>BR-01, BR-02</td></tr>
+<tr><td>Report Remarks</td><td>अंग्रेज़ी और हिंदी में रिपोर्ट कार्ड टिप्पणियाँ</td><td>PA-01</td></tr>
+<tr><td>Parent Feedback</td><td>अभिभावकों की राय से 30-दिवसीय कार्य योजना</td><td>PA-03, PA-04</td></tr>
+<tr><td>Prompt Library</td><td>46 प्रॉम्प्ट और आपके अपने प्रॉम्प्ट</td><td>सभी</td></tr>
+</table>
+<div class="box rule"><b>नियम जो कभी नहीं बदलता:</b> किसी भी AI टूल में छात्रों के नाम, बच्चे से जुड़े अंक, आधार, APAAR ID, फ़ोन नंबर, पता या फ़ोटो न डालें। कोड का उपयोग करें: छात्र S01, शिक्षक T01, पूछताछ E001। AI मसौदा बनाता है; जाँच, सुधार और हस्ताक्षर व्यक्ति करता है।</div>
+<div class="footer">AI for School Leaders 2026 · Dr. Sanket Salvi, MIT World Peace University, Pune · प्रश्न हों तो अपने Sahodaya समन्वयक से संपर्क करें।</div>
+</section>
+</body>
+</html>

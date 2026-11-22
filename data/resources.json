@@ -3,6 +3,49 @@
   "groups": [
     {
       "title": {
+        "en": "Prompt Library & School Command Sheet",
+        "hi": "प्रॉम्प्ट लाइब्रेरी और School Command Sheet"
+      },
+      "items": [
+        {
+          "title": {
+            "en": "Prompt Library: 46 prompts with copy buttons",
+            "hi": "प्रॉम्प्ट लाइब्रेरी: कॉपी बटन के साथ 46 प्रॉम्प्ट"
+          },
+          "url": "prompts.html"
+        },
+        {
+          "title": {
+            "en": "Guide: how to use the Prompt Library and the Command Sheet (9 pages, PDF)",
+            "hi": "मार्गदर्शिका: प्रॉम्प्ट लाइब्रेरी और Command Sheet का उपयोग कैसे करें (9 पृष्ठ, PDF)"
+          },
+          "url": "handouts/command-sheet-guide.pdf"
+        },
+        {
+          "title": {
+            "en": "Guide (web version, print or save as PDF)",
+            "hi": "मार्गदर्शिका (वेब संस्करण, प्रिंट या PDF)"
+          },
+          "url": "handouts/command-sheet-guide.html"
+        },
+        {
+          "title": {
+            "en": "Printable Prompt Library (10 pages, PDF)",
+            "hi": "प्रिंट योग्य प्रॉम्प्ट लाइब्रेरी (10 पृष्ठ, PDF)"
+          },
+          "url": "handouts/prompt-library.pdf"
+        },
+        {
+          "title": {
+            "en": "Make your own copy of the School Command Sheet",
+            "hi": "School Command Sheet की अपनी कॉपी बनाएँ"
+          },
+          "url": "https://docs.google.com/spreadsheets/d/1B0SdmcTN7xaZUiuz5L8v6oDsIuy6PpFH0AeYSwS7kD0/copy"
+        }
+      ]
+    },
+    {
+      "title": {
         "en": "Official CBSE references",
         "hi": "आधिकारिक CBSE संदर्भ"
       },

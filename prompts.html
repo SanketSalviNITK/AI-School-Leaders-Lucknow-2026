@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prompt Library · AI for School Leaders 2026</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.pl-tools { display: grid; gap: .6rem; margin-bottom: 1rem; }
+.pl-tools input { width: 100%; min-height: 44px; padding: .5rem .8rem; border: 1.5px solid var(--line); border-radius: 10px; font: inherit; }
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+.chip { border: 1.5px solid var(--line); background: #fff; border-radius: 999px; padding: .35rem .8rem; font: inherit; font-size: .88rem; cursor: pointer; min-height: 36px; }
+.chip.on { background: var(--brand); border-color: var(--brand); color: #fff; }
+.pcard h3 { margin: .1rem 0 .2rem; font-size: 1.05rem; }
+.pcard .hi { color: var(--muted); font-size: .92rem; margin: 0 0 .4rem; }
+.pid { display: inline-block; background: var(--brand); color: #fff; border-radius: 6px; padding: 0 .45rem; font-size: .78rem; font-weight: 700; margin-right: .3rem; }
+.tag { display: inline-block; background: #eef5f5; color: var(--brand); border-radius: 6px; padding: .05rem .5rem; font-size: .78rem; margin: 0 .3rem .3rem 0; }
+.tag.ref { background: var(--warn-bg); color: #8a4a16; }
+.fill { color: #b3541e; font-weight: 700; }
+.pcard .prompt { margin: .5rem 0; font-size: .93rem; }
+.count { color: var(--muted); font-size: .9rem; }
+.howto ol { padding-left: 1.2rem; margin: .3rem 0; } .howto li { margin: .2rem 0; }
+</style>
+</head>
+<body>
+<header class="topbar"><a href="index.html" aria-label="Home">‹</a><img class="brandlogo" src="assets/img/mitwpu-logo.png" alt="MIT World Peace University, Pune" width="114" height="32"><span class="title" id="topTitle">Prompt Library</span><span id="langSlot"></span></header>
+<main id="app"><p class="status">Loading…</p></main>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/prompt-library.js"></script>
+<script>
+(function () {
+  const A = AISL, { t, el } = A, D = window.AISL_PROMPTS;
+  const L = {
+    title: { en: "Principal's Prompt Library", hi: 'प्रधानाचार्य प्रॉम्प्ट लाइब्रेरी' },
+    lead: { en: D.prompts.length + ' ready prompts for school work, linked to your School Command Sheet. Copy one, fill the orange [brackets], paste it into your Principal\'s Assistant Gem.',
+            hi: 'विद्यालय के काम के लिए ' + D.prompts.length + ' तैयार प्रॉम्प्ट, आपकी School Command Sheet से जुड़े हुए। एक कॉपी करें, नारंगी [कोष्ठक] भरें, और अपने Principal\'s Assistant Gem में पेस्ट करें।' },
+    how: { en: 'How to use', hi: 'उपयोग कैसे करें' },
+    steps: [
+      { en: 'Open your <b>Principal\'s Assistant</b> Gem in Gemini.', hi: 'Gemini में अपना <b>Principal\'s Assistant</b> Gem खोलें।' },
+      { en: 'Copy a prompt. Replace every <b>[bracket]</b>, or paste data from the Command Sheet tab named on the card.', hi: 'प्रॉम्प्ट कॉपी करें। हर <b>[कोष्ठक]</b> भरें, या कार्ड पर लिखे Command Sheet टैब का डेटा पेस्ट करें।' },
+      { en: 'Refine: "shorter", "in Hindi", "as a table". Check everything under <b>Please verify</b>.', hi: 'सुधारें: "छोटा करें", "हिंदी में", "तालिका में"। <b>कृपया जाँचें</b> वाले हर बिंदु को जाँचें।' },
+      { en: 'Paste tables back into the sheet. Save your best version in the sheet\'s <b>Prompt Library</b> tab.', hi: 'तालिकाएँ वापस शीट में पेस्ट करें। अपना सबसे अच्छा संस्करण शीट के <b>Prompt Library</b> टैब में सेव करें।' }
+    ],
+    rule: { en: '<b>The rule:</b> no student names, marks, Aadhaar, APAAR IDs, phone numbers or photos. Use codes: S01, T01, E001.', hi: '<b>नियम:</b> छात्रों के नाम, अंक, आधार, APAAR ID, फ़ोन नंबर या फ़ोटो नहीं। कोड का उपयोग करें: S01, T01, E001।' },
+    guide: { en: 'Full guide: Prompt Library + Command Sheet', hi: 'पूरी मार्गदर्शिका: Prompt Library + Command Sheet' },
+    print: { en: 'Printable library', hi: 'प्रिंट योग्य लाइब्रेरी' },
+    sheet: { en: 'Copy the School Command Sheet', hi: 'School Command Sheet की कॉपी बनाएँ' },
+    search: { en: 'Search: circular, CPD, remarks, admission…', hi: 'खोजें: परिपत्र, CPD, टिप्पणी, प्रवेश…' },
+    all: { en: 'All', hi: 'सभी' },
+    when: { en: 'When', hi: 'कब' },
+    sheetTab: { en: 'Command Sheet', hi: 'Command Sheet' },
+    shown: { en: 'prompts shown', hi: 'प्रॉम्प्ट दिखाए गए' },
+    none: { en: 'No prompt matches. Try another word.', hi: 'कोई प्रॉम्प्ट नहीं मिला। दूसरा शब्द आज़माएँ।' }
+  };
+  let cat = 'all', q = '';
+  const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const mark = s => esc(s).replace(/\[([^\]]*)\]/g, '<span class="fill">[$1]</span>');
+
+  document.getElementById('langSlot').append(A.langToggle());
+  const app = document.getElementById('app');
+
+  function card(p) {
+    const btn = el('button', { class: 'btn small', type: 'button', text: t(A.UI.copy) });
+    btn.addEventListener('click', async () => { if (await A.copyText(p.prompt)) { btn.textContent = t(A.UI.copied); setTimeout(() => btn.textContent = t(A.UI.copy), 1800); } });
+    const tags = el('div', {});
+    if (p.tab) tags.append(el('span', { class: 'tag', text: t(L.sheetTab) + ': ' + p.tab }));
+    if (p.ref) tags.append(el('span', { class: 'tag ref', text: p.ref }));
+    return el('section', { class: 'card pcard', id: p.id }, [
+      el('h3', {}, [el('span', { class: 'pid', text: p.id }), p.title_en]),
+      el('p', { class: 'hi', text: p.title_hi }),
+      tags,
+      el('p', { class: 'status', style: 'margin:.2rem 0', html: '<b>' + t(L.when) + ':</b> ' + esc(p.use) }),
+      el('div', { class: 'prompt', html: mark(p.prompt) }),
+      btn
+    ]);
+  }
+
+  function paint() {
+    document.getElementById('topTitle').textContent = t(L.title);
+    app.innerHTML = '';
+    app.append(el('section', { class: 'hero' }, [el('h1', { text: t(L.title), style: 'margin:0 0 .4rem' }), el('p', { class: 'lead', style: 'margin:0', text: t(L.lead) })]));
+    app.append(el('section', { class: 'card howto' }, [
+      el('h2', { text: t(L.how), style: 'margin-top:0' }),
+      el('ol', {}, L.steps.map(s => el('li', { html: t(s) }))),
+      el('p', { class: 'note', html: t(L.rule) }),
+      el('div', { class: 'row' }, [
+        el('a', { class: 'btn', href: 'handouts/command-sheet-guide.html', text: t(L.guide) }),
+        el('a', { class: 'btn ghost', href: D.sheetCopy, target: '_blank', rel: 'noopener', text: t(L.sheet) + ' ↗' }),
+        el('a', { class: 'btn ghost', href: 'handouts/prompt-library.html', text: t(L.print) })
+      ])
+    ]));
+    const input = el('input', { type: 'search', placeholder: t(L.search), 'aria-label': t(L.search) }); input.value = q;
+    const chips = el('div', { class: 'chips' });
+    [{ id: 'all', en: L.all.en, hi: L.all.hi }].concat(D.cats).forEach(c => {
+      const b = el('button', { type: 'button', class: 'chip' + (cat === c.id ? ' on' : ''), text: t(c) });
+      b.addEventListener('click', () => { cat = c.id; paint(); });
+      chips.append(b);
+    });
+    const count = el('p', { class: 'count' });
+    const list = el('div', {});
+    app.append(el('div', { class: 'pl-tools' }, [input, chips, count]), list);
+    function render() {
+      const words = q.toLowerCase().split(/\s+/).filter(Boolean);
+      const shown = D.prompts.filter(p => (cat === 'all' || p.cat === cat) &&
+        words.every(w => (p.id + ' ' + p.title_en + ' ' + p.title_hi + ' ' + p.use + ' ' + p.prompt + ' ' + p.tab).toLowerCase().includes(w)));
+      list.innerHTML = '';
+      let last = '';
+      shown.forEach(p => {
+        if (cat === 'all' && p.cat !== last) { const c = D.cats.find(x => x.id === p.cat); list.append(el('h2', { text: t(c) })); last = p.cat; }
+        list.append(card(p));
+      });
+      if (!shown.length) list.append(el('p', { class: 'status', text: t(L.none) }));
+      count.textContent = shown.length + ' ' + t(L.shown);
+    }
+    input.addEventListener('input', () => { q = input.value; render(); });
+    render();
+    if (location.hash) { const n = document.getElementById(location.hash.slice(1)); if (n) n.scrollIntoView(); }
+  }
+  paint(); document.addEventListener('langchange', paint);
+})();
+</script>
+</body>
+</html>
