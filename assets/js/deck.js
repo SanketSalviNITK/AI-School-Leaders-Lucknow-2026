@@ -109,7 +109,7 @@
   };
 
   V.journey = (s, meta) => {
-    const stops = [['2:00', 'Why it matters', 'The CT & AI mandate', 'board'], ['2:09', 'Human algorithm', 'Be the computer', 'users'], ['2:12', 'New exam pattern', 'Competency questions', 'file'], ['2:20', 'Missions 1–5', '60 minutes, hands-on', 'rocket'], ['3:20', 'Pro demo', 'What grows next', 'magic'], ['3:27', 'Your plan', '30 days, 4 steps', 'cal']];
+    const stops = [['2:00', 'Why it matters', 'The CT & AI mandate', 'board'], ['2:09', 'Human algorithm', 'Be the computer', 'users'], ['2:12', 'New exam pattern', 'Competency questions', 'file'], ['2:20', 'Missions 1–6', '60 minutes, hands-on', 'rocket'], ['3:20', 'Pro demo', 'What grows next', 'magic'], ['3:27', 'Your plan', '30 days, 4 steps', 'cal']];
     let inner = '<div class="drawline" style="position:absolute;left:40px;right:40px;top:233px;height:8px;border-radius:4px;background:#dcecec;--d:100ms"></div>';
     stops.forEach(([tm, a, b, n], i) => {
       const x = i * 197, d = 300 + i * 330;
@@ -283,31 +283,39 @@
   };
 
   V.missions = (s, meta) => {
-    const ms = [['1', '10 min', 'Fit the CT & AI hours into your timetable', 'cal'], ['2', '15 min', 'An unplugged CT lesson for Class 4', 'puzzle'], ['3', '15 min', 'Board-pattern questions, then check the AI', 'file'], ['4', '10 min', 'Keep AI inside the textbook (NotebookLM)', 'book'], ['5', '10 min', 'A student AI project on a local problem', 'leaf']];
-    const inner = ms.map(([n, m, x, icn], i) => '<div class="dkc ' + (i % 2 ? '' : 'line') + ' a" style="left:' + (i * 238) + 'px;top:0;width:220px;height:470px;--d:' + (200 + i * 300) + 'ms"><div style="display:flex;justify-content:space-between;align-items:flex-start"><span class="saff-t serif" style="font-size:72px;font-weight:700;line-height:1">' + n + '</span>' + circ(icn, TEAL, 62) + '</div>' +
-      '<p style="font-size:21px;font-weight:700;margin-top:28px">' + x + '</p><p class="muted" style="position:absolute;left:24px;bottom:22px;font-size:17px">' + ic('clock', 'width:16px;height:16px;vertical-align:-2px') + ' ' + m + '</p></div>').join('');
-    return frame('content', meta, inner, h(s.title), 'On your phone with your Gem · no internet? use your table booklet and workbook');
+    const ms = [['1', '5 min', 'Set up your assistant in a new chat', 'phone'], ['2', '10 min', 'Fit the CT & AI hours into your timetable', 'cal'], ['3', '12 min', 'An unplugged CT lesson for Class 4', 'puzzle'], ['4', '13 min', 'Board-pattern questions, then check the AI', 'file'], ['5', '10 min', 'Keep AI inside the textbook (NotebookLM)', 'book'], ['6', '10 min', 'A student AI project on a local problem', 'leaf']];
+    const inner = ms.map(([n, m, x, icn], i) => '<div class="dkc ' + (i % 2 ? '' : 'line') + ' a" style="left:' + (i * 198) + 'px;top:0;width:182px;height:470px;padding:20px 18px;--d:' + (200 + i * 280) + 'ms"><div style="display:flex;justify-content:space-between;align-items:flex-start"><span class="saff-t serif" style="font-size:72px;font-weight:700;line-height:1">' + n + '</span>' + circ(icn, TEAL, 62) + '</div>' +
+      '<p style="font-size:19px;font-weight:700;margin-top:28px">' + x + '</p><p class="muted" style="position:absolute;left:18px;bottom:22px;font-size:17px">' + ic('clock', 'width:16px;height:16px;vertical-align:-2px') + ' ' + m + '</p></div>').join('');
+    return frame('content', meta, inner, h(s.title), 'On your phone, in one assistant chat · no internet? use your table booklet and workbook');
   };
 
   // missions: condensed PowerPoint content per mission number
   const MISSION = {
-    1: { tool: 'Gemini + CT & AI Plan tab', goal: '4 months left in 2026-27: make a realistic, documented plan', offline: 'No internet?<br>Booklet page 2<br>Workbook page 3',
-      steps: ['Ask your Gem for a class-wise plan for the rest of the session', 'Open the CT & AI Plan tab and change the blue numbers to your school\'s', 'Compare the two and decide who owns each class'],
+    1: { tool: 'Gemini app or website', goal: 'One chat that knows your school, on any phone. No laptop, no Gem needed', offline: 'No internet?<br>Skip this one: the booklet<br>works without an assistant',
+      steps: ['Open Gemini on your phone and start a New chat', 'Paste the instructions as your first message, with your school\'s details', 'Test: "Who are you working for?" Then stay in this chat all session'],
+      side: () => '<div class="a pop" style="position:absolute;left:520px;top:-10px;width:250px;height:300px;border-radius:30px;border:8px solid #1c2430;background:#f6f8f8;padding:16px 12px;overflow:hidden;--d:1300ms">' +
+        '<div style="font-size:12px;font-weight:700;color:#5b6573;text-align:center;margin-bottom:10px">Gemini · New chat</div>' +
+        '<div class="a" style="margin-left:30px;background:#0f5c63;color:#fff;border-radius:14px 14px 2px 14px;padding:8px 10px;font-size:12px;--d:1900ms">For the rest of this conversation, act as the personal assistant to the Principal of [School]…</div>' +
+        '<div class="a" style="margin-top:10px;margin-right:40px;background:#fff;border:1px solid #d9d2c5;border-radius:14px 14px 14px 2px;padding:8px 10px;font-size:12px;--d:2700ms"><b>Ready.</b> I will help the Principal of your CBSE school in Barabanki.</div>' +
+        '<div class="a" style="margin-top:10px;margin-left:60px;background:#0f5c63;color:#fff;border-radius:14px 14px 2px 14px;padding:8px 10px;font-size:12px;--d:3400ms">Who are you working for?</div></div>',
+      check: 'stay in this same chat for Missions 2 to 6. Never add student names, marks or phone numbers.' },
+    2: { tool: 'Assistant chat + CT & AI Plan tab', goal: '4 months left in 2026-27: make a realistic, documented plan', offline: 'No internet?<br>Booklet page 2<br>Workbook page 3',
+      steps: ['Ask your assistant chat for a class-wise plan for the rest of the session', 'Open the CT & AI Plan tab and change the blue numbers to your school\'s', 'Compare the two and decide who owns each class'],
       side: () => '<div class="muted" style="position:absolute;left:470px;top:0;font-size:14px">Sample numbers: 16 weeks left = 40% of the year</div>' +
         [['III–V', '50 h × 40% = 20 h → 30 periods', '≈ 1.9 / week', '', TEAL], ['VI–VIII', '100 h × 40% = 40 h → 60 periods', '≈ 3.75 / week', 'warm', SAFF]].map(([a, b, c, cls, col], i) => '<div class="dkc ' + cls + ' a" style="left:470px;top:' + (30 + i * 160) + 'px;width:395px;height:140px;padding:16px 22px;--d:' + (1400 + i * 600) + 'ms"><div style="font-size:19px;font-weight:700;color:' + col + '">' + a + '</div><div style="font-size:16px;margin:6px 0">' + b + '</div><div class="serif" style="font-size:30px;font-weight:700">' + c + '</div></div>').join(''),
       check: 'the hours are indicative. A documented partial plan this year is far better than none.' },
-    2: { tool: 'Gemini (your Gem)', goal: 'Patterns with paper, chalk and the children themselves: no lab, no budget', offline: 'No internet?<br>Booklet pages 3–4<br>Workbook page 4',
+    3: { tool: 'Your assistant chat', goal: 'Patterns with paper, chalk and the children themselves: no lab, no budget', offline: 'No internet?<br>Booklet pages 3–4<br>Workbook page 4',
       steps: ['Ask for a 40-minute patterns lesson: warm-up, activity, pair work, exit ticket, rubric', 'Teacher instructions in Hindi; student instructions in English and Hindi', 'Add up the minutes, then compare with the CBSE Class 4 handbook'],
       side: () => '<div class="gifbox a pop" style="left:440px;top:0;width:425px;height:239px;--d:1400ms"><img src="' + IMG + 'pattern-robots.gif" alt="A partner follows a three-step algorithm card and draws circle, triangle, repeated four times."></div><div class="caption" style="left:440px;top:246px;width:425px">Pattern Robots: a partner follows the steps exactly</div>',
       check: 'does it fit 40 minutes and work with 40 children, without devices?' },
-    3: { tool: 'Gemini, two prompts', goal: 'Class X Science, Light: write with prompt A, then make Gemini check itself with prompt B', offline: 'No internet?<br>Booklet pages 5–6<br>Workbook page 5',
+    4: { tool: 'Assistant chat, two prompts', goal: 'Class X Science, Light: write with prompt A, then make Gemini check itself with prompt B', offline: 'No internet?<br>Booklet pages 5–6<br>Workbook page 5',
       steps: ['Prompt A: a case-based question (1+1+2+4 marks) and two assertion-reason questions', 'Prompt B, same chat: "Act as a strict CBSE paper setter. Check everything."', 'Your best question goes into the Question Bank: Verified = Not yet'],
       side: () => '<div class="dkc reveal-x a" style="left:440px;top:0;width:425px;height:239px;padding:0;overflow:hidden;--d:1400ms"><div style="padding:18px 22px;font-size:16px"><b style="font-size:18px">Common first-draft slips</b><ul style="margin:8px 0 0;padding-left:20px;line-height:1.55"><li>Wrong sign for a convex mirror\'s focal length</li><li>A "real image" from a convex mirror</li><li>Marks that do not add up to the total</li></ul></div><img class="hid" src="' + IMG + 'convex-mirror.gif" alt="Ray diagram: convex mirror forms a virtual, erect, diminished image 12 cm behind the mirror." style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div><div class="caption" style="left:440px;top:246px;width:425px">Tap to reveal the worked answer</div>',
       check: 'ask 2–3 principals what Gemini corrected. That is the lesson.' },
-    4: { tool: 'NotebookLM', goal: 'Upload the NCERT chapter and ask: every answer shows the exact line', offline: 'No internet?<br>Booklet page 7<br>Workbook page 6',
+    5: { tool: 'NotebookLM', goal: 'Upload the NCERT chapter and ask: every answer shows the exact line', offline: 'No internet?<br>Booklet page 7<br>Workbook page 6',
       flow: [['Download', 'NCERT Class X Science Ch. 9 PDF', 'download'], ['Upload', 'notebooklm.google.com → Create new', 'upload'], ['Ask', '"Make 10 questions with answers from this chapter"', 'comments'], ['Tap [1]', 'See the exact line in the book', 'search']],
-      check: 'compare with Mission 3: Gemini drafted from general knowledge; NotebookLM stays inside the chapter.' },
-    5: { tool: 'Gemini + Teachable Machine', goal: 'Classes VI–VIII, one shared laptop, a problem from your own district', offline: 'No internet?<br>Booklet pages 8–9<br>Workbook page 7',
+      check: 'compare with Mission 4: Gemini drafted from general knowledge; NotebookLM stays inside the chapter.' },
+    6: { tool: 'Gemini + Teachable Machine', goal: 'Classes VI–VIII, one shared laptop, a problem from your own district', offline: 'No internet?<br>Booklet pages 8–9<br>Workbook page 7',
       steps: ['Ask for 3 low-cost project ideas on a local problem, with a 4-week plan', 'Students collect photos of leaves or objects, never people', 'Train, then test on new examples, and discuss fairness and errors'],
       side: () => '<div class="dkc mint reveal-x a" style="left:440px;top:0;width:425px;height:239px;padding:0;overflow:hidden;--d:1400ms"><div style="padding:20px 22px;display:flex;gap:16px">' + ic('leaf', 'width:54px;height:54px;color:#2f7d4f;flex:none') + '<div style="font-size:16px"><b style="font-size:18px">Example: healthy or sick leaf?</b><br>40 photos of each, from nearby fields, with the farmer\'s permission. Links Science, Maths and Hindi.</div></div><img class="hid" src="' + IMG + 'be-the-model.gif" alt="Six training mangoes teach the rule yellow means ripe; a ripe green Langra mango is wrongly called unripe." style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div><div class="caption" style="left:440px;top:246px;width:425px">Tap for the "be the AI model" game</div>',
       check: 'no faces or personal data in the training data. Asking permission is part of the lesson.' }
@@ -361,7 +369,7 @@
   };
 
   V.growth = (s, meta) => {
-    const lad = [['Free, today', 'Gemini · NotebookLM · Teachable Machine', 'Plans, lessons, questions, projects', TEAL], ['Claude', 'A playable classroom game in about a minute', 'From the Mission 2 lesson, no coding', SAFF], ['Google AI Pro', 'All the CBSE CT handbooks in one notebook', 'More sources, higher limits, Gemini in Gmail and Docs', PURPLE]];
+    const lad = [['Free, today', 'Gemini · NotebookLM · Teachable Machine', 'Plans, lessons, questions, projects', TEAL], ['Claude', 'A playable classroom game in about a minute', 'From the Mission 3 lesson, no coding', SAFF], ['Google AI Pro', 'All the CBSE CT handbooks in one notebook', 'More sources, higher limits, Gemini in Gmail and Docs', PURPLE]];
     const inner = lad.map(([a, b, c, col], i) => { const H = 240 + i * 110; return '<div class="a grow" style="position:absolute;left:' + (i * 395) + 'px;bottom:0;width:375px;height:' + H + 'px;border-radius:16px;background:' + col + ';color:#fff;padding:22px 24px;--d:' + (300 + i * 700) + 'ms"><div style="font-size:26px;font-weight:700">' + a + '</div><div style="font-size:19px;font-weight:700;margin-top:12px">' + b + '</div><div style="font-size:16px;margin-top:12px;color:#eef5f5">' + c + '</div></div>'; }).join('') +
       '<div class="a" style="position:absolute;left:0;top:0;width:720px;font-size:24px;font-weight:700;color:#e07a2e;--d:2500ms">' + ic('rocket', 'width:26px;height:26px;vertical-align:-4px') + ' Start free. Upgrade only when a teacher is using it every week.</div>';
     return frame('content', meta, inner, 'Free today. Here is where it grows', 'No vendor sponsors this workshop. Prices and features change; check before you buy');

@@ -19,7 +19,7 @@
       },
       "notes": [
         "2:00. Welcome back. One line: 'This morning you used AI in your office. Now we take it into your classrooms.'",
-        "Ask for hands: who has created their Gem (step 2)? Those who have not do it now, with a helper, while you run the opening."
+        "No Gem needed in this session: Mission 1 sets up the assistant in a new Gemini chat, which works on any phone. Principals who already have a Gem from Session 1 can use it and help a neighbour."
       ]
     },
     {
@@ -44,8 +44,8 @@
           "hi": "2:12 नया परीक्षा पैटर्न: योग्यता-आधारित प्रश्न"
         },
         {
-          "en": "2:20 Missions 1–5: 60 minutes, hands-on",
-          "hi": "2:20 मिशन 1–5: 60 मिनट, व्यावहारिक"
+          "en": "2:20 Missions 1–6: 60 minutes, hands-on",
+          "hi": "2:20 मिशन 1–6: 60 मिनट, व्यावहारिक"
         },
         {
           "en": "3:20 Pro demo: what grows next",
@@ -58,76 +58,6 @@
       ],
       "notes": [
         "The six stops build one by one. Say: twenty minutes of ideas, sixty minutes of doing, then a short demo and your own plan."
-      ]
-    },
-    {
-      "type": "mission",
-      "id": "s2pre",
-      "label": {
-        "en": "Before the session · prerequisite",
-        "hi": "सत्र से पहले · पूर्व-आवश्यकता"
-      },
-      "minutes": 10,
-      "tool": "Gemini",
-      "toolUrl": "https://gemini.google.com/gems/view",
-      "title": {
-        "en": "Create your Principal's Assistant (a Gem)",
-        "hi": "अपना प्रधानाचार्य सहायक (Gem) बनाएँ"
-      },
-      "scenario": {
-        "en": "Every mission in this session uses a Gem: a saved Gemini assistant that already knows your school, so you do not explain it again each time. Please create it before the session starts. It takes about 10 minutes.",
-        "hi": "इस सत्र का हर मिशन एक Gem का उपयोग करता है: Gemini का एक सहेजा हुआ सहायक जो आपके विद्यालय को पहले से जानता है, ताकि हर बार परिचय न देना पड़े। कृपया इसे सत्र शुरू होने से पहले बना लें। इसमें लगभग 10 मिनट लगते हैं।"
-      },
-      "steps": [
-        {
-          "en": "Open <b>gemini.google.com</b> in Chrome (Gems are easiest to create in the browser, not the app). Sign in with your Google account.",
-          "hi": "Chrome में <b>gemini.google.com</b> खोलें (Gem ब्राउज़र में आसानी से बनता है, ऐप में नहीं)। अपने Google खाते से साइन इन करें।"
-        },
-        {
-          "en": "Menu → <b>Explore Gems</b> → <b>New Gem</b>. Name it <b>Principal's Assistant</b>.",
-          "hi": "मेनू → <b>Explore Gems</b> → <b>New Gem</b>। नाम रखें <b>Principal's Assistant</b>।"
-        },
-        {
-          "en": "Copy the instructions below into the <b>Instructions</b> box. Replace every [bracket] with your school's details.",
-          "hi": "नीचे दिए निर्देश <b>Instructions</b> बॉक्स में पेस्ट करें। हर [कोष्ठक] में अपने विद्यालय का विवरण भरें।"
-        },
-        {
-          "en": "Press <b>Save</b>, then start a chat with your Gem.",
-          "hi": "<b>Save</b> दबाएँ, फिर अपने Gem के साथ चैट शुरू करें।"
-        },
-        {
-          "en": "Test it: ask your Gem <b>\"Who are you working for?\"</b> It should name your school and district.",
-          "hi": "जाँचें: अपने Gem से पूछें <b>\"आप किसके लिए काम करते हैं?\"</b> उसे आपके विद्यालय और ज़िले का नाम बताना चाहिए।"
-        },
-        {
-          "en": "Also make your own copy of the <b>School Command Sheet</b> (button below). Missions 1 and 3 use its <b>CT &amp; AI Plan</b> and <b>Question Bank</b> tabs.",
-          "hi": "<b>स्कूल कमांड शीट</b> की अपनी प्रति भी बना लें (नीचे बटन)। मिशन 1 और 3 इसके <b>CT &amp; AI Plan</b> और <b>Question Bank</b> टैब का उपयोग करते हैं।"
-        }
-      ],
-      "links": [
-        {
-          "label": {
-            "en": "Make a copy of the School Command Sheet",
-            "hi": "स्कूल कमांड शीट की प्रति बनाएँ"
-          },
-          "url": "https://docs.google.com/spreadsheets/d/1B0SdmcTN7xaZUiuz5L8v6oDsIuy6PpFH0AeYSwS7kD0/copy"
-        }
-      ],
-      "prompt": {
-        "en": "You are the personal assistant to the Principal of [School name], a CBSE-affiliated school in [Barabanki / Bahraich], Uttar Pradesh, with Classes [Nursery–XII] and about [number] students and [number] teachers.\n\nHow to work with me:\n- Write in clear, respectful, simple English. When I ask for Hindi, or when the reader is a parent, give English and Hindi side by side.\n- Follow CBSE conventions: circulars have a reference number, date, subject line, body and signature block.\n- Keep it practical for a budget-conscious school: no paid tools, no extra fees, nothing that needs every child to have a device.\n- Never ask me for, and never repeat, student names, marks, Aadhaar, APAAR IDs or phone numbers. If I paste any by mistake, remind me to remove them.\n- For teaching and curriculum work, follow the NCERT textbooks and the CBSE CT & AI framework for 2026-27, and say which class and chapter you used.\n- At the end of every answer, add a short section called \"Please verify\" listing any dates, numbers, rules or facts I should check before using it.",
-        "hi": "आप [विद्यालय का नाम] के प्रधानाचार्य के निजी सहायक हैं। यह उत्तर प्रदेश के [बाराबंकी / बहराइच] में CBSE से संबद्ध विद्यालय है, जिसमें कक्षा [नर्सरी–XII], लगभग [संख्या] छात्र और [संख्या] शिक्षक हैं।\n\nमेरे साथ कैसे काम करें:\n- स्पष्ट, सम्मानजनक और सरल भाषा में लिखें। जब मैं हिंदी माँगूँ, या पाठक अभिभावक हों, तो हिंदी और अंग्रेज़ी दोनों साथ-साथ दें।\n- CBSE के प्रारूप का पालन करें: परिपत्र में संदर्भ संख्या, दिनांक, विषय, मुख्य भाग और हस्ताक्षर हो।\n- कम बजट वाले विद्यालय के लिए व्यावहारिक रहें: कोई सशुल्क टूल नहीं, कोई अतिरिक्त शुल्क नहीं, ऐसा कुछ नहीं जिसके लिए हर बच्चे के पास उपकरण चाहिए।\n- मुझसे कभी छात्रों के नाम, अंक, आधार, APAAR ID या फ़ोन नंबर न माँगें और न दोहराएँ। यदि मैं गलती से ऐसा कुछ डाल दूँ, तो मुझे हटाने की याद दिलाएँ।\n- शिक्षण और पाठ्यक्रम के काम में NCERT पाठ्यपुस्तकों और CBSE के 2026-27 CT और AI ढाँचे का पालन करें, और बताएँ कि किस कक्षा और अध्याय का उपयोग किया।\n- हर उत्तर के अंत में \"कृपया जाँचें\" नाम का छोटा भाग जोड़ें, जिसमें वे तिथियाँ, संख्याएँ, नियम या तथ्य हों जिन्हें उपयोग से पहले मुझे जाँचना चाहिए।"
-      },
-      "expected": {
-        "en": "A Gem named Principal's Assistant that answers in your school's context and ends every answer with a \"Please verify\" list.",
-        "hi": "Principal's Assistant नाम का Gem, जो आपके विद्यालय के संदर्भ में उत्तर दे और हर उत्तर के अंत में \"कृपया जाँचें\" सूची दे।"
-      },
-      "check": {
-        "en": "Did you replace every [bracket] with your own details? Never add student names, marks or phone numbers to a Gem.",
-        "hi": "क्या आपने हर [कोष्ठक] में अपना विवरण भरा? Gem में कभी छात्रों के नाम, अंक या फ़ोन नंबर न डालें।"
-      },
-      "notes": [
-        "Prerequisite. Ideally shared with participants a day before (WhatsApp the Session 3 link). At the start, ask for hands: who has a Gem? Anyone without one does this step first while you run the opening; helpers assist.",
-        "Gems are easiest to create in Chrome on gemini.google.com, not in the app."
       ]
     },
     {
@@ -225,7 +155,7 @@
       ],
       "notes": [
         "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
-        "NotebookLM usually gets almost no votes, which sets up Mission 4."
+        "NotebookLM usually gets almost no votes, which sets up Mission 5."
       ],
       "deckTitle": {
         "en": "Warm-up",
@@ -259,7 +189,7 @@
       ],
       "notes": [
         "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
-        "Ask for one real example from the room: it opens the Mission 3 self-check better than any slide."
+        "Ask for one real example from the room: it opens the Mission 4 self-check better than any slide."
       ],
       "deckTitle": {
         "en": "Warm-up",
@@ -408,8 +338,8 @@
       ],
       "answer": 1,
       "explain": {
-        "en": "PARAKH, the assessment body at NCERT, developed the HPC. Its competency-based approach matches the board-pattern questions in Mission 3.",
-        "hi": "NCERT के मूल्यांकन निकाय PARAKH ने HPC विकसित किया। इसका योग्यता-आधारित दृष्टिकोण मिशन 3 के बोर्ड-पैटर्न प्रश्नों से मेल खाता है।"
+        "en": "PARAKH, the assessment body at NCERT, developed the HPC. Its competency-based approach matches the board-pattern questions in Mission 4.",
+        "hi": "NCERT के मूल्यांकन निकाय PARAKH ने HPC विकसित किया। इसका योग्यता-आधारित दृष्टिकोण मिशन 4 के बोर्ड-पैटर्न प्रश्नों से मेल खाता है।"
       },
       "notes": [
         "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest."
@@ -521,7 +451,7 @@
         "hi": "मौजूदा गणित और TWAU पीरियड के भीतर, अधिकतर कागज़, कार्ड और गतिविधि से। न नया पीरियड चाहिए, न लैब।"
       },
       "notes": [
-        "1 min. Sets up Missions 1 and 2."
+        "1 min. Sets up Missions 2 and 3."
       ],
       "visual": "venn",
       "deckTitle": {
@@ -751,7 +681,7 @@
         }
       ],
       "notes": [
-        "2 min. These are the formats Mission 3 asks Gemini to write."
+        "2 min. These are the formats Mission 4 asks Gemini to write."
       ],
       "visual": "qtypes"
     },
@@ -776,7 +706,7 @@
         }
       ],
       "notes": [
-        "2 min. Sets up Mission 4. Contrast it with Mission 3, where Gemini drafts from general knowledge and then checks itself."
+        "2 min. Sets up Mission 5. Contrast it with Mission 4, where Gemini drafts from general knowledge and then checks itself."
       ],
       "visual": "grounding",
       "deckTitle": {
@@ -826,44 +756,120 @@
     {
       "type": "concept",
       "title": {
-        "en": "Your five missions (60 minutes)",
-        "hi": "आपके पाँच मिशन (60 मिनट)"
+        "en": "Your six missions (60 minutes)",
+        "hi": "आपके छह मिशन (60 मिनट)"
       },
       "points": [
         {
-          "en": "1. Fit the CT & AI hours into your timetable – 10 min",
-          "hi": "1. CT और AI के घंटे अपनी समय-सारणी में फ़िट करें – 10 मिनट"
+          "en": "1. Set up your Principal's Assistant in a new chat – 5 min",
+          "hi": "1. नई चैट में अपना प्रधानाचार्य सहायक तैयार करें – 5 मिनट"
         },
         {
-          "en": "2. An unplugged CT lesson, no lab needed – 15 min",
-          "hi": "2. बिना कंप्यूटर का CT पाठ, लैब की ज़रूरत नहीं – 15 मिनट"
+          "en": "2. Fit the CT & AI hours into your timetable – 10 min",
+          "hi": "2. CT और AI के घंटे अपनी समय-सारणी में फ़िट करें – 10 मिनट"
         },
         {
-          "en": "3. Board-pattern questions, then AI checks itself – 15 min",
-          "hi": "3. बोर्ड पैटर्न के प्रश्न, फिर AI स्वयं जाँचे – 15 मिनट"
+          "en": "3. An unplugged CT lesson, no lab needed – 12 min",
+          "hi": "3. बिना कंप्यूटर का CT पाठ, लैब की ज़रूरत नहीं – 12 मिनट"
         },
         {
-          "en": "4. Keep AI inside the textbook with NotebookLM – 10 min",
-          "hi": "4. NotebookLM से AI को पाठ्यपुस्तक के भीतर रखें – 10 मिनट"
+          "en": "4. Board-pattern questions, then AI checks itself – 13 min",
+          "hi": "4. बोर्ड पैटर्न के प्रश्न, फिर AI स्वयं जाँचे – 13 मिनट"
         },
         {
-          "en": "5. A low-cost student AI project on a local problem – 10 min",
-          "hi": "5. स्थानीय समस्या पर कम खर्च का छात्र AI प्रोजेक्ट – 10 मिनट"
+          "en": "5. Keep AI inside the textbook with NotebookLM – 10 min",
+          "hi": "5. NotebookLM से AI को पाठ्यपुस्तक के भीतर रखें – 10 मिनट"
+        },
+        {
+          "en": "6. A low-cost student AI project on a local problem – 10 min",
+          "hi": "6. स्थानीय समस्या पर कम खर्च का छात्र AI प्रोजेक्ट – 10 मिनट"
         }
       ],
       "note": {
-        "en": "Use your Principal's Assistant Gem (see \"Before you start\", step 2). Press <b>Mark done</b> after each mission.",
-        "hi": "अपना Principal's Assistant Gem उपयोग करें (देखें \"सत्र से पहले\", चरण 2)। हर मिशन के बाद <b>पूरा हुआ</b> दबाएँ।"
+        "en": "Missions 2 to 6 all happen in your assistant chat from Mission 1. Press <b>Mark done</b> after each mission.",
+        "hi": "मिशन 2 से 6 सब मिशन 1 वाली सहायक चैट में होंगे। हर मिशन के बाद <b>Mark done</b> दबाएँ।"
       },
       "notes": [
-        "2:20. Start the clock. Mission 4 needs the NCERT PDF download: ask tables to start it during Mission 3 if the Wi-Fi is slow."
+        "2:20. Start the clock. Mission 5 needs the NCERT PDF download: ask tables to start it during Mission 4 if the Wi-Fi is slow."
       ],
       "visual": "missions"
     },
     {
       "type": "mission",
-      "id": "s2m1",
+      "id": "s3m-assistant",
       "number": 1,
+      "minutes": 5,
+      "tool": "Gemini",
+      "toolUrl": "https://gemini.google.com/app",
+      "title": {
+        "en": "Set up your Principal's Assistant in a new chat",
+        "hi": "नई चैट में अपना प्रधानाचार्य सहायक तैयार करें"
+      },
+      "scenario": {
+        "en": "Every mission today uses one Gemini chat that already knows your school, so you never explain it again. It works on any phone; no laptop and no Gem needed.",
+        "hi": "आज का हर मिशन Gemini की एक ही चैट में होगा, जो आपके विद्यालय को पहले से जानती है, ताकि आपको बार-बार समझाना न पड़े। यह किसी भी फ़ोन पर चलता है; लैपटॉप या Gem की ज़रूरत नहीं।"
+      },
+      "steps": [
+        {
+          "en": "Open the <b>Gemini</b> app on your phone, or <b>gemini.google.com</b>. Sign in with your Google account.",
+          "hi": "फ़ोन पर <b>Gemini</b> ऐप खोलें, या <b>gemini.google.com</b>। अपने Google खाते से साइन इन करें।"
+        },
+        {
+          "en": "Start a <b>New chat</b>.",
+          "hi": "<b>New chat</b> (नई चैट) शुरू करें।"
+        },
+        {
+          "en": "Copy the instructions below. Replace every [bracket] with your school's details, then send them as your <b>first message</b>.",
+          "hi": "नीचे दिए निर्देश कॉपी करें। हर [कोष्ठक] में अपने विद्यालय का विवरण भरें, फिर उन्हें अपने <b>पहले संदेश</b> के रूप में भेजें।"
+        },
+        {
+          "en": "Test it: ask <b>\"Who are you working for?\"</b> It should name your school and district.",
+          "hi": "जाँचें: पूछें <b>\"आप किसके लिए काम करते हैं?\"</b> उसे आपके विद्यालय और ज़िले का नाम बताना चाहिए।"
+        },
+        {
+          "en": "<b>Stay in this same chat</b> for every mission today. If you leave, find it again under <b>Recent</b> chats; if your app offers <b>Pin</b> or <b>Rename</b>, use it.",
+          "hi": "आज के हर मिशन के लिए <b>इसी चैट में रहें</b>। बाहर निकल जाएँ तो <b>Recent</b> चैट में इसे फिर खोजें; ऐप में <b>Pin</b> या <b>Rename</b> हो तो उसका उपयोग करें।"
+        },
+        {
+          "en": "Also make your own copy of the <b>School Command Sheet</b> (button below). Missions 2 and 4 use its <b>CT &amp; AI Plan</b> and <b>Question Bank</b> tabs.",
+          "hi": "<b>स्कूल कमांड शीट</b> की अपनी प्रति भी बनाएँ (नीचे बटन)। मिशन 2 और 4 इसके <b>CT &amp; AI Plan</b> और <b>Question Bank</b> टैब का उपयोग करते हैं।"
+        }
+      ],
+      "prompt": {
+        "en": "For the rest of this conversation, act as the personal assistant to the Principal of [School name], a CBSE-affiliated school in [Barabanki / Bahraich], Uttar Pradesh, with Classes [Nursery–XII] and about [number] students and [number] teachers.\n\nHow to work with me:\n- Write in clear, respectful, simple English. When I ask for Hindi, or when the reader is a parent, give English and Hindi side by side.\n- Follow CBSE conventions: circulars have a reference number, date, subject line, body and signature block.\n- Keep it practical for a budget-conscious school: no paid tools, no extra fees, nothing that needs every child to have a device.\n- Never ask me for, and never repeat, student names, marks, Aadhaar, APAAR IDs or phone numbers. If I paste any by mistake, remind me to remove them.\n- At the end of every answer, add a short section called \"Please verify\" listing any dates, numbers, rules or facts I should check before using it.\n\nIf you understand, reply only: \"Ready.\" and one line about my school.",
+        "hi": "इस पूरी बातचीत में आप [विद्यालय का नाम] के प्रधानाचार्य के निजी सहायक की तरह काम करें। यह उत्तर प्रदेश के [बाराबंकी / बहराइच] में CBSE से संबद्ध विद्यालय है, जिसमें कक्षा [नर्सरी–XII], लगभग [संख्या] छात्र और [संख्या] शिक्षक हैं।\n\nमेरे साथ कैसे काम करें:\n- स्पष्ट, सम्मानजनक और सरल भाषा में लिखें। जब मैं हिंदी माँगूँ, या पाठक अभिभावक हों, तो हिंदी और अंग्रेज़ी दोनों साथ-साथ दें।\n- CBSE के प्रारूप का पालन करें: परिपत्र में संदर्भ संख्या, दिनांक, विषय, मुख्य भाग और हस्ताक्षर हो।\n- कम बजट वाले विद्यालय के लिए व्यावहारिक रहें: कोई सशुल्क टूल नहीं, कोई अतिरिक्त शुल्क नहीं, ऐसा कुछ नहीं जिसके लिए हर बच्चे के पास उपकरण चाहिए।\n- मुझसे कभी छात्रों के नाम, अंक, आधार, APAAR ID या फ़ोन नंबर न माँगें और न दोहराएँ। यदि मैं गलती से ऐसा कुछ डाल दूँ, तो मुझे हटाने की याद दिलाएँ।\n- हर उत्तर के अंत में \"कृपया जाँचें\" नाम का छोटा भाग जोड़ें, जिसमें वे तिथियाँ, संख्याएँ, नियम या तथ्य हों जिन्हें उपयोग से पहले मुझे जाँचना चाहिए।\n\nयदि आप समझ गए हों, तो केवल उत्तर दें: \"तैयार।\" और मेरे विद्यालय के बारे में एक पंक्ति।"
+      },
+      "links": [
+        {
+          "label": {
+            "en": "Make a copy of the School Command Sheet",
+            "hi": "स्कूल कमांड शीट की प्रति बनाएँ"
+          },
+          "url": "https://docs.google.com/spreadsheets/d/1B0SdmcTN7xaZUiuz5L8v6oDsIuy6PpFH0AeYSwS7kD0/copy"
+        }
+      ],
+      "expected": {
+        "en": "One Gemini chat that answers in your school's context and ends every answer with a \"Please verify\" list. You will use it for Missions 2 to 6.",
+        "hi": "Gemini की एक चैट, जो आपके विद्यालय के संदर्भ में उत्तर देती है और हर उत्तर के अंत में \"कृपया जाँचें\" सूची देती है। मिशन 2 से 6 में आप इसी का उपयोग करेंगे।"
+      },
+      "check": {
+        "en": "Did you replace every [bracket] with your own details? Never add student names, marks or phone numbers.",
+        "hi": "क्या आपने हर [कोष्ठक] में अपना विवरण भरा? छात्रों के नाम, अंक या फ़ोन नंबर कभी न डालें।"
+      },
+      "stretch": {
+        "en": "Later, on a laptop, save these same instructions as a <b>Gem</b> (gemini.google.com → Explore Gems → New Gem), so every new chat already knows your school.",
+        "hi": "बाद में लैपटॉप पर इन्हीं निर्देशों को <b>Gem</b> के रूप में सेव करें (gemini.google.com → Explore Gems → New Gem), ताकि हर नई चैट आपके विद्यालय को पहले से जाने।"
+      },
+      "notes": [
+        "2:20, 5 minutes. Works on any phone: the Gemini app or gemini.google.com. No laptop and no Gem needed.",
+        "Common slip: people paste the instructions into a different chat later. Say it twice: stay in this one chat for all missions today.",
+        "Helpers: check the test answer ('Who are you working for?') at each table. Anyone with a Gem from Session 1 can use the Gem instead."
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "s2m1",
+      "number": 2,
       "minutes": 10,
       "tool": "Gemini",
       "toolUrl": "https://gemini.google.com/app",
@@ -877,8 +883,8 @@
       },
       "steps": [
         {
-          "en": "Open your <b>Principal's Assistant</b> Gem.",
-          "hi": "अपना <b>Principal's Assistant</b> Gem खोलें।"
+          "en": "Go back to your <b>Principal's Assistant</b> chat from Mission 1.",
+          "hi": "मिशन 1 वाली अपनी <b>Principal's Assistant</b> चैट पर लौटें।"
         },
         {
           "en": "Copy the prompt, replace the [brackets] with your school's numbers (or keep the sample numbers), and send.",
@@ -917,8 +923,8 @@
     {
       "type": "mission",
       "id": "s2m2",
-      "number": 2,
-      "minutes": 15,
+      "number": 3,
+      "minutes": 12,
       "tool": "Gemini",
       "toolUrl": "https://gemini.google.com/app",
       "title": {
@@ -931,8 +937,8 @@
       },
       "steps": [
         {
-          "en": "In your Gem, paste the prompt and send.",
-          "hi": "अपने Gem में प्रॉम्प्ट पेस्ट करें और भेजें।"
+          "en": "In your assistant chat, paste the prompt and send.",
+          "hi": "अपनी सहायक चैट में प्रॉम्प्ट पेस्ट करें और भेजें।"
         },
         {
           "en": "Refine once: \"Make the Hindi instructions simpler for a Class 4 child.\"",
@@ -967,8 +973,8 @@
     {
       "type": "mission",
       "id": "s2m3",
-      "number": 3,
-      "minutes": 15,
+      "number": 4,
+      "minutes": 13,
       "tool": "Gemini",
       "toolUrl": "https://gemini.google.com/app",
       "title": {
@@ -1021,7 +1027,7 @@
     {
       "type": "mission",
       "id": "s2m4",
-      "number": 4,
+      "number": 5,
       "minutes": 10,
       "tool": "NotebookLM",
       "toolUrl": "https://notebooklm.google.com",
@@ -1069,7 +1075,7 @@
       },
       "notes": [
         "NotebookLM needs a Google account; same one as Gemini. If the PDF download is slow on venue Wi-Fi, project your own screen and let tables watch.",
-        "Contrast with Mission 3: Gemini drafted from its general knowledge; NotebookLM is grounded in the chapter. Both are useful; grounding is what builds parents' trust.",
+        "Contrast with Mission 4: Gemini drafted from its general knowledge; NotebookLM is grounded in the chapter. Both are useful; grounding is what builds parents' trust.",
         "Chapter PDF link: ncert.nic.in/textbook/pdf/jesc109.pdf (Class 10 Science, Ch. 9 Light – Reflection and Refraction). Check it opens on the venue Wi-Fi; keep a downloaded copy on your laptop."
       ],
       "links": [
@@ -1085,7 +1091,7 @@
     {
       "type": "mission",
       "id": "s2m5",
-      "number": 5,
+      "number": 6,
       "minutes": 10,
       "tool": "Gemini",
       "toolUrl": "https://gemini.google.com/app",
@@ -1099,8 +1105,8 @@
       },
       "steps": [
         {
-          "en": "In your Gem, paste the prompt and send.",
-          "hi": "अपने Gem में प्रॉम्प्ट पेस्ट करें और भेजें।"
+          "en": "In your assistant chat, paste the prompt and send.",
+          "hi": "अपनी सहायक चैट में प्रॉम्प्ट पेस्ट करें और भेजें।"
         },
         {
           "en": "Pick the idea you like most and ask: \"Give me a 4-week plan for this, one hour a week.\"",
@@ -1140,8 +1146,8 @@
       },
       "points": [
         {
-          "en": "<b>Claude</b>: turn the Mission 2 lesson into a playable classroom game for the projector, in about a minute, with no coding.",
-          "hi": "<b>Claude</b>: मिशन 2 के पाठ को लगभग एक मिनट में, बिना कोडिंग के, प्रोजेक्टर पर खेले जाने वाले कक्षा खेल में बदलें।"
+          "en": "<b>Claude</b>: turn the Mission 3 lesson into a playable classroom game for the projector, in about a minute, with no coding.",
+          "hi": "<b>Claude</b>: मिशन 3 के पाठ को लगभग एक मिनट में, बिना कोडिंग के, प्रोजेक्टर पर खेले जाने वाले कक्षा खेल में बदलें।"
         },
         {
           "en": "<b>Google AI Pro</b>: load all the CBSE CT & AI handbooks into one NotebookLM notebook and ask questions across Classes 3–8, with more sources and higher limits.",
