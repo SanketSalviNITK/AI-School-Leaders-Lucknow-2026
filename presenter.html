@@ -6,6 +6,7 @@
 <title>Presenter · AI for School Leaders 2026</title>
 <meta name="robots" content="noindex">
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/deck.css">
 </head>
 <body class="presenter">
 <div class="topbar">
@@ -15,15 +16,18 @@
   <a id="runsheet" href="facilitator/session1.html" target="_blank" rel="noopener" style="color:#fff;font-size:.85rem">Run sheet ↗</a>
   <span id="langSlot"></span>
 </div>
-<div class="livebar"><span id="live">Live data: not connected</span><span>← → keys to move · F for full screen</span></div>
+<div class="livebar"><span id="live">Live data: not connected</span><span>← → keys to move · F for full screen · N for notes</span></div>
 <main id="app"><p class="status">Loading…</p></main>
 <nav class="nav">
   <button class="btn ghost" id="prev" type="button">‹</button>
   <span class="counter" id="counter"></span>
+  <button class="btn ghost notesbtn" id="notesBtn" type="button" title="Facilitator notes (N)">Notes</button>
   <button class="btn" id="next" type="button">›</button>
 </nav>
 <script src="assets/js/core.js"></script>
 <script src="assets/js/player.js"></script>
+<script src="assets/js/deck-icons.js"></script>
+<script src="assets/js/deck.js"></script>
 <script>
 (async function () {
   const A = AISL, { t, el } = A;
@@ -42,13 +46,23 @@
     n = num; s = await A.loadJSON('data/session' + n + '.json');
     document.getElementById('runsheet').href = 'facilitator/session' + n + '.html';
     s.steps.forEach(st => { if (st.type === 'title') st.session = n; });
+    document.body.classList.toggle('deck', !!s.deck);
     i = A.store.get('ppos.s' + n, 0); show(); refresh();
   }
   function show() {
     ctx = { session: n, presenter: true, widgets: [] };
     const app = document.getElementById('app'); app.innerHTML = '';
     document.getElementById('topTitle').textContent = n + '. ' + t(s.title);
-    app.append(AISLPlayer.renderStep(s.steps[i], ctx));
+    if (s.deck && window.AISLDeck) {
+      const stage = el('div', { class: 'stage' });
+      stage.append(AISLDeck.render(s.steps[i], ctx, { num: i + 1, foot: 'AI for School Leaders 2026 · Lucknow · Session ' + n }));
+      app.append(stage);
+      const notes = [].concat(s.steps[i].notes || []);
+      const drawer = el('div', { class: 'notes-drawer', style: notesOpen ? '' : 'display:none' }, [el('b', { text: 'Facilitator notes · ' + (i + 1) + ' / ' + s.steps.length }),
+        el('ul', {}, notes.map(x => el('li', { html: A.safeHTML(t(x)) })))]);
+      app.append(drawer);
+      fit();
+    } else app.append(AISLPlayer.renderStep(s.steps[i], ctx));
     document.getElementById('counter').textContent = (i + 1) + ' / ' + s.steps.length;
     A.store.set('ppos.s' + n, i);
     refresh();
@@ -62,11 +76,23 @@
     }
     if (last) AISLPlayer.updateWidgets(ctx, last);
   }
+  let notesOpen = false;
+  function fit() {
+    const app = document.getElementById('app'), st = app.querySelector('.stage'); if (!st) return;
+    const k = Math.min(app.clientWidth / 1280, app.clientHeight / 720) * 0.98;
+    st.style.transform = 'scale(' + k + ') translate(-50%, -50%)';
+  }
+  function toggleNotes() { notesOpen = !notesOpen; const d = document.querySelector('.notes-drawer'); if (d) d.style.display = notesOpen ? '' : 'none'; }
+  window.addEventListener('resize', fit);
+  document.addEventListener('fullscreenchange', () => setTimeout(fit, 120));
+  document.getElementById('notesBtn').onclick = toggleNotes;
   const go = d => { const j = i + d; if (j >= 0 && j < s.steps.length) { i = j; show(); } };
   document.getElementById('prev').onclick = () => go(-1);
   document.getElementById('next').onclick = () => go(1);
   document.addEventListener('keydown', e => {
     if (e.target.tagName === 'SELECT') return;
+    if (e.key === 'Escape') { const o = document.querySelector('.povl'); if (o) { o.remove(); return; } }
+    if (e.key === 'n' || e.key === 'N') { toggleNotes(); return; }
     if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); go(1); }
     if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(-1); }
     if (e.key === 'f' || e.key === 'F') { document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen().catch(() => {}); }

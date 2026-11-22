@@ -23,6 +23,44 @@
       ]
     },
     {
+      "type": "slide",
+      "id": "s3-journey",
+      "visual": "journey",
+      "title": {
+        "en": "Today's journey",
+        "hi": "आज की यात्रा"
+      },
+      "points": [
+        {
+          "en": "2:00 Why it matters: the CT & AI mandate",
+          "hi": "2:00 यह क्यों ज़रूरी है: CT और AI अनिवार्यता"
+        },
+        {
+          "en": "2:09 Human algorithm: be the computer",
+          "hi": "2:09 मानव एल्गोरिदम: कंप्यूटर बनिए"
+        },
+        {
+          "en": "2:12 New exam pattern: competency questions",
+          "hi": "2:12 नया परीक्षा पैटर्न: योग्यता-आधारित प्रश्न"
+        },
+        {
+          "en": "2:20 Missions 1–5: 60 minutes, hands-on",
+          "hi": "2:20 मिशन 1–5: 60 मिनट, व्यावहारिक"
+        },
+        {
+          "en": "3:20 Pro demo: what grows next",
+          "hi": "3:20 प्रो डेमो: आगे क्या"
+        },
+        {
+          "en": "3:27 Your 30-day plan",
+          "hi": "3:27 आपकी 30-दिन की योजना"
+        }
+      ],
+      "notes": [
+        "The six stops build one by one. Say: twenty minutes of ideas, sixty minutes of doing, then a short demo and your own plan."
+      ]
+    },
+    {
       "type": "mission",
       "id": "s2pre",
       "label": {
@@ -120,7 +158,11 @@
       "notes": [
         "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
         "Principals often underestimate this. Follow up: 'Do you know which tools they use?'"
-      ]
+      ],
+      "deckTitle": {
+        "en": "Warm-up",
+        "hi": "वार्म-अप"
+      }
     },
     {
       "type": "poll",
@@ -150,7 +192,11 @@
       "notes": [
         "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
         "Leads into 'AI drafts, a teacher checks' and why the school needs an AI policy."
-      ]
+      ],
+      "deckTitle": {
+        "en": "Warm-up",
+        "hi": "वार्म-अप"
+      }
     },
     {
       "type": "poll",
@@ -180,7 +226,11 @@
       "notes": [
         "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
         "NotebookLM usually gets almost no votes, which sets up Mission 4."
-      ]
+      ],
+      "deckTitle": {
+        "en": "Warm-up",
+        "hi": "वार्म-अप"
+      }
     },
     {
       "type": "poll",
@@ -210,7 +260,11 @@
       "notes": [
         "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
         "Ask for one real example from the room: it opens the Mission 3 self-check better than any slide."
-      ]
+      ],
+      "deckTitle": {
+        "en": "Warm-up",
+        "hi": "वार्म-अप"
+      }
     },
     {
       "type": "quiz",
@@ -244,7 +298,11 @@
       },
       "notes": [
         "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest."
-      ]
+      ],
+      "deckTitle": {
+        "en": "Warm-up quiz",
+        "hi": "वार्म-अप क्विज़"
+      }
     },
     {
       "type": "quiz",
@@ -279,7 +337,11 @@
       "notes": [
         "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest.",
         "Count the 'never heard of it' hands first."
-      ]
+      ],
+      "deckTitle": {
+        "en": "Warm-up quiz",
+        "hi": "वार्म-अप क्विज़"
+      }
     },
     {
       "type": "quiz",
@@ -313,7 +375,11 @@
       },
       "notes": [
         "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest."
-      ]
+      ],
+      "deckTitle": {
+        "en": "Warm-up quiz",
+        "hi": "वार्म-अप क्विज़"
+      }
     },
     {
       "type": "quiz",
@@ -347,7 +413,11 @@
       },
       "notes": [
         "Warm-up. Pick 2–3 of these if time is short; use the arrow key to skip the rest."
-      ]
+      ],
+      "deckTitle": {
+        "en": "Warm-up quiz",
+        "hi": "वार्म-अप क्विज़"
+      }
     },
     {
       "type": "poll",
@@ -372,12 +442,20 @@
       ],
       "notes": [
         "1 min. Whatever the bars show, the message is the same: the CT & AI mandate for Classes III–V does not need a lab."
-      ]
+      ],
+      "deckTitle": {
+        "en": "Quick poll: your computer lab",
+        "hi": "त्वरित पोल: आपकी कंप्यूटर लैब"
+      },
+      "deckMsg": {
+        "en": "Good news: Classes III–V need no lab at all",
+        "hi": "अच्छी खबर: कक्षा III–V के लिए लैब की ज़रूरत ही नहीं"
+      }
     },
     {
       "type": "concept",
       "title": {
-        "en": "The CT & AI mandate in plain words",
+        "en": "The CT & AI mandate in one picture",
         "hi": "CT और AI अनिवार्यता सरल शब्दों में"
       },
       "points": [
@@ -409,7 +487,8 @@
       "notes": [
         "3 min. Point to the handbook link on the Resources page. Principals' biggest relief: 'no board exam, no lab needed for III–V'.",
         "If asked about Class IX subject codes: refer them to Acad-18/2026 for the exact wording."
-      ]
+      ],
+      "visual": "mandate"
     },
     {
       "type": "quiz",
@@ -443,7 +522,12 @@
       },
       "notes": [
         "1 min. Sets up Missions 1 and 2."
-      ]
+      ],
+      "visual": "venn",
+      "deckTitle": {
+        "en": "Where does CT live in Classes III–V?",
+        "hi": "कक्षा III–V में CT कहाँ पढ़ाया जाता है?"
+      }
     },
     {
       "type": "reveal",
@@ -496,7 +580,12 @@
       "notes": [
         "3 min. Ask a table for one more example of each from school life before you reveal.",
         "Key line: 'Your teachers already do this. CT just gives it a name and a structure.'"
-      ]
+      ],
+      "visual": "ideas",
+      "deckTitle": {
+        "en": "Four CT ideas you already use",
+        "hi": "चार CT विचार जो आप पहले से उपयोग करते हैं"
+      }
     },
     {
       "type": "concept",
@@ -524,7 +613,12 @@
       },
       "notes": [
         "2 min, timed. Use the plain paper on the tables. Laughter is the goal; then one sentence: 'Children learn precision and debugging this way, years before any computer.'"
-      ]
+      ],
+      "visual": "algo",
+      "deckTitle": {
+        "en": "Activity: be the computer",
+        "hi": "गतिविधि: कंप्यूटर बनिए"
+      }
     },
     {
       "type": "poll",
@@ -553,6 +647,40 @@
       ],
       "notes": [
         "1 min. If many say 'computer teacher alone': gently point out the circular expects subject teachers to share it, and that one teacher cannot carry 100+ periods a week."
+      ],
+      "deckTitle": {
+        "en": "Who will teach it?",
+        "hi": "इसे कौन पढ़ाएगा?"
+      },
+      "deckMsg": {
+        "en": "Next: do the maths. One teacher cannot carry it.",
+        "hi": "अगला: हिसाब लगाइए। एक शिक्षक यह नहीं संभाल सकता।"
+      }
+    },
+    {
+      "type": "slide",
+      "id": "s3-maths",
+      "visual": "maths",
+      "title": {
+        "en": "Who will teach it? Do the maths",
+        "hi": "इसे कौन पढ़ाएगा? हिसाब लगाइए"
+      },
+      "points": [
+        {
+          "en": "2 sections per class: about 34 CT & AI periods a week, whole school",
+          "hi": "हर कक्षा में 2 सेक्शन: पूरे विद्यालय में सप्ताह में लगभग 34 CT और AI पीरियड"
+        },
+        {
+          "en": "6 sections per class: about 100 periods a week",
+          "hi": "हर कक्षा में 6 सेक्शन: सप्ताह में लगभग 100 पीरियड"
+        },
+        {
+          "en": "One computer teacher cannot carry this. III–V: class and Maths teachers. VI–VIII: Maths, Science and computer teachers together.",
+          "hi": "एक कंप्यूटर शिक्षक यह नहीं संभाल सकता। III–V: कक्षा और गणित शिक्षक। VI–VIII: गणित, विज्ञान और कंप्यूटर शिक्षक मिलकर।"
+        }
+      ],
+      "notes": [
+        "Per section per week (full year): III to V about 1.9 periods, VI to VIII about 3.75. Two sections per class: about 34 periods a week. Six sections: about 100. The squares fill in; then the sharing card appears."
       ]
     },
     {
@@ -581,7 +709,8 @@
       },
       "notes": [
         "2 min."
-      ]
+      ],
+      "visual": "donut"
     },
     {
       "type": "reveal",
@@ -623,7 +752,8 @@
       ],
       "notes": [
         "2 min. These are the formats Mission 3 asks Gemini to write."
-      ]
+      ],
+      "visual": "qtypes"
     },
     {
       "type": "concept",
@@ -647,7 +777,12 @@
       ],
       "notes": [
         "2 min. Sets up Mission 4. Contrast it with Mission 3, where Gemini drafts from general knowledge and then checks itself."
-      ]
+      ],
+      "visual": "grounding",
+      "deckTitle": {
+        "en": "General chatbot or grounded tool?",
+        "hi": "सामान्य चैटबॉट या आधारित टूल?"
+      }
     },
     {
       "type": "quiz",
@@ -681,7 +816,12 @@
       },
       "notes": [
         "1 min."
-      ]
+      ],
+      "visual": "pipeline",
+      "deckTitle": {
+        "en": "Before any AI question reaches a class test",
+        "hi": "कोई भी AI प्रश्न कक्षा परीक्षा तक पहुँचने से पहले"
+      }
     },
     {
       "type": "concept",
@@ -717,7 +857,8 @@
       },
       "notes": [
         "2:20. Start the clock. Mission 4 needs the NCERT PDF download: ask tables to start it during Mission 3 if the Wi-Fi is slow."
-      ]
+      ],
+      "visual": "missions"
     },
     {
       "type": "mission",
@@ -1031,7 +1172,123 @@
         "<b>Close (1 min).</b> \"Your teachers do not need a lab or a coder to make materials like this. Start free; upgrade only when it is used every week.\"",
         "<b>If Wi-Fi fails:</b> click 'Play the example game' on this slide (works offline once loaded) and play Level 1 with the room. Keep a 60-second recording of the NotebookLM demo on your desktop.",
         "Do not imply CBSE or any vendor endorses these tools."
+      ],
+      "visual": "growth"
+    },
+    {
+      "type": "slide",
+      "id": "s3-robot",
+      "visual": "robot",
+      "title": {
+        "en": "Play it with the room: the robot game",
+        "hi": "पूरे कक्ष के साथ खेलें: रोबोट खेल"
+      },
+      "points": [
+        {
+          "en": "Call out the arrows: the room writes the algorithm together",
+          "hi": "तीर बोलिए: पूरा कक्ष मिलकर एल्गोरिदम लिखता है"
+        },
+        {
+          "en": "Spot the bug: one wrong arrow? Find it and fix it",
+          "hi": "बग पहचानिए: एक गलत तीर? उसे खोजिए और ठीक कीजिए"
+        },
+        {
+          "en": "No lab needed: draw the grid on the board for Class 4",
+          "hi": "लैब की ज़रूरत नहीं: कक्षा 4 के लिए बोर्ड पर ग्रिड बनाइए"
+        }
+      ],
+      "links": [
+        {
+          "label": {
+            "en": "Play the robot game",
+            "hi": "रोबोट खेल खेलें"
+          },
+          "url": "demo/robot-algorithm.html"
+        }
+      ],
+      "notes": [
+        "Backup for the finale, or a bonus. Click 'Play the robot game' and play Level 1: the room calls out the arrows. Works offline once loaded."
+      ]
+    },
+    {
+      "type": "slide",
+      "id": "s3-plan30",
+      "visual": "plan30",
+      "title": {
+        "en": "Your 30-day CT & AI plan",
+        "hi": "आपकी 30-दिन की CT और AI योजना"
+      },
+      "points": [
+        {
+          "en": "Week 1: share the CT & AI plan with coordinators; download the CBSE handbooks",
+          "hi": "सप्ताह 1: समन्वयकों के साथ CT और AI योजना साझा करें; CBSE पुस्तिकाएँ डाउनलोड करें"
+        },
+        {
+          "en": "Week 2: one teacher runs the unplugged lesson; you observe",
+          "hi": "सप्ताह 2: एक शिक्षक बिना कंप्यूटर वाला पाठ पढ़ाए; आप अवलोकन करें"
+        },
+        {
+          "en": "Week 3: teachers write and verify 5 competency questions; build one NotebookLM notebook",
+          "hi": "सप्ताह 3: शिक्षक 5 योग्यता-आधारित प्रश्न लिखें और जाँचें; एक NotebookLM नोटबुक बनाएँ"
+        },
+        {
+          "en": "Week 4: start one student AI project with Classes VI to VIII",
+          "hi": "सप्ताह 4: कक्षा VI–VIII के साथ एक छात्र AI परियोजना शुरू करें"
+        }
+      ],
+      "notes": [
+        "3:27. The four weeks build. Give everyone one minute to write their Monday action in the workbook. Then: mark your missions done."
+      ]
+    },
+    {
+      "type": "slide",
+      "id": "s3-thanks",
+      "visual": "thanks",
+      "title": {
+        "en": "Thank you · धन्यवाद",
+        "hi": "धन्यवाद · Thank you"
+      },
+      "points": [
+        {
+          "en": "Everything from today stays online: missions, prompts, handouts",
+          "hi": "आज की हर चीज़ ऑनलाइन रहेगी: मिशन, प्रॉम्प्ट, हैंडआउट"
+        },
+        {
+          "en": "Prompt Library and the guide to the School Command Sheet are on the Resources page",
+          "hi": "प्रॉम्प्ट लाइब्रेरी और School Command Sheet मार्गदर्शिका Resources पृष्ठ पर हैं"
+        }
+      ],
+      "notes": [
+        "Thank the room and the Sahodaya organisers. Point to the three QR codes: session page, Prompt Library, all resources."
+      ]
+    },
+    {
+      "type": "slide",
+      "id": "s3-feedback",
+      "visual": "feedback",
+      "title": {
+        "en": "Your feedback, please · 2 minutes",
+        "hi": "कृपया अपनी प्रतिक्रिया दें · 2 मिनट"
+      },
+      "points": [
+        {
+          "en": "Scan the QR code or open forms.gle/pebCgLfMqLbBMBUa6",
+          "hi": "QR कोड स्कैन करें या forms.gle/pebCgLfMqLbBMBUa6 खोलें"
+        }
+      ],
+      "links": [
+        {
+          "label": {
+            "en": "Open the feedback form",
+            "hi": "प्रतिक्रिया फ़ॉर्म खोलें"
+          },
+          "url": "https://forms.gle/pebCgLfMqLbBMBUa6"
+        }
+      ],
+      "notes": [
+        "Last slide: leave it on screen. Ask everyone to scan and fill the form now; wait two minutes."
       ]
     }
-  ]
+  ],
+  "deck": true
 }
