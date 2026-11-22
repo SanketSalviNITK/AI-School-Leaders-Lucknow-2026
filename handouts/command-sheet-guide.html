@@ -38,7 +38,7 @@ pre.gem { white-space: pre-wrap; font-family: inherit; font-size: 9pt; backgroun
 <div class="flow">
   <div class="node"><b>School Command Sheet</b>Your school's numbers in one Google Sheet: CPD hours, observations, CT &amp; AI periods, questions, admissions, report remarks, parent feedback. It calculates totals and gaps by itself.</div>
   <div class="arr">⇄</div>
-  <div class="node"><b>Principal's Assistant (Gem)</b>Your own Gemini assistant that already knows your school, your language preference and the data rules. Free, on phone or computer.</div>
+  <div class="node"><b>Principal's Assistant (Gem or chat)</b>Your own Gemini assistant that already knows your school, your language preference and the data rules. Free, on phone or computer.</div>
   <div class="arr">⇄</div>
   <div class="node"><b>Prompt Library</b>46 tested prompts for school work. Each one says when to use it and which Command Sheet tab to paste in. You fill the [brackets].</div>
 </div>
@@ -79,7 +79,8 @@ pre.gem { white-space: pre-wrap; font-family: inherit; font-size: 9pt; backgroun
 </ol>
 <div class="box"><b>Colour code in every tab:</b> <span style="color:#0000ff;font-weight:700">blue cells</span> are for you to type or paste. All other cells calculate by themselves. If you type over a formula cell by mistake, press <b>Ctrl+Z</b> (or ↶ on the phone).</div>
 
-<h3>Step B · Create your Principal's Assistant Gem (10 min)</h3>
+<h3>Step B · Create your Principal's Assistant (5–10 min)</h3>
+<div class="box"><b>No laptop? Use your phone (this is what we do in Session 3, Mission 1):</b> open the Gemini app → <b>New chat</b> → paste the instructions below as your <b>first message</b>, with "For the rest of this conversation:" added at the start. Keep using that same chat (find it under <b>Recent</b>; pin it if your app allows). <b>Have a laptop?</b> Save the same instructions as a <b>Gem</b>, so every new chat already knows your school:</div>
 <ol>
 <li>On a computer, open <b>gemini.google.com</b> in Chrome and sign in.</li>
 <li>Menu → <b>Explore Gems</b> → <b>New Gem</b>. Name: <b>Principal's Assistant</b>.</li>
@@ -100,7 +101,7 @@ How to work with me:
 <li>"CBSE Computational Thinking &amp; AI is being introduced for Classes III–VIII; follow the NCERT/CBSE CT &amp; AI handbooks when I ask about it."</li>
 </ul>
 <p><b>Test it:</b> type "Introduce yourself to me in Hindi in 3 lines." It should name your school and mention the data rule. If not, open the Gem → <b>Edit</b> and fix the instructions.</p>
-<p class="small">On the phone: Gems you create on the computer appear in the Gemini app too (tap your Gem's name in the menu). If your Gemini version does not show Gems, paste the instructions above as the first message of a new chat instead.</p>
+<p class="small">Gems you create on the computer appear in the Gemini app too (tap your Gem's name in the menu). Everywhere this guide says "Gem", your assistant chat works the same way.</p>
 
 <h3>Step C · Open and bookmark the Prompt Library (2 min)</h3>
 <ol>
@@ -307,7 +308,7 @@ How to work with me:
 <tr><td>Totals do not change</td><td>The number was typed as text (e.g. "20 hrs"). Type only the number. Check the cell is in a blue input column.</td></tr>
 <tr><td>Pasted table lands in one column</td><td>Paste into the sheet with Ctrl+Shift+V, or use <i>Data → Split text to columns</i>. Next time add <span class="pid">SH-04</span> to the prompt.</td></tr>
 <tr><td>Hindi looks like boxes</td><td>Update Chrome / the Sheets app; on Windows install a Devanagari font such as Noto Sans Devanagari.</td></tr>
-<tr><td>Gemini forgets my school</td><td>You are in a normal chat, not the Gem. Open the Gem from the menu, then paste the prompt.</td></tr>
+<tr><td>Gemini forgets my school</td><td>You are in a new, ordinary chat. Open your Gem from the menu, or go back to your assistant chat under Recent, then paste the prompt.</td></tr>
 <tr><td>The answer is generic</td><td>Add more context: classes, numbers from the sheet, what you tried. Ask "What else do you need to know?"</td></tr>
 <tr><td>The answer has a wrong fact</td><td>Say: "Point 3 is wrong; the circular says …. Correct it." Then check the rest. For textbook content, use NotebookLM with the NCERT PDF (<span class="pid">AS-03</span>).</td></tr>
 <tr><td>Gemini refuses or says it cannot</td><td>Rephrase plainly, remove anything that looks like personal data, or break the task into two smaller prompts.</td></tr>
@@ -334,7 +335,7 @@ How to work with me:
 <ol>
 <li>वेबसाइट पर <b>Copy the School Command Sheet</b> दबाएँ → <b>Make a copy</b>। फ़ाइल का नाम बदलें: "Command Sheet – [विद्यालय] – 2026-27"।</li>
 <li><b>नीले सेल</b> में ही लिखें; बाकी सेल अपने-आप गणना करते हैं। गलती हो तो Ctrl+Z दबाएँ।</li>
-<li>कंप्यूटर पर gemini.google.com → <b>Explore Gems</b> → <b>New Gem</b> → नाम "Principal's Assistant" → पृष्ठ 2 के निर्देश पेस्ट करें, [कोष्ठक] भरें, <b>Save</b>।</li>
+<li>कंप्यूटर पर gemini.google.com → <b>Explore Gems</b> → <b>New Gem</b> (बिना लैपटॉप: फ़ोन पर नई चैट में यही निर्देश पहले संदेश के रूप में भेजें और वही चैट उपयोग करते रहें) → नाम "Principal's Assistant" → पृष्ठ 2 के निर्देश पेस्ट करें, [कोष्ठक] भरें, <b>Save</b>।</li>
 <li>जाँचें: "हिंदी में 3 पंक्तियों में अपना परिचय दें।" उसे आपके विद्यालय का नाम और डेटा नियम बताना चाहिए।</li>
 <li>Prompt Library खोलें (वेबसाइट → Resources) और फ़ोन की होम स्क्रीन पर जोड़ें।</li>
 </ol>

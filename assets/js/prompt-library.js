@@ -166,7 +166,7 @@ window.AISL_PROMPTS = {
 "use": "When planning the CT & AI curriculum for Classes III–VIII.",
 "prompt": "Below is my CT & AI Plan (classes, sections, hours, periods per week). Our timetable has [8] periods a day, [6] days a week.\nSuggest where these periods can come from without dropping any board subject: which existing periods to integrate CT into, and which to use as dedicated CT & AI periods.\nGive a table per class: Day | Period | Subject period used | CT & AI activity type. Flag any class where the plan is not realistic.\nPlan: [copy the CT & AI Plan table and paste here]",
 "tab": "CT & AI Plan",
-"ref": "Session 3 · Mission 1"
+"ref": "Session 3 · Mission 2"
 },
 {
 "id": "CU-02",
@@ -176,7 +176,7 @@ window.AISL_PROMPTS = {
 "use": "A teacher needs a CT lesson that works with chalk, cards or objects.",
 "prompt": "Design a [35]-minute unplugged computational-thinking lesson for Class [___] on [pattern recognition / algorithms / decomposition / abstraction].\nUse only things a village classroom has: chalk, paper, bottle caps, bangles, the children themselves.\nInclude: learning objective, a 5-minute hook, the main activity in steps, 3 check questions, and a 2-line homework task. Link it to the CBSE CT & AI handbook for that class where possible (I will verify).",
 "tab": "",
-"ref": "Session 3 · Mission 2"
+"ref": "Session 3 · Mission 3"
 },
 {
 "id": "CU-03",
@@ -196,7 +196,7 @@ window.AISL_PROMPTS = {
 "use": "For a Class VI–IX project, science fair or ATL activity.",
 "prompt": "Suggest 5 low-cost student AI project ideas for Classes [___] in a [rural / small-town] school in [district], UP, that solve a local problem (water, farming, traffic, waste, health, attendance).\nFor each: the problem, what the students build (e.g. a Teachable Machine model), data they can collect safely without personal information, materials, and a 4-week plan.",
 "tab": "",
-"ref": "Session 3 · Mission 5"
+"ref": "Session 3 · Mission 6"
 },
 {
 "id": "CU-05",
@@ -216,7 +216,7 @@ window.AISL_PROMPTS = {
 "use": "Building a question bank or a periodic test.",
 "prompt": "Create [5] competency-based questions for Class [___] [subject], chapter \"[chapter]\":\n[2] assertion-reason, [2] case-based, [1] source-based. Follow the latest CBSE sample-paper style.\nGive the output as a table with exactly these columns so I can paste it into my sheet:\nID | Class | Subject | Chapter | Question type | Question | Answer | Marks | Competency tested\nUse only content from the NCERT textbook.",
 "tab": "Question Bank",
-"ref": "Session 3 · Mission 3"
+"ref": "Session 3 · Mission 4"
 },
 {
 "id": "AS-02",
@@ -226,7 +226,7 @@ window.AISL_PROMPTS = {
 "use": "Right after AS-01, before any teacher review.",
 "prompt": "Now act as a strict CBSE paper-setter and check each question you just wrote:\n- Is the answer correct and complete? Is the question within the NCERT chapter?\n- Is there more than one correct option or any ambiguity?\n- Does it test application, not just recall?\nGive a table: ID | Problem found | Corrected version. If a question is fine, write \"No change\".",
 "tab": "Question Bank",
-"ref": "Session 3 · Mission 3"
+"ref": "Session 3 · Mission 4"
 },
 {
 "id": "AS-03",
@@ -236,7 +236,7 @@ window.AISL_PROMPTS = {
 "use": "Use in NotebookLM after uploading the NCERT chapter PDF.",
 "prompt": "Using only the uploaded chapter, create a one-page revision note for Class [___] students with: 8 key ideas, 5 important terms with meanings, and 5 practice questions with page references.\nIf something is not in the chapter, do not add it.",
 "tab": "",
-"ref": "Session 3 · Mission 4"
+"ref": "Session 3 · Mission 5"
 },
 {
 "id": "AS-04",
